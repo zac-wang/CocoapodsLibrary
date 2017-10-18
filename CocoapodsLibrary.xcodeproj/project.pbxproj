@@ -15,6 +15,8 @@
 		93B4129B1F974ED8003664BE /* BannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4129A1F974ED8003664BE /* BannerVC.m */; };
 		93B4129C1F974FCB003664BE /* ZCBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B412981F974DED003664BE /* ZCBannerView.m */; };
 		93B4129D1F97523B003664BE /* main_banner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93B412961F974DED003664BE /* main_banner.bundle */; };
+		93B412A11F976016003664BE /* SpinnerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B412A01F976016003664BE /* SpinnerVC.m */; };
+		93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B412A31F976026003664BE /* ZCSpinnerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		93B412981F974DED003664BE /* ZCBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCBannerView.m; sourceTree = "<group>"; };
 		93B412991F974ED8003664BE /* BannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerVC.h; sourceTree = "<group>"; };
 		93B4129A1F974ED8003664BE /* BannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerVC.m; sourceTree = "<group>"; };
+		93B4129F1F976016003664BE /* SpinnerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpinnerVC.h; sourceTree = "<group>"; };
+		93B412A01F976016003664BE /* SpinnerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpinnerVC.m; sourceTree = "<group>"; };
+		93B412A21F976026003664BE /* ZCSpinnerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCSpinnerView.h; sourceTree = "<group>"; };
+		93B412A31F976026003664BE /* ZCSpinnerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCSpinnerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +73,10 @@
 				93B4127E1F974CE2003664BE /* AppDelegate.m */,
 				93B412991F974ED8003664BE /* BannerVC.h */,
 				93B4129A1F974ED8003664BE /* BannerVC.m */,
+				93B4129F1F976016003664BE /* SpinnerVC.h */,
+				93B412A01F976016003664BE /* SpinnerVC.m */,
 				93B412951F974DED003664BE /* ZCBannerView */,
+				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
 				93B412941F974D12003664BE /* Supporting Files */,
 			);
 			path = CocoapodsLibrary;
@@ -93,6 +102,15 @@
 				93B412981F974DED003664BE /* ZCBannerView.m */,
 			);
 			path = ZCBannerView;
+			sourceTree = SOURCE_ROOT;
+		};
+		93B4129E1F975FE3003664BE /* ZCSpinnerView */ = {
+			isa = PBXGroup;
+			children = (
+				93B412A21F976026003664BE /* ZCSpinnerView.h */,
+				93B412A31F976026003664BE /* ZCSpinnerView.m */,
+			);
+			path = ZCSpinnerView;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -169,8 +187,10 @@
 			files = (
 				93B4128D1F974CE2003664BE /* main.m in Sources */,
 				93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */,
+				93B412A11F976016003664BE /* SpinnerVC.m in Sources */,
 				93B4129B1F974ED8003664BE /* BannerVC.m in Sources */,
 				93B4129C1F974FCB003664BE /* ZCBannerView.m in Sources */,
+				93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,11 +324,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "CocoapodsLibrary/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.CocoapodsLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -317,11 +341,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "CocoapodsLibrary/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.CocoapodsLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
