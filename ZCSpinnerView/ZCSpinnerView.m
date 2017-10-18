@@ -14,8 +14,6 @@
 @property(nonatomic, assign) float cellHeight;
 @property(nonatomic, assign) BOOL isCustomer;
 
-@property(nonatomic, strong) UITableView *tableView;
-
 @end
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0 green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0 blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
@@ -29,17 +27,19 @@
 }
 
 - (instancetype)initWithMaxFrame:(CGRect)maxFrame cellHeight:(int)cellHeight cellObject:(NSObject *)cellObject {
-    self = [super initWithFrame:[UIScreen mainScreen].bounds];
+    self = [super init];
     if (self) {
-        self.isShow = NO;
+        self.frame = [UIScreen mainScreen].bounds;
         self.layer.masksToBounds = YES;
+        self.isShow = NO;
         
         self.maxHeight = maxFrame.size.height;
         self.cellHeight = cellHeight <= 0 ? 44 : cellHeight;
         self.isCustomer = !!cellObject;
         
+        if(!self.tableView)
+            [self addTarget:self action:@selector(hidden) forControlEvents:UIControlEventTouchUpInside];
         [self initTableView:maxFrame cellObject:cellObject];
-        [self addTarget:self action:@selector(hidden) forControlEvents:UIControlEventTouchUpInside];
         [[UIApplication sharedApplication].delegate.window addSubview:self];
     }
     return self;
@@ -47,15 +47,17 @@
 
 - (void)initTableView:(CGRect)frame cellObject:(NSObject *)cellObject {
     frame.size.height = 0;
-    self.tableView = [[UITableView alloc] initWithFrame:frame];
-    self.tableView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-    [self addSubview:self.tableView];
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.tableView.tableFooterView = [[UIView alloc] init];
-    self.tableView.separatorColor = UIColorFromRGB(0xe3e4e5);
-    self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
+    if(!self.tableView) {
+        self.tableView = [[UITableView alloc] initWithFrame:frame];
+        self.tableView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        [self addSubview:self.tableView];
+        
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        self.tableView.tableFooterView = [[UIView alloc] init];
+        self.tableView.separatorColor = UIColorFromRGB(0xe3e4e5);
+        self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
+    }
     if([cellObject isKindOfClass:[NSString class]])
         [self.tableView registerClass:NSClassFromString((NSString *)cellObject) forCellReuseIdentifier:CellReuseIdentifier];
     else if([cellObject isKindOfClass:[UINib class]])
@@ -74,11 +76,9 @@
     }
     
     CGRect tableRect = self.tableView.frame;
-    if(isAnimat) {
-        tableRect.size.height = 0;
-        self.tableView.frame = tableRect;
-        self.isShow = YES;
-    }
+    tableRect.size.height = 0;
+    self.tableView.frame = tableRect;
+    self.isShow = YES;
     
     tableRect.size.height = height;
     [UIView animateWithDuration:isAnimat ? 0.25 : 0 animations:^{
