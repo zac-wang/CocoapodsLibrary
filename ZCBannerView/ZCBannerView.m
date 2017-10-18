@@ -23,6 +23,12 @@
 
 - (void)initBanner:(NSArray *)urlArray {
     [self stop];
+    
+    if(urlArray.count <= 0) {
+        NSLog(@"滚动栏文件为空");
+        return;
+    }
+    
     if(!self.pageControl) {
         self.showsHorizontalScrollIndicator = NO;
         //self.scrollEnabled = NO;
