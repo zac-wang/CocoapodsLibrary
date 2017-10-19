@@ -48,7 +48,7 @@
 - (void)initTableView:(CGRect)frame cellObject:(NSObject *)cellObject {
     frame.size.height = 0;
     if(!self.tableView) {
-        self.tableView = [[UITableView alloc] initWithFrame:frame];
+        self.tableView = [[UITableView alloc] init];
         self.tableView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
         [self addSubview:self.tableView];
         
@@ -58,6 +58,7 @@
         self.tableView.separatorColor = UIColorFromRGB(0xe3e4e5);
         self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
     }
+    self.tableView.frame = frame;
     if([cellObject isKindOfClass:[NSString class]])
         [self.tableView registerClass:NSClassFromString((NSString *)cellObject) forCellReuseIdentifier:CellReuseIdentifier];
     else if([cellObject isKindOfClass:[UINib class]])
