@@ -29,6 +29,8 @@
 - (void)initBanner:(NSArray *)urlArray;
 - (void)initBannerWithCount:(NSInteger)count imageViewBlock:(void(^)(UIImageView *imageView, int num))block;
 
+@property(nonatomic, assign) BOOL oneImageNotRolling;//YES:单个页面不滚动，默认NO
+
 - (void)start;
 - (void)stop;
 

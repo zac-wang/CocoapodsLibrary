@@ -78,6 +78,9 @@
 
 //开启计时器
 - (void)start {
+    if(self.oneImageNotRolling && self.contentSize.width == self.frame.size.width) {
+        return;
+    }
     self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(scrollToNextPage) userInfo:nil repeats:YES];
 }
 
