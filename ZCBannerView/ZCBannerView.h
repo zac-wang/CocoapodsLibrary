@@ -27,6 +27,8 @@
 
 
 - (void)initBanner:(NSArray *)urlArray;
+- (void)initBannerWithCount:(NSInteger)count imageViewBlock:(void(^)(UIImageView *imageView, int num))block;
+
 - (void)start;
 - (void)stop;
 

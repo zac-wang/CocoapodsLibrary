@@ -22,9 +22,15 @@
 @implementation ZCBannerView
 
 - (void)initBanner:(NSArray *)urlArray {
+    [self initBannerWithCount:urlArray.count imageViewBlock:^(UIImageView *imageView, int num) {
+        imageView.image = [UIImage imageWithContentsOfFile:urlArray[num]];
+    }];
+}
+
+- (void)initBannerWithCount:(NSInteger)count imageViewBlock:(void (^)(UIImageView *, int))imageViewBlock {
     [self stop];
     
-    if(urlArray.count <= 0) {
+    if(count <= 0) {
         NSLog(@"滚动栏文件为空");
         return;
     }
@@ -46,11 +52,11 @@
     
     NSMutableArray *imgViewArray = [NSMutableArray array];
     
-    NSMutableArray *tmpArray = [NSMutableArray arrayWithArray:urlArray];
-    [tmpArray addObject:[urlArray firstObject]];
+//    NSMutableArray *tmpArray = [NSMutableArray arrayWithArray:urlArray];
+//    [tmpArray addObject:[urlArray firstObject]];
+    NSInteger pageCount = count + 1;
     
-    for (int i = 0; i < tmpArray.count; i++) {
-        NSString *path = tmpArray[i];
+    for (int i = 0; i < pageCount; i++) {
         UIImageView *imgView;
         if(i < self.imgViewArray.count) {
             imgView = self.imgViewArray[i];
@@ -58,16 +64,15 @@
             imgView = [[UIImageView alloc] init];
         }
         imgView.frame = CGRectMake(i*self.frame.size.width, 0, self.frame.size.width, self.frame.size.height);
-        
-        imgView.image = [UIImage imageWithContentsOfFile:path];
         imgView.contentMode = UIViewContentModeScaleToFill;
         [self addSubview:imgView];
-        
         [imgViewArray addObject:imgView];
+        
+        imageViewBlock(imgView, i%count);
     }
-    self.contentSize = CGSizeMake(urlArray.count*self.frame.size.width, self.frame.size.height);
+    self.contentSize = CGSizeMake(pageCount*self.frame.size.width, self.frame.size.height);
     self.pageControl.frame = CGRectMake(0, self.frame.origin.y + self.frame.size.height - RelativeLocation, self.frame.size.width, 17);
-    self.pageControl.numberOfPages = urlArray.count;
+    self.pageControl.numberOfPages = pageCount;
     self.pageControl.currentPage = 0;
 }
 
