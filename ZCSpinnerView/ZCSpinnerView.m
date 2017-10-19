@@ -109,7 +109,6 @@
 #pragma mark - TableView Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [self showForAnimat:NO];
     return self.dataSource.count;
 }
 
