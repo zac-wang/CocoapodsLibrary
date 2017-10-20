@@ -72,7 +72,7 @@
     }
     self.contentSize = CGSizeMake(pageCount*self.frame.size.width, self.frame.size.height);
     self.pageControl.frame = CGRectMake(0, self.frame.origin.y + self.frame.size.height - RelativeLocation, self.frame.size.width, 17);
-    self.pageControl.numberOfPages = pageCount;
+    self.pageControl.numberOfPages = count;
     self.pageControl.currentPage = 0;
 }
 
@@ -103,7 +103,7 @@
     [UIView animateWithDuration:0.25 animations:^{
         self.contentOffset = CGPointMake(page*self.frame.size.width, 0);
     } completion:^(BOOL finished) {
-        if(page >= self.contentSize.width/self.frame.size.width) {
+        if(page+1 >= self.contentSize.width/self.frame.size.width) {
             self.contentOffset = CGPointMake(0, 0);
         }
         self.pageControl.currentPage = self.contentOffset.x/self.frame.size.width;
