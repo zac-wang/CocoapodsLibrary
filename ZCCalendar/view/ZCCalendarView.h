@@ -12,14 +12,12 @@
 
 
 @class ZCCalendarView;
-@protocol ZCCalendarViewFrameDelegate <NSObject>
-@optional
-/// 更新日历显示大小（一般用不到）
-- (void)calendarView:(ZCCalendarView *)collectionView updateSize:(CGSize)size;
-@end
-
 @protocol ZCCalendarViewDelegate <NSObject>
 @optional
+
+/// 更新日历显示大小（一般用不到）
+- (void)calendarView:(ZCCalendarView *)collectionView updateSize:(CGSize)size;
+
 /// 设置cell显示的内容
 - (void)calendarView:(ZCCalendarView *)collectionView cell:(ZCCalendarDayCell *)cell;
 
@@ -36,19 +34,18 @@
 
 
 
-@interface ZCCalendarView : UIView{
-    ZCCalendarShowMothArray *showMothArray;
-}
+@interface ZCCalendarView : UIView
 
 ///设置事件代理
-@property(nonatomic, weak) id<ZCCalendarViewDelegate> delagate;
-///设置事件代理
-@property(nonatomic, weak) id<ZCCalendarViewFrameDelegate> frameDelagate;
-
-- (void)reloadData;
-
+@property(nonatomic, weak) id<ZCCalendarViewDelegate> delegate;
+///间隔
+@property (nonatomic) UIEdgeInsets sectionInset;
 ///注册cell
 - (void)registerClass:(Class)cellClass;
+
+
+
+- (void)reloadData;
 ///是否可以多选
 @property(nonatomic, assign)   BOOL isMultipleSelection;
 ///设置日历显示的日期

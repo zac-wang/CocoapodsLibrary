@@ -1,14 +1,14 @@
 //
-//  CalendarView.m
-//  Calendar
+//  ZCCalendarManageView.m
+//  CocoapodsLibrary
 //
-//  Created by wangzhichao on 16/8/30.
-//  Copyright © 2016年 wangzhichao. All rights reserved.
+//  Created by 王志超 on 2017/10/20.
+//  Copyright © 2017年 王志超. All rights reserved.
 //
 
-#import "CalendarView.h"
+#import "ZCCalendarManageView.h"
 
-@interface CalendarView () {
+@interface ZCCalendarManageView () {
     ZCCalendarView *oldView;
     ZCCalendarView *newView;
     BOOL isAnimat;
@@ -16,19 +16,23 @@
 
 @end
 
-@implementation CalendarView
-@synthesize date;
+@implementation ZCCalendarManageView
 @synthesize monthFrame;
-@synthesize delegate;
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithMothFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.monthFrame = frame;
         [self initialView];
+        self.monthFrame = frame;
     }
     return self;
+}
+
+- (void)setMonthFrame:(CGRect)_monthFrame {
+    monthFrame = _monthFrame;
+    self.frame = monthFrame;
+    newView.frame = oldView.frame = newView.superview.frame = self.bounds;
 }
 
 - (void)initialView {
@@ -41,48 +45,34 @@
     
     [self addSwipeGesture];
     
-    
-    
     {
-        CGRect mothRect = ({CGRect r = self.bounds; r.size.height-=0.5; r;});
-        UIView *dayView = [[UIView alloc] initWithFrame:mothRect];
+        UIView *dayView = [[UIView alloc] init];
         dayView.backgroundColor = [UIColor clearColor];
         dayView.layer.masksToBounds = YES;
         [self addSubview:dayView];
         
-        newView = [[ZCCalendarView alloc] initWithFrame:mothRect];
-        oldView = [[ZCCalendarView alloc] initWithFrame:mothRect];
-        [newView registerClass:[CalendarDayCell class]];
-        [oldView registerClass:[CalendarDayCell class]];
-        self.backgroundColor = newView.backgroundColor = oldView.backgroundColor = UIColorFromRGB(0xf1f1f1);
-        newView.isMultipleSelection = oldView.isMultipleSelection = YES;
+        newView = [[ZCCalendarView alloc] init];
+        oldView = [[ZCCalendarView alloc] init];
         [dayView addSubview:newView];
         [dayView addSubview:oldView];
     }
     self.date = nil;
 }
 
-- (void)setMothFrame:(CGRect)_frame {
-    monthFrame = _frame;
-    self.frame = monthFrame;
-    newView.frame = oldView.frame = self.bounds;
+- (ZCCalendarView *)nowShowCalendarView {
+    return newView;
 }
 
-- (void)setDelegate:(id<ZCCalendarViewDelegate,ZCCalendarViewFrameDelegate>)_delegate {
-    delegate = _delegate;
-    newView.delagate = oldView.delagate = delegate;
-    newView.frameDelagate = oldView.frameDelagate = delegate;
+- (void)setSetCalendarView:(void (^)(ZCCalendarView *))block {
+    if(block) {
+        block(newView);
+        block(oldView);
+    }
 }
 
 - (void)setDate:(NSDate *)_date {
-    date = _date?:[NSDate date];
-    
-    oldView.date = date;
+    oldView.date = _date;
     [self setNeedsDisplay];
-}
-
-- (NSArray<NSDateComponents *> *)selectDays {
-    return newView.selectDays;
 }
 
 - (void)reloadData {
@@ -94,7 +84,7 @@
     UISwipeGestureRecognizer *previousSGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(changePreviousMonth)];
     [previousSGR setDirection:UISwipeGestureRecognizerDirectionDown];
     [self addGestureRecognizer:previousSGR];
-
+    
     UISwipeGestureRecognizer *nextSGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(changeNextMonth)];
     [nextSGR setDirection:UISwipeGestureRecognizerDirectionUp];
     [self addGestureRecognizer:nextSGR];
@@ -102,16 +92,16 @@
 
 - (void)changePreviousMonth {
     isAnimat = YES;
-//    oldView.frame = ({CGRect rect = oldView.frame; rect.origin.x = -rect.size.width; rect;}); // 左右
+    //oldView.frame = ({CGRect rect = oldView.frame; rect.origin.x = -rect.size.width; rect;}); // 左右
     oldView.frame = ({CGRect rect = oldView.frame; rect.origin.y = -rect.size.height; rect;}); // 上下
-    self.date = [[ZCCalendarDate sharedCalendarDate] previousMonthWithDate:self.date];
+    self.date = [[ZCCalendarDate sharedCalendarDate] previousMonthWithDate:self.nowShowCalendarView.date];
 }
 
 - (void)changeNextMonth {
     isAnimat = YES;
-//    oldView.frame = ({CGRect rect = oldView.frame; rect.origin.x = rect.size.width; rect;}); // 左右
+    //oldView.frame = ({CGRect rect = oldView.frame; rect.origin.x = rect.size.width; rect;}); // 左右
     oldView.frame = ({CGRect rect = oldView.frame; rect.origin.y = rect.size.height; rect;}); // 上下
-    self.date = [[ZCCalendarDate sharedCalendarDate] nextMonthWithDate:self.date];
+    self.date = [[ZCCalendarDate sharedCalendarDate] nextMonthWithDate:self.nowShowCalendarView.date];
 }
 
 #pragma mark - 动画
@@ -119,7 +109,7 @@
     [super drawRect:rect];
     
     oldView.hidden = NO;
-
+    
     [UIView animateWithDuration:(isAnimat ? 0.35 : 0) animations:^{
         CGRect tmp = oldView.frame;
         oldView.frame = ({ CGRect rect = oldView.frame; rect.origin.y = 0; rect.origin.x = 0; rect; });

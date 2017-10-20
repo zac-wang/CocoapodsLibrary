@@ -7,14 +7,14 @@
 //
 
 #import "CalendarVC.h"
-#import "CalendarView.h"
+#import "ZCCalendarManageView.h"
 
-@interface CalendarVC ()<ZCCalendarViewDelegate, ZCCalendarViewFrameDelegate>
+@interface CalendarVC ()<ZCCalendarViewDelegate>
 
 @property (strong, nonatomic) UILabel *yearMonthLabel;
 //@property (weak, nonatomic) IBOutlet NSLayoutConstraint *gapLayoutConstraint;
 
-@property (strong, nonatomic) CalendarView *dayView;
+@property (strong, nonatomic) ZCCalendarManageView *dayView;
 
 @end
 
@@ -24,12 +24,13 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor darkGrayColor];
     
+    //显示年月Label
     {
         self.yearMonthLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
         self.yearMonthLabel.center = CGPointMake(self.view.center.x, 85);
         [self.view addSubview:self.yearMonthLabel];
     }
-    
+    //显示星期
     UIView *weekBackGroundView = [[UIView alloc] initWithFrame:CGRectMake(0, self.yearMonthLabel.frame.origin.y+self.yearMonthLabel.frame.size.height, self.view.frame.size.width, 43)];
     weekBackGroundView.backgroundColor = [UIColor whiteColor];
     {
@@ -49,17 +50,24 @@
     
     
     
-    
+    //日历主体
     if(!self.dayView) {
-        self.dayView = [[CalendarView alloc] initWithFrame:CGRectMake(0, weekBackGroundView.frame.origin.y+weekBackGroundView.frame.size.height, self.view.frame.size.width, 43+self.view.frame.size.width/7*6)];
+        self.dayView = [[ZCCalendarManageView alloc] initWithMothFrame:CGRectMake(0, weekBackGroundView.frame.origin.y+weekBackGroundView.frame.size.height, self.view.frame.size.width, 43+self.view.frame.size.width/7*6)];
         [self.view addSubview:self.dayView];
     }
-    self.dayView.date = [NSDate date];
-    self.dayView.delegate = self;
+    //日历设置
+    __weak typeof(self)weakSelf = self;
+    self.dayView.setCalendarView = ^(ZCCalendarView *calendarView) {
+        [calendarView registerClass:[CalendarDayCell class]];
+        calendarView.backgroundColor = UIColorFromRGB(0xf1f1f1);
+        calendarView.isMultipleSelection = YES;
+        calendarView.date = [NSDate date];
+        calendarView.delegate = weakSelf;
+    };
 }
 
 //- (void)viewDidLayoutSubviews {
-//    self.dayView.frame = self.dayView.frame;
+//    self.dayView.monthFrame = self.dayView.frame;
 //}
 //
 //- (IBAction)changePreviousMonth {
@@ -73,7 +81,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self.dayView reloadData];
+    [self.dayView.nowShowCalendarView reloadData];
 }
 
 #pragma mark - Delegate
@@ -95,6 +103,8 @@
 -(void)calendarView:(ZCCalendarView *)collectionView didSelectCell:(CalendarDayCell *)cell {
     //cell.titleLable.textColor = UIColor.whiteColor;
     NSLog(@"%lu-%lu-%lu--%@", cell.dateComponents.year, cell.dateComponents.month, cell.dateComponents.day, cell.lunarCalendar);
+    
+    //NSLog(@"%@", self.dayView.nowShowCalendarView.selectDays);
 }
 
 - (void)calendarView:(ZCCalendarView *)collectionView didDeselectCell:(CalendarDayCell *)cell {

@@ -16,6 +16,7 @@
     // 日期小格大小
     CGSize cellSize;
 
+    ZCCalendarShowMothArray *showMothArray;
     NSDateComponents *nowDateComponents;
 }
 
@@ -27,6 +28,7 @@
 
 @implementation ZCCalendarView
 @synthesize isMultipleSelection;
+@synthesize sectionInset;
 @synthesize date;
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -36,8 +38,8 @@
         UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
         layout.scrollDirection = UICollectionViewScrollDirectionVertical;
         layout.minimumInteritemSpacing = 0;
-        layout.minimumLineSpacing = 1;
-        layout.sectionInset = UIEdgeInsetsMake(1, 0.5, 1, 0.5);
+        layout.minimumLineSpacing = 0;
+        layout.sectionInset = UIEdgeInsetsZero;
 
         m_collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
         m_collectionView.delegate = self;
@@ -54,12 +56,24 @@
     return self;
 }
 
-- (void)setFrame:(CGRect)frame{
-    cellSize = CGSizeMake(((int)(frame.size.width/7*10))/10.0, ((int)(frame.size.height/6*10))/10.0);
-    frame.size = CGSizeMake(cellSize.width*7, cellSize.height*6);
-    
-    ((UICollectionViewFlowLayout *)m_collectionView.collectionViewLayout).itemSize = CGSizeMake(cellSize.width-1, cellSize.height-1);
-    m_collectionView.frame = self.bounds;
+- (void)setSectionInset:(UIEdgeInsets)ei {
+    [self setFrame:self.frame sectionInset:ei];
+}
+
+- (void)setFrame:(CGRect)frame {
+    [self setFrame:frame sectionInset:sectionInset];
+}
+
+- (void)setFrame:(CGRect)frame sectionInset:(UIEdgeInsets)ei {
+    sectionInset = ei;
+    if(!CGRectEqualToRect(CGRectZero, frame)) {
+        cellSize = CGSizeMake(((int)(frame.size.width/7*10))/10.0, ((int)(frame.size.height/6*10))/10.0);
+        frame.size = CGSizeMake(cellSize.width*7, cellSize.height*6);
+        
+        UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)m_collectionView.collectionViewLayout;
+        layout.itemSize = CGSizeMake(cellSize.width-ei.left - ei.right, cellSize.height-ei.top-ei.bottom);
+        m_collectionView.frame = self.bounds;
+    }
     
     super.frame = frame;
 }
@@ -70,7 +84,7 @@
 }
 
 - (void)setDate:(NSDate *)_date {
-    date = _date;
+    date = _date?:[NSDate date];
 
     showMothArray = [[ZCCalendarDate sharedCalendarDate] getCalendarShowMothArrayWithDate:date];
     [m_collectionView reloadData];
@@ -99,8 +113,8 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     NSInteger count = showMothArray.previousMonthTotal + showMothArray.nowMonthTotal + showMothArray.nextMonthTotal;
-    if(count && self.frameDelagate && [self.frameDelagate respondsToSelector:@selector(calendarView:updateSize:)])
-        [self.frameDelagate calendarView:self updateSize:CGSizeMake(self.frame.size.width, cellSize.height * count/7)];
+    if(count && self.delegate && [self.delegate respondsToSelector:@selector(calendarView:updateSize:)])
+        [self.delegate calendarView:self updateSize:CGSizeMake(self.frame.size.width, cellSize.height * count/7)];
     return count;
 }
 
@@ -127,16 +141,16 @@
                     nowDateComponents.month == cell.dateComponents.month &&
                     nowDateComponents.day == cell.dateComponents.day;
     [cell updateDateComponents];
-    if(self.delagate && [self.delagate respondsToSelector:@selector(calendarView:cell:)]){
-        [self.delagate calendarView:self cell:cell];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(calendarView:cell:)]){
+        [self.delegate calendarView:self cell:cell];
     }
     return cell;
 }
 
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     ZCCalendarDayCell *cell = (ZCCalendarDayCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    if(self.delagate && [self.delagate respondsToSelector:@selector(calendarView:shouldSelectCell:)]){
-        return [self.delagate calendarView:self shouldSelectCell:cell];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(calendarView:shouldSelectCell:)]){
+        return [self.delegate calendarView:self shouldSelectCell:cell];
     }
     return cell.type == ZCCalendarDayCellTypeNowMonth;
 }
@@ -144,15 +158,15 @@
 #pragma mark 选中
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     ZCCalendarDayCell * cell = (ZCCalendarDayCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    if(self.delagate && [self.delagate respondsToSelector:@selector(calendarView:didSelectCell:)]){
-        [self.delagate calendarView:self didSelectCell:cell];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(calendarView:didSelectCell:)]){
+        [self.delegate calendarView:self didSelectCell:cell];
     }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     ZCCalendarDayCell * cell = (ZCCalendarDayCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    if(self.delagate && [self.delagate respondsToSelector:@selector(calendarView:didDeselectCell:)]){
-        [self.delagate calendarView:self didDeselectCell:cell];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(calendarView:didDeselectCell:)]){
+        [self.delegate calendarView:self didDeselectCell:cell];
     }
 }
 
