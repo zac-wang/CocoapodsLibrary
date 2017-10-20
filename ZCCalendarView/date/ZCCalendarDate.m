@@ -7,6 +7,7 @@
 //
 
 #import "ZCCalendarDate.h"
+#import "ZCCalendarDateLunarCalendar.h"
 
 #define ChDay @[@"*",@"初一",@"初二",@"初三",@"初四",@"初五",\
                 @"初六",@"初七",@"初八",@"初九",@"初十",\

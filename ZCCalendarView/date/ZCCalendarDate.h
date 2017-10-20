@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZCCalendarDateLunarCalendar.h"
 
 typedef enum : NSUInteger {
     ZCCalendarFirstWeekday_Sunday = 1,
