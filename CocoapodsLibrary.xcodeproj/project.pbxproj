@@ -71,13 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		935F4EAA1F98FB6A00CD6AB7 /* ZCCalendar */ = {
+		935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */ = {
 			isa = PBXGroup;
 			children = (
 				935F4EAB1F98FB6A00CD6AB7 /* date */,
 				935F4EB01F98FB6A00CD6AB7 /* view */,
 			);
-			path = ZCCalendar;
+			path = ZCCalendarView;
 			sourceTree = SOURCE_ROOT;
 		};
 		935F4EAB1F98FB6A00CD6AB7 /* date */ = {
@@ -143,7 +143,7 @@
 				935F4EB51F98FC9A00CD6AB7 /* Calendar */,
 				93B412951F974DED003664BE /* ZCBannerView */,
 				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
-				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendar */,
+				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */,
 				93B412941F974D12003664BE /* Supporting Files */,
 			);
 			path = CocoapodsLibrary;
