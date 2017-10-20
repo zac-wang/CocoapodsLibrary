@@ -11,7 +11,6 @@
 
 @interface ZCCalendarManageView : UIView
 
-- (instancetype)initWithMothFrame:(CGRect)frame;
 @property(nonatomic, readwrite) CGRect monthFrame;
 
 @property(nonatomic, assign) void (^setCalendarView)(ZCCalendarView *calendarView);

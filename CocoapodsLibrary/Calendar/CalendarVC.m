@@ -53,7 +53,7 @@
     
     //日历主体
     if(!self.dayView) {
-        self.dayView = [[ZCCalendarManageView alloc] initWithMothFrame:CGRectMake(0, weekBackGroundView.frame.origin.y+weekBackGroundView.frame.size.height, self.view.frame.size.width, 43+self.view.frame.size.width/7*6)];
+        self.dayView = [[ZCCalendarManageView alloc] initWithFrame:CGRectMake(0, weekBackGroundView.frame.origin.y+weekBackGroundView.frame.size.height, self.view.frame.size.width, 43+self.view.frame.size.width/7*6)];
         [self.view addSubview:self.dayView];
     }
     //日历设置
