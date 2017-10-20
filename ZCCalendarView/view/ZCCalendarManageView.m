@@ -29,12 +29,7 @@
     return self;
 }
 
-- (void)setMonthFrame:(CGRect)_monthFrame {
-    monthFrame = _monthFrame;
-    self.frame = monthFrame;
-    newView.frame = oldView.frame = newView.superview.frame = self.bounds;
-}
-
+#pragma mark - init view
 - (void)initialView {
     isAnimat = NO;
     self.date = [NSDate date];
@@ -59,6 +54,13 @@
     self.date = nil;
 }
 
+- (void)setMonthFrame:(CGRect)_monthFrame {
+    monthFrame = _monthFrame;
+    self.frame = monthFrame;
+    newView.frame = oldView.frame = newView.superview.frame = self.bounds;
+}
+
+#pragma mark - config data
 - (ZCCalendarView *)nowShowCalendarView {
     return newView;
 }
