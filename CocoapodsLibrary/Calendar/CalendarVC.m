@@ -93,7 +93,7 @@
 
 - (void)calendarView:(ZCCalendarView *)collectionView cell:(ZCCalendarDayCell *)cell {
     if(cell.type == ZCCalendarDayCellTypeNowMonth && cell.dateComponents.day == 1) {
-        self.yearMonthLabel.text = [NSString stringWithFormat:@"%ld年%.2ld月", cell.dateComponents.year, cell.dateComponents.month];
+        self.yearMonthLabel.text = [NSString stringWithFormat:@"%ld年%.2ld月", (long)cell.dateComponents.year, (long)cell.dateComponents.month];
     }
 }
 
@@ -103,7 +103,7 @@
 
 -(void)calendarView:(ZCCalendarView *)collectionView didSelectCell:(CalendarDayCell *)cell {
     //cell.titleLable.textColor = UIColor.whiteColor;
-    NSLog(@"%lu-%lu-%lu--%@", cell.dateComponents.year, cell.dateComponents.month, cell.dateComponents.day, cell.lunarCalendar);
+    NSLog(@"%lu-%lu-%lu--%@", (long)cell.dateComponents.year, (long)cell.dateComponents.month, (long)cell.dateComponents.day, cell.lunarCalendar);
     
     //NSLog(@"%@", self.dayView.nowShowCalendarView.selectDays);
 }

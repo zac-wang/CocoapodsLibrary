@@ -10,6 +10,7 @@ Pod::Spec.new do |spec|
   spec.source       =  {:git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
   spec.source_files = 'ZCCalendarView/**/*.{h,m,c,mm}'
   spec.public_header_files = 'ZCCalendarView/**/*.{h}'
+  spec.private_header_files = 'ZCCalendarView/date/ZCCalendarDateLunarCalendar.h'
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
 end

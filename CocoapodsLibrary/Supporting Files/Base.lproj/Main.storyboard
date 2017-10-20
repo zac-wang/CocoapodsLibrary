@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MUE-lc-raA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MUE-lc-raA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,12 +25,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTc-I2-hKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-550" y="31"/>
+            <point key="canvasLocation" x="-158" y="30"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IBg-vx-NG0"/>
+                        <viewControllerLayoutGuide type="bottom" id="zqg-Zo-Obe"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +45,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="ZCBannerView"/>
                                 <connections>
-                                    <segue destination="4RQ-7q-yL7" kind="push" id="mbY-hH-7da"/>
+                                    <segue destination="4RQ-7q-yL7" kind="show" id="mbY-hH-7da"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuA-Et-7gv">
@@ -50,7 +54,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="ZCSpinnerView"/>
                                 <connections>
-                                    <segue destination="EEV-Q7-sx9" kind="push" id="zqB-uC-bkg"/>
+                                    <segue destination="EEV-Q7-sx9" kind="show" id="zqB-uC-bkg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-dr-lTP">
@@ -59,7 +63,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="ZCCalendarView"/>
                                 <connections>
-                                    <segue destination="JGk-E6-XKN" kind="push" id="evz-me-uzd"/>
+                                    <segue destination="JGk-E6-XKN" kind="show" id="evz-me-uzd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,11 +72,10 @@
                             <constraint firstItem="wuA-Et-7gv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7t3-Ah-sLr"/>
                             <constraint firstItem="vwj-hW-msP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PKj-T9-GLj"/>
                             <constraint firstItem="Kb1-dr-lTP" firstAttribute="top" secondItem="wuA-Et-7gv" secondAttribute="bottom" constant="8" id="Z55-DV-Ebj"/>
-                            <constraint firstItem="vwj-hW-msP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="b5s-5R-64X"/>
+                            <constraint firstItem="vwj-hW-msP" firstAttribute="top" secondItem="IBg-vx-NG0" secondAttribute="bottom" constant="8" id="b5s-5R-64X"/>
                             <constraint firstItem="Kb1-dr-lTP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cwP-MB-zYO"/>
                             <constraint firstItem="wuA-Et-7gv" firstAttribute="top" secondItem="vwj-hW-msP" secondAttribute="bottom" constant="8" id="ffe-nY-iMO"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="bAK-cf-uEK"/>
                 </viewController>
@@ -84,11 +87,14 @@
         <scene sceneID="mdI-nw-1tj">
             <objects>
                 <viewController id="JGk-E6-XKN" customClass="CalendarVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RbP-JD-lfc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jjc-q0-ehX"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PHJ-2q-Bib">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="iKc-7F-geO"/>
                     </view>
                     <navigationItem key="navigationItem" id="yH9-PI-g6S"/>
                 </viewController>
@@ -100,6 +106,10 @@
         <scene sceneID="5k3-3J-qPV">
             <objects>
                 <viewController id="EEV-Q7-sx9" customClass="SpinnerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8e3-Yv-bhr"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZAW-Gg-aNB"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bxa-5m-cRi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,10 +125,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ge5-om-vyJ" firstAttribute="top" secondItem="XKb-iO-pbi" secondAttribute="top" constant="45" id="YVu-hY-07z"/>
+                            <constraint firstItem="Ge5-om-vyJ" firstAttribute="top" secondItem="8e3-Yv-bhr" secondAttribute="bottom" constant="45" id="YVu-hY-07z"/>
                             <constraint firstItem="Ge5-om-vyJ" firstAttribute="centerX" secondItem="Bxa-5m-cRi" secondAttribute="centerX" id="lBC-hQ-J3L"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="XKb-iO-pbi"/>
                     </view>
                     <navigationItem key="navigationItem" id="Bc8-C5-mV8"/>
                 </viewController>
@@ -130,6 +139,10 @@
         <scene sceneID="Gj9-iQ-atJ">
             <objects>
                 <viewController id="4RQ-7q-yL7" customClass="BannerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GXg-Ke-0Sy"/>
+                        <viewControllerLayoutGuide type="bottom" id="NYL-4n-42R"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mkN-fa-JJh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,11 +156,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xnV-kR-zUj" firstAttribute="leading" secondItem="svl-2x-zl1" secondAttribute="leading" id="4vW-Nf-1jT"/>
-                            <constraint firstItem="xnV-kR-zUj" firstAttribute="trailing" secondItem="svl-2x-zl1" secondAttribute="trailing" id="61c-WM-5xJ"/>
-                            <constraint firstItem="xnV-kR-zUj" firstAttribute="top" secondItem="svl-2x-zl1" secondAttribute="top" constant="80" id="Rzf-so-ii0"/>
+                            <constraint firstItem="xnV-kR-zUj" firstAttribute="leading" secondItem="mkN-fa-JJh" secondAttribute="leading" id="4vW-Nf-1jT"/>
+                            <constraint firstItem="xnV-kR-zUj" firstAttribute="trailing" secondItem="mkN-fa-JJh" secondAttribute="trailing" id="61c-WM-5xJ"/>
+                            <constraint firstItem="xnV-kR-zUj" firstAttribute="top" secondItem="GXg-Ke-0Sy" secondAttribute="bottom" constant="80" id="Rzf-so-ii0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="svl-2x-zl1"/>
                     </view>
                     <navigationItem key="navigationItem" id="Scy-Om-XRF"/>
                     <connections>
