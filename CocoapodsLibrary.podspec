@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary.git'
   spec.author       = {'王志超' => 'love_iphone@qq.com'}
   spec.source       =  {:git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
-  spec.dependency 'ZCBannerView', :git => 'https://github.com/zac-wang/CocoapodsLibrary.git'
-  spec.dependency 'ZCSpinnerView', :git => 'https://github.com/zac-wang/CocoapodsLibrary.git'
-  spec.dependency 'ZCCalendarView', :git => 'https://github.com/zac-wang/CocoapodsLibrary.git'
+  spec.dependency   = 'ZCBannerView', :git => 'https://github.com/zac-wang/CocoapodsLibrary.git'
+  spec.dependency   = 'ZCSpinnerView', :git => 'https://github.com/zac-wang/CocoapodsLibrary.git'
+  spec.dependency   = 'ZCCalendarView', :git => 'https://github.com/zac-wang/CocoapodsLibrary.git'
 end
