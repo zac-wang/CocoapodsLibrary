@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCVerticalButton"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.0"
   spec.summary      = "ZCVerticalButton UI Kit"
   spec.description  = "图标与文字位置自定义，可以上下"
   spec.platform     = :ios, '7.0'

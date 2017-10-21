@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCCalendarView"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.0"
   spec.summary      = "ZCCalendarView UI Kit"
   spec.description  = "这是一个日历"
   spec.platform     = :ios, '7.0'

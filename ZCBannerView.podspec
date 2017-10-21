@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCBannerView"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.0"
   spec.summary      = "ZCBannerView UI Kit"
   spec.description  = "这是一个滚动条"
   spec.platform     = :ios, '7.0'
