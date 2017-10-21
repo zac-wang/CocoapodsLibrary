@@ -8,8 +8,11 @@
 //
 
 #import "VerticalButtonVC.h"
+#import "ZCVerticalButton.h"
 
 @interface VerticalButtonVC ()
+
+@property (weak, nonatomic) IBOutlet ZCVerticalButton *btn;
 
 @end
 
@@ -17,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.btn imageFrame:CGRectMake(0, 0, 100, 100) titleFrame:CGRectMake(0, 100, 100, 20)];
 }
 
 - (void)didReceiveMemoryWarning {

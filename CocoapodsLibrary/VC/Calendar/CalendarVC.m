@@ -53,13 +53,13 @@
     
     //日历主体
     if(!self.dayView) {
-        self.dayView = [[ZCCalendarManageView alloc] initWithFrame:CGRectMake(0, weekBackGroundView.frame.origin.y+weekBackGroundView.frame.size.height, self.view.frame.size.width, 43+self.view.frame.size.width/7*6)];
+        self.dayView = [[ZCCalendarManageView alloc] initWithFrame:CGRectMake(0, weekBackGroundView.frame.origin.y+weekBackGroundView.frame.size.height, self.view.frame.size.width, self.view.frame.size.width/7*6)];
         [self.view addSubview:self.dayView];
     }
     //日历设置
     __weak typeof(self)weakSelf = self;
     self.dayView.setCalendarView = ^(ZCCalendarView *calendarView) {
-        [calendarView registerClass:[CalendarDayCell class]];
+        //[calendarView registerClass:[CalendarDayCell class]];
         calendarView.backgroundColor = UIColorFromRGB(0xf1f1f1);
         calendarView.isMultipleSelection = YES;
         calendarView.date = [NSDate date];

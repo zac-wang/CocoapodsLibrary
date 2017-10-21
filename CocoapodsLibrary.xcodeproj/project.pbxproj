@@ -25,6 +25,7 @@
 		93B4129D1F97523B003664BE /* main_banner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93B412961F974DED003664BE /* main_banner.bundle */; };
 		93B412A11F976016003664BE /* SpinnerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B412A01F976016003664BE /* SpinnerVC.m */; };
 		93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B412A31F976026003664BE /* ZCSpinnerView.m */; };
+		93B5CA281F9B229400288040 /* ZCVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4F0D1F9AEDB400CD6AB7 /* ZCVerticalButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -289,20 +290,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B5CA281F9B229400288040 /* ZCVerticalButton.m in Sources */,
+				935F4F101F9AEE0900CD6AB7 /* VerticalButtonVC.m in Sources */,
 				935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */,
-				935F4EBD1F99090400CD6AB7 /* CalendarDayCell.m in Sources */,
 				935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */,
 				935F4EBF1F99090400CD6AB7 /* ZCCalendarDate.m in Sources */,
 				935F4EC01F99090400CD6AB7 /* ZCCalendarDayCell.m in Sources */,
 				935F4EC11F99090400CD6AB7 /* ZCCalendarView.m in Sources */,
-				93B4128D1F974CE2003664BE /* main.m in Sources */,
-				93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */,
+				935F4EBD1F99090400CD6AB7 /* CalendarDayCell.m in Sources */,
 				935F4EBC1F99018000CD6AB7 /* CalendarVC.m in Sources */,
 				93B412A11F976016003664BE /* SpinnerVC.m in Sources */,
-				935F4F101F9AEE0900CD6AB7 /* VerticalButtonVC.m in Sources */,
-				93B4129B1F974ED8003664BE /* BannerVC.m in Sources */,
 				93B4129C1F974FCB003664BE /* ZCBannerView.m in Sources */,
 				93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */,
+				93B4129B1F974ED8003664BE /* BannerVC.m in Sources */,
+				93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */,
+				93B4128D1F974CE2003664BE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

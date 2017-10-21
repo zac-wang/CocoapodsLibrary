@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,15 +65,26 @@
                                     <segue destination="JGk-E6-XKN" kind="show" id="evz-me-uzd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSI-bX-9wD">
+                                <rect key="frame" x="118" y="198" width="139" height="34"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="ZCVerticalButton"/>
+                                <connections>
+                                    <segue destination="FUM-h2-VsK" kind="show" id="gaA-WQ-zzz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wuA-Et-7gv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7t3-Ah-sLr"/>
+                            <constraint firstItem="DSI-bX-9wD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FBB-jw-BMO"/>
                             <constraint firstItem="vwj-hW-msP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PKj-T9-GLj"/>
                             <constraint firstItem="Kb1-dr-lTP" firstAttribute="top" secondItem="wuA-Et-7gv" secondAttribute="bottom" constant="8" id="Z55-DV-Ebj"/>
                             <constraint firstItem="vwj-hW-msP" firstAttribute="top" secondItem="IBg-vx-NG0" secondAttribute="bottom" constant="8" id="b5s-5R-64X"/>
                             <constraint firstItem="Kb1-dr-lTP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cwP-MB-zYO"/>
                             <constraint firstItem="wuA-Et-7gv" firstAttribute="top" secondItem="vwj-hW-msP" secondAttribute="bottom" constant="8" id="ffe-nY-iMO"/>
+                            <constraint firstItem="DSI-bX-9wD" firstAttribute="top" secondItem="Kb1-dr-lTP" secondAttribute="bottom" constant="8" id="gnB-ou-HYP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bAK-cf-uEK"/>
@@ -100,7 +110,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRJ-Bh-HQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681" y="511"/>
+            <point key="canvasLocation" x="1505" y="-363"/>
+        </scene>
+        <!--Vertical ButtonVC-->
+        <scene sceneID="zxn-iY-Q5K">
+            <objects>
+                <viewController id="FUM-h2-VsK" customClass="VerticalButtonVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cBF-nz-gdq"/>
+                        <viewControllerLayoutGuide type="bottom" id="oL3-VK-bjg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PyB-2h-0EI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYQ-B4-Xtt" customClass="ZCVerticalButton">
+                                <rect key="frame" x="154" y="241" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Title" image="Icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3k1-RA-OVD"/>
+                    <connections>
+                        <outlet property="btn" destination="eYQ-B4-Xtt" id="R0m-wR-9Cr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyz-BD-uQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2808.8000000000002" y="-364.7676161919041"/>
         </scene>
         <!--SpinnerVC-->
         <scene sceneID="5k3-3J-qPV">
@@ -133,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgc-u4-SCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681" y="-180"/>
+            <point key="canvasLocation" x="2810" y="-1260"/>
         </scene>
         <!--BannerVC-->
         <scene sceneID="Gj9-iQ-atJ">
@@ -168,7 +208,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mC0-rw-YfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681" y="-902"/>
+            <point key="canvasLocation" x="1505" y="-1261"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon" width="57" height="57"/>
+    </resources>
 </document>
