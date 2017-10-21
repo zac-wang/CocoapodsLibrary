@@ -8,9 +8,9 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary.git'
   spec.author       = {'王志超' => 'love_iphone@qq.com'}
   spec.source       =  {:git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
-  spec.source_files = 'ZCCalendarView/**/*.{h,m,c,mm}'
-  spec.public_header_files = 'ZCCalendarView/**/*.{h}'
-  spec.private_header_files = 'ZCCalendarView/date/ZCCalendarDateLunarCalendar.h'
+  spec.source_files = 'Library/ZCCalendarView/**/*.{h,m,c,mm}'
+  spec.public_header_files = 'Library/ZCCalendarView/**/*.{h}'
+  spec.private_header_files = 'Library/ZCCalendarView/date/ZCCalendarDateLunarCalendar.h'
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
 end

@@ -14,6 +14,7 @@
 		935F4EC11F99090400CD6AB7 /* ZCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB41F98FB6A00CD6AB7 /* ZCCalendarView.m */; };
 		935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */; };
 		935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */; };
+		935F4F101F9AEE0900CD6AB7 /* VerticalButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4F0F1F9AEE0900CD6AB7 /* VerticalButtonVC.m */; };
 		93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4127E1F974CE2003664BE /* AppDelegate.m */; };
 		93B412851F974CE2003664BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B412831F974CE2003664BE /* Main.storyboard */; };
 		93B412871F974CE2003664BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B412861F974CE2003664BE /* Assets.xcassets */; };
@@ -41,6 +42,10 @@
 		935F4EBB1F99018000CD6AB7 /* CalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarVC.m; sourceTree = "<group>"; };
 		935F4EC31F999CB200CD6AB7 /* ZCCalendarManageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarManageView.h; sourceTree = "<group>"; };
 		935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
+		935F4F0C1F9AEDB400CD6AB7 /* ZCVerticalButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCVerticalButton.h; sourceTree = "<group>"; };
+		935F4F0D1F9AEDB400CD6AB7 /* ZCVerticalButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCVerticalButton.m; sourceTree = "<group>"; };
+		935F4F0E1F9AEE0900CD6AB7 /* VerticalButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerticalButtonVC.h; sourceTree = "<group>"; };
+		935F4F0F1F9AEE0900CD6AB7 /* VerticalButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerticalButtonVC.m; sourceTree = "<group>"; };
 		93B4127A1F974CE2003664BE /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B4127D1F974CE2003664BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93B4127E1F974CE2003664BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,7 +82,8 @@
 				935F4EAB1F98FB6A00CD6AB7 /* date */,
 				935F4EB01F98FB6A00CD6AB7 /* view */,
 			);
-			path = ZCCalendarView;
+			name = ZCCalendarView;
+			path = Library/ZCCalendarView;
 			sourceTree = SOURCE_ROOT;
 		};
 		935F4EAB1F98FB6A00CD6AB7 /* date */ = {
@@ -115,6 +121,41 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
+		935F4F0B1F9AEDB400CD6AB7 /* ZCVerticalButton */ = {
+			isa = PBXGroup;
+			children = (
+				935F4F0C1F9AEDB400CD6AB7 /* ZCVerticalButton.h */,
+				935F4F0D1F9AEDB400CD6AB7 /* ZCVerticalButton.m */,
+			);
+			name = ZCVerticalButton;
+			path = Library/ZCVerticalButton;
+			sourceTree = SOURCE_ROOT;
+		};
+		935F4F111F9AEE3900CD6AB7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				93B412991F974ED8003664BE /* BannerVC.h */,
+				93B4129A1F974ED8003664BE /* BannerVC.m */,
+				93B4129F1F976016003664BE /* SpinnerVC.h */,
+				93B412A01F976016003664BE /* SpinnerVC.m */,
+				935F4EB51F98FC9A00CD6AB7 /* Calendar */,
+				935F4F0E1F9AEE0900CD6AB7 /* VerticalButtonVC.h */,
+				935F4F0F1F9AEE0900CD6AB7 /* VerticalButtonVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		935F4F131F9AEE9100CD6AB7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				93B412951F974DED003664BE /* ZCBannerView */,
+				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
+				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */,
+				935F4F0B1F9AEDB400CD6AB7 /* ZCVerticalButton */,
+			);
+			path = Library;
+			sourceTree = SOURCE_ROOT;
+		};
 		93B412711F974CE2003664BE = {
 			isa = PBXGroup;
 			children = (
@@ -136,14 +177,8 @@
 			children = (
 				93B4127D1F974CE2003664BE /* AppDelegate.h */,
 				93B4127E1F974CE2003664BE /* AppDelegate.m */,
-				93B412991F974ED8003664BE /* BannerVC.h */,
-				93B4129A1F974ED8003664BE /* BannerVC.m */,
-				93B4129F1F976016003664BE /* SpinnerVC.h */,
-				93B412A01F976016003664BE /* SpinnerVC.m */,
-				935F4EB51F98FC9A00CD6AB7 /* Calendar */,
-				93B412951F974DED003664BE /* ZCBannerView */,
-				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
-				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */,
+				935F4F111F9AEE3900CD6AB7 /* VC */,
+				935F4F131F9AEE9100CD6AB7 /* Library */,
 				93B412941F974D12003664BE /* Supporting Files */,
 			);
 			path = CocoapodsLibrary;
@@ -168,7 +203,8 @@
 				93B412971F974DED003664BE /* ZCBannerView.h */,
 				93B412981F974DED003664BE /* ZCBannerView.m */,
 			);
-			path = ZCBannerView;
+			name = ZCBannerView;
+			path = Library/ZCBannerView;
 			sourceTree = SOURCE_ROOT;
 		};
 		93B4129E1F975FE3003664BE /* ZCSpinnerView */ = {
@@ -177,7 +213,8 @@
 				93B412A21F976026003664BE /* ZCSpinnerView.h */,
 				93B412A31F976026003664BE /* ZCSpinnerView.m */,
 			);
-			path = ZCSpinnerView;
+			name = ZCSpinnerView;
+			path = Library/ZCSpinnerView;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -262,6 +299,7 @@
 				93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */,
 				935F4EBC1F99018000CD6AB7 /* CalendarVC.m in Sources */,
 				93B412A11F976016003664BE /* SpinnerVC.m in Sources */,
+				935F4F101F9AEE0900CD6AB7 /* VerticalButtonVC.m in Sources */,
 				93B4129B1F974ED8003664BE /* BannerVC.m in Sources */,
 				93B4129C1F974FCB003664BE /* ZCBannerView.m in Sources */,
 				93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */,

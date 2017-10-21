@@ -8,8 +8,8 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary.git'
   spec.author       = {'王志超' => 'love_iphone@qq.com'}
   spec.source       =  {:git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
-  spec.source_files = 'ZCSpinnerView/**/*.{h,m,mm}'
-  spec.public_header_files = 'ZCSpinnerView/**/*.{h}'
+  spec.source_files = 'Library/ZCSpinnerView/**/*.{h,m,mm}'
+  spec.public_header_files = 'Library/ZCSpinnerView/**/*.{h}'
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
 end
