@@ -81,7 +81,9 @@
     if(self.oneImageNotRolling && self.contentSize.width == self.frame.size.width) {
         return;
     }
+    //self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector() userInfo:nil repeats:YES];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(scrollToNextPage) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)stop {
