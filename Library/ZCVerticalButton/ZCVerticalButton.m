@@ -15,38 +15,33 @@
 
 @end
 
+#define CGRectFromCentAndSize(_cent_, _size_) CGRectMake(_cent_.x-_size_.width/2, _cent_.y-_size_.height/2, _size_.height, _size_.width)
+
 @implementation ZCVerticalButton
 
-- (void)imageCent:(CGPoint)_imageCent
+- (void)imageCentY:(float)_imageCentY
         imageSize:(CGSize)_imageSize
-        titleCent:(CGPoint)_titleCent
+        titleCentY:(float)_titleCentY
         titleSize:(CGSize)_titleSize {
-    if(CGPointEqualToPoint(CGPointZero, _imageCent)) {
-        if(CGSizeEqualToSize(CGSizeZero, _imageSize)) {
-            m_imageViewFrame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height/2);
-        }else {
-            m_imageViewFrame = CGRectMake((self.frame.size.width-_imageSize.width)/2, 0, _imageSize.width, _imageSize.height);
-        }
-    }else {
-        if(CGSizeEqualToSize(CGSizeZero, _imageSize)) {
-            m_imageViewFrame = CGRectMake(0, 0, self.frame.size.width, _imageCent.y*2);
-        }else {
-            m_imageViewFrame = CGRectMake(_imageCent.x-_imageSize.width/2, _imageCent.y-_imageSize.height/2, _imageSize.width, _imageSize.height);
-        }
+    float centX = self.center.x;
+    
+    if(!_imageCentY) {
+        _imageCentY = self.frame.size.height/4;
     }
-    if(CGPointEqualToPoint(CGPointZero, _titleCent)) {
-        if(CGSizeEqualToSize(CGSizeZero, _titleSize)) {
-            m_titleLabelFrame = CGRectMake(0, self.frame.size.height/2, self.frame.size.width, self.frame.size.height/2);
-        }else {
-            m_titleLabelFrame = CGRectMake((self.frame.size.width-_titleSize.width)/2, self.frame.size.height-_titleSize.height, _titleSize.width, _titleSize.height);
-        }
-    }else {
-        if(CGSizeEqualToSize(CGSizeZero, _titleSize)) {
-            m_titleLabelFrame = CGRectMake(0, self.frame.size.height-(self.frame.size.height-_titleCent.y)*2, self.frame.size.width, (self.frame.size.height-_imageCent.y)*2);
-        }else {
-            m_titleLabelFrame = CGRectMake(_titleCent.x-_titleSize.width/2, _titleCent.y-_titleSize.height/2, _titleSize.width, _titleSize.height);
-        }
+    if(CGSizeEqualToSize(CGSizeZero, _imageSize)) {
+        _imageSize = CGSizeMake(self.frame.size.width, self.frame.size.height/2);
     }
+    m_imageViewFrame = CGRectFromCentAndSize(CGPointMake(centX, _imageCentY), _imageSize);
+    
+    
+    if(!_titleCentY) {
+        _titleCentY = self.frame.size.height/4*3;
+    }
+    
+    if(CGSizeEqualToSize(CGSizeZero, _titleSize)) {
+        _titleSize = CGSizeMake(self.frame.size.width, self.frame.size.height/2);
+    }
+    m_imageViewFrame = CGRectFromCentAndSize(CGPointMake(centX, _titleCentY), _titleSize);
     
     [self layoutSubviews];
 }
