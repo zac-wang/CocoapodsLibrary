@@ -71,10 +71,11 @@
 }
 
 - (void)showForAnimat:(BOOL)isAnimat {
-    float height = self.cellHeight * self.dataSource.count;
+    float height = self.cellHeight *self.dataSource.count;
     if(height > self.maxHeight) {
         height = self.maxHeight;
     }
+    [self.tableView reloadData];
     
     CGRect tableRect = self.tableView.frame;
     tableRect.size.height = 0;
