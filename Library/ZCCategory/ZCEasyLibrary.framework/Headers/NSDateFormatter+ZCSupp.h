@@ -1,5 +1,5 @@
 //
-//  NSDateFormatter+supp.h
+//  NSDateFormatter+ZCSupp.h
 //  CocoapodsLibrary
 //
 //  Created by 王志超 on 2017/10/23.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDateFormatter (supp)
+@interface NSDateFormatter (ZCSupp)
 
-+ (NSDateFormatter *)dateFormatterWithFormatString:(NSString *)formatString;
++ (NSDateFormatter *)zc_formatWithFormat:(NSString *)formatString;
 
 @end

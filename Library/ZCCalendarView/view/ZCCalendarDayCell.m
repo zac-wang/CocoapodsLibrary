@@ -8,6 +8,7 @@
 
 #import "ZCCalendarDayCell.h"
 #import "ZCCalendarDate.h"
+#import <ZCEasyLibrary/ZCCalendar.h>
 
 @interface ZCCalendarDayCell () {
     CAShapeLayer *layer;
@@ -49,8 +50,8 @@
     }else if (self.type == ZCCalendarDayCellTypeNowMonth){
         if(self.isNowDay){
             titleLabel.textColor = UIColor.redColor;
-        }else if(self.dateComponents.weekday == ZCCalendarFirstWeekday_Sunday ||
-                 self.dateComponents.weekday == ZCCalendarFirstWeekday_Saturday)
+        }else if(self.dateComponents.weekday == ZCCalendarSunday ||
+                 self.dateComponents.weekday == ZCCalendarSaturday)
             titleLabel.textColor = UIColorFromRGB(0xff5249);
         else
             titleLabel.textColor = UIColorFromRGB(0x3c3c3c);
@@ -59,7 +60,7 @@
     }
     subTitleLabel.textColor = UIColor.lightGrayColor;
     
-    titleLabel.text = [NSString stringWithFormat:@"%ld", self.dateComponents.day];
+    titleLabel.text = [NSString stringWithFormat:@"%ld", (long)self.dateComponents.day];
     subTitleLabel.text = self.lunarCalendar;
     
     

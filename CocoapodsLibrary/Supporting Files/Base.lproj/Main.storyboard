@@ -66,10 +66,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSI-bX-9wD">
-                                <rect key="frame" x="118" y="198" width="139" height="34"/>
+                                <rect key="frame" x="168" y="198" width="40" height="34"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="ZCVerticalButton"/>
+                                <state key="normal" title="View"/>
                                 <connections>
                                     <segue destination="FUM-h2-VsK" kind="show" id="gaA-WQ-zzz"/>
                                 </connections>
@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="1505" y="-363"/>
         </scene>
-        <!--Vertical ButtonVC-->
+        <!--ViewVC-->
         <scene sceneID="zxn-iY-Q5K">
             <objects>
-                <viewController id="FUM-h2-VsK" customClass="VerticalButtonVC" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="FUM-h2-VsK" customClass="ViewVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cBF-nz-gdq"/>
                         <viewControllerLayoutGuide type="bottom" id="oL3-VK-bjg"/>
@@ -125,17 +125,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYQ-B4-Xtt" customClass="ZCVerticalButton">
-                                <rect key="frame" x="154" y="241" width="100" height="120"/>
+                                <rect key="frame" x="16" y="72" width="100" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Title" image="Icon"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Yq-rM-cjI" customClass="ZCTextView">
+                                <rect key="frame" x="135" y="72" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwy-PU-RpB">
+                                <rect key="frame" x="8" y="270" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选择时间"/>
+                                <connections>
+                                    <action selector="showDatePicker:" destination="FUM-h2-VsK" eventType="touchUpInside" id="Db8-rA-13h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9o-1k-2P2">
+                                <rect key="frame" x="258" y="270" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选择图片"/>
+                                <connections>
+                                    <action selector="showImagePicker:" destination="FUM-h2-VsK" eventType="touchUpInside" id="8oY-Zt-KMN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3k1-RA-OVD"/>
                     <connections>
-                        <outlet property="btn" destination="eYQ-B4-Xtt" id="R0m-wR-9Cr"/>
+                        <outlet property="btn" destination="eYQ-B4-Xtt" id="1lW-UO-agI"/>
+                        <outlet property="textView" destination="2Yq-rM-cjI" id="Lzm-Ff-2nS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyz-BD-uQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

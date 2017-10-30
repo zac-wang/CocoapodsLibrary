@@ -8,6 +8,9 @@
 
 #import "ZCCalendarDate.h"
 #import "ZCCalendarDateLunarCalendar.h"
+#import <ZCEasyLibrary/ZCCalendar.h>
+#import <ZCEasyLibrary/NSDateComponents+ZCSupp.h>
+#import <ZCEasyLibrary/NSDate+ZCSupp.h>
 
 #define ChDay @[@"*",@"初一",@"初二",@"初三",@"初四",@"初五",\
                 @"初六",@"初七",@"初八",@"初九",@"初十",\
@@ -20,17 +23,14 @@
 
 @implementation ZCCalendarShowMothArray
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%ld-%ld, %ld-%ld, %ld-%ld", self.previousMonthStartDay, self.previousMonthTotal, self.nowMonthStartDay, self.nowMonthTotal, self.nextMonthStartDay, self.nextMonthTotal];
+    return [NSString stringWithFormat:@"startDate:%@, count:%ld", self.startCom, (unsigned long)self.total];
 }
 @end
 
-@interface ZCCalendarDate (){
-    NSCalendar *calendar;
-}
+@interface ZCCalendarDate ()
 @end
 
 @implementation ZCCalendarDate
-@synthesize weekStart;
 
 + (instancetype)sharedCalendarDate {
     static id _sharedInstance = nil;
@@ -41,82 +41,19 @@
     return _sharedInstance;
 }
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        calendar = [NSCalendar currentCalendar];
-        self.weekStart = ZCCalendarFirstWeekday_Sunday;
-    }
-    return self;
-}
-
-- (void)setWeekStart:(ZCCalendarFirstWeekday)_weekStart {
-    weekStart = _weekStart;
-    calendar.firstWeekday = _weekStart;
-}
-
-- (NSDateComponents *)dateComponentsWithDate:(NSDate *)date {
-    NSUInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
-    NSDateComponents *com = [calendar components:unitFlags fromDate:date];
-    return com;
-}
-
-- (NSDate *)dateWithDateComponents:(NSDateComponents *)dateComps {
-    NSDate *date = [calendar dateFromComponents:dateComps];
-    return date;
-}
-
-- (NSDate *)previousMonthWithDate:(NSDate *)date{
-    NSDateComponents *comps = [self dateComponentsWithDate:date];
-    comps.day = 1;
-    if(comps.month == 1){
-        comps.year -= 1;
-        comps.month = 12;
-    }else{
-        comps.month -= 1;
-    }
-    return [calendar dateFromComponents:comps];
-}
-
-- (NSDate *)nextMonthWithDate:(NSDate *)date{
-    NSDateComponents *comps = [self dateComponentsWithDate:date];
-    comps.day = 1;
-    if(comps.month == 12){
-        comps.year += 1;
-        comps.month = 1;
-    }else{
-        comps.month += 1;
-    }
-    return [calendar dateFromComponents:comps];
-}
-
 - (ZCCalendarShowMothArray *)getCalendarShowMothArrayWithDate:(NSDate *)date{
-    NSDateComponents *currentCom = [self dateComponentsWithDate:date];
-    currentCom.day = 1;
+    NSDate *nowMonthFirstDayDate = date.zc_firstDayOfCurrentMonth;
 
-    NSDate *nowMonthFirstDayDate = [self dateWithDateComponents:currentCom];
-    NSUInteger nowMonthTotal = [calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:nowMonthFirstDayDate].length;
-
-    int previousCount = ([self dateComponentsWithDate:nowMonthFirstDayDate].weekday - self.weekStart + 7)%7;
+    int previousCount = (nowMonthFirstDayDate.zc_weekDay - [ZCCalendar shared].firstWeekday + 7)%7;
     NSDate *previousDateLastDayDate = [nowMonthFirstDayDate dateByAddingTimeInterval:-24*60*60];
-    NSUInteger previousMonthTotal = [calendar rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:previousDateLastDayDate].length;
+    NSUInteger previousMonthTotal = previousDateLastDayDate.zc_countOfDaysInCurrentMonth;
 
     ZCCalendarShowMothArray *array = [[ZCCalendarShowMothArray alloc] init];
-    array.previousMonthOfYear = currentCom.month == 1 ? (currentCom.year - 1) : currentCom.year;
-    array.previousMonth = currentCom.month == 1 ? 12 : currentCom.month - 1;
-    array.previousMonthStartDay = previousMonthTotal - previousCount + 1;
-    array.previousMonthTotal = previousCount;
-    
-    array.nowMonthOfYear = currentCom.year;
-    array.nowMonth = currentCom.month;
-    array.nowMonthStartDay = 1;
-    array.nowMonthTotal = nowMonthTotal;
-    
-    array.nextMonthOfYear = currentCom.month == 12 ? (currentCom.year + 1) : currentCom.year;
-    array.nextMonth = currentCom.month == 12 ? 1 : currentCom.month + 1;
-    array.nextMonthStartDay = 1;
-    array.nextMonthTotal = (7*6 - (array.previousMonthTotal + array.nowMonthTotal))%7;
+    array.startCom = [[NSDateComponents alloc] init];
+    array.startCom.year = date.zc_month == 1 ? (date.zc_year - 1) : date.zc_year;
+    array.startCom.month = date.zc_month == 1 ? 12 : date.zc_month - 1;
+    array.startCom.day = previousMonthTotal - previousCount + 1;
+    array.total = previousCount + nowMonthFirstDayDate.zc_countOfDaysInCurrentMonth + (7*6 - (previousCount + nowMonthFirstDayDate.zc_countOfDaysInCurrentMonth))%7;
     return array;
 }
 

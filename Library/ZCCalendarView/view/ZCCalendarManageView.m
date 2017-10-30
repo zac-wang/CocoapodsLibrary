@@ -7,6 +7,8 @@
 //
 
 #import "ZCCalendarManageView.h"
+#import <ZCEasyLibrary/NSDate+ZCSupp.h>
+#import <ZCEasyLibrary/ZCCalendar.h>
 
 @interface ZCCalendarManageView () {
     ZCCalendarView *oldView;
@@ -33,7 +35,7 @@
 - (void)initialView {
     isAnimat = NO;
     self.date = [NSDate date];
-    [ZCCalendarDate sharedCalendarDate].weekStart = ZCCalendarFirstWeekday_Monday;
+    [ZCCalendar shared].firstWeekday = ZCCalendarMonday;
     
     self.backgroundColor = [UIColor clearColor];
     self.layer.masksToBounds = YES;
@@ -96,14 +98,14 @@
     isAnimat = YES;
     //oldView.frame = ({CGRect rect = oldView.frame; rect.origin.x = -rect.size.width; rect;}); // 左右
     oldView.frame = ({CGRect rect = oldView.frame; rect.origin.y = -rect.size.height; rect;}); // 上下
-    self.date = [[ZCCalendarDate sharedCalendarDate] previousMonthWithDate:self.nowShowCalendarView.date];
+    self.date = self.nowShowCalendarView.date.zc_previousMonthStartDate;
 }
 
 - (void)changeNextMonth {
     isAnimat = YES;
     //oldView.frame = ({CGRect rect = oldView.frame; rect.origin.x = rect.size.width; rect;}); // 左右
     oldView.frame = ({CGRect rect = oldView.frame; rect.origin.y = rect.size.height; rect;}); // 上下
-    self.date = [[ZCCalendarDate sharedCalendarDate] nextMonthWithDate:self.nowShowCalendarView.date];
+    self.date = self.nowShowCalendarView.date.zc_nextMonthStartDate;
 }
 
 #pragma mark - 动画

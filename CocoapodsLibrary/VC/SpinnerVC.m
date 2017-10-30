@@ -32,7 +32,7 @@
         };
         self.spinnerView.selectEvent = ^(UITableViewCell *cell, NSIndexPath *indexPath) {
             //cell.accessoryType = UITableViewCellAccessoryCheckmark;
-            NSLog(@"%ld", indexPath.row);
+            NSLog(@"%ld", (long)indexPath.row);
         };
     }
     [self.spinnerView show];

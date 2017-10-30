@@ -31,7 +31,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
     
     [self.banerScrollView start];
 }

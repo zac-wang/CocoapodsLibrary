@@ -81,14 +81,15 @@
     if(self.oneImageNotRolling && self.contentSize.width == self.frame.size.width) {
         return;
     }
-    //self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector() userInfo:nil repeats:YES];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(scrollToNextPage) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    [self addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)stop {
     if(self.timer.isValid) {
         [self.timer invalidate];
+        [self removeObserver:self forKeyPath:@"contentOffset"];
     }
 }
 
@@ -105,16 +106,23 @@
     [UIView animateWithDuration:0.25 animations:^{
         self.contentOffset = CGPointMake(page*self.frame.size.width, 0);
     } completion:^(BOOL finished) {
-        if(page+1 >= self.contentSize.width/self.frame.size.width) {
-            self.contentOffset = CGPointMake(0, 0);
-        }
-        self.pageControl.currentPage = self.contentOffset.x/self.frame.size.width;
+        
     }];
 }
 
 #pragma mark - delegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    self.pageControl.currentPage = self.contentOffset.x/self.frame.size.width;
+    int page = self.contentOffset.x/self.frame.size.width;
+    if(page+1 >= self.contentSize.width/self.frame.size.width) {
+        page = 0;
+        self.contentOffset = CGPointMake(0, 0);
+    }
+    self.pageControl.currentPage = page;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    if ([keyPath isEqual:@"contentOffset"])
+        [self scrollViewDidEndDecelerating:nil];
 }
 
 @end

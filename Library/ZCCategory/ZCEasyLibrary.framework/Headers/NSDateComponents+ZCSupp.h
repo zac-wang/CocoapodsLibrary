@@ -10,6 +10,6 @@
 
 @interface NSDateComponents (supp)
 
-@property(nonatomic, readonly) NSDate *toDate;
+@property(nonatomic, readonly) NSDate *zc_toDate;
 
 @end

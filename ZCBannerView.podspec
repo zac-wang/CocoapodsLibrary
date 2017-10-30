@@ -10,6 +10,7 @@ Pod::Spec.new do |spec|
   spec.source       =  {:git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
   spec.source_files = 'Library/ZCBannerView/**/*.{h,m,mm}'
   spec.public_header_files = 'Library/ZCBannerView/**/*.{h}'
+  spec.resources = ['Library/ZCBannerView/main_banner.bundle']
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
 end

@@ -7,6 +7,8 @@
 //
 
 #import "ZCCalendarView.h"
+#import <ZCEasyLibrary/NSDate+ZCSupp.h>
+#import <ZCEasyLibrary/NSDateComponents+ZCSupp.h>
 
 //实现三个协议：
 @interface ZCCalendarView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
@@ -107,35 +109,44 @@
 
 #pragma mark -- UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    nowDateComponents = [[ZCCalendarDate sharedCalendarDate] dateComponentsWithDate:[NSDate date]];
+    nowDateComponents = [NSDate date].zc_dateComponents;
     return 1;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSInteger count = showMothArray.previousMonthTotal + showMothArray.nowMonthTotal + showMothArray.nextMonthTotal;
+    NSInteger count = showMothArray.total;
     if(count && self.delegate && [self.delegate respondsToSelector:@selector(calendarView:updateSize:)])
         [self.delegate calendarView:self updateSize:CGSizeMake(self.frame.size.width, cellSize.height * count/7)];
     return count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    ZCCalendarDayCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    if(showMothArray.previousMonthTotal > indexPath.row){
+    ZCCalendarDayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.dateComponents = [(NSDate *)[showMothArray.startCom.zc_toDate dateByAddingTimeInterval:24*60*60*indexPath.row] zc_dateComponents];
+    if(self.date.zc_month-1==cell.dateComponents.month && self.date.zc_month+11==cell.dateComponents.month) {
         cell.type = ZCCalendarDayCellTypePreviousMonth;
-        cell.dateComponents.year = showMothArray.previousMonthOfYear;
-        cell.dateComponents.month = showMothArray.previousMonth;
-        cell.dateComponents.day = showMothArray.previousMonthStartDay + indexPath.row;
-    }else if (showMothArray.previousMonthTotal + showMothArray.nowMonthTotal > indexPath.row){
-        cell.type = ZCCalendarDayCellTypeNowMonth;
-        cell.dateComponents.year = showMothArray.nowMonthOfYear;
-        cell.dateComponents.month = showMothArray.nowMonth;
-        cell.dateComponents.day = showMothArray.nowMonthStartDay + indexPath.row - showMothArray.previousMonthTotal;
-    }else{
+    }else if(self.date.zc_month==cell.dateComponents.month) {
         cell.type = ZCCalendarDayCellTypeNextMonth;
-        cell.dateComponents.year = showMothArray.nextMonthOfYear;
-        cell.dateComponents.month = showMothArray.nextMonth;
-        cell.dateComponents.day = showMothArray.nextMonthStartDay + indexPath.row - showMothArray.previousMonthTotal - showMothArray.nowMonthTotal;
+    }else if(self.date.zc_month+1==cell.dateComponents.month && self.date.zc_month-11==cell.dateComponents.month) {
+        cell.type = ZCCalendarDayCellTypeNextMonth;
     }
+    
+//    if(showMothArray.previousMonthTotal > indexPath.row){
+//        cell.type = ZCCalendarDayCellTypePreviousMonth;
+//        cell.dateComponents.year = showMothArray.previousMonthOfYear;
+//        cell.dateComponents.month = showMothArray.previousMonth;
+//        cell.dateComponents.day = showMothArray.previousMonthStartDay + indexPath.row;
+//    }else if (showMothArray.previousMonthTotal + showMothArray.nowMonthTotal > indexPath.row){
+//        cell.type = ZCCalendarDayCellTypeNowMonth;
+//        cell.dateComponents.year = showMothArray.nowMonthOfYear;
+//        cell.dateComponents.month = showMothArray.nowMonth;
+//        cell.dateComponents.day = showMothArray.nowMonthStartDay + indexPath.row - showMothArray.previousMonthTotal;
+//    }else{
+//        cell.type = ZCCalendarDayCellTypeNextMonth;
+//        cell.dateComponents.year = showMothArray.nextMonthOfYear;
+//        cell.dateComponents.month = showMothArray.nextMonth;
+//        cell.dateComponents.day = showMothArray.nextMonthStartDay + indexPath.row - showMothArray.previousMonthTotal - showMothArray.nowMonthTotal;
+//    }
     cell.lunarCalendar = [[ZCCalendarDate sharedCalendarDate] getLunarCalendar:cell.dateComponents];
     cell.isNowDay = nowDateComponents.year == cell.dateComponents.year &&
                     nowDateComponents.month == cell.dateComponents.month &&
@@ -157,14 +168,14 @@
 
 #pragma mark 选中
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    ZCCalendarDayCell * cell = (ZCCalendarDayCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    ZCCalendarDayCell *cell = (ZCCalendarDayCell *)[collectionView cellForItemAtIndexPath:indexPath];
     if(self.delegate && [self.delegate respondsToSelector:@selector(calendarView:didSelectCell:)]){
         [self.delegate calendarView:self didSelectCell:cell];
     }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    ZCCalendarDayCell * cell = (ZCCalendarDayCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    ZCCalendarDayCell *cell = (ZCCalendarDayCell *)[collectionView cellForItemAtIndexPath:indexPath];
     if(self.delegate && [self.delegate respondsToSelector:@selector(calendarView:didDeselectCell:)]){
         [self.delegate calendarView:self didDeselectCell:cell];
     }

@@ -8,6 +8,7 @@
 
 #import "CalendarDayCell.h"
 #import "ZCCalendarView.h"
+#import <ZCEasyLibrary/ZCCalendar.h>
 
 @interface CalendarDayCell (){
 }
@@ -35,8 +36,8 @@
     }else if (self.type == ZCCalendarDayCellTypeNowMonth){
         if(self.isNowDay){
             titleLabel.textColor = UIColor.redColor;
-        }else if(self.dateComponents.weekday == ZCCalendarFirstWeekday_Sunday ||
-                 self.dateComponents.weekday == ZCCalendarFirstWeekday_Saturday)
+        }else if(self.dateComponents.weekday == ZCCalendarSunday ||
+                 self.dateComponents.weekday == ZCCalendarSaturday)
             titleLabel.textColor = UIColorFromRGB(0xff5249);
         else
             titleLabel.textColor = UIColorFromRGB(0x3c3c3c);
@@ -44,7 +45,7 @@
         titleLabel.textColor = UIColorFromRGB(0x818181);
     }
     
-    titleLabel.text = [NSString stringWithFormat:@"%ld", self.dateComponents.day];
+    titleLabel.text = [NSString stringWithFormat:@"%ld", (long)self.dateComponents.day];
 }
 
 - (UIView *)getSelectedBackgroundView {

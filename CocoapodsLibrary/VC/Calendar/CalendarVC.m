@@ -9,6 +9,7 @@
 #import "CalendarVC.h"
 #import "ZCCalendarManageView.h"
 #import "CalendarDayCell.h"
+#import <ZCEasyLibrary/ZCCalendar.h>
 
 @interface CalendarVC ()<ZCCalendarViewDelegate>
 
@@ -43,7 +44,7 @@
             UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(width*i, 0, width, weekBackGroundView.bounds.size.height)];
             week.textAlignment = NSTextAlignmentCenter;
             week.font = [UIFont systemFontOfSize:8];
-            week.text = dayTitles[([ZCCalendarDate sharedCalendarDate].weekStart-1+i)%7];
+            week.text = dayTitles[([ZCCalendar shared].firstWeekday-1+i)%7];
             [weekBackGroundView addSubview:week];
         }
     }
