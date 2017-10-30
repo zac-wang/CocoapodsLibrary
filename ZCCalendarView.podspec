@@ -13,4 +13,5 @@ Pod::Spec.new do |spec|
   spec.private_header_files = 'Library/ZCCalendarView/date/ZCCalendarDateLunarCalendar.h'
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
+  spec.ios.dependency 'ZCEasyLibrary'
 end
