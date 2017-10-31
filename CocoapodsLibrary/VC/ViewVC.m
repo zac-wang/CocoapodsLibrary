@@ -7,7 +7,6 @@
 //
 
 #import "ViewVC.h"
-#import "ZCVerticalButton.h"
 #import <ZCEasyLibrary/ZCEasyLibrary.h>
 
 @interface ViewVC ()
@@ -24,7 +23,14 @@
     // Do any additional setup after loading the view.
     
     [self.btn imageFrame:CGRectMake(0, 0, 100, 100) titleFrame:CGRectMake(0, 100, 100, 20)];
-    self.textView.zc_placeholder = @"what the fuck";
+    self.textView.font = ZCIconFont(15);
+    self.textView.text = [NSString stringWithFormat:@"\U0000e63d what the fuck"];
+    [self.textView zc_drawCornerRadius:10 borderColor:[UIColor redColor]];
+    
+    
+    
+    
+    self.navigationController.navigationBar.zc_transparent = YES;
 }
 
 - (IBAction)showDatePicker:(UIButton *)sender {

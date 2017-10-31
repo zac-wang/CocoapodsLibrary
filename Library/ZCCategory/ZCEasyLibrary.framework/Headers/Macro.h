@@ -44,5 +44,9 @@
 
 #define iOSSystemVersion ([[UIDevice currentDevice].systemVersion floatValue])
 
+#define ZCIconFontName @"iconfont"
+#define ZCIconFont(fontSize) [UIFont fontWithName:ZCIconFontName size:fontSize]
+// @"\U0000e63d" @"\ue63d"
+
 
 #endif /* Macro_h */
