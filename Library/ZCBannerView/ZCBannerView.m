@@ -121,8 +121,11 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    if ([keyPath isEqual:@"contentOffset"])
+    if ([keyPath isEqual:@"contentOffset"]) {
         [self scrollViewDidEndDecelerating:nil];
+        return;
+    }
+    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 }
 
 @end

@@ -16,6 +16,11 @@
 @property(nonatomic,copy)   NSString *zc_placeholder;
 
 /**
+ 设置提示文字
+ */
+@property(nonatomic,strong) NSAttributedString *zc_placeholderAttributesString;
+
+/**
  监测文字变化事件
  */
 @property(nonatomic, copy) void(^zc_updateEvent)(ZCTextView *);
