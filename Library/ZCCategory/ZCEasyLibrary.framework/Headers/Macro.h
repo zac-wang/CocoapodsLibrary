@@ -52,7 +52,6 @@
 // @"\U0000e63d" @"\ue63d"
 
 
-#define BankcardInfoUrl(_bankcard_no_) [NSString stringWithFormat:@"https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=%@&cardBinCheck=true", _bankcard_no_]
 
 
 

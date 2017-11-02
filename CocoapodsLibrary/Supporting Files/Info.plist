@@ -41,6 +41,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>应用内定位</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>iconfont.ttf</string>
