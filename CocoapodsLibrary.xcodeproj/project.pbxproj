@@ -149,7 +149,7 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		935F4F111F9AEE3900CD6AB7 /* VC */ = {
+		935F4F111F9AEE3900CD6AB7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				93B412991F974ED8003664BE /* BannerVC.h */,
@@ -160,7 +160,7 @@
 				935ACFF81FA45C5A000A7AF3 /* ViewVC.h */,
 				935ACFF91FA45C5A000A7AF3 /* ViewVC.m */,
 			);
-			path = VC;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		935F4F131F9AEE9100CD6AB7 /* Library */ = {
@@ -195,7 +195,7 @@
 			children = (
 				93B4127D1F974CE2003664BE /* AppDelegate.h */,
 				93B4127E1F974CE2003664BE /* AppDelegate.m */,
-				935F4F111F9AEE3900CD6AB7 /* VC */,
+				935F4F111F9AEE3900CD6AB7 /* Main */,
 				935F4F131F9AEE9100CD6AB7 /* Library */,
 				93B412941F974D12003664BE /* Supporting Files */,
 			);

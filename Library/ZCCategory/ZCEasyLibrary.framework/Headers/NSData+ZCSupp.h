@@ -11,8 +11,5 @@
 @interface NSData (ZCSupp)
 
 @property (nonatomic, readonly) NSString *zc_toString;
-@property (nonatomic, readonly) NSString *zc_md5;
-@property (nonatomic, readonly) NSString *zc_sha1;
-@property (nonatomic, readonly) NSString *zc_base64;
 
 @end

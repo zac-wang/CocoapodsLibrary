@@ -43,9 +43,13 @@ typedef NSDate *(^ChangeDateWithInt)(NSInteger);
 @property(nonatomic, readonly) NSInteger zc_second;
 @property(nonatomic, readonly) ChangeDateWithInt zc_setSecond;
 
+///所在月天数
 @property(nonatomic, readonly) NSUInteger zc_countOfDaysInCurrentMonth;
+///所在月第一天凌晨0点
 @property(nonatomic, readonly) NSDate *zc_firstDayOfCurrentMonth;
+///所在月最后一天凌晨0点
 @property(nonatomic, readonly) NSDate *zc_lastDayOfCurrentMonth;
+///当天凌晨0点
 @property(nonatomic, readonly) NSDate *zc_toDayStartDate;
 ///获取上个月1号时间
 @property(nonatomic, readonly) NSDate *zc_previousMonthStartDate;

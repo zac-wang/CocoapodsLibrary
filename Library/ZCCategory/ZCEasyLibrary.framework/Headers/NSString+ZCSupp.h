@@ -25,20 +25,6 @@
 @property(nonatomic, readonly) id zc_toJsonObject;
 
 
-@property(nonatomic, readonly) NSString *zc_md5;
-@property(nonatomic, readonly) NSString *zc_sha1;
-@property(nonatomic, readonly) NSString *zc_fileMd5;
-@property(nonatomic, readonly) NSString *zc_base64;
-@property(nonatomic, readonly) NSString *zc_base64DecodeString;
-@property(nonatomic, readonly) NSData   *zc_base64DecodeData;
-
-
-@property(nonatomic, readonly) BOOL zc_isPhoneNumber;
-@property(nonatomic, readonly) BOOL zc_isEmail;
-@property(nonatomic, readonly) BOOL zc_isNumber;
-@property(nonatomic, readonly) BOOL zc_isIDCard;
-@property(nonatomic, readonly) BOOL zc_isChinese;
-
 
 /**
  获取字体绘画区域大小
