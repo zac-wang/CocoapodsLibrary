@@ -15,7 +15,7 @@
 
 @property(nonatomic, strong) NSArray *dataSource;
 @property(nonatomic, strong) void(^cell)(UITableViewCell *cell, NSIndexPath *indexPath);
-@property(nonatomic, strong) void(^selectEvent)(UITableViewCell *, NSIndexPath *indexPath);
+@property(nonatomic, strong) void(^selectEvent)(UITableViewCell *cell, NSIndexPath *indexPath, NSString *title);
 
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, assign) BOOL isShow;

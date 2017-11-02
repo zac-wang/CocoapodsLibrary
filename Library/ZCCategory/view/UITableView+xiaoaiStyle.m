@@ -7,26 +7,25 @@
 //
 
 #import "UITableView+xiaoaiStyle.h"
-#import "UIColor+PY.h"
-
+#import <ZCEasyLibrary/UIColor+ZCSupp.h>
 
 @implementation UITableView (xiaoaiStyle)
 
-- (void)setXiaoAiStyle {
-    [self setXiaoAiStyleWithSeparatorLeft:15];
+- (void)zc_setXiaoAiStyle {
+    [self zc_setXiaoAiStyleWithSeparatorLeft:15];
 }
 
-- (void)setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft {
-    [self setXiaoAiStyleWithSeparatorLeft:separatorLeft separatorHexColor:@"#E3E4E5"];
+- (void)zc_setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft {
+    [self zc_setXiaoAiStyleWithSeparatorLeft:separatorLeft separatorHexColor:0xe3e4e5];
 }
 
-- (void)setXiaoAiStyleWithSeparatorHexColor:(NSString *)hex {
-    [self setXiaoAiStyleWithSeparatorLeft:15 separatorHexColor:@"#E3E4E5"];
+- (void)zc_setXiaoAiStyleWithSeparatorHexColor:(long)hex {
+    [self zc_setXiaoAiStyleWithSeparatorLeft:15 separatorHexColor:0xe3e4e5];
 }
 
-- (void)setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft separatorHexColor:(NSString *)hex {
+- (void)zc_setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft separatorHexColor:(long)hex {
     self.separatorInset = UIEdgeInsetsMake(0, separatorLeft, 0, 0);
-    self.separatorColor = [UIColor colorWithHexString:hex];
+    self.separatorColor = UIColorFromRGB(hex);
     self.tableFooterView = [[UIView alloc] init];
 }
 

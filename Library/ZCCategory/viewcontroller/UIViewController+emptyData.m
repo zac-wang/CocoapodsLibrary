@@ -70,7 +70,7 @@
        self.navigationController &&
        [self isKindOfClass:NSClassFromString(@"BaseTableViewController")] &&
        self.automaticallyAdjustsScrollViewInsets == YES) {
-        self.emptyDataFrame = CGRectMake(0, 0, view.size.width, view.size.height - 64);
+        self.emptyDataFrame = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height - 64);
     }
     self.emptyDataView = [[UIView alloc] initWithFrame:self.emptyDataFrame.size.width==0?view.bounds:self.emptyDataFrame];
     self.emptyDataView.backgroundColor = [UIColor whiteColor];
@@ -81,18 +81,18 @@
     self.emptyDataIconView.image = [UIImage imageNamed:@"empty_data_icon"];
     [self.emptyDataView addSubview:self.emptyDataIconView];
     
-    self.emptyDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, self.emptyDataIconView.frame.origin.y + self.emptyDataIconView.frame.size.height + 10, self.emptyDataView.bounds.size.width-30, 50*kScaling375)];
+    self.emptyDataLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, self.emptyDataIconView.frame.origin.y + self.emptyDataIconView.frame.size.height + 10, self.emptyDataView.bounds.size.width-30, 50)];
     self.emptyDataLabel.numberOfLines = 0;
-    self.emptyDataLabel.font = [UIFont systemFontOfSize:15*kScaling375];
+    self.emptyDataLabel.font = [UIFont systemFontOfSize:15];
     self.emptyDataLabel.textAlignment = NSTextAlignmentCenter;
     self.emptyDataLabel.textColor = [UIColor colorWithRed:0.84 green:0.84 blue:0.84 alpha:1.00];
     [self.emptyDataView addSubview:self.emptyDataLabel];
     
     self.emptyDataButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.emptyDataButton.frame = CGRectMake(15, self.emptyDataLabel.frame.origin.y + self.emptyDataLabel.frame.size.height + 10, self.emptyDataView.bounds.size.width-30, 20);
-    self.emptyDataButton.titleLabel.font = [UIFont boldSystemFontOfSize:15*kScaling375];
+    self.emptyDataButton.titleLabel.font = [UIFont boldSystemFontOfSize:15];
     [self setEmptyDataTitle:@"什么都没有哦~" buttonTitle:nil];
-    [self.emptyDataButton setTitleColor:ColorBlueMain forState:UIControlStateNormal];
+    [self.emptyDataButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.emptyDataButton addTarget:self action:@selector(emptyDataEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self.emptyDataView addSubview:self.emptyDataButton];
 }

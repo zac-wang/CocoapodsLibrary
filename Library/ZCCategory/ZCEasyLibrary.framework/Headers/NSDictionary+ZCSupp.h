@@ -17,4 +17,6 @@
 ///拼接对应的url参数字符串
 @property(nonatomic, readonly) NSString *zc_toUrlParam;
 
+- (id)objectForKeyPath:(id)aKeyPath;
+
 @end

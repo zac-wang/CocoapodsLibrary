@@ -10,9 +10,9 @@
 
 @interface UITableView (xiaoaiStyle)
 
-- (void)setXiaoAiStyle;
-- (void)setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft;
-- (void)setXiaoAiStyleWithSeparatorHexColor:(NSString *)hex;
-- (void)setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft separatorHexColor:(NSString *)hex;
+- (void)zc_setXiaoAiStyle;
+- (void)zc_setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft;
+- (void)zc_setXiaoAiStyleWithSeparatorHexColor:(long)hex;
+- (void)zc_setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft separatorHexColor:(long)hex;
 
 @end

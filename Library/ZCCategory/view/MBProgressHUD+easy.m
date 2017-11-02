@@ -11,7 +11,8 @@
 @implementation MBProgressHUD (easy)
 
 + (void)showText:(NSString *)text {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:window animated:YES];
     hud.labelText = text;
     hud.mode = MBProgressHUDModeText;
     hud.removeFromSuperViewOnHide = YES;

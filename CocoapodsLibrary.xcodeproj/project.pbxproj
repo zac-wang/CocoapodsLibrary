@@ -18,6 +18,7 @@
 		935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */; };
 		935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */; };
 		936462991FA6CB56002D7144 /* ZCBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 936462971FA6CB56002D7144 /* ZCBannerView.m */; };
+		93A87A831FA8ECF7005FFD3F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A87A821FA8EC6B005FFD3F /* iconfont.ttf */; };
 		93AFD3721FA661940071CE1F /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */; };
 		93AFD3731FA661940071CE1F /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4127E1F974CE2003664BE /* AppDelegate.m */; };
@@ -29,7 +30,6 @@
 		93B4129D1F97523B003664BE /* main_banner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93B412961F974DED003664BE /* main_banner.bundle */; };
 		93B412A11F976016003664BE /* SpinnerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B412A01F976016003664BE /* SpinnerVC.m */; };
 		93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B412A31F976026003664BE /* ZCSpinnerView.m */; };
-		93B5CA281F9B229400288040 /* ZCVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4F0D1F9AEDB400CD6AB7 /* ZCVerticalButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,10 +63,9 @@
 		935F4EBB1F99018000CD6AB7 /* CalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarVC.m; sourceTree = "<group>"; };
 		935F4EC31F999CB200CD6AB7 /* ZCCalendarManageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarManageView.h; sourceTree = "<group>"; };
 		935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
-		935F4F0C1F9AEDB400CD6AB7 /* ZCVerticalButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCVerticalButton.h; sourceTree = "<group>"; };
-		935F4F0D1F9AEDB400CD6AB7 /* ZCVerticalButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCVerticalButton.m; sourceTree = "<group>"; };
 		936462971FA6CB56002D7144 /* ZCBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCBannerView.m; sourceTree = "<group>"; };
 		936462981FA6CB56002D7144 /* ZCBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCBannerView.h; sourceTree = "<group>"; };
+		93A87A821FA8EC6B005FFD3F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZCEasyLibrary.framework; sourceTree = "<group>"; };
 		93B4127A1F974CE2003664BE /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B4127D1F974CE2003664BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -150,16 +149,6 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		935F4F0B1F9AEDB400CD6AB7 /* ZCVerticalButton */ = {
-			isa = PBXGroup;
-			children = (
-				935F4F0C1F9AEDB400CD6AB7 /* ZCVerticalButton.h */,
-				935F4F0D1F9AEDB400CD6AB7 /* ZCVerticalButton.m */,
-			);
-			name = ZCVerticalButton;
-			path = Library/ZCVerticalButton;
-			sourceTree = SOURCE_ROOT;
-		};
 		935F4F111F9AEE3900CD6AB7 /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,7 +170,6 @@
 				93B412951F974DED003664BE /* ZCBannerView */,
 				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
 				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */,
-				935F4F0B1F9AEDB400CD6AB7 /* ZCVerticalButton */,
 			);
 			path = Library;
 			sourceTree = SOURCE_ROOT;
@@ -250,6 +238,7 @@
 		93B5CA291F9C433900288040 /* ZCCategory */ = {
 			isa = PBXGroup;
 			children = (
+				93A87A821FA8EC6B005FFD3F /* iconfont.ttf */,
 				93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */,
 				93B5CA321F9C790000288040 /* view */,
 				93B5CA331F9C790B00288040 /* viewcontroller */,
@@ -338,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A87A831FA8ECF7005FFD3F /* iconfont.ttf in Resources */,
 				93B4129D1F97523B003664BE /* main_banner.bundle in Resources */,
 				93B4128A1F974CE2003664BE /* LaunchScreen.storyboard in Resources */,
 				93B412871F974CE2003664BE /* Assets.xcassets in Resources */,
@@ -354,7 +344,6 @@
 			files = (
 				935ACFEF1FA3A5EF000A7AF3 /* UIViewController+emptyData.m in Sources */,
 				935ACFF11FA3A5EF000A7AF3 /* UITableView+xiaoaiStyle.m in Sources */,
-				93B5CA281F9B229400288040 /* ZCVerticalButton.m in Sources */,
 				935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */,
 				935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */,
 				935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */,

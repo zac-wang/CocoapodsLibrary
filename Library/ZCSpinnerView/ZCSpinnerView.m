@@ -143,7 +143,10 @@
     [self hidden];
     
     if(self.selectEvent) {
-        self.selectEvent([tableView cellForRowAtIndexPath:indexPath], indexPath);
+        NSString *title = nil;
+        if(!self.isCustomer)
+            title = [self.tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+        self.selectEvent([tableView cellForRowAtIndexPath:indexPath], indexPath, title);
     }
 }
 

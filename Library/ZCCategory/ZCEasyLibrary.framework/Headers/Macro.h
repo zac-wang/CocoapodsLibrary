@@ -44,9 +44,21 @@
 
 #define iOSSystemVersion ([[UIDevice currentDevice].systemVersion floatValue])
 
+
+
+
 #define ZCIconFontName @"iconfont"
 #define ZCIconFont(fontSize) [UIFont fontWithName:ZCIconFontName size:fontSize]
 // @"\U0000e63d" @"\ue63d"
+
+
+#define BankcardInfoUrl(_bankcard_no_) [NSString stringWithFormat:@"https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo=%@&cardBinCheck=true", _bankcard_no_]
+
+
+
+//roundf(5.61)//四舍五入
+//ceilf(5.61)//进一法
+//floorf(5.31)//去尾法
 
 
 #endif /* Macro_h */

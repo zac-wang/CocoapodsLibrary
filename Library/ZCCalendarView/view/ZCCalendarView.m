@@ -126,27 +126,11 @@
     if(self.date.zc_month-1==cell.dateComponents.month && self.date.zc_month+11==cell.dateComponents.month) {
         cell.type = ZCCalendarDayCellTypePreviousMonth;
     }else if(self.date.zc_month==cell.dateComponents.month) {
-        cell.type = ZCCalendarDayCellTypeNextMonth;
+        cell.type = ZCCalendarDayCellTypeNowMonth;
     }else if(self.date.zc_month+1==cell.dateComponents.month && self.date.zc_month-11==cell.dateComponents.month) {
         cell.type = ZCCalendarDayCellTypeNextMonth;
     }
     
-//    if(showMothArray.previousMonthTotal > indexPath.row){
-//        cell.type = ZCCalendarDayCellTypePreviousMonth;
-//        cell.dateComponents.year = showMothArray.previousMonthOfYear;
-//        cell.dateComponents.month = showMothArray.previousMonth;
-//        cell.dateComponents.day = showMothArray.previousMonthStartDay + indexPath.row;
-//    }else if (showMothArray.previousMonthTotal + showMothArray.nowMonthTotal > indexPath.row){
-//        cell.type = ZCCalendarDayCellTypeNowMonth;
-//        cell.dateComponents.year = showMothArray.nowMonthOfYear;
-//        cell.dateComponents.month = showMothArray.nowMonth;
-//        cell.dateComponents.day = showMothArray.nowMonthStartDay + indexPath.row - showMothArray.previousMonthTotal;
-//    }else{
-//        cell.type = ZCCalendarDayCellTypeNextMonth;
-//        cell.dateComponents.year = showMothArray.nextMonthOfYear;
-//        cell.dateComponents.month = showMothArray.nextMonth;
-//        cell.dateComponents.day = showMothArray.nextMonthStartDay + indexPath.row - showMothArray.previousMonthTotal - showMothArray.nowMonthTotal;
-//    }
     cell.lunarCalendar = [[ZCCalendarDate sharedCalendarDate] getLunarCalendar:cell.dateComponents];
     cell.isNowDay = nowDateComponents.year == cell.dateComponents.year &&
                     nowDateComponents.month == cell.dateComponents.month &&

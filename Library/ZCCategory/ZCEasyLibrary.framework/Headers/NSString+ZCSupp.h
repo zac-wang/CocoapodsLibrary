@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/NSStringDrawing.h>
 
+#define NSStringFormNumber(_number_) [NSString stringWithFormat:@"%@", _number_]
+
 @interface NSString (ZCSupp)
 
 @property(nonatomic, readonly) NSData *zc_data;
@@ -37,6 +39,14 @@
 @property(nonatomic, readonly) BOOL zc_isIDCard;
 @property(nonatomic, readonly) BOOL zc_isChinese;
 
+
+/**
+ 获取字体绘画区域大小
+
+ @param size 指定区域
+ @param font 字体、或字体大小(@15)
+ @return 绘画区域大小
+ */
 - (CGSize)zc_sizeWithMaxSize:(CGSize)size font:(id)font;
 - (CGSize)zc_sizeWithMaxSize:(CGSize)size attributes:(NSDictionary<NSAttributedStringKey, id> *)attributes;
 
