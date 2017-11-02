@@ -56,39 +56,19 @@
 }
 
 - (IBAction)showPickerView:(UIButton *)sender {
-//    static ZCPickerView *pic;
-//    if(!pic)
-//        pic = [[ZCPickerView alloc] initWithFrame:self.view.bounds];
-//    [pic zc_componentCount:3 rowCount:^NSInteger(UIPickerView *pic, NSInteger component) {
-//        return component + 3;
-//    }];
-//    pic.zc_cell = ^NSString *(UIPickerView *pic, NSInteger component, NSInteger row) {
-//        return [NSString stringWithFormat:@"%ld", row];
-//    };
-//    pic.zc_selectPicker = ^(UIPickerView *pic, NSArray<NSNumber *> *selectRowArray, NSArray<NSString *> *selectTitleArray) {
-//        NSLog(@"%@\n%@", selectRowArray, selectTitleArray);
-//    };
-//    [self.view addSubview:pic];
-    
-    NSString *string = @"234567yheygrfkwueygfi别烦我热偶官方群殴我日发布网联合日本风格温柔欺负我不让玩了部分后卫我然后覅王若冰我王二UR和覅偶而部分上课了法人和我我人防办veslvhb";
-    
-    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                          [UIFont systemFontOfSize:15], NSFontAttributeName,
-                                          nil];
-    
-    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:string attributes:attributesDictionary];
-    
-    
-    
-    ZCLabel *lab = [[ZCLabel alloc] initWithFrame:CGRectMake(100, 200, 90, 12)];
-    [lab zc_drawCornerRadius:0.5 borderColor:[UIColor redColor]];
-    lab.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:lab];
-    lab.attributedText = attString;
-    NSLog(@"%@", lab.attributedText);
-    [lab zc_updateHeight];
-    
-    NSLog(@"%f", lab.zc_height);
+    static ZCPickerView *pic;
+    if(!pic)
+        pic = [[ZCPickerView alloc] initWithFrame:self.view.bounds];
+    [pic zc_componentCount:3 rowCount:^NSInteger(UIPickerView *pic, NSInteger component) {
+        return component + 3;
+    }];
+    pic.zc_cell = ^NSString *(UIPickerView *pic, NSInteger component, NSInteger row) {
+        return [NSString stringWithFormat:@"%ld", row];
+    };
+    pic.zc_selectPicker = ^(UIPickerView *pic, NSArray<NSNumber *> *selectRowArray, NSArray<NSString *> *selectTitleArray) {
+        NSLog(@"%@\n%@", selectRowArray, selectTitleArray);
+    };
+    [self.view addSubview:pic];
 }
 
 
