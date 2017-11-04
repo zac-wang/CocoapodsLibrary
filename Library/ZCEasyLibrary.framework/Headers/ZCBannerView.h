@@ -10,6 +10,8 @@
 
 @interface ZCBannerView : UIScrollView
 
+@property(nonatomic, strong) UIPageControl *pageControl;
+
 /**
  初始化（方法一）
  例：[banerScrollView initBanner:[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"main_banner.bundle"]];
@@ -25,6 +27,9 @@
  @param block 回调imageView、标号，来设置图片，可用于网络图片等
  */
 - (void)zc_initBannerWithCount:(NSInteger)count imageViewBlock:(void(^)(UIImageView *imageView, int num))block;
+
+///滚动间隔时间，默认3秒
+@property(nonatomic, assign) int zc_timeInterval;
 
 ///YES:单个页面不滚动，默认NO
 @property(nonatomic, assign) BOOL zc_oneImageNotRolling;

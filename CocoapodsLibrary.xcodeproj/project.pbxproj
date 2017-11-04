@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		934E71141FABB0B700E69A72 /* ZCAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E71131FABB0B700E69A72 /* ZCAppStore.m */; };
 		934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 934E711E1FAC18DE00E69A72 /* libz.tbd */; };
-		935ACFEF1FA3A5EF000A7AF3 /* UIViewController+emptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5CA3F1F9C7B6D00288040 /* UIViewController+emptyData.m */; };
 		935ACFF11FA3A5EF000A7AF3 /* UITableView+xiaoaiStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5CA371F9C7A5B00288040 /* UITableView+xiaoaiStyle.m */; };
 		935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935ACFF91FA45C5A000A7AF3 /* ViewVC.m */; };
 		935F4EBC1F99018000CD6AB7 /* CalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EBB1F99018000CD6AB7 /* CalendarVC.m */; };
@@ -19,14 +17,13 @@
 		935F4EC11F99090400CD6AB7 /* ZCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB41F98FB6A00CD6AB7 /* ZCCalendarView.m */; };
 		935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */; };
 		935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */; };
-		936CD7991FAC8F5B00F13E78 /* ZCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7981FAC8F5B00F13E78 /* ZCRequest.m */; };
-		936CD79C1FAC976500F13E78 /* ZCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD79B1FAC976500F13E78 /* ZCRequestManager.m */; };
 		936CD7B21FACFE6600F13E78 /* ZCJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B11FACFE6600F13E78 /* ZCJsonModel.m */; };
 		936CD7B51FACFF7000F13E78 /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B41FACFF7000F13E78 /* TestModel1.m */; };
 		936CD7B81FACFF8200F13E78 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B71FACFF8200F13E78 /* TestModel.m */; };
+		939A59591FADC21600DBD9E0 /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; };
+		939A595A1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; };
+		939A595B1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93A87A831FA8ECF7005FFD3F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A87A821FA8EC6B005FFD3F /* iconfont.ttf */; };
-		93AFD3721FA661940071CE1F /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */; };
-		93AFD3731FA661940071CE1F /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4127E1F974CE2003664BE /* AppDelegate.m */; };
 		93B412851F974CE2003664BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B412831F974CE2003664BE /* Main.storyboard */; };
 		93B412871F974CE2003664BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B412861F974CE2003664BE /* Assets.xcassets */; };
@@ -45,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				93AFD3731FA661940071CE1F /* ZCEasyLibrary.framework in Embed Frameworks */,
+				939A595B1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,8 +50,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		934E71121FABB0B700E69A72 /* ZCAppStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCAppStore.h; sourceTree = "<group>"; };
-		934E71131FABB0B700E69A72 /* ZCAppStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCAppStore.m; sourceTree = "<group>"; };
 		934E711E1FAC18DE00E69A72 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		935ACFF81FA45C5A000A7AF3 /* ViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewVC.h; sourceTree = "<group>"; };
 		935ACFF91FA45C5A000A7AF3 /* ViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewVC.m; sourceTree = "<group>"; };
@@ -72,18 +67,14 @@
 		935F4EBB1F99018000CD6AB7 /* CalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarVC.m; sourceTree = "<group>"; };
 		935F4EC31F999CB200CD6AB7 /* ZCCalendarManageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarManageView.h; sourceTree = "<group>"; };
 		935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
-		936CD7971FAC8F5B00F13E78 /* ZCRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCRequest.h; sourceTree = "<group>"; };
-		936CD7981FAC8F5B00F13E78 /* ZCRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCRequest.m; sourceTree = "<group>"; };
-		936CD79A1FAC976500F13E78 /* ZCRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCRequestManager.h; sourceTree = "<group>"; };
-		936CD79B1FAC976500F13E78 /* ZCRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCRequestManager.m; sourceTree = "<group>"; };
 		936CD7B01FACFE6600F13E78 /* ZCJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCJsonModel.h; sourceTree = "<group>"; };
 		936CD7B11FACFE6600F13E78 /* ZCJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCJsonModel.m; sourceTree = "<group>"; };
 		936CD7B31FACFF7000F13E78 /* TestModel1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel1.h; sourceTree = "<group>"; };
 		936CD7B41FACFF7000F13E78 /* TestModel1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
 		936CD7B61FACFF8200F13E78 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
 		936CD7B71FACFF8200F13E78 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZCEasyLibrary.framework; sourceTree = "<group>"; };
 		93A87A821FA8EC6B005FFD3F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
-		93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZCEasyLibrary.framework; sourceTree = "<group>"; };
 		93B4127A1F974CE2003664BE /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B4127D1F974CE2003664BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93B4127E1F974CE2003664BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,10 +94,6 @@
 		93B5CA351F9C792E00288040 /* MBProgressHUD+easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+easy.m"; sourceTree = "<group>"; };
 		93B5CA361F9C7A5B00288040 /* UITableView+xiaoaiStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+xiaoaiStyle.h"; sourceTree = "<group>"; };
 		93B5CA371F9C7A5B00288040 /* UITableView+xiaoaiStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+xiaoaiStyle.m"; sourceTree = "<group>"; };
-		93B5CA3C1F9C7B5D00288040 /* UIViewController+xiaoaiStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+xiaoaiStyle.m"; sourceTree = "<group>"; };
-		93B5CA3D1F9C7B5D00288040 /* UIViewController+xiaoaiStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+xiaoaiStyle.h"; sourceTree = "<group>"; };
-		93B5CA3E1F9C7B6D00288040 /* UIViewController+emptyData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+emptyData.h"; sourceTree = "<group>"; };
-		93B5CA3F1F9C7B6D00288040 /* UIViewController+emptyData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+emptyData.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +102,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */,
-				93AFD3721FA661940071CE1F /* ZCEasyLibrary.framework in Frameworks */,
+				939A59591FADC21600DBD9E0 /* ZCEasyLibrary.framework in Frameworks */,
+				939A595A1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,23 +180,13 @@
 		935F4F131F9AEE9100CD6AB7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */,
 				93B5CA291F9C433900288040 /* ZCCategory */,
 				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
 				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */,
 			);
 			path = Library;
 			sourceTree = SOURCE_ROOT;
-		};
-		936CD79D1FACBED600F13E78 /* ZCRequest */ = {
-			isa = PBXGroup;
-			children = (
-				936CD7971FAC8F5B00F13E78 /* ZCRequest.h */,
-				936CD7981FAC8F5B00F13E78 /* ZCRequest.m */,
-				936CD79A1FAC976500F13E78 /* ZCRequestManager.h */,
-				936CD79B1FAC976500F13E78 /* ZCRequestManager.m */,
-			);
-			path = ZCRequest;
-			sourceTree = "<group>";
 		};
 		936CD7AF1FACFDE500F13E78 /* JsonObject */ = {
 			isa = PBXGroup;
@@ -221,16 +199,6 @@
 				936CD7B41FACFF7000F13E78 /* TestModel1.m */,
 			);
 			path = JsonObject;
-			sourceTree = "<group>";
-		};
-		939A59461FADB6BD00DBD9E0 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				936CD79D1FACBED600F13E78 /* ZCRequest */,
-				934E71121FABB0B700E69A72 /* ZCAppStore.h */,
-				934E71131FABB0B700E69A72 /* ZCAppStore.m */,
-			);
-			path = test;
 			sourceTree = "<group>";
 		};
 		93B412711F974CE2003664BE = {
@@ -256,7 +224,6 @@
 				93B4127D1F974CE2003664BE /* AppDelegate.h */,
 				93B4127E1F974CE2003664BE /* AppDelegate.m */,
 				935F4F111F9AEE3900CD6AB7 /* Main */,
-				939A59461FADB6BD00DBD9E0 /* test */,
 				936CD7AF1FACFDE500F13E78 /* JsonObject */,
 				935F4F131F9AEE9100CD6AB7 /* Library */,
 				93B412941F974D12003664BE /* Supporting Files */,
@@ -291,9 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				93A87A821FA8EC6B005FFD3F /* iconfont.ttf */,
-				93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */,
 				93B5CA321F9C790000288040 /* view */,
-				93B5CA331F9C790B00288040 /* viewcontroller */,
 			);
 			path = ZCCategory;
 			sourceTree = "<group>";
@@ -307,17 +272,6 @@
 				93B5CA351F9C792E00288040 /* MBProgressHUD+easy.m */,
 			);
 			path = view;
-			sourceTree = "<group>";
-		};
-		93B5CA331F9C790B00288040 /* viewcontroller */ = {
-			isa = PBXGroup;
-			children = (
-				93B5CA3D1F9C7B5D00288040 /* UIViewController+xiaoaiStyle.h */,
-				93B5CA3C1F9C7B5D00288040 /* UIViewController+xiaoaiStyle.m */,
-				93B5CA3E1F9C7B6D00288040 /* UIViewController+emptyData.h */,
-				93B5CA3F1F9C7B6D00288040 /* UIViewController+emptyData.m */,
-			);
-			path = viewcontroller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,7 +348,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935ACFEF1FA3A5EF000A7AF3 /* UIViewController+emptyData.m in Sources */,
 				935ACFF11FA3A5EF000A7AF3 /* UITableView+xiaoaiStyle.m in Sources */,
 				935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */,
 				935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */,
@@ -408,9 +361,6 @@
 				93B412A11F976016003664BE /* SpinnerVC.m in Sources */,
 				93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */,
 				936CD7B81FACFF8200F13E78 /* TestModel.m in Sources */,
-				936CD79C1FAC976500F13E78 /* ZCRequestManager.m in Sources */,
-				934E71141FABB0B700E69A72 /* ZCAppStore.m in Sources */,
-				936CD7991FAC8F5B00F13E78 /* ZCRequest.m in Sources */,
 				936CD7B21FACFE6600F13E78 /* ZCJsonModel.m in Sources */,
 				93B4129B1F974ED8003664BE /* BannerVC.m in Sources */,
 				93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */,
@@ -554,6 +504,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/ZCCategory",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				INFOPLIST_FILE = "CocoapodsLibrary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -575,6 +526,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/ZCCategory",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				INFOPLIST_FILE = "CocoapodsLibrary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
