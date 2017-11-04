@@ -10,4 +10,6 @@
 
 @interface UIView (ZCSupp)
 
+- (CAGradientLayer *)zc_setBackgroundColors:(NSArray *)colors startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint locations:(NSArray *)locations;
+
 @end

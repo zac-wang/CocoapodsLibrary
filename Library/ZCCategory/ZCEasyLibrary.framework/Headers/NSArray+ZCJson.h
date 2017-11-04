@@ -10,9 +10,9 @@
 
 @interface NSArray (ZCJson)
 
-///获取对应的json data
-@property(nonatomic, readonly) NSData *zc_toData;
-///获取对应的json字符串
+/// 获取对应的json data
+@property(nonatomic, readonly) NSData *zc_toJsonData;
+/// 获取对应的json字符串
 @property(nonatomic, readonly) NSString *zc_toJsonString;
 
 @end

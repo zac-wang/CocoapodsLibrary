@@ -12,6 +12,4 @@
 
 NSString *iphoneType(void);
 
-- (void)callMobilePhone:(NSString *)number;
-
 @end

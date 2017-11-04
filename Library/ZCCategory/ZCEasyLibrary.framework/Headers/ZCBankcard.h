@@ -12,15 +12,17 @@
 
 + (void)zc_getBankcardInfoWithBankcardNo:(NSString *)bankcardNo block:(void(^)(ZCBankcard *bankcardInfo))block;
 
-@property(nonatomic, readonly) BOOL validated;
-@property(nonatomic, readonly) NSString *bank;
-@property(nonatomic, readonly) NSString *bankName;
-@property(nonatomic, readonly) NSString *cardType;
-@property(nonatomic, readonly) NSString *cardTypeName;
-@property(nonatomic, readonly) NSNumber *cardno;
-@property(nonatomic, readonly) NSArray *messages;
-@property(nonatomic, readonly) NSString *stat;
+@property(nonatomic, readonly) BOOL zc_validated;
+@property(nonatomic, readonly) NSString *zc_bank;
+@property(nonatomic, readonly) NSString *zc_bankName;
+@property(nonatomic, readonly) NSString *zc_cardType;
+@property(nonatomic, readonly) NSString *zc_cardTypeName;
+@property(nonatomic, readonly) NSNumber *zc_cardno;
+@property(nonatomic, readonly) NSArray *zc_messages;
+@property(nonatomic, readonly) NSString *zc_stat;
 
 + (NSString *)zc_getBankNameWithBankType:(NSString *)type;
+
++ (NSArray *)zc_getBankgroundColor:(NSString *)bankName;
 
 @end

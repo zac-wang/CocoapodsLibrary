@@ -20,9 +20,9 @@
  *  @param radii   需要设置的圆角大小 例如 CGSizeMake(20.0f, 20.0f)
  *  @param rect    需要设置的圆角view的rect
  */
-- (void)zc_addRoundedCorners:(UIRectCorner)corners
-                   withRadii:(CGSize)radii
-                 borderColor:(UIColor *)borderColor
-                    viewRect:(CGRect)rect;
+- (CAShapeLayer *)zc_addRoundedCorners:(UIRectCorner)corners
+                             withRadii:(CGSize)radii
+                           borderColor:(UIColor *)borderColor
+                              viewRect:(CGRect)rect;
 
 @end

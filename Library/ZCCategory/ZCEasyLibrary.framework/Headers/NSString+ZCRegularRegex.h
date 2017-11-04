@@ -10,7 +10,8 @@
 
 @interface NSString (ZCRegularRegex)
 
-- (BOOL)regular:(NSString *)regularRegex;
+/// 判断是否匹配正则
+@property(nonatomic, readonly) BOOL(^zc_regular)(NSString *regularRegex);
 
 @property(nonatomic, readonly) BOOL zc_isPhoneNumber;
 @property(nonatomic, readonly) BOOL zc_isEmail;

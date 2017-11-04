@@ -10,6 +10,6 @@
 
 @interface UIImage (ZCSupp)
 
-+ (UIImage *)imageWithColor:(UIColor *)color;
++ (UIImage *)zc_imageWithColor:(UIColor *)color;
 
 @end

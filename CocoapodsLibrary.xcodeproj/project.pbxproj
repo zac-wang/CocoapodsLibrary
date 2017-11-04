@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		934E71141FABB0B700E69A72 /* ZCAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 934E71131FABB0B700E69A72 /* ZCAppStore.m */; };
+		934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 934E711E1FAC18DE00E69A72 /* libz.tbd */; };
 		935ACFEF1FA3A5EF000A7AF3 /* UIViewController+emptyData.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5CA3F1F9C7B6D00288040 /* UIViewController+emptyData.m */; };
 		935ACFF11FA3A5EF000A7AF3 /* UITableView+xiaoaiStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5CA371F9C7A5B00288040 /* UITableView+xiaoaiStyle.m */; };
 		935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935ACFF91FA45C5A000A7AF3 /* ViewVC.m */; };
@@ -18,6 +20,11 @@
 		935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */; };
 		935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */; };
 		936462991FA6CB56002D7144 /* ZCBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 936462971FA6CB56002D7144 /* ZCBannerView.m */; };
+		936CD7991FAC8F5B00F13E78 /* ZCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7981FAC8F5B00F13E78 /* ZCRequest.m */; };
+		936CD79C1FAC976500F13E78 /* ZCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD79B1FAC976500F13E78 /* ZCRequestManager.m */; };
+		936CD7B21FACFE6600F13E78 /* ZCJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B11FACFE6600F13E78 /* ZCJsonModel.m */; };
+		936CD7B51FACFF7000F13E78 /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B41FACFF7000F13E78 /* TestModel1.m */; };
+		936CD7B81FACFF8200F13E78 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B71FACFF8200F13E78 /* TestModel.m */; };
 		93A87A831FA8ECF7005FFD3F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A87A821FA8EC6B005FFD3F /* iconfont.ttf */; };
 		93AFD3721FA661940071CE1F /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */; };
 		93AFD3731FA661940071CE1F /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -47,6 +54,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		934E71121FABB0B700E69A72 /* ZCAppStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCAppStore.h; sourceTree = "<group>"; };
+		934E71131FABB0B700E69A72 /* ZCAppStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCAppStore.m; sourceTree = "<group>"; };
+		934E711E1FAC18DE00E69A72 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		935ACFF81FA45C5A000A7AF3 /* ViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewVC.h; sourceTree = "<group>"; };
 		935ACFF91FA45C5A000A7AF3 /* ViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewVC.m; sourceTree = "<group>"; };
 		935F4EAC1F98FB6A00CD6AB7 /* ZCCalendarDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDate.h; sourceTree = "<group>"; };
@@ -65,6 +75,16 @@
 		935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
 		936462971FA6CB56002D7144 /* ZCBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCBannerView.m; sourceTree = "<group>"; };
 		936462981FA6CB56002D7144 /* ZCBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCBannerView.h; sourceTree = "<group>"; };
+		936CD7971FAC8F5B00F13E78 /* ZCRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCRequest.h; sourceTree = "<group>"; };
+		936CD7981FAC8F5B00F13E78 /* ZCRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCRequest.m; sourceTree = "<group>"; };
+		936CD79A1FAC976500F13E78 /* ZCRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCRequestManager.h; sourceTree = "<group>"; };
+		936CD79B1FAC976500F13E78 /* ZCRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCRequestManager.m; sourceTree = "<group>"; };
+		936CD7B01FACFE6600F13E78 /* ZCJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCJsonModel.h; sourceTree = "<group>"; };
+		936CD7B11FACFE6600F13E78 /* ZCJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCJsonModel.m; sourceTree = "<group>"; };
+		936CD7B31FACFF7000F13E78 /* TestModel1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel1.h; sourceTree = "<group>"; };
+		936CD7B41FACFF7000F13E78 /* TestModel1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
+		936CD7B61FACFF8200F13E78 /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		936CD7B71FACFF8200F13E78 /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		93A87A821FA8EC6B005FFD3F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		93AFD3701FA65FFC0071CE1F /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZCEasyLibrary.framework; sourceTree = "<group>"; };
 		93B4127A1F974CE2003664BE /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */,
 				93AFD3721FA661940071CE1F /* ZCEasyLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		934E711D1FAC18DD00E69A72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				934E711E1FAC18DE00E69A72 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,11 +203,36 @@
 			path = Library;
 			sourceTree = SOURCE_ROOT;
 		};
+		936CD79D1FACBED600F13E78 /* ZCRequest */ = {
+			isa = PBXGroup;
+			children = (
+				936CD7971FAC8F5B00F13E78 /* ZCRequest.h */,
+				936CD7981FAC8F5B00F13E78 /* ZCRequest.m */,
+				936CD79A1FAC976500F13E78 /* ZCRequestManager.h */,
+				936CD79B1FAC976500F13E78 /* ZCRequestManager.m */,
+			);
+			path = ZCRequest;
+			sourceTree = "<group>";
+		};
+		936CD7AF1FACFDE500F13E78 /* JsonObject */ = {
+			isa = PBXGroup;
+			children = (
+				936CD7B01FACFE6600F13E78 /* ZCJsonModel.h */,
+				936CD7B11FACFE6600F13E78 /* ZCJsonModel.m */,
+				936CD7B61FACFF8200F13E78 /* TestModel.h */,
+				936CD7B71FACFF8200F13E78 /* TestModel.m */,
+				936CD7B31FACFF7000F13E78 /* TestModel1.h */,
+				936CD7B41FACFF7000F13E78 /* TestModel1.m */,
+			);
+			path = JsonObject;
+			sourceTree = "<group>";
+		};
 		93B412711F974CE2003664BE = {
 			isa = PBXGroup;
 			children = (
 				93B4127C1F974CE2003664BE /* CocoapodsLibrary */,
 				93B4127B1F974CE2003664BE /* Products */,
+				934E711D1FAC18DD00E69A72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,7 +249,11 @@
 			children = (
 				93B4127D1F974CE2003664BE /* AppDelegate.h */,
 				93B4127E1F974CE2003664BE /* AppDelegate.m */,
+				936CD79D1FACBED600F13E78 /* ZCRequest */,
+				934E71121FABB0B700E69A72 /* ZCAppStore.h */,
+				934E71131FABB0B700E69A72 /* ZCAppStore.m */,
 				935F4F111F9AEE3900CD6AB7 /* Main */,
+				936CD7AF1FACFDE500F13E78 /* JsonObject */,
 				935F4F131F9AEE9100CD6AB7 /* Library */,
 				93B412941F974D12003664BE /* Supporting Files */,
 			);
@@ -352,9 +410,15 @@
 				935F4EC11F99090400CD6AB7 /* ZCCalendarView.m in Sources */,
 				935F4EBD1F99090400CD6AB7 /* CalendarDayCell.m in Sources */,
 				935F4EBC1F99018000CD6AB7 /* CalendarVC.m in Sources */,
+				936CD7B51FACFF7000F13E78 /* TestModel1.m in Sources */,
 				93B412A11F976016003664BE /* SpinnerVC.m in Sources */,
 				93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */,
+				936CD7B81FACFF8200F13E78 /* TestModel.m in Sources */,
 				936462991FA6CB56002D7144 /* ZCBannerView.m in Sources */,
+				936CD79C1FAC976500F13E78 /* ZCRequestManager.m in Sources */,
+				934E71141FABB0B700E69A72 /* ZCAppStore.m in Sources */,
+				936CD7991FAC8F5B00F13E78 /* ZCRequest.m in Sources */,
+				936CD7B21FACFE6600F13E78 /* ZCJsonModel.m in Sources */,
 				93B4129B1F974ED8003664BE /* BannerVC.m in Sources */,
 				93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */,
 				93B4128D1F974CE2003664BE /* main.m in Sources */,

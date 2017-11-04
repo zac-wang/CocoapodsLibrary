@@ -10,9 +10,9 @@
 
 @interface NSDictionary (ZCSupp)
 
-///拼接对应的url参数字符串
-@property(nonatomic, readonly) NSString *zc_toUrlParam;
+/// 拼接并返回对应的url参数字符串
+@property(nonatomic, readonly) NSString *zc_toUrlParamString;
 
-- (id)objectForKeyPath:(id)aKeyPath;
+- (id)zc_objectForKeyPath:(id)aKeyPath;
 
 @end

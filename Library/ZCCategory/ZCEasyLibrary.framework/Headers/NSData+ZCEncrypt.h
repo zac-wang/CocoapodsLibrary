@@ -14,4 +14,9 @@
 @property (nonatomic, readonly) NSString *zc_sha1;
 @property (nonatomic, readonly) NSString *zc_base64;
 
+/// AES256加密
+- (NSData *)zc_AES256EncryptWithKey:(NSString *)key;
+/// AES256解密
+- (NSData *)zc_AES256DecryptWithKey:(NSString *)key;
+
 @end

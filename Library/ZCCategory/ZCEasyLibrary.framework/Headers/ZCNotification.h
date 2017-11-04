@@ -13,12 +13,12 @@
 /**
  注册远程推送
  */
-+ (void)registerRemoteNotification;
++ (void)zc_registerRemoteNotification;
 
 /**
  注册本地推送
  */
-+ (void)registerUserNotification;
++ (void)zc_registerUserNotification;
 
 /**
  根据deviceToken获取推送字符串
@@ -26,6 +26,6 @@
  @param deviceToken token二进制
  @return token字符串
  */
-+ (NSString *)getTokenWithTokenData:(NSData *)deviceToken;
++ (NSString *)zc_getTokenWithTokenData:(NSData *)deviceToken;
 
 @end

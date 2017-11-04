@@ -11,5 +11,6 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = 'Library/ZCCategory/ZCEasyLibrary.framework'
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
+  spec.libraries    = 'z'
 
 end

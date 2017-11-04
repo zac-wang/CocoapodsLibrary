@@ -10,6 +10,7 @@
 
 @interface NSData (ZCSupp)
 
+/// 转换为字符串
 @property (nonatomic, readonly) NSString *zc_toString;
 
 @end

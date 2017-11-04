@@ -17,6 +17,6 @@
 
  @param block 设置要保存的数据
  */
-+ (void)save:(void(^)(NSUserDefaults *))block;
++ (void)zc_save:(void(^)(NSUserDefaults *))block;
 
 @end

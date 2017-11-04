@@ -13,14 +13,14 @@
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message;
 + (instancetype)actionSheetWithTitle:(NSString *)title message:(NSString *)message;
 
-- (void)addDefaultAction:(NSArray<NSString *> *)titles;
-- (UIAlertAction *)addCancelAction:(NSString *)title;
-- (UIAlertAction *)addDefaultAction:(NSString *)title handler:(void (^)(UIAlertAction *action))handler;
-- (UIAlertAction *)addCancelAction:(NSString *)title handler:(void (^)(UIAlertAction *action))handler;
-- (UIAlertAction *)addAction:(NSString *)title style:(UIAlertActionStyle)style handler:(void (^)(UIAlertAction *action))handler;
-- (void)addTextFieldWithHandler:(void (^)(UITextField *))configurationHandler;
-- (void)showWithViewController:(UIViewController *)vc;
+- (void)zc_addDefaultAction:(NSArray<NSString *> *)titles;
+- (UIAlertAction *)zc_addCancelAction:(NSString *)title;
+- (UIAlertAction *)zc_addDefaultAction:(NSString *)title handler:(void (^)(UIAlertAction *action))handler;
+- (UIAlertAction *)zc_addCancelAction:(NSString *)title handler:(void (^)(UIAlertAction *action))handler;
+- (UIAlertAction *)zc_addAction:(NSString *)title style:(UIAlertActionStyle)style handler:(void (^)(UIAlertAction *action))handler;
+- (void)zc_addTextFieldWithHandler:(void (^)(UITextField *))configurationHandler;
+- (void)zc_showWithViewController:(UIViewController *)vc;
 
-@property(nonatomic, copy) void (^handler)(UIAlertAction *action);
+@property(nonatomic, copy) void (^zc_handler)(UIAlertAction *action);
 
 @end
