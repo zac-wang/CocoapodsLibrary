@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
   spec.name         = "ZCSpinnerView"
   spec.version      = "1.0.0"
   spec.summary      = "ZCSpinnerView UI Kit"
-  spec.description  = "这是一个下拉框"
+  spec.description  = "ZCSpinnerView 这是一个下拉框"
   spec.platform     = :ios, '7.0'
   spec.license      = { :type => 'Copyright', :text => 'Zac Inc. 2017' }
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary.git'

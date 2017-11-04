@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
   spec.name         = "ZCCalendarView"
   spec.version      = "1.0.0"
   spec.summary      = "ZCCalendarView UI Kit"
-  spec.description  = "这是一个日历"
+  spec.description  = "ZCCalendarView 这是一个可自定义样式日历"
   spec.platform     = :ios, '7.0'
   spec.license      = { :type => 'Copyright', :text => 'Zac Inc. 2017' }
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary.git'
