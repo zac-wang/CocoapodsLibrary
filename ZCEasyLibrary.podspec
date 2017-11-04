@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.description  = "ZCEasyLibrary 拓展库+UI库"
   spec.platform     = :ios, '8.0'
   spec.license      = { :type => 'Copyright', :text => 'Zac Inc. 2017' }
-  spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary.git'
+  spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary'
   spec.author       = {'王志超' => 'love_iphone@qq.com'}
   spec.source       =  {:git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
   spec.vendored_frameworks = 'Library/ZCEasyLibrary.framework'
