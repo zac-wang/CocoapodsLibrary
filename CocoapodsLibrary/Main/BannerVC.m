@@ -7,7 +7,7 @@
 //
 
 #import "BannerVC.h"
-#import "ZCBannerView.h"
+#import <ZCEasyLibrary/ZCEasyLibrary.h>
 
 @interface BannerVC ()
 
@@ -27,19 +27,19 @@
 }
 
 - (void)viewDidLayoutSubviews {
-    [self.banerScrollView initBanner:[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"main_banner.bundle"]];
+    [self.banerScrollView zc_initBanner:[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"main_banner.bundle"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self.banerScrollView start];
+    [self.banerScrollView zc_start];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [self.banerScrollView stop];
+    [self.banerScrollView zc_stop];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,7 +19,6 @@
 		935F4EC11F99090400CD6AB7 /* ZCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB41F98FB6A00CD6AB7 /* ZCCalendarView.m */; };
 		935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */; };
 		935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */; };
-		936462991FA6CB56002D7144 /* ZCBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 936462971FA6CB56002D7144 /* ZCBannerView.m */; };
 		936CD7991FAC8F5B00F13E78 /* ZCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7981FAC8F5B00F13E78 /* ZCRequest.m */; };
 		936CD79C1FAC976500F13E78 /* ZCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD79B1FAC976500F13E78 /* ZCRequestManager.m */; };
 		936CD7B21FACFE6600F13E78 /* ZCJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B11FACFE6600F13E78 /* ZCJsonModel.m */; };
@@ -73,8 +72,6 @@
 		935F4EBB1F99018000CD6AB7 /* CalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarVC.m; sourceTree = "<group>"; };
 		935F4EC31F999CB200CD6AB7 /* ZCCalendarManageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarManageView.h; sourceTree = "<group>"; };
 		935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
-		936462971FA6CB56002D7144 /* ZCBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCBannerView.m; sourceTree = "<group>"; };
-		936462981FA6CB56002D7144 /* ZCBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCBannerView.h; sourceTree = "<group>"; };
 		936CD7971FAC8F5B00F13E78 /* ZCRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCRequest.h; sourceTree = "<group>"; };
 		936CD7981FAC8F5B00F13E78 /* ZCRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCRequest.m; sourceTree = "<group>"; };
 		936CD79A1FAC976500F13E78 /* ZCRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCRequestManager.h; sourceTree = "<group>"; };
@@ -196,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				93B5CA291F9C433900288040 /* ZCCategory */,
-				93B412951F974DED003664BE /* ZCBannerView */,
 				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
 				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */,
 			);
@@ -227,6 +223,16 @@
 			path = JsonObject;
 			sourceTree = "<group>";
 		};
+		939A59461FADB6BD00DBD9E0 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				936CD79D1FACBED600F13E78 /* ZCRequest */,
+				934E71121FABB0B700E69A72 /* ZCAppStore.h */,
+				934E71131FABB0B700E69A72 /* ZCAppStore.m */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 		93B412711F974CE2003664BE = {
 			isa = PBXGroup;
 			children = (
@@ -249,10 +255,8 @@
 			children = (
 				93B4127D1F974CE2003664BE /* AppDelegate.h */,
 				93B4127E1F974CE2003664BE /* AppDelegate.m */,
-				936CD79D1FACBED600F13E78 /* ZCRequest */,
-				934E71121FABB0B700E69A72 /* ZCAppStore.h */,
-				934E71131FABB0B700E69A72 /* ZCAppStore.m */,
 				935F4F111F9AEE3900CD6AB7 /* Main */,
+				939A59461FADB6BD00DBD9E0 /* test */,
 				936CD7AF1FACFDE500F13E78 /* JsonObject */,
 				935F4F131F9AEE9100CD6AB7 /* Library */,
 				93B412941F974D12003664BE /* Supporting Files */,
@@ -263,6 +267,7 @@
 		93B412941F974D12003664BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93B412961F974DED003664BE /* main_banner.bundle */,
 				93B412831F974CE2003664BE /* Main.storyboard */,
 				93B412861F974CE2003664BE /* Assets.xcassets */,
 				93B412881F974CE2003664BE /* LaunchScreen.storyboard */,
@@ -271,17 +276,6 @@
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
-		};
-		93B412951F974DED003664BE /* ZCBannerView */ = {
-			isa = PBXGroup;
-			children = (
-				936462981FA6CB56002D7144 /* ZCBannerView.h */,
-				936462971FA6CB56002D7144 /* ZCBannerView.m */,
-				93B412961F974DED003664BE /* main_banner.bundle */,
-			);
-			name = ZCBannerView;
-			path = Library/ZCBannerView;
-			sourceTree = SOURCE_ROOT;
 		};
 		93B4129E1F975FE3003664BE /* ZCSpinnerView */ = {
 			isa = PBXGroup;
@@ -414,7 +408,6 @@
 				93B412A11F976016003664BE /* SpinnerVC.m in Sources */,
 				93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */,
 				936CD7B81FACFF8200F13E78 /* TestModel.m in Sources */,
-				936462991FA6CB56002D7144 /* ZCBannerView.m in Sources */,
 				936CD79C1FAC976500F13E78 /* ZCRequestManager.m in Sources */,
 				934E71141FABB0B700E69A72 /* ZCAppStore.m in Sources */,
 				936CD7991FAC8F5B00F13E78 /* ZCRequest.m in Sources */,

@@ -32,6 +32,7 @@
 #import "ZCAlert.h"
 #import "ZCApp.h"
 #import "ZCBankcard.h"
+#import "ZCBannerView.h"
 #import "ZCBaseJsonModel.h"
 #import "ZCCalendar.h"
 #import "ZCLabel.h"
