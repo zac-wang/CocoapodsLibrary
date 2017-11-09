@@ -10,15 +10,17 @@
 
 @interface ZCNotification : NSObject
 
++ (instancetype)shared;
+
 /**
  注册远程推送
  */
-+ (void)zc_registerRemoteNotification;
+- (void)zc_registerRemoteNotification;
 
 /**
  注册本地推送
  */
-+ (void)zc_registerUserNotification;
+- (void)zc_registerUserNotification;
 
 /**
  根据deviceToken获取推送字符串
@@ -26,6 +28,6 @@
  @param deviceToken token二进制
  @return token字符串
  */
-+ (NSString *)zc_getTokenWithTokenData:(NSData *)deviceToken;
+- (NSString *)zc_getTokenWithTokenData:(NSData *)deviceToken;
 
 @end

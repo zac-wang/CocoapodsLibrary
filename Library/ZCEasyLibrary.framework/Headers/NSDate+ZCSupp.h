@@ -58,5 +58,6 @@ typedef NSDate *(^ChangeDateWithInt)(NSInteger);
 
 @property(nonatomic, readonly) NSString *zc_description;
 @property(nonatomic, readonly) NSString *(^zc_format)(NSString *formatString);
+@property(nonatomic, readonly) NSString *(^zc_formatAndRemoveTimeZoneString)(NSString *formatString);
 
 @end

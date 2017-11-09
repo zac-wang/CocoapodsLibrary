@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Macro.h</key>
 		<data>
-		Vt0WiyNDzYPj98SKjY8RjABjwL4=
+		kWMVE571x4lxKs5lFx5A4gLQY/w=
 		</data>
 		<key>Headers/NSArray+ZCJson.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/NSDate+ZCSupp.h</key>
 		<data>
-		FzZ2feR5Cmnz3/gCLElfnoO8pYU=
+		oEjKfb5W8T9jcgzguiOUAFNb1AA=
 		</data>
 		<key>Headers/NSDateComponents+ZCSupp.h</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Headers/NSDictionary+ZCSupp.h</key>
 		<data>
-		46xalbbQLS+cpDSxrlG833/a2cI=
+		TQJl3MQ/lCpdR7MVv7ixI5duq70=
 		</data>
 		<key>Headers/NSObject+ZCRuntime.h</key>
 		<data>
-		PSTVw5DSYkhP1qnJYSNgDxIye8U=
+		+3MSmWVlQF9V5n++sTdXhQSiwEU=
 		</data>
 		<key>Headers/NSString+ZCEncrypt.h</key>
 		<data>
@@ -104,13 +104,21 @@
 		<data>
 		3gSIMPUtrn8oBJonikTw8pX6P2A=
 		</data>
+		<key>Headers/ZCCacheManage.h</key>
+		<data>
+		+2uqDX/up5/Jfes54OF61xqPPcM=
+		</data>
 		<key>Headers/ZCCalendar.h</key>
 		<data>
 		pRvfLmnHxkD4XH5PPHydXqMqS2g=
 		</data>
 		<key>Headers/ZCEasyLibrary.h</key>
 		<data>
-		YCex2+xmnZKPtPxSUoAj00WRmdM=
+		YC9N5YS3X7GsYm3lMiamy+b2lEk=
+		</data>
+		<key>Headers/ZCFont.h</key>
+		<data>
+		SdVC8Lr5Gx/xKmim+e06+ql5IMw=
 		</data>
 		<key>Headers/ZCLabel.h</key>
 		<data>
@@ -118,15 +126,15 @@
 		</data>
 		<key>Headers/ZCLocationGeocode.h</key>
 		<data>
-		bef+HPWj508hdkoQmQEi9eIP+os=
+		UFOZb8MwjHGzv0BpTvsIXaPtE0Y=
 		</data>
 		<key>Headers/ZCLocationManager.h</key>
 		<data>
-		Cn94QH0RLhjA2K0v0ZtQp4T+bhk=
+		Y87zGsP9ZrVmYHFvgBqPd9SXCqU=
 		</data>
 		<key>Headers/ZCNotification.h</key>
 		<data>
-		/+XVbkwy1YrVBfYLmPTSlRVMLKI=
+		JrlYjsgdWyRo4ZO6aRplN++eEhI=
 		</data>
 		<key>Headers/ZCPickerView.h</key>
 		<data>
@@ -179,11 +187,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Vt0WiyNDzYPj98SKjY8RjABjwL4=
+			kWMVE571x4lxKs5lFx5A4gLQY/w=
 			</data>
 			<key>hash2</key>
 			<data>
-			ATcrPkAeDWY+SenKsPsDkpAUOJs7uIXLVE/IaT/dd/E=
+			YP+/tyf2iWzU+vOkfwz0y15XAIkMuHjuE76YyiP7ziA=
 			</data>
 		</dict>
 		<key>Headers/NSArray+ZCJson.h</key>
@@ -245,11 +253,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FzZ2feR5Cmnz3/gCLElfnoO8pYU=
+			oEjKfb5W8T9jcgzguiOUAFNb1AA=
 			</data>
 			<key>hash2</key>
 			<data>
-			iA6DE2KPIEtWVAOmsE1CIfcK20hdjCeRbFvjySD+cU0=
+			hsTioso3NpnQn01w9cd60ozYawFhzRnJ6SbvD49E4ME=
 			</data>
 		</dict>
 		<key>Headers/NSDateComponents+ZCSupp.h</key>
@@ -289,22 +297,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			46xalbbQLS+cpDSxrlG833/a2cI=
+			TQJl3MQ/lCpdR7MVv7ixI5duq70=
 			</data>
 			<key>hash2</key>
 			<data>
-			RSr/qrL8UYHCc/wI3bPElnV91kI94gTJvAacyZjudoE=
+			MdAe66sq9q3qEJvJtRP25nMODH/5LIQytbuwlqtF/Go=
 			</data>
 		</dict>
 		<key>Headers/NSObject+ZCRuntime.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PSTVw5DSYkhP1qnJYSNgDxIye8U=
+			+3MSmWVlQF9V5n++sTdXhQSiwEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			lUtw2RugNUgEGdn8GpN4RQXNVwYWp5BYBOoz7lzdiuE=
+			vcWRQH4/8GSnfbGsi1weuHuAfI4QjSKS3/Io/EF2NnY=
 			</data>
 		</dict>
 		<key>Headers/NSString+ZCEncrypt.h</key>
@@ -450,6 +458,17 @@
 			CV3DEeaN1H/g6jYv4iY3N2iwpjFw8WsiiOjljNjbr08=
 			</data>
 		</dict>
+		<key>Headers/ZCCacheManage.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+2uqDX/up5/Jfes54OF61xqPPcM=
+			</data>
+			<key>hash2</key>
+			<data>
+			e8ZiY0TkQDELQCh3zGfLFHy3Etbl+/Znz0SCrGLmaCs=
+			</data>
+		</dict>
 		<key>Headers/ZCCalendar.h</key>
 		<dict>
 			<key>hash</key>
@@ -465,11 +484,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YCex2+xmnZKPtPxSUoAj00WRmdM=
+			YC9N5YS3X7GsYm3lMiamy+b2lEk=
 			</data>
 			<key>hash2</key>
 			<data>
-			yg0ZFUaBn4+HKlDGzGRnX0PofsWytT0BcI1ZU6P29NU=
+			Vi/9akP67P4yz09IuJ+Zfhee+V0x4VLfmaeGJDDlxXI=
+			</data>
+		</dict>
+		<key>Headers/ZCFont.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SdVC8Lr5Gx/xKmim+e06+ql5IMw=
+			</data>
+			<key>hash2</key>
+			<data>
+			CIKiZhJydz8ISDsCXSgvhEaSwy+iGknl2YwpN5oju/U=
 			</data>
 		</dict>
 		<key>Headers/ZCLabel.h</key>
@@ -487,33 +517,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bef+HPWj508hdkoQmQEi9eIP+os=
+			UFOZb8MwjHGzv0BpTvsIXaPtE0Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			2p5wYzPTONfIOfjv84nAKSjZ5TNr7vyyVtjIc0qhbMk=
+			ZDTjkSprspx3edWgBodR+nsAJ+m9uU3qlADIttXhq+c=
 			</data>
 		</dict>
 		<key>Headers/ZCLocationManager.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cn94QH0RLhjA2K0v0ZtQp4T+bhk=
+			Y87zGsP9ZrVmYHFvgBqPd9SXCqU=
 			</data>
 			<key>hash2</key>
 			<data>
-			ly5poqnXYV9lp2rCunsyzX6PJhfLF0pE4tGpnPNRZd8=
+			m2I+9KVa3mGryYVU/TFS4fknKg00LDdZQ9hca4It81U=
 			</data>
 		</dict>
 		<key>Headers/ZCNotification.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/+XVbkwy1YrVBfYLmPTSlRVMLKI=
+			JrlYjsgdWyRo4ZO6aRplN++eEhI=
 			</data>
 			<key>hash2</key>
 			<data>
-			AGTPJCSp6jIhWC/juGBd6RSKwLHNLCym3VAq49ps27Y=
+			Aln9ZA5UI4TD7m+YOCIfobTyRNVTGtei+c5C87x8xfs=
 			</data>
 		</dict>
 		<key>Headers/ZCPickerView.h</key>

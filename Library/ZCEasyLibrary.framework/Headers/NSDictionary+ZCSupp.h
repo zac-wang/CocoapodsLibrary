@@ -13,6 +13,6 @@
 /// 拼接并返回对应的url参数字符串
 @property(nonatomic, readonly) NSString *zc_toUrlParamString;
 
-- (id)zc_objectForKeyPath:(id)aKeyPath;
+- (id)zc_objectForKeyPath:(NSString *)aKeyPath;
 
 @end

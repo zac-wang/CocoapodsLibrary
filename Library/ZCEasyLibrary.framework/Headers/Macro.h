@@ -41,15 +41,13 @@
 #define AppBuildVersion ([infoDictionary objectForKey:@"CFBundleVersion"])
 ///手机别名： 用户定义的名称
 #define DeviceName      ([[UIDevice currentDevice] name])
-
+///手机系统版本
 #define iOSSystemVersion ([[UIDevice currentDevice].systemVersion floatValue])
 
 
 
+#define ZCCleanCacheFile(_finderPath_, _deadline_, _delay_) [ZCCacheManage zc_cleanFileWithFinderPath:_finderPath_ deadline:_deadline_ delay:_delay_]
 
-#define ZCIconFontName @"iconfont"
-#define ZCIconFont(fontSize) [UIFont fontWithName:ZCIconFontName size:fontSize]
-// @"\U0000e63d" @"\ue63d"
 
 
 

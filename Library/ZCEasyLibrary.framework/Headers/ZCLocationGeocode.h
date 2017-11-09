@@ -20,7 +20,7 @@
  @param location 地理位置
  @param block 结果回调
  */
-+ (void)reverseGeocodeLocation:(CLLocation *)location block:(void(^)(CLPlacemark *))block;
++ (void)zc_reverseGeocodeLocation:(CLLocation *)location block:(void(^)(CLPlacemark *))block;
 
 /**
  根据地理名称获取地理位置等信息
@@ -28,6 +28,6 @@
  @param addressString 地理名称
  @param block 结果回调
  */
-+ (void)geocodeAddressString:(NSString *)addressString block:(void(^)(CLPlacemark *))block;
++ (void)zc_geocodeAddressString:(NSString *)addressString block:(void(^)(CLPlacemark *))block;
 
 @end

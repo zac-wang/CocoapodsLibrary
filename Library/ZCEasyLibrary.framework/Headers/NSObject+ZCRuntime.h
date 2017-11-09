@@ -12,10 +12,10 @@
 
 #pragma mark -
 /// 添加动态属性
-- (void)zc_setValue:(NSObject *)value forKey:(NSString *)key;
+- (void)zc_setDynamicValue:(id)value forKey:(NSString *)key;
 
 /// 获取动态属性value
-- (NSString *)zc_valueForKey:(NSString *)key;
+- (id)zc_dynamicValueForKey:(NSString *)key;
 
 #pragma mark -
 /**
