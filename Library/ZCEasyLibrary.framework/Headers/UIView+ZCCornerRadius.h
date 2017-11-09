@@ -17,12 +17,13 @@
  *  设置部分圆角(相对布局)
  *
  *  @param corners 需要设置为圆角的角 UIRectCornerTopLeft | UIRectCornerTopRight | UIRectCornerBottomLeft | UIRectCornerBottomRight | UIRectCornerAllCorners
- *  @param radii   需要设置的圆角大小 例如 CGSizeMake(20.0f, 20.0f)
- *  @param rect    需要设置的圆角view的rect
+ *  @param radii   圆角大小
+ *  @param borderColor   边框线条颜色
+ *  @param lineWidth    边框线条宽度
  */
 - (CAShapeLayer *)zc_addRoundedCorners:(UIRectCorner)corners
-                             withRadii:(CGSize)radii
+                                 radii:(CGSize)radii
                            borderColor:(UIColor *)borderColor
-                              viewRect:(CGRect)rect;
+                             lineWidth:(float)lineWidth;
 
 @end

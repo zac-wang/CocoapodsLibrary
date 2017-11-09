@@ -1,6 +1,0 @@
-framework module ZCEasyLibrary {
-  umbrella header "ZCEasyLibrary.h"
-
-  export *
-  module * { export * }
-}
