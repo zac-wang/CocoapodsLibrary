@@ -133,8 +133,8 @@
 			children = (
 				935F4EAC1F98FB6A00CD6AB7 /* ZCCalendarDate.h */,
 				935F4EAD1F98FB6A00CD6AB7 /* ZCCalendarDate.m */,
-				935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */,
 				935F4EAF1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.h */,
+				935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */,
 			);
 			path = date;
 			sourceTree = "<group>";
@@ -234,6 +234,7 @@
 		93B412941F974D12003664BE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93A87A821FA8EC6B005FFD3F /* iconfont.ttf */,
 				93B412961F974DED003664BE /* main_banner.bundle */,
 				93B412831F974CE2003664BE /* Main.storyboard */,
 				93B412861F974CE2003664BE /* Assets.xcassets */,
@@ -257,7 +258,6 @@
 		93B5CA291F9C433900288040 /* ZCCategory */ = {
 			isa = PBXGroup;
 			children = (
-				93A87A821FA8EC6B005FFD3F /* iconfont.ttf */,
 				93B5CA321F9C790000288040 /* view */,
 			);
 			path = ZCCategory;
