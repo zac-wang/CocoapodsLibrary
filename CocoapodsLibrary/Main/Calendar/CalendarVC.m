@@ -10,6 +10,7 @@
 #import "ZCCalendarManageView.h"
 #import "CalendarDayCell.h"
 #import <ZCEasyLibrary/ZCCalendar.h>
+#import <ZCEasyLibrary/NSDate+ZCSupp.h>
 
 @interface CalendarVC ()<ZCCalendarViewDelegate>
 
@@ -90,11 +91,12 @@
 -(void)calendarView:(ZCCalendarView *)collectionView updateSize:(CGSize)size {
     self.dayView.frame = ({CGRect r = self.dayView.monthFrame; r.size.height = size.height; r;});
     //self.gapLayoutConstraint.constant = height - self.dayView.frame.size.height;
+    NSDateComponents *com = collectionView.date.zc_dateComponents;
+    self.yearMonthLabel.text = [NSString stringWithFormat:@"%ld年%.2ld月", com.year, com.month];
 }
 
 - (void)calendarView:(ZCCalendarView *)collectionView cell:(ZCCalendarDayCell *)cell {
     if(cell.type == ZCCalendarDayCellTypeNowMonth && cell.dateComponents.day == 1) {
-        self.yearMonthLabel.text = [NSString stringWithFormat:@"%ld年%.2ld月", (long)cell.dateComponents.year, (long)cell.dateComponents.month];
     }
 }
 

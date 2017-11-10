@@ -123,11 +123,11 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ZCCalendarDayCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.dateComponents = [(NSDate *)[showMothArray.startCom.zc_toDate dateByAddingTimeInterval:24*60*60*indexPath.row] zc_dateComponents];
-    if(self.date.zc_month-1==cell.dateComponents.month && self.date.zc_month+11==cell.dateComponents.month) {
-        cell.type = ZCCalendarDayCellTypePreviousMonth;
-    }else if(self.date.zc_month==cell.dateComponents.month) {
+    if(self.date.zc_month==cell.dateComponents.month) {
         cell.type = ZCCalendarDayCellTypeNowMonth;
-    }else if(self.date.zc_month+1==cell.dateComponents.month && self.date.zc_month-11==cell.dateComponents.month) {
+    }else if(self.date.zc_month-1==cell.dateComponents.month || self.date.zc_month+11==cell.dateComponents.month) {
+        cell.type = ZCCalendarDayCellTypePreviousMonth;
+    }else if(self.date.zc_month+1==cell.dateComponents.month || self.date.zc_month-11==cell.dateComponents.month) {
         cell.type = ZCCalendarDayCellTypeNextMonth;
     }
     

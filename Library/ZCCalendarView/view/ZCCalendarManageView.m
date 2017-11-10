@@ -35,7 +35,7 @@
 - (void)initialView {
     isAnimat = NO;
     self.date = [NSDate date];
-    [ZCCalendar shared].firstWeekday = ZCCalendarMonday;
+    [ZCCalendar shared].firstWeekday = ZCCalendarSunday;
     
     self.backgroundColor = [UIColor clearColor];
     self.layer.masksToBounds = YES;

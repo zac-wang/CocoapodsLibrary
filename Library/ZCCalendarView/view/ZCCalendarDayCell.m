@@ -37,11 +37,13 @@
     if(!titleLabel) {
         titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/4, self.frame.size.width, self.frame.size.height/4)];
         titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.font = [UIFont systemFontOfSize:21];
         [self addSubview:titleLabel];
         
         subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/2, self.frame.size.width, self.frame.size.height/4)];
         subTitleLabel.textAlignment = NSTextAlignmentCenter;
+        subTitleLabel.backgroundColor = [UIColor clearColor];
         subTitleLabel.font = [UIFont systemFontOfSize:8];
         [self addSubview:subTitleLabel];
     }
