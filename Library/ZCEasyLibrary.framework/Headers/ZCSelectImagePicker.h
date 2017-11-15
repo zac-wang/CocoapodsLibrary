@@ -22,6 +22,6 @@
 ///取消选择图片后回调的方法
 @property(nonatomic, copy) void(^zc_cancelSelectPickerController)(void);
 
-- (void)zc_showWithViewController:(UIViewController *)vc;
+- (void)zc_showWithViewController:(UIViewController *)vc push:(BOOL)isPush;
 
 @end
