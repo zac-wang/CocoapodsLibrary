@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 934E711E1FAC18DE00E69A72 /* libz.tbd */; };
-		935ACFF11FA3A5EF000A7AF3 /* UITableView+xiaoaiStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B5CA371F9C7A5B00288040 /* UITableView+xiaoaiStyle.m */; };
 		935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935ACFF91FA45C5A000A7AF3 /* ViewVC.m */; };
 		935F4EBC1F99018000CD6AB7 /* CalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EBB1F99018000CD6AB7 /* CalendarVC.m */; };
 		935F4EBD1F99090400CD6AB7 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB71F98FC9A00CD6AB7 /* CalendarDayCell.m */; };
@@ -21,7 +20,6 @@
 		936CD7B51FACFF7000F13E78 /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B41FACFF7000F13E78 /* TestModel1.m */; };
 		936CD7B81FACFF8200F13E78 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CD7B71FACFF8200F13E78 /* TestModel.m */; };
 		939A59591FADC21600DBD9E0 /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; };
-		939A595A1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; };
 		939A595B1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93A87A831FA8ECF7005FFD3F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A87A821FA8EC6B005FFD3F /* iconfont.ttf */; };
 		93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4127E1F974CE2003664BE /* AppDelegate.m */; };
@@ -92,8 +90,6 @@
 		93B412A31F976026003664BE /* ZCSpinnerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCSpinnerView.m; sourceTree = "<group>"; };
 		93B5CA341F9C792D00288040 /* MBProgressHUD+easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+easy.h"; sourceTree = "<group>"; };
 		93B5CA351F9C792E00288040 /* MBProgressHUD+easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+easy.m"; sourceTree = "<group>"; };
-		93B5CA361F9C7A5B00288040 /* UITableView+xiaoaiStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+xiaoaiStyle.h"; sourceTree = "<group>"; };
-		93B5CA371F9C7A5B00288040 /* UITableView+xiaoaiStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+xiaoaiStyle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +99,6 @@
 			files = (
 				934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */,
 				939A59591FADC21600DBD9E0 /* ZCEasyLibrary.framework in Frameworks */,
-				939A595A1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +261,6 @@
 		93B5CA321F9C790000288040 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				93B5CA361F9C7A5B00288040 /* UITableView+xiaoaiStyle.h */,
-				93B5CA371F9C7A5B00288040 /* UITableView+xiaoaiStyle.m */,
 				93B5CA341F9C792D00288040 /* MBProgressHUD+easy.h */,
 				93B5CA351F9C792E00288040 /* MBProgressHUD+easy.m */,
 			);
@@ -348,7 +341,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935ACFF11FA3A5EF000A7AF3 /* UITableView+xiaoaiStyle.m in Sources */,
 				935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */,
 				935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */,
 				935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */,

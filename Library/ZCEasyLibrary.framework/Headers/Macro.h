@@ -34,11 +34,11 @@
 /// 获取当前App的基本信息字典
 #define AppInfoPlist    ([[NSBundle mainBundle] infoDictionary])
 ///app名称
-#define AppName         ([infoDictionary objectForKey:@"CFBundleDisplayName"])
+#define AppName         ([AppInfoPlist objectForKey:@"CFBundleDisplayName"])
 /// app版本
-#define AppVersion      ([infoDictionary objectForKey:@"CFBundleShortVersionString"])
+#define AppVersion      ([AppInfoPlist objectForKey:@"CFBundleShortVersionString"])
 /// app build版本
-#define AppBuildVersion ([infoDictionary objectForKey:@"CFBundleVersion"])
+#define AppBuildVersion ([AppInfoPlist objectForKey:@"CFBundleVersion"])
 ///手机别名： 用户定义的名称
 #define DeviceName      ([[UIDevice currentDevice] name])
 ///手机系统版本
