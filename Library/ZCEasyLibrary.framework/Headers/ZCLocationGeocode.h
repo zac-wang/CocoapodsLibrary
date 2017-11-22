@@ -7,10 +7,10 @@
 //
 
 #import <CoreLocation/CLPlacemark.h>
+#import <CoreLocation/CLLocation.h>
 
-#define CLLocationModel(__latitude__, __longitude__) [[CLLocation alloc] initWithLatitude:__latitude__ longitude:__longitude__]
-///计算两坐标间的距离,偏差±50米
-#define DistanceFromLocation(__CLLocationModel1__, __CLLocationModel2__) [__CLLocationModel1__ distanceFromLocation:__CLLocationModel2__]
+/// 计算两坐标间的距离
+#define DistanceFromLocation(__CLLocationModel1__, __CLLocationModel2__) [ZCLocationGeocode zc_getDistance:__CLLocationModel1__ :__CLLocationModel2__]
 
 @interface ZCLocationGeocode : NSObject
 
@@ -29,5 +29,17 @@
  @param block 结果回调
  */
 + (void)zc_geocodeAddressString:(NSString *)addressString block:(void(^)(CLPlacemark *p))block;
+
+
+/**
+ 计算两坐标间的距离,偏差±50米
+
+ @param location1 坐标1
+ @param location2 坐标2
+ */
++ (CLLocationDistance)zc_getDistance:(CLLocation *)location1 :(CLLocation *)location2;
+/// 计算两坐标间的距离
++ (CLLocationDistance)zc_getDistanceCoord:(CLLocationCoordinate2D)coo1 :(CLLocationCoordinate2D)coo2;
+
 
 @end
