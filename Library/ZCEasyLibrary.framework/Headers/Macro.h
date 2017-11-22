@@ -32,17 +32,18 @@
 
 
 /// 获取当前App的基本信息字典
-#define AppInfoPlist    ([[NSBundle mainBundle] infoDictionary])
+#define ZCAppInfoPlist          ([[NSBundle mainBundle] infoDictionary])
 ///app名称
-#define AppName         ([AppInfoPlist objectForKey:@"CFBundleDisplayName"])
+#define ZCAppInfoName           ([ZCAppInfoPlist objectForKey:@"CFBundleDisplayName"])
+#define ZCAppInfoBundleName     ([ZCAppInfoPlist objectForKey:@"CFBundleName"])
 /// app版本
-#define AppVersion      ([AppInfoPlist objectForKey:@"CFBundleShortVersionString"])
+#define ZCAppInfoVersion        ([ZCAppInfoPlist objectForKey:@"CFBundleShortVersionString"])
 /// app build版本
-#define AppBuildVersion ([AppInfoPlist objectForKey:@"CFBundleVersion"])
+#define ZCAppInfoBuildVersion   ([ZCAppInfoPlist objectForKey:@"CFBundleVersion"])
 ///手机别名： 用户定义的名称
-#define DeviceName      ([[UIDevice currentDevice] name])
+#define ZCDeviceName            ([[UIDevice currentDevice] name])
 ///手机系统版本
-#define iOSSystemVersion ([[UIDevice currentDevice].systemVersion floatValue])
+#define ZCiOSSystemVersion      ([[UIDevice currentDevice].systemVersion floatValue])
 
 
 
