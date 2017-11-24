@@ -24,6 +24,8 @@ extern NSNotificationName const ZCLocationChangedNotification;
 @property(nonatomic, readwrite) BOOL zc_backgroundLocation;
 
 /// 获取当前地理位置
+@property(nonatomic, readonly) CLLocation *zc_nowLocation;
+/// 获取当前地理位置
 @property(nonatomic, readonly) CLLocationCoordinate2D zc_nowCoordinate;
 
 /// 实时刷新当前位置(也可注册广播)

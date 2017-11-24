@@ -12,4 +12,6 @@
 
 + (UIImage *)zc_imageWithColor:(UIColor *)color;
 
++ (UIImage *)zc_imageWithColor:(UIColor *)color size:(CGSize)size;
+
 @end
