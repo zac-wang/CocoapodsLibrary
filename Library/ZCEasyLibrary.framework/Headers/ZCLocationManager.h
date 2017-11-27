@@ -20,7 +20,7 @@ extern NSNotificationName const ZCLocationChangedNotification;
 /// 允许打印log
 @property(nonatomic, assign) BOOL zc_enabledLog;
 /// 检查是否授权,servicesEnabled(定位是否开启)，authStatus(仅用户明确拒绝时为NO，其他为YES)，前两项均为NO时，则会返回默认提示语msg
-- (void)checkAuthorizationStatus:(void(^)(BOOL servicesEnabled, BOOL authStatus, NSString *msg))block;
+- (void)zc_checkAuthorizationStatus:(void(^)(BOOL servicesEnabled, BOOL authStatus, NSString *msg))block;
 
 /// 开启后台定位(iOS9+)
 @property(nonatomic, readwrite) BOOL zc_backgroundLocation;
