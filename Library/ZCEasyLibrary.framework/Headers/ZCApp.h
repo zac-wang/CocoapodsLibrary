@@ -12,7 +12,5 @@
 
 /// 打电话
 + (void (^)(NSString *))zc_callMobilePhone;
-/// 打电话，弹出确认框
-+ (void (^)(NSString *, UIViewController *))zc_alertCallMobilePhone;
 
 @end

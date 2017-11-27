@@ -21,9 +21,6 @@
 
 @property(nonatomic, readonly) NSString *zc_pinyin;
 
-///获取对应的json对象（字典or数组）
-@property(nonatomic, readonly) id zc_toJsonObject;
-
 
 
 /**
