@@ -33,6 +33,15 @@
                                     paddingString:(NSString *)paddingString
                                      paddingColor:(UIColor *)paddingColor
                                           maxSize:(CGSize)maxSize;
+/// 按行生成标签数组
++ (NSArray *)zc_getTagLinesWithTextFont:(UIFont *)font
+                               backFont:(UIFont *)backFont
+                              textColor:(UIColor *)textColor
+                              backColor:(UIColor *)backColor
+                           tagTextArray:(NSArray *)tagTextArray
+                          paddingString:(NSString *)paddingString
+                           paddingColor:(UIColor *)paddingColor
+                                maxSize:(CGSize)maxSize;
 /// 生成标签数组
 + (NSArray *)zc_getTagsWithTextFont:(UIFont *)font
                            backFont:(UIFont *)backFont
