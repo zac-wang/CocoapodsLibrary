@@ -40,6 +40,8 @@
 #define ZCAppInfoVersion        ([ZCAppInfoPlist objectForKey:@"CFBundleShortVersionString"])
 /// app build版本
 #define ZCAppInfoBuildVersion   ([ZCAppInfoPlist objectForKey:@"CFBundleVersion"])
+/// app bundleIdentifier
+#define ZCAppInfoBundleId       ([ZCAppInfoPlist objectForKey:@"CFBundleIdentifier"])
 ///手机别名： 用户定义的名称
 #define ZCDeviceName            ([[UIDevice currentDevice] name])
 ///手机系统版本

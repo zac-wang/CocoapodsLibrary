@@ -14,4 +14,6 @@
 
 + (UIImage *)zc_imageWithColor:(UIColor *)color size:(CGSize)size;
 
++ (UIImage *)zc_imageWithImageStream:(CVImageBufferRef)imageBuffer;
+
 @end

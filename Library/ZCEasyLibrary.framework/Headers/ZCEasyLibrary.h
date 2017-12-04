@@ -26,6 +26,7 @@
 #import "NSString+ZCSupp.h"
 #import "UIColor+ZCSupp.h"
 #import "UIImage+ZCSupp.h"
+#import "UIImageView+ZCGif.h"
 #import "UINavigationBar+ZCSupp.h"
 #import "UITableView+xiaoaiStyle.h"
 #import "UIView+ZCCornerRadius.h"
