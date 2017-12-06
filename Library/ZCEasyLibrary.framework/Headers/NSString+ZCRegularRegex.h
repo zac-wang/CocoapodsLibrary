@@ -31,4 +31,12 @@
 /// 根据身份证前17位获取正确的第18位
 @property(nonatomic, readonly) NSString *validVerificationCode;
 
+
+
+
+/// 根据正则获取匹配内容
+@property(nonatomic, readonly) NSArray<NSTextCheckingResult *> *(^zc_getMatchingForRegular)(NSString *regularRegex);
+@property(nonatomic, readonly) NSArray<NSString *> *(^zc_getOneMatchingForRegular)(NSString *regularRegex);
+
+
 @end

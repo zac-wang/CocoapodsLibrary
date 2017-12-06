@@ -10,6 +10,9 @@
 
 @interface UIView (ZCSupp)
 
+- (void)zc_addFrameSizeChangeEvent:(void (^)(UIView *))zc_addFrameSizeChangeEvent;
+- (void)zc_removeFrameSizeChangeEvent;
+
 - (CAGradientLayer *)zc_setBackgroundColors:(NSArray *)colors startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint locations:(NSArray *)locations;
 
 @end
