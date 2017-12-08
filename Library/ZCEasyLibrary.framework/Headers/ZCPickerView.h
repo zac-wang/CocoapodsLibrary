@@ -26,5 +26,7 @@
 
 ///选择后的回调方法
 @property(nonatomic, copy) void(^zc_selectPicker)(UIPickerView *pic, NSArray<NSNumber *> *selectRowArray, NSArray<NSString *> *selectTitleArray);
+/// 当前选择行号
+@property(nonatomic, readonly) NSInteger (^zc_selectRow)(NSInteger component);
 
 @end
