@@ -9,12 +9,12 @@
 #import "ViewVC.h"
 #import <ZCEasyLibrary/ZCEasyLibrary.h>
 #import <CoreText/CoreText.h>
+#import "ZCSpinnerView.h"
 
 @interface ViewVC ()
 
 @property (weak, nonatomic) IBOutlet ZCVerticalButton *btn;
 @property (weak, nonatomic) IBOutlet ZCTextView *textView;
-@property (weak, nonatomic) IBOutlet ZCTextField *textField;
 
 @end
 
@@ -25,14 +25,11 @@
     // Do any additional setup after loading the view.
     
     [self.btn imageFrame:CGRectMake(0, 0, 100, 100) titleFrame:CGRectMake(0, 100, 100, 20)];
-    self.textView.font = ZCIconFont(15);
-    self.textView.text = [NSString stringWithFormat:@"\U0000e63d what the fuck"];
-    [self.textView zc_drawCornerRadius:10 borderColor:[UIColor redColor]];
     
+    [self.textView zc_addFrameSizeChangeEvent:^(UIView *view) {
+        NSLog(@"%@", NSStringFromCGRect(self.textView.frame));
+    }];
     
-    
-    
-    self.navigationController.navigationBar.zc_transparent = YES;
 }
 
 - (IBAction)showDatePicker:(UIButton *)sender {
@@ -71,6 +68,22 @@
     [self.view addSubview:pic];
 }
 
+- (IBAction)showSpinner:(UIButton *)sender {
+    static ZCSpinnerView *spinnerView;
+    if(!spinnerView) {
+        CGRect rect = CGRectMake(0, sender.frame.origin.y+sender.frame.size.height, self.view.frame.size.width, 300);
+        spinnerView = [[ZCSpinnerView alloc] initWithMaxFrame:rect];
+        spinnerView.dataSource = @[@"一", @"二", @"三", @"四", @"五"];
+        spinnerView.cell = ^(UITableViewCell *cell, NSIndexPath *indexPath) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        };
+        spinnerView.selectEvent = ^(UITableViewCell *cell, NSIndexPath *indexPath, NSString *title) {
+            //cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            NSLog(@"%ld", (long)indexPath.row);
+        };
+    }
+    [spinnerView show];
+}
 
 
 - (void)didReceiveMemoryWarning {
