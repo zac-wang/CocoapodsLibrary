@@ -10,6 +10,8 @@
 
 @interface ZCNotification : NSObject
 
++ (instancetype)alloc __attribute__((unavailable("不允许使用这个方法")));
+
 + (instancetype)shared;
 
 /**

@@ -16,7 +16,11 @@
 typedef NSDate *(^ChangeDateWithInt)(NSInteger);
 
 
-@interface NSString (dataZCSupp)
+@interface NSNumber (ZCDateSupp)
+@property(nonatomic, readonly) NSDate *zc_toDate;
+@end
+
+@interface NSString (ZCDateSupp)
 @property(nonatomic, readonly) NSDate *(^zc_toDate)(NSString *formartString);
 @end
 
