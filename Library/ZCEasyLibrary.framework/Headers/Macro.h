@@ -55,6 +55,10 @@
 
 
 
+#ifndef __ios9
+#define NSAttributedStringKey NSString
+#endif
+
 
 //roundf(5.61)//四舍五入
 //ceilf(5.61)//进一法

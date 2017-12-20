@@ -15,14 +15,9 @@
 + (instancetype)shared;
 
 /**
- 注册远程推送
+ 注册推送
  */
 - (void)zc_registerRemoteNotification;
-
-/**
- 注册本地推送
- */
-- (void)zc_registerUserNotification;
 
 /**
  根据deviceToken获取推送字符串

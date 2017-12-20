@@ -30,7 +30,7 @@
 #import "UIImage+ZCSupp.h"
 #import "UIImageView+ZCGif.h"
 #import "UINavigationBar+ZCSupp.h"
-#import "UITableView+xiaoaiStyle.h"
+#import "UITableView+ZCSupp.h"
 #import "UIView+ZCCornerRadius.h"
 #import "UIView+ZCSupp.h"
 #import "ZCAlert.h"

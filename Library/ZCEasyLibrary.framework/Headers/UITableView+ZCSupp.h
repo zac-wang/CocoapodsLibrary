@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITableView (xiaoaiStyle)
+@interface UITableView (ZCSupp)
 
 /**
  分页请求数据的 每页数据个数，不作任何处理，仅用于存储
@@ -20,9 +20,7 @@
  */
 @property(nonatomic, assign) int zc_dataSourcePageOffset;
 
-- (void)zc_setXiaoAiStyle;
-- (void)zc_setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft;
-- (void)zc_setXiaoAiStyleWithSeparatorHexColor:(long)hex;
-- (void)zc_setXiaoAiStyleWithSeparatorLeft:(float)separatorLeft separatorHexColor:(long)hex;
+/// 自动调整cell高度，并设置cell的估算高度
+@property(nonatomic, readwrite) int autoCellHeight;
 
 @end

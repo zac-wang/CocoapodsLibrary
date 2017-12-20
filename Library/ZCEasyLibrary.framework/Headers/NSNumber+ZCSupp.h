@@ -16,7 +16,4 @@ NSString *zc_decimalNumberWithDouble(double conversionValue);
 /// 解决 NSJSONSerialization 解析JSON，精度丢失问题
 @property (nonatomic, readonly) NSString *zc_decimalNumber;
 
-/// 转换为字符串
-@property (nonatomic, readonly) NSString *zc_toString;
-
 @end
