@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/NSStringDrawing.h>
+#import "Macro.h"
 
 #define NSStringFormNumber(_number_) [NSString stringWithFormat:@"%@", _number_]
 

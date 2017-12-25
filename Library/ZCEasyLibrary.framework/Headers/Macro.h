@@ -9,24 +9,23 @@
 #ifndef Macro_h
 #define Macro_h
 
-
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
-#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
-#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
-#define SCREEN_SCALE ([[UIScreen mainScreen] scale])
-
+/// 根据中心点 和大小 计算出CGRect
 #define CGRectFromCentAndSize(_cent_, _size_) CGRectMake(_cent_.x-_size_.width/2, _cent_.y-_size_.height/2, _size_.height, _size_.width)
 
+#define ZC_SCREEN_SIZE          ([[UIScreen mainScreen] bounds].size)
+#define ZC_SCREEN_WIDTH         (ZC_SCREEN_SIZE.width)
+#define ZC_SCREEN_HEIGHT        (ZC_SCREEN_SIZE.height)
+#define ZC_SCREEN_MAX_LENGTH    (MAX(ZC_SCREEN_WIDTH, ZC_SCREEN_HEIGHT))
+#define ZC_SCREEN_MIN_LENGTH    (MIN(ZC_SCREEN_WIDTH, ZC_SCREEN_HEIGHT))
+#define ZC_SCREEN_SCALE         ([[UIScreen mainScreen] scale])
 
-#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define IS_RETINA (SCREEN_SCALE >= 2.0)
 
-#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
-#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
-#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
-#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+/// 设备是否是iPad
+#define ZC_IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+/// 设备是否是iphone
+#define ZC_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+/// 设备是否是视网膜屏幕
+#define ZC_IS_RETINA (ZC_SCREEN_SCALE >= 2.0)
 
 
 
@@ -48,15 +47,15 @@
 #define ZCiOSSystemVersion      ([[UIDevice currentDevice].systemVersion floatValue])
 
 
-
-#define ZCCleanCacheFile(_finderPath_, _deadline_, _delay_) [ZCCacheManage zc_cleanFileWithFinderPath:_finderPath_ deadline:_deadline_ delay:_delay_]
-
-
+/// 清理文件夹，（要清理的目录，过期时间/秒）
+#define ZCCleanCacheFile(_finderPath_, _deadline_) [ZCCacheManage zc_cleanFileWithFinderPath:_finderPath_ deadline:_deadline_ delay:0.5]
 
 
 
-#ifndef __ios9
-#define NSAttributedStringKey NSString
+
+/// 兼容xcode9以下
+#ifndef __IPHONE_10_0
+typedef NSString * NSAttributedStringKey NS_EXTENSIBLE_STRING_ENUM;
 #endif
 
 
