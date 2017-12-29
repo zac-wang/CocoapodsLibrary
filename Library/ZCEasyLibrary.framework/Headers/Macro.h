@@ -50,6 +50,8 @@
 /// 清理文件夹，（要清理的目录，过期时间/秒）
 #define ZCCleanCacheFile(_finderPath_, _deadline_) [ZCCacheManage zc_cleanFileWithFinderPath:_finderPath_ deadline:_deadline_ delay:0.5]
 
+/// 创建一个UUID
+#define ZC_CREATE_NEW_UUID ([[NSUUID UUID] UUIDString])
 
 
 

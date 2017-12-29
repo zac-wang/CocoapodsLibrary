@@ -12,5 +12,7 @@
 
 /// 打电话
 + (void (^)(NSString *))zc_callMobilePhone;
+/// 获取uuid唯一标示
++ (NSString *)zc_uuid;
 
 @end
