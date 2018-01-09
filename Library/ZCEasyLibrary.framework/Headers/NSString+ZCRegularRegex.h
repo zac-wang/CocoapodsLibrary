@@ -29,7 +29,7 @@
 /// 判断身份证格式有效(不验证时间)
 @property(nonatomic, readonly) BOOL zc_isIDCardNoVerifTime;
 /// 根据身份证前17位获取正确的第18位
-@property(nonatomic, readonly) NSString *validVerificationCode;
+@property(nonatomic, readonly) NSString *zc_validVerificationCode;
 
 
 

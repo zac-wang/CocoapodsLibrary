@@ -10,6 +10,6 @@
 
 @interface iphoneDevice : NSObject
 
-NSString *iphoneType(void);
+NSString *zc_iphoneType(void);
 
 @end

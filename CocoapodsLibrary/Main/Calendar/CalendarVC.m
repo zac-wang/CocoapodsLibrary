@@ -92,7 +92,7 @@
     self.dayView.frame = ({CGRect r = self.dayView.monthFrame; r.size.height = size.height; r;});
     //self.gapLayoutConstraint.constant = height - self.dayView.frame.size.height;
     NSDateComponents *com = collectionView.date.zc_dateComponents;
-    self.yearMonthLabel.text = [NSString stringWithFormat:@"%ld年%.2ld月", com.year, com.month];
+    self.yearMonthLabel.text = [NSString stringWithFormat:@"%ld年%.2ld月", (long)com.year, (long)com.month];
 }
 
 - (void)calendarView:(ZCCalendarView *)collectionView cell:(ZCCalendarDayCell *)cell {

@@ -21,6 +21,6 @@
 @property(nonatomic, assign) int zc_dataSourcePageOffset;
 
 /// 自动调整cell高度，并设置cell的估算高度
-@property(nonatomic, readwrite) int autoCellHeight;
+@property(nonatomic, readwrite) int zc_autoCellHeight;
 
 @end

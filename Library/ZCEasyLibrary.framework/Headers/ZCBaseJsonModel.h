@@ -20,7 +20,7 @@
 
 #pragma mark - 重写
 /// 设置属性公共头（例：m_）
-- (NSString *)customPrefix;
+- (NSString *)zc_customPrefix;
 /// 设置【 属性名：对应json key关系 】特殊情况
 - (NSString *)zc_customJsonKeyWithPropertyName:(NSString *)propertyName;
 /// 如属性中有数组类型，必须声明对应关系【 属性名：元素Class 】

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		934525F91FD55F6600142E10 /* ZCTablePopupControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 934525F81FD55F6600142E10 /* ZCTablePopupControl.m */; };
 		934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 934E711E1FAC18DE00E69A72 /* libz.tbd */; };
+		9355C30D1FDE1A08007E8BB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9355C30C1FDE1A08007E8BB8 /* ViewController.m */; };
 		935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935ACFF91FA45C5A000A7AF3 /* ViewVC.m */; };
 		935F4EBC1F99018000CD6AB7 /* CalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EBB1F99018000CD6AB7 /* CalendarVC.m */; };
 		935F4EBD1F99090400CD6AB7 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB71F98FC9A00CD6AB7 /* CalendarDayCell.m */; };
@@ -17,6 +18,7 @@
 		935F4EC11F99090400CD6AB7 /* ZCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB41F98FB6A00CD6AB7 /* ZCCalendarView.m */; };
 		935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */; };
 		935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */; };
+		9376DB131FF6DBF500D1D9CA /* ZCNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 9376DB111FF6DBF500D1D9CA /* ZCNotification.m */; };
 		938173011FCE931100F141FB /* ZCPlaySystemSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 938173001FCE931100F141FB /* ZCPlaySystemSound.m */; };
 		938173031FCE94E600F141FB /* zc_sound.plist in Resources */ = {isa = PBXBuildFile; fileRef = 938173021FCE937A00F141FB /* zc_sound.plist */; };
 		939A59591FADC21600DBD9E0 /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; };
@@ -55,6 +57,8 @@
 		934525F81FD55F6600142E10 /* ZCTablePopupControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCTablePopupControl.m; sourceTree = "<group>"; };
 		934E711E1FAC18DE00E69A72 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9355C3041FDD0175007E8BB8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9355C30B1FDE1A08007E8BB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9355C30C1FDE1A08007E8BB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		935ACFF81FA45C5A000A7AF3 /* ViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewVC.h; sourceTree = "<group>"; };
 		935ACFF91FA45C5A000A7AF3 /* ViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewVC.m; sourceTree = "<group>"; };
 		935F4EAC1F98FB6A00CD6AB7 /* ZCCalendarDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDate.h; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		935F4EBB1F99018000CD6AB7 /* CalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarVC.m; sourceTree = "<group>"; };
 		935F4EC31F999CB200CD6AB7 /* ZCCalendarManageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarManageView.h; sourceTree = "<group>"; };
 		935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
+		9376DB111FF6DBF500D1D9CA /* ZCNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCNotification.m; sourceTree = "<group>"; };
+		9376DB121FF6DBF500D1D9CA /* ZCNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCNotification.h; sourceTree = "<group>"; };
 		938172FF1FCE931100F141FB /* ZCPlaySystemSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPlaySystemSound.h; sourceTree = "<group>"; };
 		938173001FCE931100F141FB /* ZCPlaySystemSound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPlaySystemSound.m; sourceTree = "<group>"; };
 		938173021FCE937A00F141FB /* zc_sound.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = zc_sound.plist; sourceTree = "<group>"; };
@@ -239,6 +245,10 @@
 			children = (
 				93B4127D1F974CE2003664BE /* AppDelegate.h */,
 				93B4127E1F974CE2003664BE /* AppDelegate.m */,
+				9355C30B1FDE1A08007E8BB8 /* ViewController.h */,
+				9355C30C1FDE1A08007E8BB8 /* ViewController.m */,
+				9376DB121FF6DBF500D1D9CA /* ZCNotification.h */,
+				9376DB111FF6DBF500D1D9CA /* ZCNotification.m */,
 				93ACC7461FC81C0F00B8FE01 /* test */,
 				935F4F111F9AEE3900CD6AB7 /* Main */,
 				935F4F131F9AEE9100CD6AB7 /* Library */,
@@ -364,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9355C30D1FDE1A08007E8BB8 /* ViewController.m in Sources */,
 				934525F91FD55F6600142E10 /* ZCTablePopupControl.m in Sources */,
 				935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */,
 				935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */,
@@ -378,6 +389,7 @@
 				93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */,
 				93A3C4C11FC5351600663793 /* ZCAppConfigFieldInfo.m in Sources */,
 				93B4129B1F974ED8003664BE /* BannerVC.m in Sources */,
+				9376DB131FF6DBF500D1D9CA /* ZCNotification.m in Sources */,
 				93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */,
 				93ACC74F1FC81C1000B8FE01 /* ZCRequest.m in Sources */,
 				93B4128D1F974CE2003664BE /* main.m in Sources */,

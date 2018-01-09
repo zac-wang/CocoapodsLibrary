@@ -10,12 +10,12 @@
 
 @interface ZCVerticalButton : UIButton
 
-- (void)imageCentY:(float)_imageCentY
-         imageSize:(CGSize)_imageSize
-        titleCentY:(float)_titleCentY
-         titleSize:(CGSize)_titleSize;
+- (void)zc_imageCentY:(float)_imageCentY
+            imageSize:(CGSize)_imageSize
+           titleCentY:(float)_titleCentY
+            titleSize:(CGSize)_titleSize;
 
-- (void)imageFrame:(CGRect)_imageFrame
-        titleFrame:(CGRect)_titleFrame;
+- (void)zc_imageFrame:(CGRect)_imageFrame
+           titleFrame:(CGRect)_titleFrame;
 
 @end

@@ -60,7 +60,7 @@
         return component + 3;
     }];
     pic.zc_cell = ^NSString *(UIPickerView *pic, NSInteger component, NSInteger row) {
-        return [NSString stringWithFormat:@"%ld", row];
+        return [NSString stringWithFormat:@"%ld", (long)row];
     };
     pic.zc_selectPicker = ^(UIPickerView *pic, NSArray<NSNumber *> *selectRowArray, NSArray<NSString *> *selectTitleArray) {
         NSLog(@"%@\n%@", selectRowArray, selectTitleArray);

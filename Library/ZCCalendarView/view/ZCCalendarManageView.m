@@ -19,6 +19,7 @@
 @end
 
 @implementation ZCCalendarManageView
+@synthesize nowShowCalendarView = newView;
 @synthesize monthFrame;
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -60,11 +61,6 @@
     monthFrame = _monthFrame;
     self.frame = monthFrame;
     newView.frame = oldView.frame = newView.superview.frame = self.bounds;
-}
-
-#pragma mark - config data
-- (ZCCalendarView *)nowShowCalendarView {
-    return newView;
 }
 
 - (void)setSetCalendarView:(void (^)(ZCCalendarView *))block {
