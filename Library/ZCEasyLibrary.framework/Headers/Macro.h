@@ -26,7 +26,8 @@
 #define ZC_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 /// 设备是否是视网膜屏幕
 #define ZC_IS_RETINA (ZC_SCREEN_SCALE >= 2.0)
-
+/// 设备是否是iPhone X
+#define ZC_IS_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 
 
 
