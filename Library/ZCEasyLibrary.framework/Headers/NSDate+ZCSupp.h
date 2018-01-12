@@ -29,7 +29,7 @@ typedef NSDate *(^ChangeDateWithInt)(NSInteger);
 @property(nonatomic, readonly) NSDateComponents *zc_dateComponents;
 - (NSDate *)zc_changDate:(void(^)(NSDateComponents *))block;
 
-@property(nonatomic, readonly) BOOL zc_isTodayDate;
+@property(nonatomic, readonly) BOOL zc_isToday;
 - (BOOL)zc_isEqualDay:(NSDate *)date;
 - (BOOL)zc_isEqualDate:(NSDate *)date;
 

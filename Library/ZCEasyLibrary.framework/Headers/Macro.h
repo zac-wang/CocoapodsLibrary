@@ -31,6 +31,7 @@
 
 
 
+
 /// 获取当前App的基本信息字典
 #define ZCAppInfoPlist          ([[NSBundle mainBundle] infoDictionary])
 ///app名称

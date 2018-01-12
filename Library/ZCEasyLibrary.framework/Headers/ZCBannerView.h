@@ -28,11 +28,14 @@
  */
 - (void)zc_initBannerWithCount:(NSInteger)count imageViewBlock:(void(^)(UIImageView *imageView, int num))block;
 
-///滚动间隔时间，默认3秒
+/// 滚动间隔时间，默认3秒
 @property(nonatomic, assign) int zc_timeInterval;
 
-///YES:单个页面不滚动，默认NO
+/// YES:单个页面不滚动，默认NO
 @property(nonatomic, assign) BOOL zc_oneImageNotRolling;
+
+/// 选择图片后的事件
+@property(nonatomic, copy) void(^zc_selectImageView)(UIImageView *imgView, NSInteger index);
 
 /// 开始滚动
 - (void)zc_start;
