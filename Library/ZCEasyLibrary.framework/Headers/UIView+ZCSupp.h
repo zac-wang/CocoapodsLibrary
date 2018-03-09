@@ -10,6 +10,11 @@
 
 @interface UIView (ZCSupp)
 
+///删除子view，UIScrollView等 慎重使用
+@property(nonatomic, readonly) void zc_removeAllSubviews;
+///删除指定类型的子view
+- (void)zc_removeAllSubviewsWithClass:(Class)viewClass;
+
 - (void)zc_addFrameSizeChangeEvent:(void (^)(UIView *))zc_addFrameSizeChangeEvent;
 - (void)zc_removeFrameSizeChangeEvent;
 

@@ -1,5 +1,5 @@
 //
-//  NSData+ZCSupp.h
+//  NSData+ZCJson.h
 //  CocoapodsLibrary
 //
 //  Created by 王志超 on 2017/10/23.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+ZCToString.h"
 
-@interface NSData (ZCSupp)
+@interface NSData (ZCJson)
 
 ///获取对应的json对象（字典or数组）
 @property(nonatomic, readonly) id zc_toJsonObject;
