@@ -27,6 +27,7 @@
 #import "NSObject+ZCToString.h"
 #import "NSString+ZCEncrypt.h"
 #import "NSString+ZCRegularRegex.h"
+#import "NSString+ZCSize.h"
 #import "NSString+ZCSupp.h"
 #import "UIColor+ZCSupp.h"
 #import "UIImage+ZCSupp.h"
