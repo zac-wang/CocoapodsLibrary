@@ -26,6 +26,7 @@
 #import "NSObject+ZCRuntime.h"
 #import "NSObject+ZCToString.h"
 #import "NSString+ZCEncrypt.h"
+#import "NSString+ZCFile.h"
 #import "NSString+ZCRegularRegex.h"
 #import "NSString+ZCSize.h"
 #import "NSString+ZCSupp.h"
