@@ -49,7 +49,7 @@
     [pic setZc_selectPickerController:^(UIImage *image) {
         NSLog(@"%@", image);
     }];
-    [pic zc_showWithViewController:self.navigationController push:YES];
+    [pic zc_showWithViewController:self];
 }
 
 - (IBAction)showPickerView:(UIButton *)sender {
