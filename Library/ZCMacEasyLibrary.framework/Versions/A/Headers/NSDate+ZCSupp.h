@@ -13,6 +13,11 @@
 #define ZCDateFormatDateTime @"yyyy-MM-dd HH:mm:ss"
 #define ZCDateFormatTimeZone @"yyyy-MM-dd'T'HH:mm:ssZZZZ"
 
+/// 根据时间戳初始化时间
+#define ZCDateWithTimeStamp(_time_stamp_) [NSDate dateWithTimeIntervalSince1970:(_time_stamp_)]
+
+#define ZCDateNil ZCDateWithTimeStamp(0)
+
 typedef NSDate *(^ChangeDateWithInt)(NSInteger);
 
 
@@ -33,7 +38,8 @@ typedef NSDate *(^ChangeDateWithInt)(NSInteger);
 - (BOOL)zc_isEqualDay:(NSDate *)date;
 - (BOOL)zc_isEqualDate:(NSDate *)date;
 
-@property(nonatomic, readonly) NSInteger zc_weekDay;
+@property(nonatomic, readonly) NSInteger zc_weekday;
+@property(nonatomic, readonly) ChangeDateWithInt zc_setWeekday;
 @property(nonatomic, readonly) NSInteger zc_year;
 @property(nonatomic, readonly) ChangeDateWithInt zc_setYear;
 @property(nonatomic, readonly) NSInteger zc_month;

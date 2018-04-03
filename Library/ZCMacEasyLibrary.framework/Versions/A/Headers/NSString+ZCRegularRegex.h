@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define ZCRegularTimeStamp @"^[1-9]\\d*$"       //判断是否符合 时间戳格式
+
 @interface NSString (ZCRegularRegex)
 
 /// 判断是否匹配正则

@@ -23,6 +23,7 @@
 #import "NSNumber+MutableDeepCopy.h"
 #import "NSObject+ZCToString.h"
 #import "NSString+ZCEncrypt.h"
+#import "NSString+ZCFile.h"
 #import "NSString+ZCRegularRegex.h"
 #import "NSString+ZCSupp.h"
 #import "NSString+qrImage.h"

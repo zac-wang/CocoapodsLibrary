@@ -44,7 +44,7 @@
 - (ZCCalendarShowMothArray *)getCalendarShowMothArrayWithDate:(NSDate *)date{
     NSDate *nowMonthFirstDayDate = date.zc_firstDayOfCurrentMonth;
 
-    int previousCount = (nowMonthFirstDayDate.zc_weekDay - [ZCCalendar shared].firstWeekday + 7)%7;
+    int previousCount = (nowMonthFirstDayDate.zc_weekday - [ZCCalendar shared].firstWeekday + 7)%7;
     NSDate *previousDateLastDayDate = [nowMonthFirstDayDate dateByAddingTimeInterval:-24*60*60];
     NSUInteger previousMonthTotal = previousDateLastDayDate.zc_countOfDaysInCurrentMonth;
 

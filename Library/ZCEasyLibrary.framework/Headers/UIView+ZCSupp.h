@@ -15,6 +15,9 @@
 ///删除指定类型的子view
 - (void)zc_removeAllSubviewsWithClass:(Class)viewClass;
 
+///遍历子view
+- (void)zc_ergodicSubviews:(void(^)(UIView *v))block;
+
 - (void)zc_addFrameSizeChangeEvent:(void (^)(UIView *))zc_addFrameSizeChangeEvent;
 - (void)zc_removeFrameSizeChangeEvent;
 
