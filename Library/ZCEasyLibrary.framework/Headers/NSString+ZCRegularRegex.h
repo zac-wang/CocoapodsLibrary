@@ -13,7 +13,7 @@
 @interface NSString (ZCRegularRegex)
 
 /// 判断是否匹配正则
-@property(nonatomic, readonly) BOOL(^zc_regular)(NSString *regularRegex);
+- (BOOL)zc_regular:(NSString *)regularRegex;
 
 /// 格式是否符合 手机号
 @property(nonatomic, readonly) BOOL zc_isPhoneNumber;
@@ -37,8 +37,8 @@
 
 
 /// 根据正则获取匹配内容
-@property(nonatomic, readonly) NSArray<NSTextCheckingResult *> *(^zc_getMatchingForRegular)(NSString *regularRegex);
-@property(nonatomic, readonly) NSArray<NSString *> *(^zc_getOneMatchingForRegular)(NSString *regularRegex);
+- (NSArray<NSTextCheckingResult *> *)zc_getMatchingForRegular:(NSString *)regularRegex;
+- (NSArray<NSString *> *)zc_getOneMatchingForRegular:(NSString *)regularRegex;
 
 
 @end

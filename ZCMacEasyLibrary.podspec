@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCMacEasyLibrary"
-  spec.version      = "1.0.42"
+  spec.version      = "1.0.44"
   spec.summary      = "ZCMacEasyLibrary Kit"
   spec.description  = "ZCMacEasyLibrary 拓展库+UI库"
   spec.platform     = :osx, '10.6'

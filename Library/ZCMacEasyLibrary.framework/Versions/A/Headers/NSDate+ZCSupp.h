@@ -26,7 +26,8 @@ typedef NSDate *(^ChangeDateWithInt)(NSInteger);
 @end
 
 @interface NSString (ZCDateSupp)
-@property(nonatomic, readonly) NSDate *(^zc_toDate)(NSString *formartString);
+- (NSDate *)zc_dateFromString:(NSString *)formatString;
+@property(nonatomic, readonly) NSDate *(^zc_toDate)(NSString *formatString);
 @end
 
 @interface NSDate (ZCSupp)
@@ -66,8 +67,10 @@ typedef NSDate *(^ChangeDateWithInt)(NSInteger);
 ///获取下个月1号时间
 @property(nonatomic, readonly) NSDate *zc_nextMonthStartDate;
 
-@property(nonatomic, readonly) NSString *zc_description;
+- (NSString *)zc_format:(NSString *)formatString;
 @property(nonatomic, readonly) NSString *(^zc_format)(NSString *formatString);
 @property(nonatomic, readonly) NSString *(^zc_formatAndRemoveTimeZoneString)(NSString *formatString);
+
+@property(nonatomic, readonly) NSString *zc_description;
 
 @end
