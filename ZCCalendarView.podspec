@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCCalendarView"
-  spec.version      = "1.0.42"
+  spec.version      = "1.0.43"
   spec.summary      = "ZCCalendarView UI Kit"
   spec.description  = "ZCCalendarView 这是一个可自定义样式日历"
   spec.platform     = :ios, '7.0'
@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
   spec.private_header_files = 'Library/ZCCalendarView/date/ZCCalendarDateLunarCalendar.h'
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
-  spec.ios.dependency 'ZCEasyLibrary'
+  spec.ios.dependency 'ZCEasyLibrary', '>= 1.0.42'
 end
