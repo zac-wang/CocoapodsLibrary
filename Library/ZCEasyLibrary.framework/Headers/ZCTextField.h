@@ -22,4 +22,7 @@
 ///文字编辑结束事件
 @property(nonatomic, copy) void(^zc_endEditEvent)(ZCTextField *);
 
+///设置输入框左边的小图标
+- (void)setLeftImage:(UIImage *)image frame:(CGRect)frame;
+
 @end
