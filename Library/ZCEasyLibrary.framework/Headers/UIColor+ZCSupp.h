@@ -19,6 +19,6 @@
 
 @interface UIColor (ZCSupp)
 
-@property(nonatomic, readonly) UIColor *(^zc_alpha)(int);
+@property(nonatomic, readonly) UIColor *(^zc_alpha)(double);
 
 @end

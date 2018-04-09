@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <ZCEasyLibrary/ZCEasyLibrary.h>
 
 @interface ViewController ()
 
