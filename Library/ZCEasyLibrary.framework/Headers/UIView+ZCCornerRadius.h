@@ -10,9 +10,9 @@
 
 @interface UIView (ZCCornerRadius)
 
-- (void)zc_drawCornerRadius:(int)radius;
-- (void)zc_drawCornerRadius:(int)radius borderColor:(UIColor *)color;
-- (void)zc_drawCornerRadius:(int)radius borderWidth:(int)width borderColor:(UIColor *)color;
+- (void)zc_drawCornerRadius:(double)radius;
+- (void)zc_drawCornerRadius:(double)radius borderColor:(UIColor *)color;
+- (void)zc_drawCornerRadius:(double)radius borderWidth:(double)width borderColor:(UIColor *)color;
 /**
  *  设置部分圆角
  *
@@ -24,7 +24,7 @@
 - (CAShapeLayer *)zc_addRoundedCorners:(UIRectCorner)corners
                                  radii:(CGSize)radii
                            borderColor:(UIColor *)borderColor
-                             lineWidth:(float)lineWidth;
+                             lineWidth:(double)lineWidth;
 
 /**
  *  设置部分圆角,可以设置虚线
@@ -38,7 +38,7 @@
 - (CAShapeLayer *)zc_addRoundedCorners:(UIRectCorner)corners
                                  radii:(CGSize)radii
                            borderColor:(UIColor *)borderColor
-                             lineWidth:(float)lineWidth
+                             lineWidth:(double)lineWidth
                        lineDashPattern:(NSArray *)lineDashPattern;
 
 @end
