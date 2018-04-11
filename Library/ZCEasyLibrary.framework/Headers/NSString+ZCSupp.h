@@ -10,7 +10,7 @@
 
 #define NSStringFormNumber(_number_) [NSString stringWithFormat:@"%@", _number_]
 
-#define NSStringValid(__string__) ([(__string__) isKindOfClass:[NSString class]] && (__string__).length)
+#define NSStringValid(__string__) ([((NSString *)(__string__)) isKindOfClass:[NSString class]] && ((NSString *)(__string__)).length)
 
 @interface NSString (ZCSupp)
 
