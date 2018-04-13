@@ -16,7 +16,7 @@
 
 
 ///用于设置回调方法中，返回格式化时间的格式
-@property(nonatomic, readonly) NSString *zc_dateFormat;
+@property(nonatomic, copy) NSString *zc_dateFormat;
 
 /**
  选择时间后的回调方法
