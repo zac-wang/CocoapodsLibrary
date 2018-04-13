@@ -10,18 +10,18 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    ZCAttributedUnderlineStyleNone         = NSUnderlineStyleNone,
-    ZCAttributedUnderlineStyleSingle       = NSUnderlineStyleSingle,
-    ZCAttributedUnderlineStyleThick        = NSUnderlineStyleThick,
-    ZCAttributedUnderlineStyleDouble       = NSUnderlineStyleDouble,
+    ZCAttributedUnderlineStyleNone         = NSUnderlineStyleNone,  // 不设置 下划线／删除线
+    ZCAttributedUnderlineStyleSingle       = NSUnderlineStyleSingle,// 设置下划线／删除线 为 细单线
+    ZCAttributedUnderlineStyleThick        = NSUnderlineStyleThick, // 设置下划线／删除线 为 粗单线
+    ZCAttributedUnderlineStyleDouble       = NSUnderlineStyleDouble,// 设置下划线／删除线 为 细双线
     
-    ZCAttributedUnderlinePatternSolid      = NSUnderlinePatternSolid,
-    ZCAttributedUnderlinePatternDot        = NSUnderlinePatternDot,
-    ZCAttributedUnderlinePatternDash       = NSUnderlinePatternDash,
-    ZCAttributedUnderlinePatternDashDot    = NSUnderlinePatternDashDot,
-    ZCAttributedUnderlinePatternDashDotDot = NSUnderlinePatternDashDotDot,
+    ZCAttributedUnderlinePatternSolid      = NSUnderlinePatternSolid,     // 设置下划线／删除线 为 连续的实线
+    ZCAttributedUnderlinePatternDot        = NSUnderlinePatternDot,       // 设置下划线／删除线 为 断续的短虚线
+    ZCAttributedUnderlinePatternDash       = NSUnderlinePatternDash,      // 设置下划线／删除线 为 断续的长虚线
+    ZCAttributedUnderlinePatternDashDot    = NSUnderlinePatternDashDot,   // 设置下划线／删除线 为 断续的长、短虚线
+    ZCAttributedUnderlinePatternDashDotDot = NSUnderlinePatternDashDotDot,// 设置下划线／删除线 为 断续的长、短、短虚线
     
-    ZCAttributedUnderlineByWord            = NSUnderlineByWord
+    ZCAttributedUnderlineByWord            = NSUnderlineByWord            // 空格 不设置 下划线／删除线
 } ZCAttributedUnderType;
 
 @interface NSMutableAttributedString (ZCSetStyle)
