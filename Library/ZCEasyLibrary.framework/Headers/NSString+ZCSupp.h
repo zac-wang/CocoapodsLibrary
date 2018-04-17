@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define NSStringFormNumber(_number_) [NSString stringWithFormat:@"%@", _number_]
+#define ZCStringFromObject(_object_) [NSString stringWithFormat:@"%@", _object_]
 
 #define NSStringValid(__string__) ({ \
     NSString *myString = __string__; \
