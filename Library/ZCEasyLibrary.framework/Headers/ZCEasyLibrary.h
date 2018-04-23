@@ -35,6 +35,7 @@
 #import "UIButton+ZCSupp.h"
 #import "UIColor+ZCSupp.h"
 #import "UIImage+ZCSupp.h"
+#import "UIImageView+ZCAnimat.h"
 #import "UIImageView+ZCGif.h"
 #import "UINavigationBar+ZCSupp.h"
 #import "UITableView+ZCSupp.h"
