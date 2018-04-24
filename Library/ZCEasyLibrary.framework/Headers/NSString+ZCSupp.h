@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define ZCStringFromObject(_object_) [NSString stringWithFormat:@"%@", _object_ ? ([_object_ isEqual:[NSNull null]] ? @"" : _object_) : @""]
+#define ZCStringFromObject(_object_) [NSString stringWithFormat:@"%@", NSStringValid(_object_) ? _object_ : @""]
 
 #define NSStringValid(__string__) ({ \
     NSString *myString = __string__; \

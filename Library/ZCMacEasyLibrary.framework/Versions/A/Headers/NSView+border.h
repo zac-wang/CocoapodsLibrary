@@ -10,6 +10,6 @@
 
 @interface NSView (border)
 
-- (void)addBorderWithRadius:(float)radius borderWidth:(float)borderWidth borderColor:(NSColor *)borderColor;
+- (void)zc_addBorderWithRadius:(float)radius borderWidth:(float)borderWidth borderColor:(NSColor *)borderColor;
 
 @end

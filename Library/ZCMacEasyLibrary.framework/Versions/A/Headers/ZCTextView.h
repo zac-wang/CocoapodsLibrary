@@ -10,8 +10,8 @@
 
 @interface ZCTextView : NSScrollView
 
-+ (ZCTextView *)textViewWithFrame:(CGRect)rect;
++ (ZCTextView *)zc_textViewWithFrame:(CGRect)rect;
 
-@property(nonatomic, strong)NSTextView *textView;
+@property(nonatomic, strong)NSTextView *zc_textView;
 
 @end

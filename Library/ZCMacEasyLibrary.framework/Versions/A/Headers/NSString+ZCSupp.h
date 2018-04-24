@@ -8,11 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-#define NSStringFormNumber(_number_) [NSString stringWithFormat:@"%@", _number_]
+#define ZCStringFromObject(_object_) [NSString stringWithFormat:@"%@", NSStringValid(_object_) ? _object_ : @""]
+
+#define NSStringValid(__string__) ({ \
+    NSString *myString = __string__; \
+    [myString isKindOfClass:[NSString class]] && myString.length; \
+})
 
 @interface NSString (ZCSupp)
 
 @property(nonatomic, readonly) NSData *zc_data;
+
+@property(nonatomic, readonly) NSDictionary *zc_urlParamSplit;
 
 @property(nonatomic, readonly) NSString *zc_urlEncoded;
 @property(nonatomic, readonly) NSString *zc_urlDecoded;

@@ -11,6 +11,6 @@
 
 @interface NSView (ZCSupp)
 
-- (void)addSubviewWithMaxSize:(NSView *)view;
+- (void)zc_addSubviewWithMaxSize:(NSView *)view;
 
 @end

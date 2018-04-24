@@ -27,6 +27,6 @@
  */
 @property(nonatomic, copy) void(^zc_selectDatePicker)(UIDatePicker *pic, NSDate *date, NSString *message);
 
-@property(nonatomic, assign) BOOL selectEndRemoveFromSuperview;
+@property(nonatomic, assign) BOOL zc_selectEndRemoveFromSuperview;
 
 @end

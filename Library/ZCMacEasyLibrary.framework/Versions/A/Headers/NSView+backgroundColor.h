@@ -10,6 +10,6 @@
 
 @interface NSView (backgroundColor)
 
-@property(nonatomic, strong)NSColor *backgroundColor;
+@property(nonatomic, strong)NSColor *zc_backgroundColor;
 
 @end

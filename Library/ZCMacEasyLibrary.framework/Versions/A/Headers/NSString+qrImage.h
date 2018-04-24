@@ -11,6 +11,6 @@
 
 @interface NSString (qrImage)
 
-- (NSImage *)qrImageForSize:(CGSize)size;
+- (NSImage *)zc_qrImageForSize:(CGSize)size;
 
 @end
