@@ -111,15 +111,15 @@
     oldView.hidden = NO;
     
     [UIView animateWithDuration:(isAnimat ? 0.35 : 0) animations:^{
-        CGRect tmp = oldView.frame;
-        oldView.frame = ({ CGRect rect = oldView.frame; rect.origin.y = 0; rect.origin.x = 0; rect; });
-        newView.frame = ({ CGRect rect = newView.frame; rect.origin.y = -tmp.origin.y; rect.origin.x = -tmp.origin.x; rect; });
+        CGRect tmp = self->oldView.frame;
+        self->oldView.frame = ({ CGRect rect = self->oldView.frame; rect.origin.y = 0; rect.origin.x = 0; rect; });
+        self->newView.frame = ({ CGRect rect = self->newView.frame; rect.origin.y = -tmp.origin.y; rect.origin.x = -tmp.origin.x; rect; });
     } completion:^(BOOL finished) {
-        id tmp = oldView;
-        oldView = newView;
-        newView = tmp;
+        id tmp = self->oldView;
+        self->oldView = self->newView;
+        self->newView = tmp;
         
-        oldView.hidden = YES;
+        self->oldView.hidden = YES;
     }];
     isAnimat = NO;
 }
