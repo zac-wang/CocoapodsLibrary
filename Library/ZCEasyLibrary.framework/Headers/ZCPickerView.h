@@ -6,9 +6,9 @@
 //  Copyright © 2017年 王志超. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZCElasticControl.h"
 
-@interface ZCPickerView : UIControl
+@interface ZCPickerView : ZCElasticControl
 
 - (instancetype)initWithFrame:(CGRect)frame;
 

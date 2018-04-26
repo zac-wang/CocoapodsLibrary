@@ -32,14 +32,22 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.textView.zc_keyBoardTopBar = [[ZCKeyBoardTopBar alloc] init];
+}
+
 - (IBAction)showDatePicker:(UIButton *)sender {
     static ZCSelectDatePicker *pic;
-    if(!pic)
+    if(!pic) {
         pic = [[ZCSelectDatePicker alloc] initWithFrame:self.view.bounds];
-    [pic setZc_selectDatePicker:^(UIDatePicker *pic, NSDate *date, NSString *message) {
-        NSLog(@"%@", message);
-    }];
-    [self.view addSubview:pic];
+        [pic setZc_selectDatePicker:^(UIDatePicker *pic, NSDate *date, NSString *message) {
+            NSLog(@"%@", message);
+        }];
+        [self.view addSubview:pic];
+    }
+    [pic zc_showView];
 }
 
 - (IBAction)showImagePicker:(UIButton *)sender {
@@ -85,6 +93,18 @@
     [spinnerView show];
 }
 
+- (IBAction)selectLocation:(UIButton *)sender {
+    static ZCCitySelect *select;
+    if(!select) {
+        select = [[ZCCitySelect alloc] initWithFrame:self.view.bounds];
+        //select.zc_componentCount = 2;
+        select.zc_eventClick = ^(NSString *province, NSString *city, NSString *district, NSNumber *code) {
+            NSLog(@"%@-%@-%@", province, city, district);
+        };
+        [self.view addSubview:select];
+    }
+    [select zc_showView];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

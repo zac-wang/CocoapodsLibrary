@@ -172,9 +172,12 @@
                                     <action selector="showSpinner:" destination="FUM-h2-VsK" eventType="touchUpInside" id="1QV-WW-kA4"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-Jk-WfA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA4-Jk-WfA">
                                 <rect key="frame" x="130.5" y="112" width="114" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="选择省市区"/>
+                                <connections>
+                                    <action selector="selectLocation:" destination="FUM-h2-VsK" eventType="touchUpInside" id="eGL-BS-rHJ"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fb4-bn-uQf">
                                 <rect key="frame" x="244.5" y="112" width="114.5" height="30"/>

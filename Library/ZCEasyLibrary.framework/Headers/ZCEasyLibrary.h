@@ -54,6 +54,7 @@
 #import "ZCCacheManage.h"
 #import "ZCCalendar.h"
 #import "ZCCitySelect.h"
+#import "ZCElasticControl.h"
 #import "ZCFont.h"
 #import "ZCKeyBoardTopBar.h"
 #import "ZCLabel.h"

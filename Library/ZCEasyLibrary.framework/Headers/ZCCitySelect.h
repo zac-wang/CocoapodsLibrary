@@ -6,16 +6,13 @@
 //  Copyright © 2017年 Workai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZCElasticControl.h"
 
-@interface ZCCitySelect : UIControl
+@interface ZCCitySelect : ZCElasticControl
 
-+ (instancetype)citySelect;
 - (instancetype)initWithFrame:(CGRect)frame;
 
 @property(nonatomic, assign) int zc_componentCount;
-
-@property(nonatomic, strong) UIView *zc_picBackgrounndView;
 
 @property(nonatomic, copy) void(^zc_eventClick)(NSString *province, NSString *city, NSString *district, NSNumber *code);
 
