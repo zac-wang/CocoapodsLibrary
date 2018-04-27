@@ -11,7 +11,13 @@
 #import <CoreText/CoreText.h>
 #import "ZCSpinnerView.h"
 
-@interface ViewVC ()
+@interface ViewVC () {
+    ZCSelectDatePicker *selectDatePicker;
+    ZCSelectImagePicker *selectImagePicker;
+    ZCPickerView *pickerView;
+    ZCSpinnerView *spinnerView;
+    ZCCitySelect *citySelect;
+}
 
 @property (weak, nonatomic) IBOutlet ZCVerticalButton *btn;
 @property (weak, nonatomic) IBOutlet ZCTextView *textView;
@@ -39,45 +45,43 @@
 }
 
 - (IBAction)showDatePicker:(UIButton *)sender {
-    static ZCSelectDatePicker *pic;
-    if(!pic) {
-        pic = [[ZCSelectDatePicker alloc] initWithFrame:self.view.bounds];
-        [pic setZc_selectDatePicker:^(UIDatePicker *pic, NSDate *date, NSString *message) {
+    if(!selectDatePicker) {
+        selectDatePicker = [[ZCSelectDatePicker alloc] initWithFrame:self.view.bounds];
+        [selectDatePicker setZc_selectDatePicker:^(UIDatePicker *pic, NSDate *date, NSString *message) {
             NSLog(@"%@", message);
         }];
-        [self.view addSubview:pic];
+        [self.view addSubview:selectDatePicker];
     }
-    [pic zc_showView];
+    [selectDatePicker zc_showView];
 }
 
 - (IBAction)showImagePicker:(UIButton *)sender {
-    static ZCSelectImagePicker *pic;
-    if(!pic)
-        pic = [[ZCSelectImagePicker alloc] init];
-    [pic setZc_selectPickerController:^(UIImage *image) {
+    if(!selectImagePicker)
+        selectImagePicker = [[ZCSelectImagePicker alloc] init];
+    [selectImagePicker setZc_selectPickerController:^(UIImage *image) {
         NSLog(@"%@", image);
     }];
-    [pic zc_showWithViewController:self];
+    [selectImagePicker zc_showWithViewController:self];
 }
 
 - (IBAction)showPickerView:(UIButton *)sender {
-    static ZCPickerView *pic;
-    if(!pic)
-        pic = [[ZCPickerView alloc] initWithFrame:self.view.bounds];
-    [pic zc_componentCount:3 rowCount:^NSInteger(UIPickerView *pic, NSInteger component) {
-        return component + 3;
-    }];
-    pic.zc_cell = ^NSString *(UIPickerView *pic, NSInteger component, NSInteger row) {
-        return [NSString stringWithFormat:@"%ld", (long)row];
-    };
-    pic.zc_selectPicker = ^(UIPickerView *pic, NSArray<NSNumber *> *selectRowArray, NSArray<NSString *> *selectTitleArray) {
-        NSLog(@"%@\n%@", selectRowArray, selectTitleArray);
-    };
-    [self.view addSubview:pic];
+    if(!pickerView) {
+        pickerView = [[ZCPickerView alloc] initWithFrame:self.view.bounds];
+        [pickerView zc_componentCount:3 rowCount:^NSInteger(UIPickerView *pic, NSInteger component) {
+            return component + 3;
+        }];
+        pickerView.zc_cell = ^NSString *(UIPickerView *pic, NSInteger component, NSInteger row) {
+            return [NSString stringWithFormat:@"%ld", (long)row];
+        };
+        pickerView.zc_selectPicker = ^(UIPickerView *pic, NSArray<NSNumber *> *selectRowArray, NSArray<NSString *> *selectTitleArray) {
+            NSLog(@"%@\n%@", selectRowArray, selectTitleArray);
+        };
+        [self.view addSubview:pickerView];
+    }
+    [pickerView zc_showView];
 }
 
 - (IBAction)showSpinner:(UIButton *)sender {
-    static ZCSpinnerView *spinnerView;
     if(!spinnerView) {
         CGRect rect = CGRectMake(0, sender.frame.origin.y+sender.frame.size.height, self.view.frame.size.width, 300);
         spinnerView = [[ZCSpinnerView alloc] initWithMaxFrame:rect];
@@ -94,16 +98,15 @@
 }
 
 - (IBAction)selectLocation:(UIButton *)sender {
-    static ZCCitySelect *select;
-    if(!select) {
-        select = [[ZCCitySelect alloc] initWithFrame:self.view.bounds];
+    if(!citySelect) {
+        citySelect = [[ZCCitySelect alloc] initWithFrame:self.view.bounds];
         //select.zc_componentCount = 2;
-        select.zc_eventClick = ^(NSString *province, NSString *city, NSString *district, NSNumber *code) {
+        citySelect.zc_eventClick = ^(NSString *province, NSString *city, NSString *district, NSNumber *code) {
             NSLog(@"%@-%@-%@", province, city, district);
         };
-        [self.view addSubview:select];
+        [self.view addSubview:citySelect];
     }
-    [select zc_showView];
+    [citySelect zc_showView];
 }
 
 - (void)didReceiveMemoryWarning {
