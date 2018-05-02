@@ -65,6 +65,7 @@
 #import "ZCSelectDatePicker.h"
 #import "ZCSelectImagePicker.h"
 #import "ZCTabBarItem.h"
+#import "ZCTableViewCell.h"
 #import "ZCTextField.h"
 #import "ZCTextView.h"
 #import "ZCTimeCountDown.h"
