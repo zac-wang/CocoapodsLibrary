@@ -60,6 +60,7 @@
 #import "ZCLabel.h"
 #import "ZCLocationGeocode.h"
 #import "ZCLocationManager.h"
+#import "ZCPickerCirculateView.h"
 #import "ZCPickerView.h"
 #import "ZCSelectDatePicker.h"
 #import "ZCSelectImagePicker.h"

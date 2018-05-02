@@ -14,7 +14,7 @@
 @interface ViewVC () {
     ZCSelectDatePicker *selectDatePicker;
     ZCSelectImagePicker *selectImagePicker;
-    ZCPickerView *pickerView;
+    ZCPickerCirculateView *pickerView;
     ZCSpinnerView *spinnerView;
     ZCCitySelect *citySelect;
 }
@@ -66,9 +66,9 @@
 
 - (IBAction)showPickerView:(UIButton *)sender {
     if(!pickerView) {
-        pickerView = [[ZCPickerView alloc] initWithFrame:self.view.bounds];
+        pickerView = [[ZCPickerCirculateView alloc] initWithFrame:self.view.bounds];
         [pickerView zc_componentCount:3 rowCount:^NSInteger(UIPickerView *pic, NSInteger component) {
-            return component + 3;
+            return component + 15;
         }];
         pickerView.zc_cell = ^NSString *(UIPickerView *pic, NSInteger component, NSInteger row) {
             return [NSString stringWithFormat:@"%ld", (long)row];
