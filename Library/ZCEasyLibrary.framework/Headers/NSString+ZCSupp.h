@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-#define ZCStringFromObject(_object_) [NSString stringWithFormat:@"%@", (_object_) && ![(_object_) isEqual:[NSNull null]] ? (_object_) : @""]
+static inline NSString* ZCStringFromObject(NSObject *_object_) {
+    if(!_object_)
+        return @"";
+    if([(_object_) isEqual:[NSNull null]])
+        return @"";
+    return [NSString stringWithFormat:@"%@", _object_];
+}
 
-#define NSStringValid(__string__) ({ \
-    NSString *myString = __string__; \
-    [myString isKindOfClass:[NSString class]] && myString.length; \
-})
+static inline BOOL NSStringValid(NSString *myString) {
+    return [myString isKindOfClass:[NSString class]] && myString.length;
+}
 
 @interface NSString (ZCSupp)
 

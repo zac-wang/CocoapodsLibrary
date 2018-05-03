@@ -23,4 +23,7 @@
 /// 自动调整cell高度，并设置cell的估算高度
 @property(nonatomic, readwrite) int zc_autoCellHeight;
 
+/// 刷新UITableView高度（约束）
+@property(nonatomic, readonly) void zc_updateTableViewConstraint;
+
 @end

@@ -19,6 +19,7 @@
 #define ZC_SCREEN_MIN_LENGTH    (MIN(ZC_SCREEN_WIDTH, ZC_SCREEN_HEIGHT))
 #define ZC_SCREEN_SCALE         ([[UIScreen mainScreen] scale])
 
+#define ZC_SCREEN_NOW_IS_PORTRAIT UIDeviceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)
 
 /// 设备是否是iPad
 #define ZC_IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
