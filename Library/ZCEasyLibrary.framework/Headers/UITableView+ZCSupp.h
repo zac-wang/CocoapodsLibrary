@@ -24,6 +24,6 @@
 @property(nonatomic, readwrite) int zc_autoCellHeight;
 
 /// 刷新UITableView高度（约束）
-@property(nonatomic, readonly) void zc_updateTableViewConstraint;
+- (void)zc_updateTableViewConstraint:(void(^)(UITableView *tableView))block;
 
 @end
