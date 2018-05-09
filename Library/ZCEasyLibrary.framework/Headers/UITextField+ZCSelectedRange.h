@@ -1,5 +1,5 @@
 //
-//  UITextField+ZCSupp.h
+//  UITextField+ZCSelectedRange.h
 //  ZCEasyLibrary
 //
 //  Created by 王志超 on 2018/4/25.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITextField (ZCSupp)
+@interface UITextField (ZCSelectedRange)
 
 @property(nonatomic,assign) NSRange zc_selectedRange;
 

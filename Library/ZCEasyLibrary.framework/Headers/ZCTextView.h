@@ -10,12 +10,6 @@
 
 @interface ZCTextView : UITextView
 
-///设置提示文字
-@property(nonatomic,copy)   NSString *zc_placeholder;
-
-///设置提示文字
-@property(nonatomic,strong) NSAttributedString *zc_placeholderAttributesString;
-
 ///设置属性key
 @property(nonatomic, strong) NSString *zc_keyPath;
 
@@ -36,4 +30,12 @@
 ///更新高度
 - (void)zc_updateHeight;
 
+@end
+
+
+@interface ZCTextView (ZCPlaceholder)
+///设置提示文字
+@property(nonatomic,strong) NSAttributedString *zc_placeholderAttributesString;
+///设置提示文字
+@property(nonatomic,copy)   NSString *zc_placeholder;
 @end
