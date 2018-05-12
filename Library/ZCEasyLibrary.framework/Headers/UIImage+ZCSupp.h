@@ -10,12 +10,6 @@
 
 @interface UIImage (ZCSupp)
 
-/// 根据颜色创建图片
-+ (UIImage *)zc_imageWithColor:(UIColor *)color;
-
-/// 根据颜色、大小创建图片
-+ (UIImage *)zc_imageWithColor:(UIColor *)color size:(CGSize)size;
-
 /// 根据图片流数据创建图片
 + (UIImage *)zc_imageWithImageStream:(CVImageBufferRef)imageBuffer;
 

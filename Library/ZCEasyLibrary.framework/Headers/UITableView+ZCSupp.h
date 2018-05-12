@@ -10,16 +10,6 @@
 
 @interface UITableView (ZCSupp)
 
-/**
- 分页请求数据的 每页数据个数，不作任何处理，仅用于存储
- */
-@property(nonatomic, assign) int zc_dataSourcePageSize;
-
-/**
- 分页请求数据的 当前页标示，不作任何处理，仅用于存储
- */
-@property(nonatomic, assign) int zc_dataSourcePageOffset;
-
 /// 自动调整cell高度，并设置cell的估算高度
 @property(nonatomic, readwrite) int zc_autoCellHeight;
 

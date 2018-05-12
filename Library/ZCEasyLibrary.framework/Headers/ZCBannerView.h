@@ -10,13 +10,13 @@
 
 @interface ZCBannerView : UIScrollView
 
-@property(nonatomic, strong) UIPageControl *pageControl;
+@property(nonatomic, strong) UIPageControl *zc_pageControl;
 
 /**
  初始化（方法一）
  例：[banerScrollView initBanner:[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"main_banner.bundle"]];
 
- @param fileUrlArray 图片地址数组
+ @param fileUrlArray 图片路径数组
  */
 - (void)zc_initBanner:(NSArray *)fileUrlArray;
 
