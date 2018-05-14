@@ -15,6 +15,7 @@
 
 /// 根据时间戳初始化时间
 #define ZCDateWithTimeStamp(_time_stamp_) [NSDate dateWithTimeIntervalSince1970:(_time_stamp_)]
+#define ZCDateWithTimeStampNumber(_time_stamp_number_) ZCDateWithTimeStamp([(_time_stamp_) longLongValue])
 
 #define ZCDateNil ZCDateWithTimeStamp(0)
 
