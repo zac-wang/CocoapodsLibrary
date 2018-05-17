@@ -71,7 +71,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="图片浏览"/>
                                 <connections>
-                                    <segue destination="zwD-mM-Rs9" kind="push" id="SQ8-Qu-9bf"/>
+                                    <segue destination="zwD-mM-Rs9" kind="show" id="SQ8-Qu-9bf"/>
                                 </connections>
                             </button>
                         </subviews>

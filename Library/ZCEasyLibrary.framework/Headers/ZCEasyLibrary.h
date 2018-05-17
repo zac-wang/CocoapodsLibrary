@@ -10,6 +10,7 @@
 
 // 
 #import "CALayer+ZCSupp.h"
+#import "CNContact+ZCToDictionary.h"
 #import "Macro.h"
 #import "NSArray+MutableDeepCopy.h"
 #import "NSArray+ZCJson.h"
@@ -59,6 +60,7 @@
 #import "ZCCacheManage.h"
 #import "ZCCalendar.h"
 #import "ZCCitySelect.h"
+#import "ZCContactStore.h"
 #import "ZCElasticControl.h"
 #import "ZCFont.h"
 #import "ZCKeyBoardTopBar.h"

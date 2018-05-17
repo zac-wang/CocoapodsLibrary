@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <ZCEasyLibrary/ZCEasyLibrary.h>
+#import <ZCEasyLibrary/ZCContactStore.h>
 
 @interface ViewController ()
 
@@ -18,6 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    //通讯录打印
+    //ZCContactStore *contactStore = [ZCContactStore shared];
+    //[contactStore zc_getContactAuthorization:^{
+    //    [contactStore zc_enumerateContactsWithCNContactKeys:nil usingBlock:^(CNContact *contact, BOOL *stop) {
+    //        NSLog(@"%@", contact.zc_dictionary);
+    //    }];
+    //}];
 }
 
 - (void)didReceiveMemoryWarning {
