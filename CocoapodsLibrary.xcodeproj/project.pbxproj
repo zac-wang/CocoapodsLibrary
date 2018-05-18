@@ -105,8 +105,6 @@
 		93B4129A1F974ED8003664BE /* BannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerVC.m; sourceTree = "<group>"; };
 		93B412A21F976026003664BE /* ZCSpinnerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCSpinnerView.h; sourceTree = "<group>"; };
 		93B412A31F976026003664BE /* ZCSpinnerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCSpinnerView.m; sourceTree = "<group>"; };
-		93B5CA341F9C792D00288040 /* MBProgressHUD+easy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+easy.h"; sourceTree = "<group>"; };
-		93B5CA351F9C792E00288040 /* MBProgressHUD+easy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+easy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */,
-				93B5CA291F9C433900288040 /* ZCCategory */,
 				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
 				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */,
 			);
@@ -285,23 +282,6 @@
 			name = ZCSpinnerView;
 			path = Library/ZCSpinnerView;
 			sourceTree = SOURCE_ROOT;
-		};
-		93B5CA291F9C433900288040 /* ZCCategory */ = {
-			isa = PBXGroup;
-			children = (
-				93B5CA321F9C790000288040 /* view */,
-			);
-			path = ZCCategory;
-			sourceTree = "<group>";
-		};
-		93B5CA321F9C790000288040 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				93B5CA341F9C792D00288040 /* MBProgressHUD+easy.h */,
-				93B5CA351F9C792E00288040 /* MBProgressHUD+easy.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
