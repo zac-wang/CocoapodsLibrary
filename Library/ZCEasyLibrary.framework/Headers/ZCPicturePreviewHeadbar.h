@@ -16,6 +16,7 @@
 
 @property(nonatomic, strong) UIBarButtonItem *zc_deleteItem;
 
+- (void)zc_hiddenDeleteItem;
 
 - (void)zc_pageNum:(NSUInteger)pageNum totalNum:(NSUInteger)totalNum;
 

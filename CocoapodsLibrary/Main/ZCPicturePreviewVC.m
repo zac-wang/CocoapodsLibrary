@@ -28,7 +28,7 @@
     
     ZCPicturePreview *picturePreview = [ZCPicturePreview shared];
     [self.navigationController.view addSubview:picturePreview];
-    
+    [picturePreview.zc_headBar zc_hiddenDeleteItem];
     picturePreview.zc_imageCount = imgArray.count;
     picturePreview.zc_willChangeBlock = ^(ZCPicturePreview *preview, ZCPicturePreviewItem *item) {
         item.zc_imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];

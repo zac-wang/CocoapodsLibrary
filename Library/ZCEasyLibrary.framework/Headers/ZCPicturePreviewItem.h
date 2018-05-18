@@ -16,4 +16,6 @@
 /// 页面ImageView
 @property(nonatomic, readonly) UIImageView *zc_imgView;
 
+@property(nonatomic, assign)   BOOL zc_loadding;
+
 @end
