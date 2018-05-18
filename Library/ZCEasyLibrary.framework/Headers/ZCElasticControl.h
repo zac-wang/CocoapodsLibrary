@@ -20,6 +20,6 @@
 - (void)zc_showView:(double)duration;
 
 - (void)zc_hiddenView;
-- (void)zc_hiddenView:(double)duration;
+- (void)zc_hiddenView:(double)duration completion:(void (^)(BOOL finished))completion;
 
 @end

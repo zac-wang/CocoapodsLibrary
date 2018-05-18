@@ -52,6 +52,7 @@
 #import "UIView+ZCCornerRadius.h"
 #import "UIView+ZCSupp.h"
 #import "ZCAlert.h"
+#import "ZCAlertView.h"
 #import "ZCApp.h"
 #import "ZCAppUpdateVersion.h"
 #import "ZCBankcard.h"

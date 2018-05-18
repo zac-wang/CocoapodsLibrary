@@ -29,7 +29,7 @@
 - (void)viewDidLayoutSubviews {
     [self.banerScrollView zc_initBanner:[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"main_banner.bundle"]];
     self.banerScrollView.zc_selectImageView = ^(UIImageView *imgView, NSInteger index) {
-        NSLog(@"%lu", index);
+        NSLog(@"%ld", (long)index);
     };
 }
 

@@ -37,7 +37,7 @@
         item.imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];
     };
     picturePreview.headBar.deleteImageBlock = ^{
-        NSLog(@"== %lu", picturePreview.zc_nowShowImgIndex);
+        NSLog(@"== %lu", (unsigned long)picturePreview.zc_nowShowImgIndex);
     };
     
     for (int i = 0; i < self.imageViews.count; i++) {

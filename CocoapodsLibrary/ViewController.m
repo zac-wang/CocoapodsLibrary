@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import <ZCEasyLibrary/ZCEasyLibrary.h>
-#import <ZCEasyLibrary/ZCContactStore.h>
 
 @interface ViewController ()
 
@@ -30,6 +29,13 @@
     //        NSLog(@"%@", contact.zc_dictionary);
     //    }];
     //}];
+}
+
+- (IBAction)click:(id)sender {
+    ZCAlertView *alertView = [[ZCAlertView alloc] initWithTitle:@"title" message:nil];//@"message"];
+    [alertView zc_addDefaultAction:@"1" handler:nil];
+    [alertView zc_addCancelAction:nil];
+    [alertView zc_show];
 }
 
 - (void)didReceiveMemoryWarning {
