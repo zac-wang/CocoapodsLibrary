@@ -38,12 +38,17 @@
 /// 绑定 UIImageView 与 对应 预览下标
 - (void)zc_monitorImageView:(UIImageView *)imgView index:(NSUInteger)index;
 
+/// 绑定 UIView子类 与 对应 预览下标
+- (void)zc_monitorView:(UIView *)view index:(NSUInteger)index;
+
 @end
 
 
 @interface ZCPicturePreview (ZCAnimat)
 
-- (void)zc_showViewWithImgView:(UIImageView *)imgView index:(NSUInteger)index;
+- (void)zc_showViewWithView:(UIView *)view;
+
+- (void)zc_showViewWithView:(UIView *)view index:(NSUInteger)index;
 
 - (void)zc_hiddenView;
 

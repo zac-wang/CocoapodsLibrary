@@ -16,6 +16,9 @@
 
 @property(nonatomic, strong) UIBarButtonItem *deleteItem;
 
+
+- (void)zc_pageNum:(NSUInteger)pageNum totalNum:(NSUInteger)totalNum;
+
 @property(nonatomic, copy) void(^deleteImageBlock)(void);
 
 @end
