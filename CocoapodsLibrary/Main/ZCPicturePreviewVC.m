@@ -31,12 +31,12 @@
     
     picturePreview.zc_imageCount = imgArray.count;
     picturePreview.zc_willChangeBlock = ^(ZCPicturePreview *preview, ZCPicturePreviewItem *item) {
-        item.imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];
+        item.zc_imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];
     };
     picturePreview.zc_didChangeBlock = ^(ZCPicturePreview *preview, ZCPicturePreviewItem *item) {
-        item.imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];
+        item.zc_imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];
     };
-    picturePreview.zc_headBar.deleteImageBlock = ^{
+    picturePreview.zc_headBar.zc_deleteImageBlock = ^{
         NSLog(@"== %lu", (unsigned long)picturePreview.zc_nowShowImgIndex);
     };
     

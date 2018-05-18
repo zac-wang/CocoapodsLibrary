@@ -14,6 +14,6 @@
 @property(nonatomic, readonly) NSUInteger zc_index;
 
 /// 页面ImageView
-@property(nonatomic, readonly) UIImageView *imgView;
+@property(nonatomic, readonly) UIImageView *zc_imgView;
 
 @end

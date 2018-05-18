@@ -10,15 +10,15 @@
 
 @interface ZCPicturePreviewHeadbar : UIToolbar
 
-@property(nonatomic, strong) UIBarButtonItem *leftItem;
+@property(nonatomic, strong) UIBarButtonItem *zc_leftItem;
 
-@property(nonatomic, strong) UIBarButtonItem *pageItem;
+@property(nonatomic, strong) UIBarButtonItem *zc_pageItem;
 
-@property(nonatomic, strong) UIBarButtonItem *deleteItem;
+@property(nonatomic, strong) UIBarButtonItem *zc_deleteItem;
 
 
 - (void)zc_pageNum:(NSUInteger)pageNum totalNum:(NSUInteger)totalNum;
 
-@property(nonatomic, copy) void(^deleteImageBlock)(void);
+@property(nonatomic, copy) void(^zc_deleteImageBlock)(void);
 
 @end
