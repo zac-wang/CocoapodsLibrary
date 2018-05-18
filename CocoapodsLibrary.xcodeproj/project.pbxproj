@@ -3,50 +3,48 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		934525F91FD55F6600142E10 /* ZCTablePopupControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 934525F81FD55F6600142E10 /* ZCTablePopupControl.m */; };
-		934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 934E711E1FAC18DE00E69A72 /* libz.tbd */; };
-		9355C30D1FDE1A08007E8BB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9355C30C1FDE1A08007E8BB8 /* ViewController.m */; };
-		935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935ACFF91FA45C5A000A7AF3 /* ViewVC.m */; };
-		935F4EBC1F99018000CD6AB7 /* CalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EBB1F99018000CD6AB7 /* CalendarVC.m */; };
-		935F4EBD1F99090400CD6AB7 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB71F98FC9A00CD6AB7 /* CalendarDayCell.m */; };
-		935F4EBF1F99090400CD6AB7 /* ZCCalendarDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EAD1F98FB6A00CD6AB7 /* ZCCalendarDate.m */; };
-		935F4EC01F99090400CD6AB7 /* ZCCalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB21F98FB6A00CD6AB7 /* ZCCalendarDayCell.m */; };
-		935F4EC11F99090400CD6AB7 /* ZCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EB41F98FB6A00CD6AB7 /* ZCCalendarView.m */; };
-		935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */; };
-		935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */; };
-		938173011FCE931100F141FB /* ZCPlaySystemSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 938173001FCE931100F141FB /* ZCPlaySystemSound.m */; };
-		938173031FCE94E600F141FB /* zc_sound.plist in Resources */ = {isa = PBXBuildFile; fileRef = 938173021FCE937A00F141FB /* zc_sound.plist */; };
-		9381976920AE6D4E00134EBC /* ZCNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381976720AE6D4E00134EBC /* ZCNotification.m */; };
-		939A59591FADC21600DBD9E0 /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; };
-		939A595B1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		93A38FA020AC1E9300B82EE1 /* ZCPicturePreviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A38F9F20AC1E9300B82EE1 /* ZCPicturePreviewVC.m */; };
-		93A3C4BE1FC52E1700663793 /* AppConfigFieldInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93A3C4BD1FC52E1700663793 /* AppConfigFieldInfo.plist */; };
-		93A3C4C11FC5351600663793 /* ZCAppConfigFieldInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A3C4C01FC5351600663793 /* ZCAppConfigFieldInfo.m */; };
-		93A87A831FA8ECF7005FFD3F /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93A87A821FA8EC6B005FFD3F /* iconfont.ttf */; };
-		93ACC74F1FC81C1000B8FE01 /* ZCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ACC74B1FC81C0F00B8FE01 /* ZCRequest.m */; };
-		93ACC7501FC81C1000B8FE01 /* ZCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ACC74D1FC81C0F00B8FE01 /* ZCRequestManager.m */; };
-		93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4127E1F974CE2003664BE /* AppDelegate.m */; };
-		93B412851F974CE2003664BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B412831F974CE2003664BE /* Main.storyboard */; };
-		93B412871F974CE2003664BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B412861F974CE2003664BE /* Assets.xcassets */; };
-		93B4128A1F974CE2003664BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B412881F974CE2003664BE /* LaunchScreen.storyboard */; };
-		93B4128D1F974CE2003664BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4128C1F974CE2003664BE /* main.m */; };
-		93B4129B1F974ED8003664BE /* BannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4129A1F974ED8003664BE /* BannerVC.m */; };
-		93B4129D1F97523B003664BE /* main_banner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93B412961F974DED003664BE /* main_banner.bundle */; };
-		93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B412A31F976026003664BE /* ZCSpinnerView.m */; };
+		9381978C20AE731700134EBC /* ZCSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381977220AE731700134EBC /* ZCSpinnerView.m */; };
+		9381979020AE731700134EBC /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 9381977E20AE731700134EBC /* ZCCalendarDateLunarCalendar.c */; };
+		9381979120AE731700134EBC /* ZCCalendarDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381977F20AE731700134EBC /* ZCCalendarDate.m */; };
+		9381979220AE731700134EBC /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381978320AE731700134EBC /* ZCCalendarManageView.m */; };
+		9381979320AE731700134EBC /* ZCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381978420AE731700134EBC /* ZCCalendarView.m */; };
+		9381979420AE731700134EBC /* ZCCalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381978820AE731700134EBC /* ZCCalendarDayCell.m */; };
+		938197A120AE732800134EBC /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381979820AE732800134EBC /* CalendarDayCell.m */; };
+		938197A220AE732800134EBC /* CalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381979A20AE732800134EBC /* CalendarVC.m */; };
+		938197A320AE732800134EBC /* BannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381979C20AE732800134EBC /* BannerVC.m */; };
+		938197A420AE732800134EBC /* ZCPicturePreviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381979E20AE732800134EBC /* ZCPicturePreviewVC.m */; };
+		938197A520AE732800134EBC /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381979F20AE732800134EBC /* ViewVC.m */; };
+		938197B820AE733B00134EBC /* ZCNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 938197B020AE733B00134EBC /* ZCNotification.m */; };
+		938197B920AE733B00134EBC /* AppConfigFieldInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 938197B120AE733B00134EBC /* AppConfigFieldInfo.plist */; };
+		938197BA20AE733B00134EBC /* ZCTablePopupControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 938197B220AE733B00134EBC /* ZCTablePopupControl.m */; };
+		938197BB20AE733B00134EBC /* ZCAppConfigFieldInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 938197B320AE733B00134EBC /* ZCAppConfigFieldInfo.m */; };
+		938197BC20AE733B00134EBC /* zc_sound.plist in Resources */ = {isa = PBXBuildFile; fileRef = 938197B420AE733B00134EBC /* zc_sound.plist */; };
+		938197BD20AE733B00134EBC /* ZCPlaySystemSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 938197B520AE733B00134EBC /* ZCPlaySystemSound.m */; };
+		938197C020AE735700134EBC /* main_banner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 938197BF20AE735600134EBC /* main_banner.bundle */; };
+		938197C320AE776600134EBC /* ZCEasyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C220AE776600134EBC /* ZCEasyLibrary.framework */; };
+		938197C420AE776600134EBC /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C220AE776600134EBC /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		938197C720AE779800134EBC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C620AE779800134EBC /* libz.tbd */; };
+		938197C920AE77A500134EBC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C820AE77A500134EBC /* MobileCoreServices.framework */; };
+		9398C50920A7645000C7C8AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C50820A7645000C7C8AA /* AppDelegate.m */; };
+		9398C50C20A7645000C7C8AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C50B20A7645000C7C8AA /* ViewController.m */; };
+		9398C50F20A7645000C7C8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9398C50D20A7645000C7C8AA /* Main.storyboard */; };
+		9398C51120A7645200C7C8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9398C51020A7645200C7C8AA /* Assets.xcassets */; };
+		9398C51420A7645200C7C8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9398C51220A7645200C7C8AA /* LaunchScreen.storyboard */; };
+		9398C51720A7645200C7C8AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C51620A7645200C7C8AA /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		93AFD3741FA661940071CE1F /* Embed Frameworks */ = {
+		938197C520AE776600134EBC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				939A595B1FADC23300DBD9E0 /* ZCEasyLibrary.framework in Embed Frameworks */,
+				938197C420AE776600134EBC /* ZCEasyLibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,246 +52,229 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		934525F71FD55F6600142E10 /* ZCTablePopupControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCTablePopupControl.h; sourceTree = "<group>"; };
-		934525F81FD55F6600142E10 /* ZCTablePopupControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCTablePopupControl.m; sourceTree = "<group>"; };
-		934E711E1FAC18DE00E69A72 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		9355C3041FDD0175007E8BB8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		9355C30B1FDE1A08007E8BB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9355C30C1FDE1A08007E8BB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		935ACFF81FA45C5A000A7AF3 /* ViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewVC.h; sourceTree = "<group>"; };
-		935ACFF91FA45C5A000A7AF3 /* ViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewVC.m; sourceTree = "<group>"; };
-		935F4EAC1F98FB6A00CD6AB7 /* ZCCalendarDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDate.h; sourceTree = "<group>"; };
-		935F4EAD1F98FB6A00CD6AB7 /* ZCCalendarDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarDate.m; sourceTree = "<group>"; };
-		935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ZCCalendarDateLunarCalendar.c; sourceTree = "<group>"; };
-		935F4EAF1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDateLunarCalendar.h; sourceTree = "<group>"; };
-		935F4EB11F98FB6A00CD6AB7 /* ZCCalendarDayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDayCell.h; sourceTree = "<group>"; };
-		935F4EB21F98FB6A00CD6AB7 /* ZCCalendarDayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarDayCell.m; sourceTree = "<group>"; };
-		935F4EB31F98FB6A00CD6AB7 /* ZCCalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarView.h; sourceTree = "<group>"; };
-		935F4EB41F98FB6A00CD6AB7 /* ZCCalendarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarView.m; sourceTree = "<group>"; };
-		935F4EB61F98FC9A00CD6AB7 /* CalendarDayCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarDayCell.h; sourceTree = "<group>"; };
-		935F4EB71F98FC9A00CD6AB7 /* CalendarDayCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
-		935F4EBA1F99018000CD6AB7 /* CalendarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarVC.h; sourceTree = "<group>"; };
-		935F4EBB1F99018000CD6AB7 /* CalendarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarVC.m; sourceTree = "<group>"; };
-		935F4EC31F999CB200CD6AB7 /* ZCCalendarManageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCCalendarManageView.h; sourceTree = "<group>"; };
-		935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
-		938172FF1FCE931100F141FB /* ZCPlaySystemSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPlaySystemSound.h; sourceTree = "<group>"; };
-		938173001FCE931100F141FB /* ZCPlaySystemSound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPlaySystemSound.m; sourceTree = "<group>"; };
-		938173021FCE937A00F141FB /* zc_sound.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = zc_sound.plist; sourceTree = "<group>"; };
-		9381976720AE6D4E00134EBC /* ZCNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCNotification.m; sourceTree = "<group>"; };
-		9381976820AE6D4E00134EBC /* ZCNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCNotification.h; sourceTree = "<group>"; };
-		939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZCEasyLibrary.framework; sourceTree = "<group>"; };
-		93A38F9E20AC1E9300B82EE1 /* ZCPicturePreviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCPicturePreviewVC.h; sourceTree = "<group>"; };
-		93A38F9F20AC1E9300B82EE1 /* ZCPicturePreviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCPicturePreviewVC.m; sourceTree = "<group>"; };
-		93A3C4BD1FC52E1700663793 /* AppConfigFieldInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppConfigFieldInfo.plist; sourceTree = "<group>"; };
-		93A3C4BF1FC5351600663793 /* ZCAppConfigFieldInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCAppConfigFieldInfo.h; sourceTree = "<group>"; };
-		93A3C4C01FC5351600663793 /* ZCAppConfigFieldInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCAppConfigFieldInfo.m; sourceTree = "<group>"; };
-		93A87A821FA8EC6B005FFD3F /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
-		93ACC74A1FC81C0F00B8FE01 /* ZCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCRequest.h; sourceTree = "<group>"; };
-		93ACC74B1FC81C0F00B8FE01 /* ZCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCRequest.m; sourceTree = "<group>"; };
-		93ACC74C1FC81C0F00B8FE01 /* ZCRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCRequestManager.h; sourceTree = "<group>"; };
-		93ACC74D1FC81C0F00B8FE01 /* ZCRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCRequestManager.m; sourceTree = "<group>"; };
-		93B4127A1F974CE2003664BE /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		93B4127D1F974CE2003664BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		93B4127E1F974CE2003664BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		93B412841F974CE2003664BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93B412861F974CE2003664BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93B412891F974CE2003664BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		93B4128B1F974CE2003664BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93B4128C1F974CE2003664BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		93B412961F974DED003664BE /* main_banner.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = main_banner.bundle; sourceTree = "<group>"; };
-		93B412991F974ED8003664BE /* BannerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerVC.h; sourceTree = "<group>"; };
-		93B4129A1F974ED8003664BE /* BannerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerVC.m; sourceTree = "<group>"; };
-		93B412A21F976026003664BE /* ZCSpinnerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCSpinnerView.h; sourceTree = "<group>"; };
-		93B412A31F976026003664BE /* ZCSpinnerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCSpinnerView.m; sourceTree = "<group>"; };
+		9381977120AE731700134EBC /* ZCSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSpinnerView.h; sourceTree = "<group>"; };
+		9381977220AE731700134EBC /* ZCSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSpinnerView.m; sourceTree = "<group>"; };
+		9381977E20AE731700134EBC /* ZCCalendarDateLunarCalendar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZCCalendarDateLunarCalendar.c; sourceTree = "<group>"; };
+		9381977F20AE731700134EBC /* ZCCalendarDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarDate.m; sourceTree = "<group>"; };
+		9381978020AE731700134EBC /* ZCCalendarDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDate.h; sourceTree = "<group>"; };
+		9381978120AE731700134EBC /* ZCCalendarDateLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDateLunarCalendar.h; sourceTree = "<group>"; };
+		9381978320AE731700134EBC /* ZCCalendarManageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
+		9381978420AE731700134EBC /* ZCCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarView.m; sourceTree = "<group>"; };
+		9381978520AE731700134EBC /* ZCCalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDayCell.h; sourceTree = "<group>"; };
+		9381978620AE731700134EBC /* ZCCalendarManageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarManageView.h; sourceTree = "<group>"; };
+		9381978720AE731700134EBC /* ZCCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarView.h; sourceTree = "<group>"; };
+		9381978820AE731700134EBC /* ZCCalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarDayCell.m; sourceTree = "<group>"; };
+		9381979620AE732800134EBC /* ZCPicturePreviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPicturePreviewVC.h; sourceTree = "<group>"; };
+		9381979820AE732800134EBC /* CalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
+		9381979920AE732800134EBC /* CalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarVC.h; sourceTree = "<group>"; };
+		9381979A20AE732800134EBC /* CalendarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarVC.m; sourceTree = "<group>"; };
+		9381979B20AE732800134EBC /* CalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayCell.h; sourceTree = "<group>"; };
+		9381979C20AE732800134EBC /* BannerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerVC.m; sourceTree = "<group>"; };
+		9381979D20AE732800134EBC /* ViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewVC.h; sourceTree = "<group>"; };
+		9381979E20AE732800134EBC /* ZCPicturePreviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPicturePreviewVC.m; sourceTree = "<group>"; };
+		9381979F20AE732800134EBC /* ViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewVC.m; sourceTree = "<group>"; };
+		938197A020AE732800134EBC /* BannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerVC.h; sourceTree = "<group>"; };
+		938197A720AE733B00134EBC /* ZCAppConfigFieldInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAppConfigFieldInfo.h; sourceTree = "<group>"; };
+		938197A820AE733B00134EBC /* ZCTablePopupControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTablePopupControl.h; sourceTree = "<group>"; };
+		938197A920AE733B00134EBC /* ZCNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCNotification.h; sourceTree = "<group>"; };
+		938197AF20AE733B00134EBC /* ZCPlaySystemSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPlaySystemSound.h; sourceTree = "<group>"; };
+		938197B020AE733B00134EBC /* ZCNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCNotification.m; sourceTree = "<group>"; };
+		938197B120AE733B00134EBC /* AppConfigFieldInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppConfigFieldInfo.plist; sourceTree = "<group>"; };
+		938197B220AE733B00134EBC /* ZCTablePopupControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTablePopupControl.m; sourceTree = "<group>"; };
+		938197B320AE733B00134EBC /* ZCAppConfigFieldInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAppConfigFieldInfo.m; sourceTree = "<group>"; };
+		938197B420AE733B00134EBC /* zc_sound.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = zc_sound.plist; sourceTree = "<group>"; };
+		938197B520AE733B00134EBC /* ZCPlaySystemSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPlaySystemSound.m; sourceTree = "<group>"; };
+		938197BE20AE735200134EBC /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		938197BF20AE735600134EBC /* main_banner.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = main_banner.bundle; sourceTree = "<group>"; };
+		938197C220AE776600134EBC /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZCEasyLibrary.framework; sourceTree = "<group>"; };
+		938197C620AE779800134EBC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		938197C820AE77A500134EBC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9398C50420A7645000C7C8AA /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9398C50720A7645000C7C8AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9398C50820A7645000C7C8AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9398C50A20A7645000C7C8AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9398C50B20A7645000C7C8AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9398C50E20A7645000C7C8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9398C51020A7645200C7C8AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9398C51320A7645200C7C8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9398C51520A7645200C7C8AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9398C51620A7645200C7C8AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		93B412771F974CE2003664BE /* Frameworks */ = {
+		9398C50120A7645000C7C8AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				934E711F1FAC18DE00E69A72 /* libz.tbd in Frameworks */,
-				939A59591FADC21600DBD9E0 /* ZCEasyLibrary.framework in Frameworks */,
+				938197C920AE77A500134EBC /* MobileCoreServices.framework in Frameworks */,
+				938197C720AE779800134EBC /* libz.tbd in Frameworks */,
+				938197C320AE776600134EBC /* ZCEasyLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		934E711D1FAC18DD00E69A72 /* Frameworks */ = {
+		9381976620AE6C1000134EBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9355C3041FDD0175007E8BB8 /* MobileCoreServices.framework */,
-				934E711E1FAC18DE00E69A72 /* libz.tbd */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */ = {
-			isa = PBXGroup;
-			children = (
-				935F4EAB1F98FB6A00CD6AB7 /* date */,
-				935F4EB01F98FB6A00CD6AB7 /* view */,
-			);
-			name = ZCCalendarView;
-			path = Library/ZCCalendarView;
-			sourceTree = SOURCE_ROOT;
-		};
-		935F4EAB1F98FB6A00CD6AB7 /* date */ = {
-			isa = PBXGroup;
-			children = (
-				935F4EAC1F98FB6A00CD6AB7 /* ZCCalendarDate.h */,
-				935F4EAD1F98FB6A00CD6AB7 /* ZCCalendarDate.m */,
-				935F4EAF1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.h */,
-				935F4EAE1F98FB6A00CD6AB7 /* ZCCalendarDateLunarCalendar.c */,
-			);
-			path = date;
-			sourceTree = "<group>";
-		};
-		935F4EB01F98FB6A00CD6AB7 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				935F4EB11F98FB6A00CD6AB7 /* ZCCalendarDayCell.h */,
-				935F4EB21F98FB6A00CD6AB7 /* ZCCalendarDayCell.m */,
-				935F4EB31F98FB6A00CD6AB7 /* ZCCalendarView.h */,
-				935F4EB41F98FB6A00CD6AB7 /* ZCCalendarView.m */,
-				935F4EC31F999CB200CD6AB7 /* ZCCalendarManageView.h */,
-				935F4EC41F999CB200CD6AB7 /* ZCCalendarManageView.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		935F4EB51F98FC9A00CD6AB7 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				935F4EBA1F99018000CD6AB7 /* CalendarVC.h */,
-				935F4EBB1F99018000CD6AB7 /* CalendarVC.m */,
-				935F4EB61F98FC9A00CD6AB7 /* CalendarDayCell.h */,
-				935F4EB71F98FC9A00CD6AB7 /* CalendarDayCell.m */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		935F4F111F9AEE3900CD6AB7 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				93B412991F974ED8003664BE /* BannerVC.h */,
-				93B4129A1F974ED8003664BE /* BannerVC.m */,
-				93A38F9E20AC1E9300B82EE1 /* ZCPicturePreviewVC.h */,
-				93A38F9F20AC1E9300B82EE1 /* ZCPicturePreviewVC.m */,
-				935F4EB51F98FC9A00CD6AB7 /* Calendar */,
-				935ACFF81FA45C5A000A7AF3 /* ViewVC.h */,
-				935ACFF91FA45C5A000A7AF3 /* ViewVC.m */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		935F4F131F9AEE9100CD6AB7 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				939A59581FADC21600DBD9E0 /* ZCEasyLibrary.framework */,
-				93B4129E1F975FE3003664BE /* ZCSpinnerView */,
-				935F4EAA1F98FB6A00CD6AB7 /* ZCCalendarView */,
-			);
-			path = Library;
-			sourceTree = SOURCE_ROOT;
-		};
-		93ACC7461FC81C0F00B8FE01 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				938173021FCE937A00F141FB /* zc_sound.plist */,
-				938172FF1FCE931100F141FB /* ZCPlaySystemSound.h */,
-				938173001FCE931100F141FB /* ZCPlaySystemSound.m */,
-				934525F71FD55F6600142E10 /* ZCTablePopupControl.h */,
-				934525F81FD55F6600142E10 /* ZCTablePopupControl.m */,
-				93A3C4BF1FC5351600663793 /* ZCAppConfigFieldInfo.h */,
-				93A3C4C01FC5351600663793 /* ZCAppConfigFieldInfo.m */,
-				93A3C4BD1FC52E1700663793 /* AppConfigFieldInfo.plist */,
-				9381976820AE6D4E00134EBC /* ZCNotification.h */,
-				9381976720AE6D4E00134EBC /* ZCNotification.m */,
-				93ACC7491FC81C0F00B8FE01 /* ZCRequest */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
-		93ACC7491FC81C0F00B8FE01 /* ZCRequest */ = {
-			isa = PBXGroup;
-			children = (
-				93ACC74A1FC81C0F00B8FE01 /* ZCRequest.h */,
-				93ACC74B1FC81C0F00B8FE01 /* ZCRequest.m */,
-				93ACC74C1FC81C0F00B8FE01 /* ZCRequestManager.h */,
-				93ACC74D1FC81C0F00B8FE01 /* ZCRequestManager.m */,
-			);
-			path = ZCRequest;
-			sourceTree = "<group>";
-		};
-		93B412711F974CE2003664BE = {
-			isa = PBXGroup;
-			children = (
-				93B4127C1F974CE2003664BE /* CocoapodsLibrary */,
-				93B4127B1F974CE2003664BE /* Products */,
-				934E711D1FAC18DD00E69A72 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		93B4127B1F974CE2003664BE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				93B4127A1F974CE2003664BE /* CocoapodsLibrary.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		93B4127C1F974CE2003664BE /* CocoapodsLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				93B4127D1F974CE2003664BE /* AppDelegate.h */,
-				93B4127E1F974CE2003664BE /* AppDelegate.m */,
-				9355C30B1FDE1A08007E8BB8 /* ViewController.h */,
-				9355C30C1FDE1A08007E8BB8 /* ViewController.m */,
-				93ACC7461FC81C0F00B8FE01 /* test */,
-				935F4F111F9AEE3900CD6AB7 /* Main */,
-				935F4F131F9AEE9100CD6AB7 /* Library */,
-				93B412941F974D12003664BE /* Supporting Files */,
-			);
-			path = CocoapodsLibrary;
-			sourceTree = "<group>";
-		};
-		93B412941F974D12003664BE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				93A87A821FA8EC6B005FFD3F /* iconfont.ttf */,
-				93B412961F974DED003664BE /* main_banner.bundle */,
-				93B412831F974CE2003664BE /* Main.storyboard */,
-				93B412861F974CE2003664BE /* Assets.xcassets */,
-				93B412881F974CE2003664BE /* LaunchScreen.storyboard */,
-				93B4128B1F974CE2003664BE /* Info.plist */,
-				93B4128C1F974CE2003664BE /* main.m */,
+				938197BE20AE735200134EBC /* iconfont.ttf */,
+				938197BF20AE735600134EBC /* main_banner.bundle */,
+				9398C50D20A7645000C7C8AA /* Main.storyboard */,
+				9398C51020A7645200C7C8AA /* Assets.xcassets */,
+				9398C51220A7645200C7C8AA /* LaunchScreen.storyboard */,
+				9398C51520A7645200C7C8AA /* Info.plist */,
+				9398C51620A7645200C7C8AA /* main.m */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		93B4129E1F975FE3003664BE /* ZCSpinnerView */ = {
+		9381976A20AE731700134EBC /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				93B412A21F976026003664BE /* ZCSpinnerView.h */,
-				93B412A31F976026003664BE /* ZCSpinnerView.m */,
+				938197C220AE776600134EBC /* ZCEasyLibrary.framework */,
+				9381977020AE731700134EBC /* ZCSpinnerView */,
+				9381977C20AE731700134EBC /* ZCCalendarView */,
 			);
-			name = ZCSpinnerView;
-			path = Library/ZCSpinnerView;
+			path = Library;
 			sourceTree = SOURCE_ROOT;
+		};
+		9381977020AE731700134EBC /* ZCSpinnerView */ = {
+			isa = PBXGroup;
+			children = (
+				9381977120AE731700134EBC /* ZCSpinnerView.h */,
+				9381977220AE731700134EBC /* ZCSpinnerView.m */,
+			);
+			path = ZCSpinnerView;
+			sourceTree = "<group>";
+		};
+		9381977C20AE731700134EBC /* ZCCalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				9381977D20AE731700134EBC /* date */,
+				9381978220AE731700134EBC /* view */,
+			);
+			path = ZCCalendarView;
+			sourceTree = "<group>";
+		};
+		9381977D20AE731700134EBC /* date */ = {
+			isa = PBXGroup;
+			children = (
+				9381978020AE731700134EBC /* ZCCalendarDate.h */,
+				9381977F20AE731700134EBC /* ZCCalendarDate.m */,
+				9381977E20AE731700134EBC /* ZCCalendarDateLunarCalendar.c */,
+				9381978120AE731700134EBC /* ZCCalendarDateLunarCalendar.h */,
+			);
+			path = date;
+			sourceTree = "<group>";
+		};
+		9381978220AE731700134EBC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9381978520AE731700134EBC /* ZCCalendarDayCell.h */,
+				9381978820AE731700134EBC /* ZCCalendarDayCell.m */,
+				9381978620AE731700134EBC /* ZCCalendarManageView.h */,
+				9381978320AE731700134EBC /* ZCCalendarManageView.m */,
+				9381978720AE731700134EBC /* ZCCalendarView.h */,
+				9381978420AE731700134EBC /* ZCCalendarView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9381979520AE732800134EBC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				938197A020AE732800134EBC /* BannerVC.h */,
+				9381979C20AE732800134EBC /* BannerVC.m */,
+				9381979720AE732800134EBC /* Calendar */,
+				9381979D20AE732800134EBC /* ViewVC.h */,
+				9381979F20AE732800134EBC /* ViewVC.m */,
+				9381979620AE732800134EBC /* ZCPicturePreviewVC.h */,
+				9381979E20AE732800134EBC /* ZCPicturePreviewVC.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9381979720AE732800134EBC /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				9381979B20AE732800134EBC /* CalendarDayCell.h */,
+				9381979820AE732800134EBC /* CalendarDayCell.m */,
+				9381979920AE732800134EBC /* CalendarVC.h */,
+				9381979A20AE732800134EBC /* CalendarVC.m */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		938197A620AE733B00134EBC /* test */ = {
+			isa = PBXGroup;
+			children = (
+				938197B120AE733B00134EBC /* AppConfigFieldInfo.plist */,
+				938197A720AE733B00134EBC /* ZCAppConfigFieldInfo.h */,
+				938197B320AE733B00134EBC /* ZCAppConfigFieldInfo.m */,
+				938197A920AE733B00134EBC /* ZCNotification.h */,
+				938197B020AE733B00134EBC /* ZCNotification.m */,
+				938197B420AE733B00134EBC /* zc_sound.plist */,
+				938197AF20AE733B00134EBC /* ZCPlaySystemSound.h */,
+				938197B520AE733B00134EBC /* ZCPlaySystemSound.m */,
+				938197A820AE733B00134EBC /* ZCTablePopupControl.h */,
+				938197B220AE733B00134EBC /* ZCTablePopupControl.m */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		938197C120AE771C00134EBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				938197C820AE77A500134EBC /* MobileCoreServices.framework */,
+				938197C620AE779800134EBC /* libz.tbd */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		9398C4FB20A7645000C7C8AA = {
+			isa = PBXGroup;
+			children = (
+				9398C50620A7645000C7C8AA /* CocoapodsLibrary */,
+				938197C120AE771C00134EBC /* Frameworks */,
+				9398C50520A7645000C7C8AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9398C50520A7645000C7C8AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9398C50420A7645000C7C8AA /* CocoapodsLibrary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9398C50620A7645000C7C8AA /* CocoapodsLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				9398C50720A7645000C7C8AA /* AppDelegate.h */,
+				9398C50820A7645000C7C8AA /* AppDelegate.m */,
+				9398C50A20A7645000C7C8AA /* ViewController.h */,
+				9398C50B20A7645000C7C8AA /* ViewController.m */,
+				938197A620AE733B00134EBC /* test */,
+				9381979520AE732800134EBC /* Main */,
+				9381976A20AE731700134EBC /* Library */,
+				9381976620AE6C1000134EBC /* Supporting Files */,
+			);
+			path = CocoapodsLibrary;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93B412791F974CE2003664BE /* CocoapodsLibrary */ = {
+		9398C50320A7645000C7C8AA /* CocoapodsLibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93B412901F974CE2003664BE /* Build configuration list for PBXNativeTarget "CocoapodsLibrary" */;
+			buildConfigurationList = 9398C51A20A7645200C7C8AA /* Build configuration list for PBXNativeTarget "CocoapodsLibrary" */;
 			buildPhases = (
-				93B412761F974CE2003664BE /* Sources */,
-				93B412771F974CE2003664BE /* Frameworks */,
-				93B412781F974CE2003664BE /* Resources */,
-				93AFD3741FA661940071CE1F /* Embed Frameworks */,
+				9398C50020A7645000C7C8AA /* Sources */,
+				9398C50120A7645000C7C8AA /* Frameworks */,
+				9398C50220A7645000C7C8AA /* Resources */,
+				938197C520AE776600134EBC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,102 +282,98 @@
 			);
 			name = CocoapodsLibrary;
 			productName = CocoapodsLibrary;
-			productReference = 93B4127A1F974CE2003664BE /* CocoapodsLibrary.app */;
+			productReference = 9398C50420A7645000C7C8AA /* CocoapodsLibrary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		93B412721F974CE2003664BE /* Project object */ = {
+		9398C4FC20A7645000C7C8AA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "王志超";
 				TargetAttributes = {
-					93B412791F974CE2003664BE = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+					9398C50320A7645000C7C8AA = {
+						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
-			buildConfigurationList = 93B412751F974CE2003664BE /* Build configuration list for PBXProject "CocoapodsLibrary" */;
-			compatibilityVersion = "Xcode 8.0";
+			buildConfigurationList = 9398C4FF20A7645000C7C8AA /* Build configuration list for PBXProject "CocoapodsLibrary" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 93B412711F974CE2003664BE;
-			productRefGroup = 93B4127B1F974CE2003664BE /* Products */;
+			mainGroup = 9398C4FB20A7645000C7C8AA;
+			productRefGroup = 9398C50520A7645000C7C8AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93B412791F974CE2003664BE /* CocoapodsLibrary */,
+				9398C50320A7645000C7C8AA /* CocoapodsLibrary */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		93B412781F974CE2003664BE /* Resources */ = {
+		9398C50220A7645000C7C8AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				938173031FCE94E600F141FB /* zc_sound.plist in Resources */,
-				93A87A831FA8ECF7005FFD3F /* iconfont.ttf in Resources */,
-				93B4129D1F97523B003664BE /* main_banner.bundle in Resources */,
-				93A3C4BE1FC52E1700663793 /* AppConfigFieldInfo.plist in Resources */,
-				93B4128A1F974CE2003664BE /* LaunchScreen.storyboard in Resources */,
-				93B412871F974CE2003664BE /* Assets.xcassets in Resources */,
-				93B412851F974CE2003664BE /* Main.storyboard in Resources */,
+				938197C020AE735700134EBC /* main_banner.bundle in Resources */,
+				9398C51420A7645200C7C8AA /* LaunchScreen.storyboard in Resources */,
+				938197B920AE733B00134EBC /* AppConfigFieldInfo.plist in Resources */,
+				9398C51120A7645200C7C8AA /* Assets.xcassets in Resources */,
+				9398C50F20A7645000C7C8AA /* Main.storyboard in Resources */,
+				938197BC20AE733B00134EBC /* zc_sound.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		93B412761F974CE2003664BE /* Sources */ = {
+		9398C50020A7645000C7C8AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9355C30D1FDE1A08007E8BB8 /* ViewController.m in Sources */,
-				934525F91FD55F6600142E10 /* ZCTablePopupControl.m in Sources */,
-				935F4EC21F990A0C00CD6AB7 /* ZCCalendarDateLunarCalendar.c in Sources */,
-				93A38FA020AC1E9300B82EE1 /* ZCPicturePreviewVC.m in Sources */,
-				935ACFFA1FA45C5A000A7AF3 /* ViewVC.m in Sources */,
-				935F4EC51F999CB200CD6AB7 /* ZCCalendarManageView.m in Sources */,
-				935F4EBF1F99090400CD6AB7 /* ZCCalendarDate.m in Sources */,
-				935F4EC01F99090400CD6AB7 /* ZCCalendarDayCell.m in Sources */,
-				938173011FCE931100F141FB /* ZCPlaySystemSound.m in Sources */,
-				935F4EC11F99090400CD6AB7 /* ZCCalendarView.m in Sources */,
-				935F4EBD1F99090400CD6AB7 /* CalendarDayCell.m in Sources */,
-				935F4EBC1F99018000CD6AB7 /* CalendarVC.m in Sources */,
-				93ACC7501FC81C1000B8FE01 /* ZCRequestManager.m in Sources */,
-				93B412A41F976026003664BE /* ZCSpinnerView.m in Sources */,
-				93A3C4C11FC5351600663793 /* ZCAppConfigFieldInfo.m in Sources */,
-				9381976920AE6D4E00134EBC /* ZCNotification.m in Sources */,
-				93B4129B1F974ED8003664BE /* BannerVC.m in Sources */,
-				93B4127F1F974CE2003664BE /* AppDelegate.m in Sources */,
-				93ACC74F1FC81C1000B8FE01 /* ZCRequest.m in Sources */,
-				93B4128D1F974CE2003664BE /* main.m in Sources */,
+				938197BA20AE733B00134EBC /* ZCTablePopupControl.m in Sources */,
+				938197BB20AE733B00134EBC /* ZCAppConfigFieldInfo.m in Sources */,
+				9381979020AE731700134EBC /* ZCCalendarDateLunarCalendar.c in Sources */,
+				938197A420AE732800134EBC /* ZCPicturePreviewVC.m in Sources */,
+				938197A520AE732800134EBC /* ViewVC.m in Sources */,
+				9398C50C20A7645000C7C8AA /* ViewController.m in Sources */,
+				9381979420AE731700134EBC /* ZCCalendarDayCell.m in Sources */,
+				938197A320AE732800134EBC /* BannerVC.m in Sources */,
+				938197B820AE733B00134EBC /* ZCNotification.m in Sources */,
+				9381979120AE731700134EBC /* ZCCalendarDate.m in Sources */,
+				9381979220AE731700134EBC /* ZCCalendarManageView.m in Sources */,
+				9381978C20AE731700134EBC /* ZCSpinnerView.m in Sources */,
+				9381979320AE731700134EBC /* ZCCalendarView.m in Sources */,
+				9398C51720A7645200C7C8AA /* main.m in Sources */,
+				938197A220AE732800134EBC /* CalendarVC.m in Sources */,
+				938197A120AE732800134EBC /* CalendarDayCell.m in Sources */,
+				9398C50920A7645000C7C8AA /* AppDelegate.m in Sources */,
+				938197BD20AE733B00134EBC /* ZCPlaySystemSound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		93B412831F974CE2003664BE /* Main.storyboard */ = {
+		9398C50D20A7645000C7C8AA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				93B412841F974CE2003664BE /* Base */,
+				9398C50E20A7645000C7C8AA /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		93B412881F974CE2003664BE /* LaunchScreen.storyboard */ = {
+		9398C51220A7645200C7C8AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				93B412891F974CE2003664BE /* Base */,
+				9398C51320A7645200C7C8AA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -404,7 +381,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		93B4128E1F974CE2003664BE /* Debug */ = {
+		9398C51820A7645200C7C8AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,6 +391,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -454,14 +432,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		93B4128F1F974CE2003664BE /* Release */ = {
+		9398C51920A7645200C7C8AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -471,6 +449,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -505,53 +484,53 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		93B412911F974CE2003664BE /* Debug */ = {
+		9398C51B20A7645200C7C8AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TF6UX56K9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/ZCCategory",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				INFOPLIST_FILE = "CocoapodsLibrary/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.workai.employee;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.workai.CocoapodsLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		93B412921F974CE2003664BE /* Release */ = {
+		9398C51C20A7645200C7C8AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TF6UX56K9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/ZCCategory",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
 				INFOPLIST_FILE = "CocoapodsLibrary/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.workai.employee;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.workai.CocoapodsLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -559,25 +538,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93B412751F974CE2003664BE /* Build configuration list for PBXProject "CocoapodsLibrary" */ = {
+		9398C4FF20A7645000C7C8AA /* Build configuration list for PBXProject "CocoapodsLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93B4128E1F974CE2003664BE /* Debug */,
-				93B4128F1F974CE2003664BE /* Release */,
+				9398C51820A7645200C7C8AA /* Debug */,
+				9398C51920A7645200C7C8AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93B412901F974CE2003664BE /* Build configuration list for PBXNativeTarget "CocoapodsLibrary" */ = {
+		9398C51A20A7645200C7C8AA /* Build configuration list for PBXNativeTarget "CocoapodsLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93B412911F974CE2003664BE /* Debug */,
-				93B412921F974CE2003664BE /* Release */,
+				9398C51B20A7645200C7C8AA /* Debug */,
+				9398C51C20A7645200C7C8AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 93B412721F974CE2003664BE /* Project object */;
+	rootObject = 9398C4FC20A7645000C7C8AA /* Project object */;
 }
