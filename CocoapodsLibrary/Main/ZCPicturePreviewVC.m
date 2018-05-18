@@ -36,7 +36,7 @@
     picturePreview.zc_didChangeBlock = ^(ZCPicturePreview *preview, ZCPicturePreviewItem *item) {
         item.imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];
     };
-    picturePreview.headBar.deleteImageBlock = ^{
+    picturePreview.zc_headBar.deleteImageBlock = ^{
         NSLog(@"== %lu", (unsigned long)picturePreview.zc_nowShowImgIndex);
     };
     

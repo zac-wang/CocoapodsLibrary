@@ -16,7 +16,7 @@
 + (instancetype)shared;
 
 /// 界面导航栏（可以移除 自定义界面）
-@property(nonatomic, readonly) ZCPicturePreviewHeadbar *headBar;
+@property(nonatomic, readonly) ZCPicturePreviewHeadbar *zc_headBar;
 
 /// 设置 预览 图片总个数
 @property(nonatomic, assign) NSUInteger zc_imageCount;
