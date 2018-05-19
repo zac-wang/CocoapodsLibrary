@@ -77,6 +77,7 @@
 #import "ZCSelectImagePicker.h"
 #import "ZCTabBarItem.h"
 #import "ZCTableViewCell.h"
+#import "ZCTextDecimalField.h"
 #import "ZCTextField.h"
 #import "ZCTextView.h"
 #import "ZCTimeCountDown.h"

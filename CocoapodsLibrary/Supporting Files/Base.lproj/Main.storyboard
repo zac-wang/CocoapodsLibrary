@@ -249,6 +249,18 @@
                                 <rect key="frame" x="244.5" y="312" width="114.5" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="限制输入小数，且要求精度" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R24-Sk-PD1" customClass="ZCTextDecimalField">
+                                <rect key="frame" x="26" y="445" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LLH-bX-5RD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="zc_isMinus" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.42154017857142856" green="1" blue="0.86455816702857136" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -267,6 +279,7 @@
                             <constraint firstItem="Eeg-VG-vaJ" firstAttribute="top" secondItem="Fb4-bn-uQf" secondAttribute="bottom" constant="10" id="BRx-VG-crd"/>
                             <constraint firstItem="Fb4-bn-uQf" firstAttribute="leading" secondItem="YA4-Jk-WfA" secondAttribute="trailing" id="BhB-bd-2z7"/>
                             <constraint firstItem="hDB-dh-mD5" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" id="D51-Ak-2Tp"/>
+                            <constraint firstItem="R24-Sk-PD1" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" constant="10" id="D8z-mi-yaQ"/>
                             <constraint firstItem="vJX-Rm-s2D" firstAttribute="width" secondItem="33P-r4-Awf" secondAttribute="width" id="Dmz-8P-DkX"/>
                             <constraint firstItem="Eeg-VG-vaJ" firstAttribute="width" secondItem="lHM-T9-ZRy" secondAttribute="width" id="Ezb-tT-4uc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pLw-iR-w9N" secondAttribute="trailing" id="GdU-xV-Rbm"/>
@@ -317,6 +330,7 @@
                             <constraint firstItem="z9o-kf-StD" firstAttribute="top" secondItem="fzG-1Q-ps7" secondAttribute="bottom" constant="10" id="oZO-Fk-F5t"/>
                             <constraint firstItem="pLw-iR-w9N" firstAttribute="width" secondItem="gwy-PU-RpB" secondAttribute="width" id="qdO-bl-eRC"/>
                             <constraint firstItem="qqq-Ny-MIX" firstAttribute="leading" secondItem="lHM-T9-ZRy" secondAttribute="trailing" id="tSe-Aq-uJI"/>
+                            <constraint firstItem="eYQ-B4-Xtt" firstAttribute="top" secondItem="R24-Sk-PD1" secondAttribute="bottom" constant="14.5" id="u5P-7S-3vk"/>
                             <constraint firstItem="pLw-iR-w9N" firstAttribute="leading" secondItem="B9o-1k-2P2" secondAttribute="trailing" id="u81-0e-fKO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Knb-QG-lts" secondAttribute="trailing" id="ufl-kA-Xgq"/>
                             <constraint firstItem="2Yq-rM-cjI" firstAttribute="width" secondItem="eYQ-B4-Xtt" secondAttribute="width" id="vo9-E0-WPc"/>
@@ -331,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyz-BD-uQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2972" y="-1263"/>
+            <point key="canvasLocation" x="2972" y="-1263.4182908545729"/>
         </scene>
         <!--Banner-->
         <scene sceneID="Gj9-iQ-atJ">
