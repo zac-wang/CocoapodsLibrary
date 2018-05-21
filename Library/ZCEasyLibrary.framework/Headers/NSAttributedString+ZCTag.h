@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 //标签
+NS_CLASS_DEPRECATED_IOS(2_0, 9_0, "建议使用 ZCTagView")
 @interface NSAttributedString (ZCTag)
 
 /// 生成标签

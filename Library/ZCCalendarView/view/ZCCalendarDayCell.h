@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    ZCCalendarDayCellTypeNowMonth      = 0, /**> 上月 */
-    ZCCalendarDayCellTypePreviousMonth = 1, /**> 本月 */
-    ZCCalendarDayCellTypeNextMonth     = 2, /**> 下月 */
+    /// 上月
+    ZCCalendarDayCellTypeNowMonth      = 0,
+    /// 本月
+    ZCCalendarDayCellTypePreviousMonth = 1,
+    /// 下月
+    ZCCalendarDayCellTypeNextMonth     = 2,
 } ZCCalendarDayCellType;
 
 

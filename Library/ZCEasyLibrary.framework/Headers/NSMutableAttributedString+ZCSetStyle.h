@@ -10,18 +10,28 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    ZCAttributedUnderlineStyleNone         = NSUnderlineStyleNone,  // 不设置 下划线／删除线
-    ZCAttributedUnderlineStyleSingle       = NSUnderlineStyleSingle,// 设置下划线／删除线 为 细单线
-    ZCAttributedUnderlineStyleThick        = NSUnderlineStyleThick, // 设置下划线／删除线 为 粗单线
-    ZCAttributedUnderlineStyleDouble       = NSUnderlineStyleDouble,// 设置下划线／删除线 为 细双线
+    /// 不设置 下划线／删除线
+    ZCAttributedUnderlineStyleNone         = NSUnderlineStyleNone,
+    /// 设置下划线／删除线 为 细单线
+    ZCAttributedUnderlineStyleSingle       = NSUnderlineStyleSingle,
+    /// 设置下划线／删除线 为 粗单线
+    ZCAttributedUnderlineStyleThick        = NSUnderlineStyleThick,
+    /// 设置下划线／删除线 为 细双线
+    ZCAttributedUnderlineStyleDouble       = NSUnderlineStyleDouble,
     
-    ZCAttributedUnderlinePatternSolid      = NSUnderlinePatternSolid,     // 设置下划线／删除线 为 连续的实线
-    ZCAttributedUnderlinePatternDot        = NSUnderlinePatternDot,       // 设置下划线／删除线 为 断续的短虚线
-    ZCAttributedUnderlinePatternDash       = NSUnderlinePatternDash,      // 设置下划线／删除线 为 断续的长虚线
-    ZCAttributedUnderlinePatternDashDot    = NSUnderlinePatternDashDot,   // 设置下划线／删除线 为 断续的长、短虚线
-    ZCAttributedUnderlinePatternDashDotDot = NSUnderlinePatternDashDotDot,// 设置下划线／删除线 为 断续的长、短、短虚线
+    /// 设置下划线／删除线 为 连续的实线
+    ZCAttributedUnderlinePatternSolid      = NSUnderlinePatternSolid,
+    /// 设置下划线／删除线 为 断续的短虚线
+    ZCAttributedUnderlinePatternDot        = NSUnderlinePatternDot,
+    /// 设置下划线／删除线 为 断续的长虚线
+    ZCAttributedUnderlinePatternDash       = NSUnderlinePatternDash,
+    /// 设置下划线／删除线 为 断续的长、短虚线
+    ZCAttributedUnderlinePatternDashDot    = NSUnderlinePatternDashDot,
+    /// 设置下划线／删除线 为 断续的长、短、短虚线
+    ZCAttributedUnderlinePatternDashDotDot = NSUnderlinePatternDashDotDot,
     
-    ZCAttributedUnderlineByWord            = NSUnderlineByWord            // 空格 不设置 下划线／删除线
+    /// 空格 不设置 下划线／删除线
+    ZCAttributedUnderlineByWord            = NSUnderlineByWord
 } ZCAttributedUnderType;
 
 @interface NSMutableAttributedString (ZCSetStyle)

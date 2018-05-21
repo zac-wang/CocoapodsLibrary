@@ -74,9 +74,8 @@
                                     <segue destination="zwD-mM-Rs9" kind="show" id="SQ8-Qu-9bf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-mE-3S3">
-                                <rect key="frame" x="41" y="279" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJF-mE-3S3">
+                                <rect key="frame" x="41" y="282" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZN-Rf-WZv"/>
@@ -85,13 +84,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AJF-mE-3S3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="41" id="CXV-mS-FvW"/>
                             <constraint firstItem="DSI-bX-9wD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FBB-jw-BMO"/>
                             <constraint firstItem="vwj-hW-msP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PKj-T9-GLj"/>
                             <constraint firstItem="u2Z-4r-ndX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QSh-P4-COy"/>
+                            <constraint firstItem="AJF-mE-3S3" firstAttribute="top" secondItem="u2Z-4r-ndX" secondAttribute="bottom" constant="50" id="QYP-Du-Ntt"/>
                             <constraint firstItem="Kb1-dr-lTP" firstAttribute="top" secondItem="vwj-hW-msP" secondAttribute="bottom" constant="10" id="VlB-fk-Cxa"/>
                             <constraint firstItem="vwj-hW-msP" firstAttribute="top" secondItem="IBg-vx-NG0" secondAttribute="bottom" constant="8" id="b5s-5R-64X"/>
                             <constraint firstItem="Kb1-dr-lTP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cwP-MB-zYO"/>
                             <constraint firstItem="DSI-bX-9wD" firstAttribute="top" secondItem="Kb1-dr-lTP" secondAttribute="bottom" constant="8" id="gnB-ou-HYP"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AJF-mE-3S3" secondAttribute="trailing" constant="20" symbolic="YES" id="wQ4-Q7-Bgv"/>
                             <constraint firstItem="u2Z-4r-ndX" firstAttribute="top" secondItem="DSI-bX-9wD" secondAttribute="bottom" constant="10" id="zT9-m5-mok"/>
                         </constraints>
                     </view>
@@ -250,10 +252,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="限制输入小数，且要求精度" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R24-Sk-PD1" customClass="ZCTextDecimalField">
-                                <rect key="frame" x="26" y="445" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="LLH-bX-5RD"/>
-                                </constraints>
+                                <rect key="frame" x="26" y="445" width="323" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -261,6 +260,18 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="zc_isMinus" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDi-Wh-OZr" customClass="ZCTagView">
+                                <rect key="frame" x="16" y="350" width="343" height="87"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.zc_borderColor">
+                                        <color key="value" red="0.83974255181347157" green="0.83974255181347157" blue="0.83974255181347157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.42154017857142856" green="1" blue="0.86455816702857136" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -305,6 +316,7 @@
                             <constraint firstItem="hDB-dh-mD5" firstAttribute="top" secondItem="em4-Pa-FvZ" secondAttribute="bottom" constant="10" id="bym-pf-UXl"/>
                             <constraint firstItem="2Yq-rM-cjI" firstAttribute="centerY" secondItem="eYQ-B4-Xtt" secondAttribute="centerY" id="cnH-QA-J1D"/>
                             <constraint firstItem="gwy-PU-RpB" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" id="cs0-QP-9cE"/>
+                            <constraint firstItem="kDi-Wh-OZr" firstAttribute="trailing" secondItem="PyB-2h-0EI" secondAttribute="trailingMargin" id="dOI-wf-Zlh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Eeg-VG-vaJ" secondAttribute="trailing" id="ddA-Jw-Bmm"/>
                             <constraint firstItem="LPp-OC-mmA" firstAttribute="width" secondItem="em4-Pa-FvZ" secondAttribute="width" id="deE-EX-D0u"/>
                             <constraint firstItem="pLw-iR-w9N" firstAttribute="top" secondItem="cBF-nz-gdq" secondAttribute="bottom" constant="8" id="edM-Ee-jbb"/>
@@ -328,24 +340,29 @@
                             <constraint firstItem="Knb-QG-lts" firstAttribute="leading" secondItem="cOe-vx-sJg" secondAttribute="trailing" id="n1f-qZ-MF9"/>
                             <constraint firstItem="g37-yG-J2T" firstAttribute="leading" secondItem="z9o-kf-StD" secondAttribute="trailing" id="nE4-14-kPP"/>
                             <constraint firstItem="z9o-kf-StD" firstAttribute="top" secondItem="fzG-1Q-ps7" secondAttribute="bottom" constant="10" id="oZO-Fk-F5t"/>
+                            <constraint firstItem="kDi-Wh-OZr" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" id="qHw-fC-HXQ"/>
                             <constraint firstItem="pLw-iR-w9N" firstAttribute="width" secondItem="gwy-PU-RpB" secondAttribute="width" id="qdO-bl-eRC"/>
+                            <constraint firstItem="R24-Sk-PD1" firstAttribute="top" secondItem="kDi-Wh-OZr" secondAttribute="bottom" constant="8" id="rzS-Se-kwk"/>
                             <constraint firstItem="qqq-Ny-MIX" firstAttribute="leading" secondItem="lHM-T9-ZRy" secondAttribute="trailing" id="tSe-Aq-uJI"/>
                             <constraint firstItem="eYQ-B4-Xtt" firstAttribute="top" secondItem="R24-Sk-PD1" secondAttribute="bottom" constant="14.5" id="u5P-7S-3vk"/>
                             <constraint firstItem="pLw-iR-w9N" firstAttribute="leading" secondItem="B9o-1k-2P2" secondAttribute="trailing" id="u81-0e-fKO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Knb-QG-lts" secondAttribute="trailing" id="ufl-kA-Xgq"/>
                             <constraint firstItem="2Yq-rM-cjI" firstAttribute="width" secondItem="eYQ-B4-Xtt" secondAttribute="width" id="vo9-E0-WPc"/>
                             <constraint firstItem="lHM-T9-ZRy" firstAttribute="top" secondItem="h4c-r6-4D5" secondAttribute="bottom" constant="10" id="wXT-q4-2Fi"/>
+                            <constraint firstItem="kDi-Wh-OZr" firstAttribute="top" secondItem="hDB-dh-mD5" secondAttribute="bottom" constant="8" id="zjd-9G-7SX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R24-Sk-PD1" secondAttribute="trailing" constant="10" id="zzb-yV-J0W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Other" id="3k1-RA-OVD"/>
                     <connections>
                         <outlet property="btn" destination="eYQ-B4-Xtt" id="1lW-UO-agI"/>
+                        <outlet property="tagBackView" destination="kDi-Wh-OZr" id="6kT-mx-fg8"/>
                         <outlet property="textView" destination="2Yq-rM-cjI" id="Lzm-Ff-2nS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyz-BD-uQJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2972" y="-1263.4182908545729"/>
+            <point key="canvasLocation" x="2970.4000000000001" y="-1264.3178410794603"/>
         </scene>
         <!--Banner-->
         <scene sceneID="Gj9-iQ-atJ">

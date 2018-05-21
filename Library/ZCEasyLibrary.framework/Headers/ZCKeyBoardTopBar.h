@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
+    /// 只有取消按钮
     ZCKeyBoardTopBarStylePlain = 0,
+    /// 有输入框、取消按钮
     ZCKeyBoardTopBarStyleTextField = 1,
 } ZCKeyBoardTopBarStyle;
 

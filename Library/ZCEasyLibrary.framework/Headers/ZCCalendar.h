@@ -9,13 +9,20 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
-    ZCCalendarSunday = 1, /**< 星期日 */
-    ZCCalendarMonday = 2, /**< 星期一 */
-    ZCCalendarTuesday = 3, /**< 星期二 */
-    ZCCalendarWednesday = 4, /**< 星期三 */
-    ZCCalendarThursday = 5, /**< 星期四 */
-    ZCCalendarFriday = 6, /**< 星期五 */
-    ZCCalendarSaturday = 7, /**< 星期六 */
+    /// 星期日
+    ZCCalendarSunday = 1,
+    /// 星期一
+    ZCCalendarMonday = 2,
+    /// 星期二
+    ZCCalendarTuesday = 3,
+    /// 星期三
+    ZCCalendarWednesday = 4,
+    /// 星期四
+    ZCCalendarThursday = 5,
+    /// 星期五
+    ZCCalendarFriday = 6,
+    /// 星期六
+    ZCCalendarSaturday = 7,
 } ZCCalendarFirstWeekday;
 
 @interface ZCCalendar : NSCalendar
