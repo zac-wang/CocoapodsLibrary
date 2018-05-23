@@ -50,6 +50,7 @@
 #import "UITextView+ZCKeyBoardTopBar.h"
 #import "UITextView+ZCSelectedRange.h"
 #import "UIView+ZCCornerRadius.h"
+#import "UIView+ZCScreenCapture.h"
 #import "UIView+ZCSupp.h"
 #import "ZCAlert.h"
 #import "ZCAlertView.h"
