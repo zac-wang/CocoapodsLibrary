@@ -18,4 +18,7 @@
 
 @property(nonatomic, assign)   BOOL zc_loadding;
 
+- (void)viewDidAppear;
+- (void)viewDidDisappear;
+
 @end

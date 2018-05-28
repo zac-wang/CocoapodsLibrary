@@ -22,9 +22,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSDictionary *dic = @{ @"name" : @"n_a_m_e", @"_age" : @"_n_a_m_e", @"model":@{@"name" : @"n_a_m_e", @"_age" : @"_n_a_m_e"}, @"array":@[@{@"name" : @"n_a_m_e", @"_age" : @"_n_a_m_e"}, @{@"name" : @"n_a_m_e", @"_age" : @"_n_a_m_e"}] };
-    TestModel *model = [TestModel zc_objectWithJson:dic];
-    NSLog(@"%@", model);
     return YES;
 }
 
