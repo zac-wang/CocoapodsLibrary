@@ -99,16 +99,16 @@
     if(!spinnerView) {
         CGRect rect = CGRectMake(0, sender.frame.origin.y+sender.frame.size.height, self.view.frame.size.width, 300);
         spinnerView = [[ZCSpinnerView alloc] initWithMaxFrame:rect];
-        spinnerView.dataSource = @[@"一", @"二", @"三", @"四", @"五"];
-        spinnerView.cell = ^(UITableViewCell *cell, NSIndexPath *indexPath) {
+        spinnerView.zc_dataSource = @[@"一", @"二", @"三", @"四", @"五"];
+        spinnerView.zc_cell = ^(UITableViewCell *cell, NSIndexPath *indexPath) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         };
-        spinnerView.selectEvent = ^(UITableViewCell *cell, NSIndexPath *indexPath, NSString *title) {
+        spinnerView.zc_selectEvent = ^(UITableViewCell *cell, NSIndexPath *indexPath, NSString *title) {
             //cell.accessoryType = UITableViewCellAccessoryCheckmark;
             NSLog(@"%ld", (long)indexPath.row);
         };
     }
-    [spinnerView show];
+    [spinnerView zc_show];
 }
 
 - (IBAction)selectLocation:(UIButton *)sender {

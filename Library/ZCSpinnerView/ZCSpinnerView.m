@@ -31,14 +31,14 @@
     if (self) {
         self.frame = [UIScreen mainScreen].bounds;
         self.layer.masksToBounds = YES;
-        self.isShow = NO;
+        self.zc_isShow = NO;
         
         self.maxHeight = maxFrame.size.height;
         self.cellHeight = cellHeight <= 0 ? 44 : cellHeight;
         self.isCustomer = !!cellObject;
         
-        if(!self.tableView)
-            [self addTarget:self action:@selector(hidden) forControlEvents:UIControlEventTouchUpInside];
+        if(!self.zc_tableView)
+            [self addTarget:self action:@selector(zc_hidden) forControlEvents:UIControlEventTouchUpInside];
         [self initTableView:maxFrame cellObject:cellObject];
         [[UIApplication sharedApplication].delegate.window addSubview:self];
     }
@@ -47,71 +47,71 @@
 
 - (void)initTableView:(CGRect)frame cellObject:(NSObject *)cellObject {
     frame.size.height = 0;
-    if(!self.tableView) {
-        self.tableView = [[UITableView alloc] init];
-        self.tableView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
-        [self addSubview:self.tableView];
+    if(!self.zc_tableView) {
+        self.zc_tableView = [[UITableView alloc] init];
+        self.zc_tableView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        [self addSubview:self.zc_tableView];
         
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
-        self.tableView.tableFooterView = [[UIView alloc] init];
-        self.tableView.separatorColor = UIColorFromRGB(0xe3e4e5);
-        self.tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
+        self.zc_tableView.delegate = self;
+        self.zc_tableView.dataSource = self;
+        self.zc_tableView.tableFooterView = [[UIView alloc] init];
+        self.zc_tableView.separatorColor = UIColorFromRGB(0xe3e4e5);
+        self.zc_tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
     }
-    self.tableView.frame = frame;
+    self.zc_tableView.frame = frame;
     if([cellObject isKindOfClass:[NSString class]])
-        [self.tableView registerClass:NSClassFromString((NSString *)cellObject) forCellReuseIdentifier:CellReuseIdentifier];
+        [self.zc_tableView registerClass:NSClassFromString((NSString *)cellObject) forCellReuseIdentifier:CellReuseIdentifier];
     else if([cellObject isKindOfClass:[UINib class]])
-        [self.tableView registerNib:(UINib *)cellObject forCellReuseIdentifier:CellReuseIdentifier];
+        [self.zc_tableView registerNib:(UINib *)cellObject forCellReuseIdentifier:CellReuseIdentifier];
 }
 
 #pragma mark - Func
-- (void)show {
+- (void)zc_show {
     [self showForAnimat:YES];
 }
 
 - (void)showForAnimat:(BOOL)isAnimat {
-    float height = self.cellHeight *self.dataSource.count;
+    float height = self.cellHeight *self.zc_dataSource.count;
     if(height > self.maxHeight) {
         height = self.maxHeight;
     }
-    [self.tableView reloadData];
+    [self.zc_tableView reloadData];
     
-    CGRect tableRect = self.tableView.frame;
+    CGRect tableRect = self.zc_tableView.frame;
     tableRect.size.height = 0;
-    self.tableView.frame = tableRect;
-    self.isShow = YES;
+    self.zc_tableView.frame = tableRect;
+    self.zc_isShow = YES;
     
     tableRect.size.height = height;
     [UIView animateWithDuration:isAnimat ? 0.25 : 0 animations:^{
-        self.tableView.frame = tableRect;
+        self.zc_tableView.frame = tableRect;
     } completion:^(BOOL finished) {
     }];
 }
 
-- (void)hidden {
-    CGRect selfRect = self.tableView.frame;
+- (void)zc_hidden {
+    CGRect selfRect = self.zc_tableView.frame;
     selfRect.size.height = 0;
     
     [UIView animateWithDuration:0.25 animations:^{
-        self.tableView.frame = selfRect;
+        self.zc_tableView.frame = selfRect;
     } completion:^(BOOL finished) {
-        self.isShow = NO;
+        self.zc_isShow = NO;
     }];
 }
 
-- (BOOL)isShow {
+- (BOOL)zc_isShow {
     return !self.hidden;
 }
 
-- (void)setIsShow:(BOOL)_isShow {
+- (void)setZc_isShow:(BOOL)_isShow {
     self.hidden = !_isShow;
 }
 
 #pragma mark - TableView Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSource.count;
+    return self.zc_dataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -128,11 +128,11 @@
         cell.backgroundColor = [UIColor clearColor];
     }
     if(!self.isCustomer) {
-        NSString *string = self.dataSource[indexPath.row];
+        NSString *string = self.zc_dataSource[indexPath.row];
         cell.textLabel.text = [string isKindOfClass:[NSString class]] ? string : nil;
     }
-    if(self.cell)
-        self.cell(cell, indexPath);
+    if(self.zc_cell)
+        self.zc_cell(cell, indexPath);
     return cell;
 }
 
@@ -140,13 +140,13 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self hidden];
+    [self zc_hidden];
     
-    if(self.selectEvent) {
+    if(self.zc_selectEvent) {
         NSString *title = nil;
         if(!self.isCustomer)
-            title = [self.tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-        self.selectEvent([tableView cellForRowAtIndexPath:indexPath], indexPath, title);
+            title = [self.zc_tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+        self.zc_selectEvent([tableView cellForRowAtIndexPath:indexPath], indexPath, title);
     }
 }
 

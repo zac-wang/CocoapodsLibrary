@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCSpinnerView"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.49"
   spec.summary      = "ZCSpinnerView UI Kit"
   spec.description  = "ZCSpinnerView 这是一个下拉框"
   spec.platform     = :ios, '7.0'
