@@ -49,6 +49,7 @@
 #import "UITextView+ZCHandleMaxTextLength.h"
 #import "UITextView+ZCKeyBoardTopBar.h"
 #import "UITextView+ZCSelectedRange.h"
+#import "UIView+ZCConvert.h"
 #import "UIView+ZCCornerRadius.h"
 #import "UIView+ZCScreenCapture.h"
 #import "UIView+ZCSupp.h"
