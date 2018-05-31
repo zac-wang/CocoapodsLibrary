@@ -10,7 +10,7 @@
 #import "ZCPicturePreviewItem.h"
 #import "ZCPicturePreviewHeadbar.h"
 
-
+/// 图片浏览
 @interface ZCPicturePreview : UIScrollView
 
 + (instancetype)shared;

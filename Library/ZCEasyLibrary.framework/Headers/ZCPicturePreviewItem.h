@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+/// 图片浏览 item
 @interface ZCPicturePreviewItem : UIScrollView
 
 /// 当前预览的图片下标

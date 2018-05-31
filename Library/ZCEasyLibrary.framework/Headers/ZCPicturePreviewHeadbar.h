@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+/// 图片浏览导航栏
 @interface ZCPicturePreviewHeadbar : UIToolbar
 
 @property(nonatomic, strong) UIBarButtonItem *zc_leftItem;

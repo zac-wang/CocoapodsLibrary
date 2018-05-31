@@ -11,28 +11,28 @@
 
 typedef enum : NSUInteger {
     /// 不设置 下划线／删除线
-    ZCAttributedUnderlineStyleNone         = NSUnderlineStyleNone,
+    ZCAttribTypeStyleNone         = NSUnderlineStyleNone,
     /// 设置下划线／删除线 为 细单线
-    ZCAttributedUnderlineStyleSingle       = NSUnderlineStyleSingle,
+    ZCAttribTypeStyleSingle       = NSUnderlineStyleSingle,
     /// 设置下划线／删除线 为 粗单线
-    ZCAttributedUnderlineStyleThick        = NSUnderlineStyleThick,
+    ZCAttribTypeStyleThick        = NSUnderlineStyleThick,
     /// 设置下划线／删除线 为 细双线
-    ZCAttributedUnderlineStyleDouble       = NSUnderlineStyleDouble,
+    ZCAttribTypeStyleDouble       = NSUnderlineStyleDouble,
     
     /// 设置下划线／删除线 为 连续的实线
-    ZCAttributedUnderlinePatternSolid      = NSUnderlinePatternSolid,
+    ZCAttribTypePatternSolid      = NSUnderlinePatternSolid,
     /// 设置下划线／删除线 为 断续的短虚线
-    ZCAttributedUnderlinePatternDot        = NSUnderlinePatternDot,
+    ZCAttribTypePatternDot        = NSUnderlinePatternDot,
     /// 设置下划线／删除线 为 断续的长虚线
-    ZCAttributedUnderlinePatternDash       = NSUnderlinePatternDash,
+    ZCAttribTypePatternDash       = NSUnderlinePatternDash,
     /// 设置下划线／删除线 为 断续的长、短虚线
-    ZCAttributedUnderlinePatternDashDot    = NSUnderlinePatternDashDot,
+    ZCAttribTypePatternDashDot    = NSUnderlinePatternDashDot,
     /// 设置下划线／删除线 为 断续的长、短、短虚线
-    ZCAttributedUnderlinePatternDashDotDot = NSUnderlinePatternDashDotDot,
+    ZCAttribTypePatternDashDotDot = NSUnderlinePatternDashDotDot,
     
     /// 空格 不设置 下划线／删除线
-    ZCAttributedUnderlineByWord            = NSUnderlineByWord
-} ZCAttributedUnderType;
+    ZCAttribTypeByWord            = NSUnderlineByWord
+} ZCAttribType;
 
 @interface NSMutableAttributedString (ZCSetStyle)
 
@@ -53,8 +53,12 @@ typedef enum : NSUInteger {
 /// 添加描边宽度（负值填充效果，正值中空效果）, 设置描边颜色
 @property(nonatomic, readonly, copy) NSMutableAttributedString *(^zc_addTextStrokeStyle)(int stroke, UIColor *color);
 /// 添加下划线(0:不设置, 1:细单线, 2:粗单线, 1:细双线), 设置下划线颜色
-@property(nonatomic, readonly, copy) NSMutableAttributedString *(^zc_addUnderlineStyle)(ZCAttributedUnderType type, UIColor *color);
+@property(nonatomic, readonly, copy) NSMutableAttributedString *(^zc_addUnderlineStyle)(ZCAttribType type, UIColor *color);
 /// 添加删除线(0:不设置, 1:细单线, 2:粗单线, 1:细双线), 设置删除线颜色
-@property(nonatomic, readonly, copy) NSMutableAttributedString *(^zc_addStrikethroughStyle)(ZCAttributedUnderType type, UIColor *color);
+@property(nonatomic, readonly, copy) NSMutableAttributedString *(^zc_addStrikethroughStyle)(ZCAttribType type, UIColor *color);
+
+
+/// 最佳文字
+@property(nonatomic, readonly, copy) NSMutableAttributedString *(^zc_addTextAndStyle)(NSString *text, NSDictionary *style);
 
 @end
