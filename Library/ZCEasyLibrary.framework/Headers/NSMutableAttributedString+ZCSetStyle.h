@@ -59,6 +59,6 @@ typedef enum : NSUInteger {
 
 
 /// 最佳文字
-@property(nonatomic, readonly, copy) NSMutableAttributedString *(^zc_addTextAndStyle)(NSString *text, NSDictionary *style);
+@property(nonatomic, readonly, copy) NSMutableAttributedString *(^zc_appendTextAndStyle)(NSString *text, NSDictionary *style);
 
 @end
