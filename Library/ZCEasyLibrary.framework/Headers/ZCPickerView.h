@@ -20,8 +20,10 @@
 
 /// 方法二、设置数据列数，行数
 - (void)zc_componentCount:(NSInteger)count rowCount:(NSInteger(^)(UIPickerView *pic, NSInteger component))block;
-/// 设置title
+/// 方法一、设置title
 @property(nonatomic, copy)   NSString *(^zc_cell)(UIPickerView *pic, NSInteger component, NSInteger row);
+/// 方法二、设置title
+@property(nonatomic, copy)   NSAttributedString *(^zc_cellAttributedText)(UIPickerView *pic, NSInteger component, NSInteger row);
 
 
 ///选择后的回调方法
