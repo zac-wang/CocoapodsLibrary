@@ -76,6 +76,7 @@
 #import "ZCPicturePreview.h"
 #import "ZCPicturePreviewHeadbar.h"
 #import "ZCPicturePreviewItem.h"
+#import "ZCReachability.h"
 #import "ZCSelectDatePicker.h"
 #import "ZCSelectImagePicker.h"
 #import "ZCTabBarItem.h"
