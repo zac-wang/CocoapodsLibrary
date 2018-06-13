@@ -9,7 +9,7 @@
 #import "ZCAppUpdateVersion.h"
 #import <StoreKit/StoreKit.h>
 #import "NSData+ZCJson.h"
-#import <ZCEasyLibraryPrivate/Macro.h>
+#import "Macro.h"
 
 #define APPVersionURL1(_buildID_) [NSString stringWithFormat:@"https://itunes.apple.com/cn/lookup?bundleId=%@", _buildID_]
 #define APPVersionURL2(_appID_) [NSString stringWithFormat:@"http://itunes.apple.com/cn/lookup?id=%@", _appID_]

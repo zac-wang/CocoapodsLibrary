@@ -7,7 +7,7 @@
 //
 
 #import "ZCBankcard.h"
-#import <ZCEasyLibraryPrivate/Macro.h>
+#import "Macro.h"
 #import "NSData+ZCJson.h"
 //#import "UIColor+ZCSupp.h"
 

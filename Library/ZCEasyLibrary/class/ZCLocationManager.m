@@ -8,7 +8,7 @@
 
 #import "ZCLocationManager.h"
 #import <CoreLocation/CoreLocation.h>
-#import <ZCEasyLibraryPrivate/Macro.h>
+#import "Macro.h"
 #import "ZCAlert.h"
 #import "ZCUserDefaults.h"
 

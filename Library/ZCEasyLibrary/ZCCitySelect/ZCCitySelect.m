@@ -7,8 +7,8 @@
 //
 
 #import "ZCCitySelect.h"
+#import "Macro.h"
 #import "UIColor+ZCSupp.h"
-#import <ZCEasyLibraryPrivate/Macro.h>
 #import <ZCEasyLibraryPrivate/UIView+ZCCornerRadius.h>
 
 #define ZCEasyLibraryBundle [NSBundle bundleWithIdentifier:@"com.workai.ZCEasyLibrary"]

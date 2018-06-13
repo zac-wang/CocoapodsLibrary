@@ -7,7 +7,7 @@
 //
 
 #import "ZCAlert.h"
-#import <ZCEasyLibraryPrivate/Macro.h>
+#import "Macro.h"
 
 @implementation ZCAlertAction
 @end

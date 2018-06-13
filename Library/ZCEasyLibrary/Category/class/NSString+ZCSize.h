@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/NSStringDrawing.h>
-#import <ZCEasyLibraryPrivate/Macro.h>
+#import "Macro.h"
 
 @interface NSString (ZCSize)
 

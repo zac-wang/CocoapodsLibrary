@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ZCEasyLibraryPrivate/Macro.h>
+#import "Macro.h"
 
 @interface ZCTabBarItem : UITabBarItem
 
