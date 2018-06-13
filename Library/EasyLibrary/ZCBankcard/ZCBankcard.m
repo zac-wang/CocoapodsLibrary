@@ -7,9 +7,7 @@
 //
 
 #import "ZCBankcard.h"
-#import "Macro.h"
 #import "NSData+ZCJson.h"
-//#import "UIColor+ZCSupp.h"
 
 #define BankcardInfoUrl(_bankcard_no_) [NSString stringWithFormat:@"https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardBinCheck=true&cardNo=%@", _bankcard_no_]
 

@@ -7,7 +7,6 @@
 //
 
 #import "ZCAlertView.h"
-#import "Macro.h"
 #import "UIColor+ZCSupp.h"
 #import <ZCEasyLibraryPrivate/UIView+ZCCornerRadius.h>
 

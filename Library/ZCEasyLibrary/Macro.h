@@ -54,10 +54,6 @@
 
 
 
-#define UIColorFromRGB(rgbValue) UIColorFromRGBAlpha(rgbValue, 1.0)
-#define UIColorFromRGBAlpha(rgbValue, _alpha_) [UIColor colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0 green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0 blue:((float)((rgbValue) & 0xFF))/255.0 alpha:(_alpha_)]
-
-
 /// 清理文件夹，（要清理的目录，过期时间/秒）
 #define ZCCleanCacheFile(_finderPath_, _deadline_) [ZCCacheManage zc_cleanFileWithFinderPath:_finderPath_ deadline:_deadline_ delay:0.5]
 

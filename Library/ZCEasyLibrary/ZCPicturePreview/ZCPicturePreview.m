@@ -7,7 +7,6 @@
 //
 
 #import "ZCPicturePreview.h"
-#import "Macro.h"
 
 @interface ZCPicturePreviewItem (update)
 - (void)updateIndex:(NSUInteger)index count:(NSUInteger)count;

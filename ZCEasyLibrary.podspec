@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = 'Library/ZCEasyLibraryPrivate.framework'
   spec.source_files = ['Library/EasyLibrary/**/*.{h,m,c,mm}', 'Library/ZCEasyLibrary/**/*.{h,m,c,mm}']
   spec.public_header_files = ['Library/EasyLibrary/**/*.{h}', 'Library/ZCEasyLibrary/**/*.{h}']
-  spec.private_header_files = 'Library/EasyLibrary/ZCMutableDeepCopy/NSNumber+MutableDeepCopy.h'
+  spec.private_header_files = ['Library/EasyLibrary/ZCMutableDeepCopy/NSNumber+MutableDeepCopy.h', 'Library/ZCEasyLibrary/ZCBannerView/ZCBannerImageView.h']
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
   spec.libraries    = 'z'
