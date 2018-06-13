@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  XAEmpAssistant
+//
+//  Created by 庞阳 on 2017/4/14.
+//  Copyright © 2017年 Workai. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import <ZCEasyLibrary/ZCEasyLibrary.h>
+
+
+#endif
+
+#endif /* PrefixHeader_pch */

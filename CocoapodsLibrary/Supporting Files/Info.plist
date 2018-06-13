@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>1.0.0</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -29,10 +29,32 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>App需要您的同意,才能访问媒体资料库</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>App需要您的同意,才能访问蓝牙</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>App需要您的同意,才能访问日历</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App需要您的同意,才能访问相机</string>
 	<key>NSContactsUsageDescription</key>
-	<string>通讯录</string>
+	<string>App需要您的同意,才能访问通讯录</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>App需要您的同意,才能访问健康分享</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>App需要您的同意,才能访问健康更新</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>应用内定位</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>App需要您的同意,才能访问麦克风</string>
+	<key>NSMotionUsageDescription</key>
+	<string>App需要您的同意,才能访问运动与健身</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App需要您的同意,才能写入相册</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App需要您的同意,才能访问相册</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>App需要您的同意,才能访问提醒事项</string>
 	<key>UIAppFonts</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

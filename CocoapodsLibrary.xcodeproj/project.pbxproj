@@ -29,13 +29,13 @@
 		938197C420AE776600134EBC /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C220AE776600134EBC /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		938197C720AE779800134EBC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C620AE779800134EBC /* libz.tbd */; };
 		938197C920AE77A500134EBC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C820AE77A500134EBC /* MobileCoreServices.framework */; };
+		93907D6620BD20FF00D8BB4B /* ZCRequestJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93907D6520BD20FF00D8BB4B /* ZCRequestJSONSerializer.m */; };
 		9398C50920A7645000C7C8AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C50820A7645000C7C8AA /* AppDelegate.m */; };
 		9398C50C20A7645000C7C8AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C50B20A7645000C7C8AA /* ViewController.m */; };
 		9398C50F20A7645000C7C8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9398C50D20A7645000C7C8AA /* Main.storyboard */; };
 		9398C51120A7645200C7C8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9398C51020A7645200C7C8AA /* Assets.xcassets */; };
 		9398C51420A7645200C7C8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9398C51220A7645200C7C8AA /* LaunchScreen.storyboard */; };
 		9398C51720A7645200C7C8AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C51620A7645200C7C8AA /* main.m */; };
-		9399FD5B20B43B3300720592 /* ZCJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD5820B43B3300720592 /* ZCJSONRequestSerializer.m */; };
 		9399FD5C20B43B3300720592 /* ZCRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD5A20B43B3300720592 /* ZCRequestManager.m */; };
 		9399FD8220B43BE400720592 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD5F20B43BE400720592 /* UIProgressView+AFNetworking.m */; };
 		9399FD8320B43BE400720592 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD6120B43BE400720592 /* UIRefreshControl+AFNetworking.m */; };
@@ -52,6 +52,9 @@
 		9399FD8E20B43BE400720592 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7C20B43BE400720592 /* AFURLRequestSerialization.m */; };
 		9399FD8F20B43BE400720592 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7E20B43BE400720592 /* AFNetworkReachabilityManager.m */; };
 		9399FD9020B43BE400720592 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7F20B43BE400720592 /* AFSecurityPolicy.m */; };
+		93A137DE20C0F194007D5A05 /* _CIFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A137DD20C0F194007D5A05 /* _CIFilter.m */; };
+		93A137E720C14943007D5A05 /* CIFilter+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A137E620C14943007D5A05 /* CIFilter+ZCSupp.m */; };
+		93C7BFA820CA600000C7A25D /* ZCSystemVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C7BFA720CA600000C7A25D /* ZCSystemVariable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -106,6 +109,8 @@
 		938197C220AE776600134EBC /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZCEasyLibrary.framework; sourceTree = "<group>"; };
 		938197C620AE779800134EBC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		938197C820AE77A500134EBC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		93907D6420BD20FF00D8BB4B /* ZCRequestJSONSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCRequestJSONSerializer.h; sourceTree = "<group>"; };
+		93907D6520BD20FF00D8BB4B /* ZCRequestJSONSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCRequestJSONSerializer.m; sourceTree = "<group>"; };
 		9398C50420A7645000C7C8AA /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9398C50720A7645000C7C8AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9398C50820A7645000C7C8AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,8 +121,6 @@
 		9398C51320A7645200C7C8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9398C51520A7645200C7C8AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9398C51620A7645200C7C8AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9399FD5720B43B3300720592 /* ZCJSONRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCJSONRequestSerializer.h; sourceTree = "<group>"; };
-		9399FD5820B43B3300720592 /* ZCJSONRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCJSONRequestSerializer.m; sourceTree = "<group>"; };
 		9399FD5920B43B3300720592 /* ZCRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCRequestManager.h; sourceTree = "<group>"; };
 		9399FD5A20B43B3300720592 /* ZCRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCRequestManager.m; sourceTree = "<group>"; };
 		9399FD5F20B43BE400720592 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -154,6 +157,13 @@
 		9399FD7F20B43BE400720592 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
 		9399FD8020B43BE400720592 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		9399FD8120B43BE400720592 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		93A137DC20C0F194007D5A05 /* _CIFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _CIFilter.h; sourceTree = "<group>"; };
+		93A137DD20C0F194007D5A05 /* _CIFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _CIFilter.m; sourceTree = "<group>"; };
+		93A137E520C14943007D5A05 /* CIFilter+ZCSupp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CIFilter+ZCSupp.h"; sourceTree = "<group>"; };
+		93A137E620C14943007D5A05 /* CIFilter+ZCSupp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CIFilter+ZCSupp.m"; sourceTree = "<group>"; };
+		93C7BFA520CA593300C7A25D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		93C7BFA620CA600000C7A25D /* ZCSystemVariable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCSystemVariable.h; sourceTree = "<group>"; };
+		93C7BFA720CA600000C7A25D /* ZCSystemVariable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCSystemVariable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +187,7 @@
 				938197BF20AE735600134EBC /* main_banner.bundle */,
 				9398C50D20A7645000C7C8AA /* Main.storyboard */,
 				9398C51020A7645200C7C8AA /* Assets.xcassets */,
+				93C7BFA520CA593300C7A25D /* PrefixHeader.pch */,
 				9398C51220A7645200C7C8AA /* LaunchScreen.storyboard */,
 				9398C51520A7645200C7C8AA /* Info.plist */,
 				9398C51620A7645200C7C8AA /* main.m */,
@@ -264,8 +275,14 @@
 		938197A620AE733B00134EBC /* test */ = {
 			isa = PBXGroup;
 			children = (
-				9399FD5720B43B3300720592 /* ZCJSONRequestSerializer.h */,
-				9399FD5820B43B3300720592 /* ZCJSONRequestSerializer.m */,
+				93C7BFA620CA600000C7A25D /* ZCSystemVariable.h */,
+				93C7BFA720CA600000C7A25D /* ZCSystemVariable.m */,
+				93A137DC20C0F194007D5A05 /* _CIFilter.h */,
+				93A137DD20C0F194007D5A05 /* _CIFilter.m */,
+				93A137E520C14943007D5A05 /* CIFilter+ZCSupp.h */,
+				93A137E620C14943007D5A05 /* CIFilter+ZCSupp.m */,
+				93907D6420BD20FF00D8BB4B /* ZCRequestJSONSerializer.h */,
+				93907D6520BD20FF00D8BB4B /* ZCRequestJSONSerializer.m */,
 				9399FD5920B43B3300720592 /* ZCRequestManager.h */,
 				9399FD5A20B43B3300720592 /* ZCRequestManager.m */,
 				938197B120AE733B00134EBC /* AppConfigFieldInfo.plist */,
@@ -468,9 +485,11 @@
 				9399FD8C20B43BE400720592 /* AFHTTPSessionManager.m in Sources */,
 				9399FD8220B43BE400720592 /* UIProgressView+AFNetworking.m in Sources */,
 				9399FD8A20B43BE400720592 /* AFImageDownloader.m in Sources */,
+				93A137DE20C0F194007D5A05 /* _CIFilter.m in Sources */,
 				938197A320AE732800134EBC /* BannerVC.m in Sources */,
 				938197B820AE733B00134EBC /* ZCNotification.m in Sources */,
 				9399FD8820B43BE400720592 /* UIWebView+AFNetworking.m in Sources */,
+				93A137E720C14943007D5A05 /* CIFilter+ZCSupp.m in Sources */,
 				9381979120AE731700134EBC /* ZCCalendarDate.m in Sources */,
 				9399FD8720B43BE400720592 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9399FD8E20B43BE400720592 /* AFURLRequestSerialization.m in Sources */,
@@ -478,7 +497,6 @@
 				9399FD8420B43BE400720592 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9399FD9020B43BE400720592 /* AFSecurityPolicy.m in Sources */,
 				9381979220AE731700134EBC /* ZCCalendarManageView.m in Sources */,
-				9399FD5B20B43B3300720592 /* ZCJSONRequestSerializer.m in Sources */,
 				9381978C20AE731700134EBC /* ZCSpinnerView.m in Sources */,
 				9399FD8920B43BE400720592 /* AFAutoPurgingImageCache.m in Sources */,
 				9381979320AE731700134EBC /* ZCCalendarView.m in Sources */,
@@ -489,6 +507,8 @@
 				9399FD8320B43BE400720592 /* UIRefreshControl+AFNetworking.m in Sources */,
 				938197A120AE732800134EBC /* CalendarDayCell.m in Sources */,
 				9398C50920A7645000C7C8AA /* AppDelegate.m in Sources */,
+				93C7BFA820CA600000C7A25D /* ZCSystemVariable.m in Sources */,
+				93907D6620BD20FF00D8BB4B /* ZCRequestJSONSerializer.m in Sources */,
 				938197BD20AE733B00134EBC /* ZCPlaySystemSound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,6 +655,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
+				GCC_PREFIX_HEADER = "CocoapodsLibrary/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "CocoapodsLibrary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -658,6 +679,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)",
 				);
+				GCC_PREFIX_HEADER = "CocoapodsLibrary/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "CocoapodsLibrary/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

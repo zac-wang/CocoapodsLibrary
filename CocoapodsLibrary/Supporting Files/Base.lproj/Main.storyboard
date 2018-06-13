@@ -81,6 +81,14 @@
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZN-Rf-WZv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouM-wI-t4J">
+                                <rect key="frame" x="156" y="318" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CIFilter"/>
+                                <connections>
+                                    <segue destination="pHs-4f-gPW" kind="show" id="n6u-pj-jRf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -483,6 +491,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="app-ni-uP5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1525.5999999999999" y="28.335832083958024"/>
+        </scene>
+        <!--Filter-->
+        <scene sceneID="Btr-yG-mbd">
+            <objects>
+                <viewController id="pHs-4f-gPW" customClass="_CIFilter" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J5S-yX-vh9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Upn-2E-WCF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uoR-1X-HTe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fZe-dk-ocU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fZe-dk-ocU" secondAttribute="height" multiplier="1:1" id="ETm-pV-GOY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fZe-dk-ocU" firstAttribute="leading" secondItem="uoR-1X-HTe" secondAttribute="leading" id="5aI-7f-2zm"/>
+                            <constraint firstAttribute="trailing" secondItem="fZe-dk-ocU" secondAttribute="trailing" id="oZR-Ip-NXn"/>
+                            <constraint firstItem="fZe-dk-ocU" firstAttribute="top" secondItem="J5S-yX-vh9" secondAttribute="bottom" id="ppE-bK-7g6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kcI-6C-M5W"/>
+                    <connections>
+                        <outlet property="imgView" destination="fZe-dk-ocU" id="8So-Ik-J3r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tCd-kG-MQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2248.8000000000002" y="28.335832083958024"/>
         </scene>
     </scenes>
     <resources>
