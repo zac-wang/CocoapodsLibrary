@@ -8,7 +8,6 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary'
   spec.author       = {'王志超' => 'love_iphone@qq.com'}
   spec.source       =  {:git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
-  spec.vendored_frameworks = 'Library/ZCEasyLibraryPrivate.framework'
   spec.source_files = ['Library/EasyLibrary/**/*.{h,m,c,mm}', 'Library/ZCEasyLibrary/**/*.{h,m,c,mm}']
   spec.public_header_files = ['Library/EasyLibrary/**/*.{h}', 'Library/ZCEasyLibrary/**/*.{h}']
   spec.private_header_files = ['Library/EasyLibrary/ZCMutableDeepCopy/NSNumber+MutableDeepCopy.h', 'Library/ZCEasyLibrary/ZCBannerView/ZCBannerImageView.h']
