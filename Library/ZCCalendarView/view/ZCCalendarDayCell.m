@@ -7,7 +7,7 @@
 //
 
 #import "ZCCalendarDayCell.h"
-#import "ZCCalendar.h"
+#import <ZCEasyLibrary/ZCCalendar.h>
 #import "ZCCalendarDate.h"
 
 @interface ZCCalendarDayCell () {

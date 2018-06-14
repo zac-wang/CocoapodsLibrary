@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIColor+ZCSupp.h"
+#import <ZCEasyLibrary/UIColor+ZCSupp.h>
 
 typedef enum : NSUInteger {
     /// 上月

@@ -8,9 +8,9 @@
 
 #import "ZCCalendarDate.h"
 #import "ZCCalendarDateLunarCalendar.h"
-#import "ZCCalendar.h"
-#import "NSDateComponents+ZCSupp.h"
-#import "NSDate+ZCSupp.h"
+#import <ZCEasyLibrary/ZCCalendar.h>
+#import <ZCEasyLibrary/NSDateComponents+ZCSupp.h>
+#import <ZCEasyLibrary/NSDate+ZCSupp.h>
 
 #define ChDay @[@"*",@"初一",@"初二",@"初三",@"初四",@"初五",\
                 @"初六",@"初七",@"初八",@"初九",@"初十",\
