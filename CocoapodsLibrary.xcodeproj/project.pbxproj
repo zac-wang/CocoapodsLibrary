@@ -482,9 +482,9 @@
 		938E692220D26C39007A86AC /* date */ = {
 			isa = PBXGroup;
 			children = (
-				938E692320D26C39007A86AC /* ZCCalendarDateLunarCalendar.c */,
-				938E692420D26C39007A86AC /* ZCCalendarDate.m */,
 				938E692520D26C39007A86AC /* ZCCalendarDate.h */,
+				938E692420D26C39007A86AC /* ZCCalendarDate.m */,
+				938E692320D26C39007A86AC /* ZCCalendarDateLunarCalendar.c */,
 				938E692620D26C39007A86AC /* ZCCalendarDateLunarCalendar.h */,
 			);
 			path = date;
@@ -493,12 +493,12 @@
 		938E692720D26C39007A86AC /* view */ = {
 			isa = PBXGroup;
 			children = (
-				938E692820D26C39007A86AC /* ZCCalendarManageView.m */,
-				938E692920D26C39007A86AC /* ZCCalendarView.m */,
 				938E692A20D26C39007A86AC /* ZCCalendarDayCell.h */,
-				938E692B20D26C39007A86AC /* ZCCalendarManageView.h */,
-				938E692C20D26C39007A86AC /* ZCCalendarView.h */,
 				938E692D20D26C39007A86AC /* ZCCalendarDayCell.m */,
+				938E692B20D26C39007A86AC /* ZCCalendarManageView.h */,
+				938E692820D26C39007A86AC /* ZCCalendarManageView.m */,
+				938E692C20D26C39007A86AC /* ZCCalendarView.h */,
+				938E692920D26C39007A86AC /* ZCCalendarView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";

@@ -26,7 +26,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         dateComponents = [[NSDateComponents alloc] init];
-        self.backgroundColor = UIColor.clearColor;
+        self.backgroundColor = [UIColor clearColor];
         
         self.selectedBackgroundView = self.getSelectedBackgroundView;
     }
@@ -48,19 +48,19 @@
         [self addSubview:subTitleLabel];
     }
     if(self.type == ZCCalendarDayCellTypePreviousMonth){
-        titleLabel.textColor = UIColorFromRGB(0x818181);
+        titleLabel.textColor = [UIColor colorWithWhite:0x81/255 alpha:1];
     }else if (self.type == ZCCalendarDayCellTypeNowMonth){
         if(self.isNowDay){
             titleLabel.textColor = UIColor.redColor;
         }else if(self.dateComponents.weekday == ZCCalendarSunday ||
                  self.dateComponents.weekday == ZCCalendarSaturday)
-            titleLabel.textColor = UIColorFromRGB(0xff5249);
+            titleLabel.textColor = [UIColor colorWithRed:0xff/255 green:0x52/255 blue:0x49/255 alpha:1];
         else
-            titleLabel.textColor = UIColorFromRGB(0x3c3c3c);
+            titleLabel.textColor = [UIColor colorWithWhite:0x3c/255 alpha:1];
     }else{
-        titleLabel.textColor = UIColorFromRGB(0x818181);
+        titleLabel.textColor = [UIColor colorWithWhite:0x81/255 alpha:1];
     }
-    subTitleLabel.textColor = UIColor.lightGrayColor;
+    subTitleLabel.textColor = [UIColor lightGrayColor];
     
     titleLabel.text = [NSString stringWithFormat:@"%ld", (long)self.dateComponents.day];
     subTitleLabel.text = self.lunarCalendar;
@@ -79,8 +79,8 @@
         layer.lineWidth = 0.0f;
         layer.lineCap = kCALineCapRound;
         
-        layer.fillColor = UIColor.redColor.CGColor;
-        layer.strokeColor = UIColor.redColor.CGColor;
+        layer.fillColor = [UIColor redColor].CGColor;
+        layer.strokeColor = [UIColor redColor].CGColor;
         
         view = [[UIView alloc] initWithFrame:self.bounds];
         [view.layer insertSublayer:layer atIndex:0];
