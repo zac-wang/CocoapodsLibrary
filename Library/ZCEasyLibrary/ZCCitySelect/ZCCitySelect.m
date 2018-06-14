@@ -9,8 +9,11 @@
 #import "ZCCitySelect.h"
 #import "UIColor+ZCSupp.h"
 #import "UIView+ZCCornerRadius.h"
+#import "NSData+ZCJson.h"
+#import "NSString+ZCSupp.h"
+#import "ZCCitySelectDataSource.h"
 
-#define ZCEasyLibraryBundle [NSBundle mainBundle]
+extern NSString * const ZCCitySelectDataSourceAddress;
 
 @interface ZCCitySelect ()<UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -53,8 +56,7 @@
 {
     [self.zc_backView zc_drawCornerRadius:0];
     
-    NSString *dicPath = [ZCEasyLibraryBundle pathForResource:@"ZCCitySelectAddressFile" ofType:@"plist"];
-    self.dataArr = [NSArray arrayWithContentsOfFile:dicPath];
+    self.dataArr = ZCCitySelectDataSourceAddress.zc_data.zc_toJsonObject;
     
     self.pic = [[UIPickerView alloc] initWithFrame:CGRectZero];
     self.pic.showsSelectionIndicator = YES;
