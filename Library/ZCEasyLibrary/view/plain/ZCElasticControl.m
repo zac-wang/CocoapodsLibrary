@@ -8,7 +8,7 @@
 
 #import "ZCElasticControl.h"
 #import "UIColor+ZCSupp.h"
-#import <ZCEasyLibraryPrivate/UIView+ZCCornerRadius.h>
+#import "UIView+ZCCornerRadius.h"
 
 @implementation ZCElasticControl
 

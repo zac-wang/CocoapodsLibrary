@@ -12,10 +12,9 @@
 
 - (NSMutableArray *)zc_mutableDeepCopy {
     NSMutableArray *arr = [NSMutableArray array];
-    for(id value in self) {//循环读取复制每一个元素
+    for(id value in self) {
         id copyValue;
         if ([value respondsToSelector:@selector(zc_mutableDeepCopy)]) {
-            //如果key对应的元素可以响应mutableDeepCopy方法(还是NSDictionary)，调用mutableDeepCopy方法复制
             copyValue = [value zc_mutableDeepCopy];
         }else if([value respondsToSelector:@selector(mutableCopy)]) {
             copyValue = [value mutableCopy];

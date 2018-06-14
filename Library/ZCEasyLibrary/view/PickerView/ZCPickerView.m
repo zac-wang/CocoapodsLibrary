@@ -8,7 +8,7 @@
 
 #import "ZCPickerView.h"
 #import "UIColor+ZCSupp.h"
-#import <ZCEasyLibraryPrivate/UIView+ZCCornerRadius.h>
+#import "UIView+ZCCornerRadius.h"
 
 
 @interface ZCPickerView()<UIPickerViewDelegate, UIPickerViewDataSource> {

@@ -7,7 +7,7 @@
 //
 
 #import "ZCSelectDatePicker.h"
-#import <ZCEasyLibraryPrivate/UIView+ZCCornerRadius.h>
+#import "UIView+ZCCornerRadius.h"
 
 @interface ZCSelectDatePicker() {
     UIButton *zc_cancelButton;

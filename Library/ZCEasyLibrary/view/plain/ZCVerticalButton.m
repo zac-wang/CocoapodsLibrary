@@ -7,6 +7,7 @@
 //
 
 #import "ZCVerticalButton.h"
+#import "Macro.h"
 
 @interface ZCVerticalButton(){
     CGRect m_imageViewFrame;
@@ -14,8 +15,6 @@
 }
 
 @end
-
-#define CGRectFromCentAndSize(_cent_, _size_) CGRectMake(_cent_.x-_size_.width/2, _cent_.y-_size_.height/2, _size_.width, _size_.height)
 
 @implementation ZCVerticalButton
 

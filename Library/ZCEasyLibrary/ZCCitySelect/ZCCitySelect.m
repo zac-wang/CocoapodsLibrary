@@ -8,7 +8,7 @@
 
 #import "ZCCitySelect.h"
 #import "UIColor+ZCSupp.h"
-#import <ZCEasyLibraryPrivate/UIView+ZCCornerRadius.h>
+#import "UIView+ZCCornerRadius.h"
 
 #define ZCEasyLibraryBundle [NSBundle bundleWithIdentifier:@"com.workai.ZCEasyLibrary"]
 

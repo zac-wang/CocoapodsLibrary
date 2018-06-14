@@ -8,9 +8,9 @@
 
 #import "ZCKeyBoardTopBar.h"
 #import "Macro.h"
+#import "UITextField+ZCSelectedRange.h"
+#import "UITextView+ZCSelectedRange.h"
 #import "ZCTextField.h"
-#import <ZCEasyLibraryPrivate/UITextField+ZCSelectedRange.h>
-#import <ZCEasyLibraryPrivate/UITextView+ZCSelectedRange.h>
 
 @interface ZCKeyBoardTopBar()
 

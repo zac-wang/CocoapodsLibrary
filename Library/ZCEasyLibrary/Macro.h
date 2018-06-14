@@ -10,7 +10,7 @@
 #define Macro_h
 
 /// 根据中心点 和大小 计算出CGRect
-#define CGRectFromCentAndSize(_cent_, _size_) CGRectMake(_cent_.x-_size_.width/2, _cent_.y-_size_.height/2, _size_.height, _size_.width)
+#define CGRectFromCentAndSize(_cent_, _size_) CGRectMake(_cent_.x-_size_.width/2, _cent_.y-_size_.height/2, _size_.width, _size_.height)
 
 #define ZC_SCREEN_SIZE          ([[UIScreen mainScreen] bounds].size)
 #define ZC_SCREEN_WIDTH         (ZC_SCREEN_SIZE.width)

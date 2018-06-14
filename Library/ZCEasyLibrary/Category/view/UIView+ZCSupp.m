@@ -7,7 +7,7 @@
 //
 
 #import "UIView+ZCSupp.h"
-#import <ZCEasyLibraryPrivate/NSObject+ZCRuntime.h>
+#import "NSObject+ZCRuntime.h"
 //#import "ZCListenFrameSizeChange.h"
 
 @implementation UIView (ZCSupp)

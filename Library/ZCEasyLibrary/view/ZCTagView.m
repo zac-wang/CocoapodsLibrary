@@ -8,7 +8,7 @@
 
 #import "ZCTagView.h"
 #import "UIColor+ZCSupp.h"
-#import <ZCEasyLibraryPrivate/UIView+ZCCornerRadius.h>
+#import "UIView+ZCCornerRadius.h"
 
 @interface ZCTagView()
 @property(nonatomic, strong) NSMutableArray<UIButton *> *dequeueReusableButtonArray;

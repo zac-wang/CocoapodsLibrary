@@ -32,8 +32,7 @@
                 // 截取子串
                 self.text = [toBeString substringToIndex:textMaxLength];
             }
-        } else { // 有高亮选择的字符串，则暂不对文字进行统计和限制
-            //NSLog(@"11111111111111========      %@",position);
+        }else { // 有高亮选择的字符串，则暂不对文字进行统计和限制
         }
     } else {
         // 中文输入法以外的直接对其统计限制即可，不考虑其他语种情况

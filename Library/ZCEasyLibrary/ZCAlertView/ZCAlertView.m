@@ -8,7 +8,7 @@
 
 #import "ZCAlertView.h"
 #import "UIColor+ZCSupp.h"
-#import <ZCEasyLibraryPrivate/UIView+ZCCornerRadius.h>
+#import "UIView+ZCCornerRadius.h"
 
 @interface ZCAlertView()
 @property(nonatomic, strong) UIView *headBackView;

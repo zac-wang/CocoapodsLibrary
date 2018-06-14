@@ -7,7 +7,7 @@
 //
 
 #import "UITableView+ZCPaging.h"
-#import <ZCEasyLibraryPrivate/NSObject+ZCRuntime.h>
+#import "NSObject+ZCRuntime.h"
 
 @implementation UITableView (ZCPaging)
 

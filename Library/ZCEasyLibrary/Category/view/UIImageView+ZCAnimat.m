@@ -15,12 +15,12 @@
         count = CGFLOAT_MAX;
     }
     
-    self.animationImages = images;//把存有UIImage的数组赋给动画图片数组
-    self.animationDuration = duration;//设置执行一次完整动画的时长
+    self.animationImages = images;//图片数组
+    self.animationDuration = duration;//执行一次完整动画的时长
     self.animationRepeatCount = count;//动画重复次数 （0为重复播放）
     [self startAnimating];//开始动画
-    // [self stopAnimating];//停止动画
-    // NSLog(@"%@播放动画", self.isAnimating? @"正在" : @"尚未");
+    //[self stopAnimating];//停止动画
+    //NSLog(@"%@播放动画", self.isAnimating? @"正在" : @"尚未");
 }
 
 @end

@@ -11,26 +11,6 @@
 
 @implementation CNContact (ZCToDictionary)
 
-//- (void)catCNContact:(CNContact *)contact {
-//    // 1.获取联系人的姓名
-//    NSString *lastname = contact.familyName;
-//    NSString *firstname = contact.givenName;
-//    printf("姓名：%s %s\n", lastname.UTF8String, firstname.UTF8String);
-//
-//    // 2.获取联系人的电话号码
-//    NSArray *phoneNums = contact.phoneNumbers;
-//    for (CNLabeledValue *labeledValue in phoneNums) {
-//        // 2.1.获取电话号码的KEY
-//        NSString *phoneLabel = labeledValue.label;
-//
-//        // 2.2.获取电话号码
-//        CNPhoneNumber *phoneNumer = labeledValue.value;
-//        NSString *phoneValue = phoneNumer.stringValue;
-//
-//        printf("\t手机号类型：%s\n\t\t手机号码:%s\n", phoneLabel.UTF8String, phoneValue.UTF8String);
-//    }
-//}
-
 - (NSArray<NSDictionary *> *)zc_phoneNumbers {
     NSMutableArray *postalAdds = [NSMutableArray array];
     for (CNLabeledValue *labeledValue in self.phoneNumbers) {

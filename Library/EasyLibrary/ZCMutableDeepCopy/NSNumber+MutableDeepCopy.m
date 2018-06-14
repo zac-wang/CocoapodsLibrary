@@ -11,7 +11,7 @@
 @implementation NSNumber (MutableDeepCopy)
 
 - (NSNumber *)zc_mutableDeepCopy {
-    return self;
+    return [self copy];
 }
 
 @end

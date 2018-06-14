@@ -24,12 +24,7 @@
         NSNumber *num = (NSNumber *)self;
         if (strcmp([num objCType], @encode(double)) == 0) {
             double value = [num doubleValue];
-//            NSString *temp = [NSString stringWithFormat:@"%.12lf", fabs(value-(int)value)];
-//            if(temp.length > 11) {
-//                return zc_decimalNumberWithDouble(value);
-//            }else{
-                return [NSString stringWithFormat:@"%.12lg", value];//防止数字过长，使用科学及学法，限制有效数字为40位
-//            }
+            return [NSString stringWithFormat:@"%.12lg", value];
         }else{
             return [NSString stringWithFormat:@"%@", num];
         }
