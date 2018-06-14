@@ -7,7 +7,6 @@
 //
 
 #import "ZCPicturePreviewVC.h"
-#import <ZCEasyLibrary/ZCPicturePreview.h>
 
 @interface ZCPicturePreviewVC ()
 

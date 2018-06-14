@@ -8,7 +8,7 @@
 
 #import "CalendarDayCell.h"
 #import "ZCCalendarView.h"
-#import <ZCEasyLibrary/ZCCalendar.h>
+#import "ZCCalendar.h"
 
 @interface CalendarDayCell (){
 }

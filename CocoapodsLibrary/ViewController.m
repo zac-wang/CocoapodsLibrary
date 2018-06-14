@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
-#import <ZCEasyLibrary/ZCEasyLibrary.h>
+//#import "AFHTTPSessionManager.h"
+//#import "ZCRequestManager.h"
+//#import "AFHTTPRequestOperationManager.h"
+//#import "ZCSystemVariable.h"
 
 @interface ViewController ()
 
@@ -17,7 +20,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+        
+//    ZCRequestManager *manager = [ZCRequestManager shared];
+////    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    manager.responseSerializer = [AFImageResponseSerializer serializer];
+//
+//    NSString *url = @"https://www.baidu.com/img/baidu_jgylogo3.gif";
+//    NSDictionary *params = @{
+//                             @"PARAMETERS NAME 1": @"PARAMETERS VALUE 1",
+//                             @"PARAMETERS NAME 2": @"PARAMETERS VALUE 2"
+//                             };
+//    [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+//        ;
+//    } success:^(NSURLSessionDataTask *task, id mp3Data) {
+//        //拿到响应头信息
+//        NSHTTPURLResponse *res = (NSHTTPURLResponse *)task.response;
+//        //4.解析拿到的响应数据
+//        NSLog(@"%@", res.allHeaderFields);
+//
+//        NSLog(@"%@", [mp3Data zc_toString]);
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -32,10 +57,6 @@
 }
 
 - (IBAction)click:(id)sender {
-    ZCAlertView *alertView = [[ZCAlertView alloc] initWithTitle:@"title" message:nil];//@"message"];
-    [alertView zc_addDefaultAction:@"1" handler:nil];
-    [alertView zc_addCancelAction:nil];
-    [alertView zc_show];
 }
 
 - (void)didReceiveMemoryWarning {

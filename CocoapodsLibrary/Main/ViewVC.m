@@ -7,7 +7,6 @@
 //
 
 #import "ViewVC.h"
-#import <ZCEasyLibrary/ZCEasyLibrary.h>
 #import <CoreText/CoreText.h>
 #import "ZCSpinnerView.h"
 
@@ -32,10 +31,6 @@
     // Do any additional setup after loading the view.
     
 //    [self.btn imageFrame:CGRectMake(0, 0, 100, 100) titleFrame:CGRectMake(0, 100, 100, 20)];
-    
-    [self.textView zc_addFrameSizeChangeEvent:^(UIView *view) {
-        NSLog(@"%@", NSStringFromCGRect(self.textView.frame));
-    }];
     
 }
 
