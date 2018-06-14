@@ -10,7 +10,7 @@
 #import "UIColor+ZCSupp.h"
 #import "UIView+ZCCornerRadius.h"
 
-#define ZCEasyLibraryBundle [NSBundle bundleWithIdentifier:@"com.workai.ZCEasyLibrary"]
+#define ZCEasyLibraryBundle [NSBundle mainBundle]
 
 @interface ZCCitySelect ()<UIPickerViewDelegate, UIPickerViewDataSource>
 

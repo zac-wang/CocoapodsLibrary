@@ -7,8 +7,8 @@
 //
 
 #import "ZCCalendarManageView.h"
-#import <ZCEasyLibrary/NSDate+ZCSupp.h>
-#import <ZCEasyLibrary/ZCCalendar.h>
+#import "NSDate+ZCSupp.h"
+#import "ZCCalendar.h"
 
 @interface ZCCalendarManageView () {
     ZCCalendarView *oldView;

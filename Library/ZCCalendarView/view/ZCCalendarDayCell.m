@@ -7,8 +7,8 @@
 //
 
 #import "ZCCalendarDayCell.h"
+#import "ZCCalendar.h"
 #import "ZCCalendarDate.h"
-#import <ZCEasyLibrary/ZCCalendar.h>
 
 @interface ZCCalendarDayCell () {
     CAShapeLayer *layer;
