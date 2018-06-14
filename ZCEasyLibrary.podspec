@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.source_files = ['Library/EasyLibrary/**/*.{h,m,c,mm}', 'Library/ZCEasyLibrary/**/*.{h,m,c,mm}']
   spec.public_header_files = ['Library/EasyLibrary/**/*.{h}', 'Library/ZCEasyLibrary/**/*.{h}']
   spec.private_header_files = ['Library/EasyLibrary/ZCMutableDeepCopy/NSNumber+MutableDeepCopy.h', 'Library/ZCEasyLibrary/ZCBannerView/ZCBannerImageView.h']
-  spec.resource    = 'Library/ZCEasyLibrary/ZCCitySelect/ZCCitySelectAddressFile.plist'
+  spec.resources    = ['Library/ZCEasyLibrary/ZCCitySelect/ZCCitySelectAddressFile.plist']
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
   spec.libraries    = 'z'
