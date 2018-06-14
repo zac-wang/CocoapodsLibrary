@@ -7,7 +7,7 @@
 //
 
 #import "ZCSpinnerView.h"
-#import "Macro.h"
+#import "UIColor+ZCSupp.h"
 
 @interface ZCSpinnerView ()<UITableViewDelegate, UITableViewDataSource>
 
