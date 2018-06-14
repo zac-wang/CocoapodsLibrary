@@ -2,8 +2,8 @@
 //  ZCCalendarManageView.m
 //  CocoapodsLibrary
 //
-//  Created by 王志超 on 2017/10/20.
-//  Copyright © 2017年 王志超. All rights reserved.
+//  Created by zac on 2017/10/20.
+//  Copyright © 2017年 love_iphone@qq.com. All rights reserved.
 //
 
 #import "ZCCalendarManageView.h"

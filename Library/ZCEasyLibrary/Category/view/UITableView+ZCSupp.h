@@ -2,7 +2,7 @@
 //  UITableView+xiaoaiStyle.h
 //  XAEmpAssistant
 //
-//  Created by 王志超 on 2017/5/3.
+//  Created by zac on 2017/5/3.
 //  Copyright © 2017年 Workai. All rights reserved.
 //
 

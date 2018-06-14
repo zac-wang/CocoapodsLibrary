@@ -2,8 +2,8 @@
 //  ZCBannerView.h
 //  ZCBannerViewDemo
 //
-//  Created by 王志超 on 2017/10/10.
-//  Copyright © 2017年 王志超. All rights reserved.
+//  Created by zac on 2017/10/10.
+//  Copyright © 2017年 love_iphone@qq.com. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
