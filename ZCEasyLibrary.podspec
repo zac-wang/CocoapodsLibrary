@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCEasyLibrary"
-  spec.version      = "2.0.0"
+  spec.version      = "2.0.1"
   spec.summary      = "ZCEasyLibrary Kit"
   spec.description  = "ZCEasyLibrary 拓展库+UI库"
   spec.platform     = :ios, '8.0'

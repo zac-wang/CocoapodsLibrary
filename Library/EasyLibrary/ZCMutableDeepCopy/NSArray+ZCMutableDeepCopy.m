@@ -1,14 +1,14 @@
 //
-//  NSArray+MutableDeepCopy.m
+//  NSArray+ZCMutableDeepCopy.m
 //  ZCEasyLibrary
 //
 //  Created by zac on 2018/1/11.
 //  Copyright © 2017年 love_iphone@qq.com. All rights reserved.
 //
 
-#import "NSArray+MutableDeepCopy.h"
+#import "NSArray+ZCMutableDeepCopy.h"
 
-@implementation NSArray (MutableDeepCopy)
+@implementation NSArray (ZCMutableDeepCopy)
 
 - (NSMutableArray *)zc_mutableDeepCopy {
     NSMutableArray *arr = [NSMutableArray array];

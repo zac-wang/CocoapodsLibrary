@@ -1,5 +1,5 @@
 //
-//  NSArray+MutableDeepCopy.h
+//  NSNumber+ZCMutableDeepCopy.h
 //  ZCEasyLibrary
 //
 //  Created by zac on 2018/1/11.
@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (MutableDeepCopy)
-
-/// 深度Copy
-@property(nonatomic, readonly) NSMutableArray *zc_mutableDeepCopy;
+@interface NSNumber (ZCMutableDeepCopy)
 
 @end

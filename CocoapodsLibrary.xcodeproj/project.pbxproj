@@ -111,7 +111,6 @@
 		93AC698720D111A50071B781 /* ZCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AC693820D111A50071B781 /* ZCLocationManager.m */; };
 		93AC698820D111A50071B781 /* iphoneDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AC693920D111A50071B781 /* iphoneDevice.m */; };
 		93AC698920D111A50071B781 /* ZCCitySelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AC693C20D111A50071B781 /* ZCCitySelect.m */; };
-		93AC698A20D111A50071B781 /* ZCCitySelectAddressFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93AC693D20D111A50071B781 /* ZCCitySelectAddressFile.plist */; };
 		93AC698B20D111A50071B781 /* ZCBannerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AC694220D111A50071B781 /* ZCBannerImageView.m */; };
 		93AC698C20D111A50071B781 /* ZCBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AC694320D111A50071B781 /* ZCBannerView.m */; };
 		93AC699620D13C5E0071B781 /* ZCPicturePreviewHeadbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AC699020D13C5E0071B781 /* ZCPicturePreviewHeadbar.m */; };
@@ -342,7 +341,6 @@
 		93AC693920D111A50071B781 /* iphoneDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iphoneDevice.m; sourceTree = "<group>"; };
 		93AC693A20D111A50071B781 /* ZCApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCApp.h; sourceTree = "<group>"; };
 		93AC693C20D111A50071B781 /* ZCCitySelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCitySelect.m; sourceTree = "<group>"; };
-		93AC693D20D111A50071B781 /* ZCCitySelectAddressFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZCCitySelectAddressFile.plist; sourceTree = "<group>"; };
 		93AC693E20D111A50071B781 /* ZCCitySelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCitySelect.h; sourceTree = "<group>"; };
 		93AC694020D111A50071B781 /* ZCBannerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBannerImageView.h; sourceTree = "<group>"; };
 		93AC694120D111A50071B781 /* ZCBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBannerView.h; sourceTree = "<group>"; };
@@ -849,7 +847,6 @@
 				93AC693E20D111A50071B781 /* ZCCitySelect.h */,
 				93AC693C20D111A50071B781 /* ZCCitySelect.m */,
 				938E694020D2CBC7007A86AC /* ZCCitySelectDataSource.h */,
-				93AC693D20D111A50071B781 /* ZCCitySelectAddressFile.plist */,
 			);
 			path = ZCCitySelect;
 			sourceTree = "<group>";
@@ -938,7 +935,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				938E68F820D2435E007A86AC /* ZCSystemVariable.plist in Resources */,
-				93AC698A20D111A50071B781 /* ZCCitySelectAddressFile.plist in Resources */,
 				938197C020AE735700134EBC /* main_banner.bundle in Resources */,
 				9398C51420A7645200C7C8AA /* LaunchScreen.storyboard in Resources */,
 				9398C51120A7645200C7C8AA /* Assets.xcassets in Resources */,
