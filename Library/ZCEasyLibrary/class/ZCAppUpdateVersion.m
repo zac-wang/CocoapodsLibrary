@@ -127,7 +127,12 @@
     //NSString *string = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/cn/app/id%@?mt=8", self.zc_appID];
     [self zc_appStoreVersionInfo:^(NSDictionary *info) {
         if(info && info[@"trackViewUrl"]) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:info[@"trackViewUrl"]]];
+            NSURL *url = [NSURL URLWithString:info[@"trackViewUrl"]];
+            if (@available(iOS 10.0, *)) {
+                [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+            } else {
+                [[UIApplication sharedApplication] openURL:url];
+            }
         }
     }];
 }

@@ -13,8 +13,6 @@
 #import "NSString+ZCSupp.h"
 #import "ZCCitySelectDataSource.h"
 
-extern NSString * const ZCCitySelectDataSourceAddress;
-
 @interface ZCCitySelect ()<UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property(nonatomic, strong) UIPickerView * pic;

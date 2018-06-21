@@ -11,7 +11,7 @@
 
 #ifdef __OBJC__
 
-#import "ZCEasyLibrary.h"
+#import <ZCEasyLibrary/ZCEasyLibrary.h>
 
 
 #endif

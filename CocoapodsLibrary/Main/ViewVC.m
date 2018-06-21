@@ -8,7 +8,6 @@
 
 #import "ViewVC.h"
 #import <CoreText/CoreText.h>
-#import "ZCSpinnerView.h"
 
 @interface ViewVC () {
     ZCSelectDatePicker *selectDatePicker;
