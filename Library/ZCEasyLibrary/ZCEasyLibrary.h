@@ -68,6 +68,8 @@
 #import "ZCFont.h"
 #import "ZCKeyBoardTopBar.h"
 #import "ZCLabel.h"
+#import "ZCLocationGeocode.h"
+#import "ZCLocationManager.h"
 #import "ZCPickerCirculateView.h"
 #import "ZCPickerView.h"
 #import "ZCPicturePreview.h"
