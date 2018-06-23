@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9392BBFA20DE4C6000B6F9B3 /* ZCLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9392BBF620DE4C5F00B6F9B3 /* ZCLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9392BBFB20DE4C6000B6F9B3 /* ZCLocationGeocode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9392BBF720DE4C5F00B6F9B3 /* ZCLocationGeocode.m */; };
+		9392BBFC20DE4C6000B6F9B3 /* ZCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9392BBF820DE4C5F00B6F9B3 /* ZCLocationManager.m */; };
+		9392BBFD20DE4C6000B6F9B3 /* ZCLocationGeocode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9392BBF920DE4C5F00B6F9B3 /* ZCLocationGeocode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA2A20DB979C00E7E789 /* NSNumber+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397A9FB20DB979C00E7E789 /* NSNumber+ZCMutableDeepCopy.m */; };
 		9397AA2B20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397A9FC20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.m */; };
 		9397AA2C20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397A9FD20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.m */; };
@@ -189,6 +193,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9392BBF620DE4C5F00B6F9B3 /* ZCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLocationManager.h; sourceTree = "<group>"; };
+		9392BBF720DE4C5F00B6F9B3 /* ZCLocationGeocode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationGeocode.m; sourceTree = "<group>"; };
+		9392BBF820DE4C5F00B6F9B3 /* ZCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationManager.m; sourceTree = "<group>"; };
+		9392BBF920DE4C5F00B6F9B3 /* ZCLocationGeocode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLocationGeocode.h; sourceTree = "<group>"; };
 		9397A9E120DB974A00E7E789 /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZCEasyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9397A9E520DB974A00E7E789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9397A9F120DB976C00E7E789 /* ZCMacEasyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZCMacEasyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -372,6 +380,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9392BBF520DE4C5F00B6F9B3 /* ZCLocation */ = {
+			isa = PBXGroup;
+			children = (
+				9392BBF620DE4C5F00B6F9B3 /* ZCLocationManager.h */,
+				9392BBF720DE4C5F00B6F9B3 /* ZCLocationGeocode.m */,
+				9392BBF820DE4C5F00B6F9B3 /* ZCLocationManager.m */,
+				9392BBF920DE4C5F00B6F9B3 /* ZCLocationGeocode.h */,
+			);
+			name = ZCLocation;
+			path = ../../Library/ZCEasyLibrary/ZCLocation;
+			sourceTree = "<group>";
+		};
 		9397A9D720DB974900E7E789 = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +424,7 @@
 				9397AA6620DB98DF00E7E789 /* ZCBannerView */,
 				9397AADE20DB98E000E7E789 /* ZCCitySelect */,
 				9397AAA720DB98E000E7E789 /* ZCKeyBoardTopBar */,
+				9392BBF520DE4C5F00B6F9B3 /* ZCLocation */,
 				9397AAE220DB98E100E7E789 /* ZCPicturePreview */,
 				9397AAE920DB98E100E7E789 /* ZCSpinnerView */,
 				9397A9E520DB974A00E7E789 /* Info.plist */,
@@ -836,6 +857,8 @@
 				9397AB3020DB98E100E7E789 /* ZCFont.h in Headers */,
 				9397AB2A20DB98E100E7E789 /* ZCKeyBoardTopBar.h in Headers */,
 				9397AB3A20DB98E100E7E789 /* ZCLabel.h in Headers */,
+				9392BBFD20DE4C6000B6F9B3 /* ZCLocationGeocode.h in Headers */,
+				9392BBFA20DE4C6000B6F9B3 /* ZCLocationManager.h in Headers */,
 				9397AB4B20DB98E100E7E789 /* ZCReachability.h in Headers */,
 				9397AB2F20DB98E100E7E789 /* ZCSelectDatePicker.h in Headers */,
 				9397AB4820DB98E100E7E789 /* ZCSelectImagePicker.h in Headers */,
@@ -1074,6 +1097,7 @@
 				9397AA4820DB979C00E7E789 /* ZCCacheManage.m in Sources */,
 				9397AB3520DB98E100E7E789 /* ZCTableViewCell.m in Sources */,
 				9397AB2C20DB98E100E7E789 /* ZCKeyBoardTopBar.m in Sources */,
+				9392BBFB20DE4C6000B6F9B3 /* ZCLocationGeocode.m in Sources */,
 				9397AB6220DB98E100E7E789 /* ZCSpinnerView.m in Sources */,
 				9397AB4220DB98E100E7E789 /* ZCTagView.m in Sources */,
 				9397AB1C20DB98E100E7E789 /* NSNumber+ZCSupp.m in Sources */,
@@ -1091,6 +1115,7 @@
 				9397AB3D20DB98E100E7E789 /* ZCTextField.m in Sources */,
 				9397AA2B20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.m in Sources */,
 				9397AAEE20DB98E100E7E789 /* ZCBannerImageView.m in Sources */,
+				9392BBFC20DE4C6000B6F9B3 /* ZCLocationManager.m in Sources */,
 				9397AB1420DB98E100E7E789 /* UIImageView+ZCGif.m in Sources */,
 				9397AA5120DB979C00E7E789 /* ZCCalendar.m in Sources */,
 				9397AB3820DB98E100E7E789 /* ZCElasticControl.m in Sources */,
