@@ -9,7 +9,7 @@
 #import "NSObject+ZCToString.h"
 #import "NSArray+ZCJson.h"
 #import "NSDictionary+ZCJson.h"
-#import "NSNumber+ZCSupp.h"
+//#import "NSNumber+ZCSupp.h"
 
 @implementation NSObject (ZCToString)
 
