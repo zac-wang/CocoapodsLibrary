@@ -9,6 +9,7 @@
 #import "CalendarVC.h"
 #import "ZCCalendarManageView.h"
 #import "CalendarDayCell.h"
+#import <ZCEasyLibrary/ZCEasyLibrary.h>
 
 @interface CalendarVC ()<ZCCalendarViewDelegate>
 

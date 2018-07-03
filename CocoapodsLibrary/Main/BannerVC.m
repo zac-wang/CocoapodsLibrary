@@ -7,6 +7,7 @@
 //
 
 #import "BannerVC.h"
+#import <ZCEasyLibrary/ZCEasyLibrary.h>
 
 @interface BannerVC ()
 

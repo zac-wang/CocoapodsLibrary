@@ -22,13 +22,12 @@
     return [self alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
 }
 
-- (void)zc_addDefaultAction:(NSArray<NSString *> *)titles {
-    __weak typeof(self)weakSelf = self;
+- (void)zc_addDefaultActions:(NSArray<NSString *> *)titles handler:(void (^)(ZCAlertAction *))handler {
     for (int i = 0; i < titles.count; i++) {
         NSString *title = titles[i];
         ZCAlertAction *action = [ZCAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            if(weakSelf.zc_handler) {
-                weakSelf.zc_handler((ZCAlertAction *)action);
+            if(handler) {
+                handler((ZCAlertAction *)action);
             }
         }];
         action.zc_index = i;

@@ -18,9 +18,7 @@
 + (instancetype)actionSheetWithTitle:(NSString *)title message:(NSString *)message;
 
 /// 设置选项数组
-- (void)zc_addDefaultAction:(NSArray<NSString *> *)titles;
-/// 回调事件，仅对zc_addDefaultAction添加的按钮点击回调
-@property(nonatomic, copy) void (^zc_handler)(ZCAlertAction *action);
+- (void)zc_addDefaultActions:(NSArray<NSString *> *)titles handler:(void (^)(ZCAlertAction *action))handler;
 
 /// 添加默认按钮
 - (UIAlertAction *)zc_addDefaultAction:(NSString *)title handler:(void (^)(UIAlertAction *action))handler;
