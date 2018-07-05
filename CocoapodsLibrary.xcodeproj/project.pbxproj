@@ -166,10 +166,10 @@
 		9336027620DBF93B002079F9 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				9336027A20DBF93B002079F9 /* CalendarDayCell.h */,
 				9336027720DBF93B002079F9 /* CalendarDayCell.m */,
 				9336027820DBF93B002079F9 /* CalendarVC.h */,
 				9336027920DBF93B002079F9 /* CalendarVC.m */,
-				9336027A20DBF93B002079F9 /* CalendarDayCell.h */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
