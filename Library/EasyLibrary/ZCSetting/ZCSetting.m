@@ -8,7 +8,9 @@
 
 #import "ZCSetting.h"
 
-@interface ZCSetting()
+@interface ZCSetting() {
+    BOOL haveSetting;
+}
 @property(nonatomic, strong) NSMutableDictionary *defaultValueDictionary;
 @end
 
@@ -29,6 +31,8 @@
     if (self) {
         self.zc_userDefaults = [NSUserDefaults standardUserDefaults];
         self.zc_beSujectSettingFile = NO;
+        
+        haveSetting = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
         self.defaultValueDictionary = [NSMutableDictionary dictionary];
     }
     return self;
@@ -44,34 +48,30 @@
 
 - (nullable id)zc_objectForKey:(NSString *)defaultName {
     id value = [self.zc_userDefaults objectForKey:defaultName];
-    if(!value) {
-        value = self.defaultValueDictionary[defaultName];
+    if(!value) { // 本地无值
+        return self.defaultValueDictionary[defaultName];
+    }else if(self.zc_beSujectSettingFile && haveSetting) {
+        return value;
+    }else if(self.zc_beSujectSettingFile && !haveSetting) {
+        return self.defaultValueDictionary[defaultName];
+    }else {
+        return value;
     }
-    return value;
 }
 
 - (NSInteger)zc_integerForKey:(NSString *)defaultName {
-    NSNumber *value = [self.zc_userDefaults objectForKey:defaultName];
-    if(!value) {
-        value = self.defaultValueDictionary[defaultName];
-    }
-    return [self.defaultValueDictionary[defaultName] integerValue];
+    NSNumber *value = [self zc_objectForKey:defaultName];
+    return [value integerValue];
 }
 
 - (double)zc_doubleForKey:(NSString *)defaultName {
-    NSNumber *value = [self.zc_userDefaults objectForKey:defaultName];
-    if(!value) {
-        value = self.defaultValueDictionary[defaultName];
-    }
-    return [self.defaultValueDictionary[defaultName] doubleValue];
+    NSNumber *value = [self zc_objectForKey:defaultName];
+    return [value doubleValue];
 }
 
 - (BOOL)zc_boolForKey:(NSString *)defaultName {
-    NSNumber *value = [self.zc_userDefaults objectForKey:defaultName];
-    if(!value) {
-        value = self.defaultValueDictionary[defaultName];
-    }
-    return [self.defaultValueDictionary[defaultName] boolValue];
+    NSNumber *value = [self zc_objectForKey:defaultName];
+    return [value boolValue];
 }
 
 @end

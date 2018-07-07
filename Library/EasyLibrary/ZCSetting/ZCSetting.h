@@ -17,8 +17,8 @@
 
 /**
  是否以Setting.bundle文件为准，默认NO
-    YES：若文件存在 且 userDefaults有值，则返回此值；否则文件不存在 或 userDefaults无值 则返回默认值
-    NO ：userDefaults有值，则返回此值；否则返回默认值
+    YES：若文件存在 且 userDefaults有值，则返回此值；否则文件不存在 则返回默认值
+    NO ：userDefaults有值，则返回；否则返回默认值
  */
 @property(nonatomic, assign) BOOL zc_beSujectSettingFile;
 
