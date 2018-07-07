@@ -223,6 +223,9 @@
 		9397AB6020DB98E100E7E789 /* ZCPicturePreviewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AAE820DB98E100E7E789 /* ZCPicturePreviewItem.m */; };
 		9397AB6120DB98E100E7E789 /* ZCSpinnerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AAEA20DB98E100E7E789 /* ZCSpinnerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB6220DB98E100E7E789 /* ZCSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AAEB20DB98E100E7E789 /* ZCSpinnerView.m */; };
+		93A71A9B20F092F2000C7209 /* ZCSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 93A71A9920F092F2000C7209 /* ZCSetting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93A71A9C20F092F2000C7209 /* ZCSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A71A9A20F092F2000C7209 /* ZCSetting.m */; };
+		93A71A9D20F09DEC000C7209 /* ZCSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 93A71A9920F092F2000C7209 /* ZCSetting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -410,6 +413,8 @@
 		9397AAE820DB98E100E7E789 /* ZCPicturePreviewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPicturePreviewItem.m; sourceTree = "<group>"; };
 		9397AAEA20DB98E100E7E789 /* ZCSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSpinnerView.h; sourceTree = "<group>"; };
 		9397AAEB20DB98E100E7E789 /* ZCSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSpinnerView.m; sourceTree = "<group>"; };
+		93A71A9920F092F2000C7209 /* ZCSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZCSetting.h; sourceTree = "<group>"; };
+		93A71A9A20F092F2000C7209 /* ZCSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZCSetting.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,6 +570,7 @@
 		9397A9F920DB979C00E7E789 /* EasyLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				93A71A9820F092C2000C7209 /* ZCSetting */,
 				9397AA0820DB979C00E7E789 /* Category */,
 				9397AA1620DB979C00E7E789 /* ZCBankcard */,
 				9397AA1E20DB979C00E7E789 /* ZCCacheManage */,
@@ -899,6 +905,15 @@
 			path = ../../Library/ZCEasyLibrary/ZCSpinnerView;
 			sourceTree = "<group>";
 		};
+		93A71A9820F092C2000C7209 /* ZCSetting */ = {
+			isa = PBXGroup;
+			children = (
+				93A71A9920F092F2000C7209 /* ZCSetting.h */,
+				93A71A9A20F092F2000C7209 /* ZCSetting.m */,
+			);
+			path = ZCSetting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -972,6 +987,7 @@
 				9397AB4B20DB98E100E7E789 /* ZCReachability.h in Headers */,
 				9397AB2F20DB98E100E7E789 /* ZCSelectDatePicker.h in Headers */,
 				9397AB4820DB98E100E7E789 /* ZCSelectImagePicker.h in Headers */,
+				93A71A9B20F092F2000C7209 /* ZCSetting.h in Headers */,
 				9397AB6120DB98E100E7E789 /* ZCSpinnerView.h in Headers */,
 				9397AB3920DB98E100E7E789 /* ZCTabBarItem.h in Headers */,
 				9397AB3F20DB98E100E7E789 /* ZCTableViewCell.h in Headers */,
@@ -1022,6 +1038,7 @@
 				9391155220ECA7100016F643 /* NSAlert+ZCEasy.h in Headers */,
 				9397AA6120DB97B200E7E789 /* ZCCacheManage.h in Headers */,
 				9397AA6220DB97B200E7E789 /* ZCCalendar.h in Headers */,
+				93A71A9D20F09DEC000C7209 /* ZCSetting.h in Headers */,
 				9397AA5220DB97B200E7E789 /* NSNumber+ZCMutableDeepCopy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1238,6 +1255,7 @@
 				9397AB3E20DB98E100E7E789 /* ZCVerticalButton.m in Sources */,
 				9397AA4B20DB979C00E7E789 /* NSDateFormatter+ZCSupp.m in Sources */,
 				9397AB0220DB98E100E7E789 /* UIView+ZCScreenCapture.m in Sources */,
+				93A71A9C20F092F2000C7209 /* ZCSetting.m in Sources */,
 				9397AB1520DB98E100E7E789 /* UIView+ZCSupp.m in Sources */,
 				9397AB3220DB98E100E7E789 /* ZCTabBarItem.m in Sources */,
 				9397AB2020DB98E100E7E789 /* NSString+ZCSize.m in Sources */,

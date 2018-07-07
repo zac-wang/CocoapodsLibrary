@@ -78,6 +78,7 @@
 #import "ZCReachability.h"
 #import "ZCSelectDatePicker.h"
 #import "ZCSelectImagePicker.h"
+#import "ZCSetting.h"
 #import "ZCSpinnerView.h"
 #import "ZCTabBarItem.h"
 #import "ZCTableViewCell.h"
