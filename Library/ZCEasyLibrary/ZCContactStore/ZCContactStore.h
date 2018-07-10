@@ -31,14 +31,14 @@ API_AVAILABLE(ios(9.0))
  *
  *  @return 返回数组
  */
-- (NSArray *)queryContactWithName:(NSString *)name fetchKeys:(NSArray *)fetchKeys;
+- (NSArray *)zc_queryContactWithName:(NSString *)name fetchKeys:(NSArray *)fetchKeys;
 
 /**
  *  更新联系人
  *
  *  @param contact 被更新的联系人
  */
-- (void)updateContact:(CNMutableContact *)contact;
+- (void)zc_updateContact:(CNMutableContact *)contact;
 
 /**
  *  删除联系人

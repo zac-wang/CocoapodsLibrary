@@ -16,7 +16,7 @@
 
 @property(nonatomic, strong) ZCTextField *zc_barTextField;
 
-@property(nonatomic, assign) ZCKeyBoardTopBarStyle zc_style;
+@property(nonatomic, assign) ZCKeyBoardTopBarStyle topBarStyle;
 
 @end
 
@@ -56,7 +56,7 @@
 
         [self setItems:@[editSpace, nonepace, doneButton]];
         
-        self.style(ZCKeyBoardTopBarStylePlain);
+        self.zc_style(ZCKeyBoardTopBarStylePlain);
     }
     return self;
 }
@@ -113,7 +113,7 @@
 
 #pragma mark - 开始编辑事件
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    if(self.zc_style == ZCKeyBoardTopBarStyleTextField) {
+    if(self.topBarStyle == ZCKeyBoardTopBarStyleTextField) {
         [self.zc_barTextField becomeFirstResponder];
         
         self.zc_barTextField.zc_selectedRange = self.zc_textField.zc_selectedRange;
@@ -121,7 +121,7 @@
 }
 
 - (void)textViewDidBeginEditing:(NSNotification *)notification {
-    if(self.zc_style == ZCKeyBoardTopBarStyleTextField) {
+    if(self.topBarStyle == ZCKeyBoardTopBarStyleTextField) {
         [self.zc_barTextField becomeFirstResponder];
         
         self.zc_barTextField.zc_selectedRange = self.zc_textView.zc_selectedRange;
@@ -129,14 +129,14 @@
 }
 
 #pragma mark - 设置样式
-- (ZCKeyBoardTopBar *(^)(ZCKeyBoardTopBarStyle))style {
+- (ZCKeyBoardTopBar *(^)(ZCKeyBoardTopBarStyle))zc_style {
     return ^ZCKeyBoardTopBar *(ZCKeyBoardTopBarStyle style) {
-        self.zc_style = style;
+        self.topBarStyle = style;
         //NSLog(@"%d", style);
         
         if(self.zc_style == ZCKeyBoardTopBarStylePlain) {
             self.items.firstObject.customView.hidden = YES;
-        }else if(self.zc_style == ZCKeyBoardTopBarStyleTextField) {
+        }else if(self.topBarStyle == ZCKeyBoardTopBarStyleTextField) {
             self.items.firstObject.customView.hidden = NO;
         }
         return self;

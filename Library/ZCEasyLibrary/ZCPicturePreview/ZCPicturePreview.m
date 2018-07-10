@@ -160,9 +160,9 @@
     
     for (ZCPicturePreviewItem *i in self.zc_previewItemArray) {
         if(item == i) {
-            [i viewDidAppear];
+            [i zc_viewDidAppear];
         }else{
-            [i viewDidDisappear];
+            [i zc_viewDidDisappear];
         }
     }
 }

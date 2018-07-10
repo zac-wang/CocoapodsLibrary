@@ -49,11 +49,11 @@
     return zc_imgView;
 }
 
-- (void)viewDidAppear {
+- (void)zc_viewDidAppear {
     self.zc_loadding = NO;
 }
 
-- (void)viewDidDisappear {
+- (void)zc_viewDidDisappear {
     self.zc_loadding = NO;
     self.zoomScale = 1;
 }

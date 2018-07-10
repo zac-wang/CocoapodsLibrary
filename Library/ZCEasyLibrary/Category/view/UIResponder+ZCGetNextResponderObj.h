@@ -10,6 +10,6 @@
 
 @interface UIResponder (ZCGetNextResponderObj)
 
-- (id)getNextResponderForClass:(Class)_class;
+- (id)zc_getNextResponderForClass:(Class)_class;
 
 @end

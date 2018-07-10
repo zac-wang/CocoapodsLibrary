@@ -23,6 +23,6 @@ typedef enum : NSUInteger {
 
 @property(nonatomic, weak) UITextView *zc_textView;
 
-@property(nonatomic, readonly) ZCKeyBoardTopBar *(^style)(ZCKeyBoardTopBarStyle style);
+@property(nonatomic, readonly) ZCKeyBoardTopBar *(^zc_style)(ZCKeyBoardTopBarStyle style);
 
 @end

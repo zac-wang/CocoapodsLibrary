@@ -109,7 +109,7 @@
  *
  *  @return 返回数组
  */
-- (NSArray *)queryContactWithName:(NSString *)name fetchKeys:(NSArray *)fetchKeys {
+- (NSArray *)zc_queryContactWithName:(NSString *)name fetchKeys:(NSArray *)fetchKeys {
     CNContactStore *store = [[CNContactStore alloc] init];
     // 检索条件
     NSPredicate *predicate = [CNContact predicateForContactsMatchingName:name];
@@ -124,7 +124,7 @@
  *
  *  @param contact 被更新的联系人
  */
-- (void)updateContact:(CNMutableContact *)contact {
+- (void)zc_updateContact:(CNMutableContact *)contact {
     // 创建联系人请求
     CNSaveRequest *saveRequest = [[CNSaveRequest alloc] init];
     [saveRequest updateContact:contact];
