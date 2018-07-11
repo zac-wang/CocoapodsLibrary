@@ -1,6 +1,6 @@
 //
 //  NSAttributedString+ZCSupp.h
-//  CocoapodsLibrary
+//  ZCEasyLibrary
 //
 //  Created by zac on 2017/10/24.
 //  Copyright © 2017年 love_iphone@qq.com. All rights reserved.

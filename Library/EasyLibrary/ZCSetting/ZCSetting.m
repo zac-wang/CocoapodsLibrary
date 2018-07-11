@@ -3,7 +3,7 @@
 //  ZCEasyLibrary
 //
 //  Created by zac on 2018/7/7.
-//  Copyright © 2018年 zac. All rights reserved.
+//  Copyright © 2018年 love_iphone@qq.com. All rights reserved.
 //
 
 #import "ZCSetting.h"

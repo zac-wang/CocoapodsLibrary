@@ -1,6 +1,6 @@
 //
 //  ZCElasticControl.m
-//  Shopkeeper
+//  ZCEasyLibrary
 //
 //  Created by zac on 2018/4/12.
 //  Copyright © 2017年 love_iphone@qq.com. All rights reserved.

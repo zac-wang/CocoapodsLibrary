@@ -1,9 +1,9 @@
 //
 //  UITableView+xiaoaiStyle.m
-//  XAEmpAssistant
+//  ZCEasyLibrary
 //
 //  Created by zac on 2017/5/3.
-//  Copyright © 2017年 Workai. All rights reserved.
+//  Copyright © 2017年 love_iphone@qq.com. All rights reserved.
 //
 
 #import "UITableView+ZCSupp.h"

@@ -1,9 +1,9 @@
 //
 //  NSView+ZCBackgroundColor.h
-//  ZCMacEasyLibrary
+//  ZCEasyLibrary
 //
 //  Created by zac on 2018/7/3.
-//  Copyright © 2018年 zac. All rights reserved.
+//  Copyright © 2018年 love_iphone@qq.com. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
