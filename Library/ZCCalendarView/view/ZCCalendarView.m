@@ -2,8 +2,8 @@
 //  ZCCalendarView.m
 //  Calendar
 //
-//  Created by wangzhichao on 16/8/31.
-//  Copyright © 2016年 wangzhichao. All rights reserved.
+//  Created by zac on 16/8/31.
+//  Copyright © 2016年 love_iphone@qq.com. All rights reserved.
 //
 
 #import "ZCCalendarView.h"
