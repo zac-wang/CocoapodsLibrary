@@ -32,7 +32,7 @@
         self.zc_userDefaults = [NSUserDefaults standardUserDefaults];
         self.zc_beSujectSettingFile = NO;
         
-        haveSetting = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+        haveSetting = !![[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
         self.defaultValueDictionary = [NSMutableDictionary dictionary];
     }
     return self;
@@ -42,6 +42,7 @@
     id oldValue = [self.zc_userDefaults objectForKey:key];
     if(!oldValue) {
         [self.zc_userDefaults setValue:value forKey:key];
+        [self.zc_userDefaults synchronize];
     }
     [self.defaultValueDictionary setValue:value forKey:key];
 }
