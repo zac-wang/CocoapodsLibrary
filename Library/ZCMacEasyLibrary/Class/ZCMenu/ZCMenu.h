@@ -1,9 +1,9 @@
 //
 //  ZCMenuItem.h
-//  MenuItem
+//  ZCEasyLibrary
 //
-//  Created by wangzhichao on 16/11/6.
-//  Copyright © 2016年 wangzhichao. All rights reserved.
+//  Created by zac on 16/11/6.
+//  Copyright © 2016年 love_iphone@qq.com. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

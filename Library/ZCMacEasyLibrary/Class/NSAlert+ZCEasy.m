@@ -1,9 +1,9 @@
 //
 //  NSAlert+ZCEasy.m
-//  MenuItem
+//  ZCEasyLibrary
 //
-//  Created by wangzhichao on 2016/11/21.
-//  Copyright © 2016年 wangzhichao. All rights reserved.
+//  Created by zac on 2016/11/21.
+//  Copyright © 2016年 love_iphone@qq.com. All rights reserved.
 //
 
 #import "NSAlert+ZCEasy.h"

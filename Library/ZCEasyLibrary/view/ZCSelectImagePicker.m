@@ -1,6 +1,6 @@
 //
 //  ZCSelectImagePicker.m
-//  CocoapodsLibrary
+//  ZCEasyLibrary
 //
 //  Created by zac on 2017/10/30.
 //  Copyright © 2017年 love_iphone@qq.com. All rights reserved.
