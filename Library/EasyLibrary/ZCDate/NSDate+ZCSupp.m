@@ -148,11 +148,11 @@
 }
 
 - (NSDate *)zc_firstDayOfCurrentMonth {
-    return self.zc_setDay(1);
+    return self.zc_setDay(1).zc_toDayStartDate;
 }
 
 - (NSDate *)zc_lastDayOfCurrentMonth {
-    return self.zc_setDay(self.zc_countOfDaysInCurrentMonth);
+    return self.zc_setDay(self.zc_countOfDaysInCurrentMonth).zc_toDayStartDate;
 }
 
 - (NSDate *)zc_toDayStartDate {
