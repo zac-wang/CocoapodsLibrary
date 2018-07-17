@@ -17,6 +17,7 @@
     return b;
 }
 
+#pragma mark - 
 - (BOOL)zc_isPhoneNumber {
 //    NSString *regularRegex = @"^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$";
     
@@ -97,6 +98,30 @@
 - (BOOL)zc_isChinese {
     NSString *regularRegex = @"(^[\u4e00-\u9fa5]+$)";
     return [self zc_regular:regularRegex];
+}
+
+#pragma mark 银行卡号合法性
+- (BOOL)zc_isBankCard {
+    int oddSum = 0;     // 奇数和
+    int evenSum = 0;    // 偶数和
+    for (NSUInteger i = 0; i < self.length; i++){
+        unsigned char theNumber = [self characterAtIndex:i];
+        int lastNumber = theNumber - '0';
+        if ((i+1)%2 == 0){ // 偶数位
+            lastNumber *= 2;
+            if (lastNumber > 9) {
+                lastNumber -=9;
+            }
+            evenSum += lastNumber;
+        }else { // 奇数位
+            oddSum += lastNumber;
+        }
+    }
+    int allSum = oddSum + evenSum;     // 总和
+    if (allSum % 10 == 0){ // 是否合法
+        return YES;
+    }
+    return NO;
 }
     
 #pragma mark - 身份证校验

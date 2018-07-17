@@ -26,6 +26,9 @@
 /// 格式是否为  全中文
 @property(nonatomic, readonly) BOOL zc_isChinese;
 
+///银行卡号合法性
+@property(nonatomic, readonly) BOOL zc_isBankCard;
+
 /// 判断身份证格式有效
 @property(nonatomic, readonly) BOOL zc_isIDCard;
 /// 判断身份证格式有效(不验证时间)
