@@ -12,26 +12,6 @@
 
 @implementation UIView (ZCSupp)
 
-- (void)zc_removeAllSubviews {
-    [self zc_ergodicSubviews:^(UIView *v) {
-        [v removeFromSuperview];
-    }];
-}
-
-- (void)zc_removeAllSubviewsWithClass:(Class)viewClass {
-    [self zc_ergodicSubviews:^(UIView *v) {
-        if(viewClass && [v isKindOfClass:viewClass]) {
-            [v removeFromSuperview];
-        }
-    }];
-}
-
-- (void)zc_ergodicSubviews:(void (^)(UIView *))block {
-    for (UIView *v in self.subviews) {
-        block(v);
-    }
-}
-
 - (void)zc_shadowColor:(UIColor *)shadowColor shadowOffset:(CGSize)shadowOffset shadowOpacity:(float)shadowOpacity {
     self.layer.shadowOffset = shadowOffset;
     if(shadowColor)

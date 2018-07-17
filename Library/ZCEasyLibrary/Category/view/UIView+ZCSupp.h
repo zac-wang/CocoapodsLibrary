@@ -10,14 +10,6 @@
 
 @interface UIView (ZCSupp)
 
-///删除子view，UIScrollView等 慎重使用
-@property(nonatomic, readonly) void zc_removeAllSubviews;
-///删除指定类型的子view
-- (void)zc_removeAllSubviewsWithClass:(Class)viewClass;
-
-///遍历子view
-- (void)zc_ergodicSubviews:(void(^)(UIView *v))block;
-
 /**
  阴影
 

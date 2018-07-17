@@ -44,6 +44,8 @@
 		937EF54E20EB8BFE0040DE5C /* ZCMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 937EF54A20EB8BFE0040DE5C /* ZCMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		937EF54F20EB8BFE0040DE5C /* ZCMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 937EF54B20EB8BFE0040DE5C /* ZCMenu.m */; };
 		937EF55020EB8BFE0040DE5C /* ZCMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 937EF54C20EB8BFE0040DE5C /* ZCMenuItem.m */; };
+		9390445020FC7ED20005492B /* UIView+ZCSubview.h in Headers */ = {isa = PBXBuildFile; fileRef = 9390444E20FC7ED20005492B /* UIView+ZCSubview.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9390445120FC7ED20005492B /* UIView+ZCSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 9390444F20FC7ED20005492B /* UIView+ZCSubview.m */; };
 		9391155220ECA7100016F643 /* NSAlert+ZCEasy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9391155020ECA7100016F643 /* NSAlert+ZCEasy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9391155320ECA7100016F643 /* NSAlert+ZCEasy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9391155120ECA7100016F643 /* NSAlert+ZCEasy.m */; };
 		9392BBFA20DE4C6000B6F9B3 /* ZCLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9392BBF620DE4C5F00B6F9B3 /* ZCLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -248,6 +250,8 @@
 		937EF54A20EB8BFE0040DE5C /* ZCMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMenu.h; sourceTree = "<group>"; };
 		937EF54B20EB8BFE0040DE5C /* ZCMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMenu.m; sourceTree = "<group>"; };
 		937EF54C20EB8BFE0040DE5C /* ZCMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMenuItem.m; sourceTree = "<group>"; };
+		9390444E20FC7ED20005492B /* UIView+ZCSubview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCSubview.h"; sourceTree = "<group>"; };
+		9390444F20FC7ED20005492B /* UIView+ZCSubview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCSubview.m"; sourceTree = "<group>"; };
 		9391155020ECA7100016F643 /* NSAlert+ZCEasy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+ZCEasy.h"; sourceTree = "<group>"; };
 		9391155120ECA7100016F643 /* NSAlert+ZCEasy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+ZCEasy.m"; sourceTree = "<group>"; };
 		9392BBF620DE4C5F00B6F9B3 /* ZCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLocationManager.h; sourceTree = "<group>"; };
@@ -731,6 +735,8 @@
 				9397AA7F20DB98DF00E7E789 /* UIView+ZCScreenCapture.m */,
 				9397AA7820DB98DF00E7E789 /* UIView+ZCSupp.h */,
 				9397AA9220DB98DF00E7E789 /* UIView+ZCSupp.m */,
+				9390444E20FC7ED20005492B /* UIView+ZCSubview.h */,
+				9390444F20FC7ED20005492B /* UIView+ZCSubview.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -946,6 +952,7 @@
 				9397AAF720DB98E100E7E789 /* UIView+ZCConvert.h in Headers */,
 				9397AB1120DB98E100E7E789 /* UIView+ZCCornerRadius.h in Headers */,
 				9397AB0E20DB98E100E7E789 /* UIView+ZCScreenCapture.h in Headers */,
+				9390445020FC7ED20005492B /* UIView+ZCSubview.h in Headers */,
 				9397AAFB20DB98E100E7E789 /* UIView+ZCSupp.h in Headers */,
 				9397AA3520DB979C00E7E789 /* NSArray+ZCJson.h in Headers */,
 				9397AA2F20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.h in Headers */,
@@ -1316,6 +1323,7 @@
 				9397AB4D20DB98E100E7E789 /* ZCAppUpdateVersion.m in Sources */,
 				9397AA4A20DB979C00E7E789 /* NSDateComponents+ZCSupp.m in Sources */,
 				9397AB2420DB98E100E7E789 /* ZCAlertView.m in Sources */,
+				9390445120FC7ED20005492B /* UIView+ZCSubview.m in Sources */,
 				9397AB0A20DB98E100E7E789 /* UITableView+ZCSupp.m in Sources */,
 				9397AA4020DB979C00E7E789 /* NSString+ZCEncrypt.m in Sources */,
 				9397AB0120DB98E100E7E789 /* CALayer+ZCSupp.m in Sources */,
