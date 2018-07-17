@@ -8,7 +8,7 @@
 
 #import "ZCElasticControl.h"
 
-typedef void (^ZCAlertActionHandle)(UIAlertAction *action);
+typedef void (^ZCAlertActionHandle)(UIButton *action);
 
 @interface ZCAlertView : ZCElasticControl
 

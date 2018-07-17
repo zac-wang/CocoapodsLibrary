@@ -18,7 +18,7 @@
 @property(nonatomic, strong) UIView *btnBackView;
 @property(nonatomic, strong) UIButton *cancelButton;
 @property(nonatomic, strong) NSMutableArray<UIButton *> *buttonArray;
-@property(nonatomic, strong) NSMutableDictionary<UIButton *, ZCAlertActionHandle> *buttonHandleMap;
+@property(nonatomic, strong) NSMutableDictionary<NSString *, ZCAlertActionHandle> *buttonHandleMap;
 @end
 
 #define BackViewWidth 270.5
@@ -108,10 +108,11 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor colorWithRed:0.08 green:0.49 blue:0.98 alpha:1.00] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(zc_hiddenView) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.btnBackView addSubview:btn];
     
-    self.buttonHandleMap[(id)btn] = handler;
+    NSString *key = [NSString stringWithFormat:@"%p", btn];
+    self.buttonHandleMap[key] = handler;
     return btn;
 }
 
@@ -136,6 +137,11 @@
 }
 
 - (void)buttonClick:(UIButton *)btn {
+    NSString *key = [NSString stringWithFormat:@"%p", btn];
+    ZCAlertActionHandle handler = self.buttonHandleMap[key];
+    if(handler) {
+        handler(btn);
+    }
     [self zc_hiddenView:0.25 completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
