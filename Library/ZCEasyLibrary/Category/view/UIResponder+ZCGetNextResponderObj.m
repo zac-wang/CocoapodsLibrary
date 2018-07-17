@@ -10,7 +10,7 @@
 
 @implementation UIResponder (ZCGetNextResponderObj)
 
-- (id)getNextResponderForClass:(Class)_class {
+- (id)zc_getNextResponderForClass:(Class)_class {
     UIResponder *target = self;
     while (target) {
         target = target.nextResponder;
