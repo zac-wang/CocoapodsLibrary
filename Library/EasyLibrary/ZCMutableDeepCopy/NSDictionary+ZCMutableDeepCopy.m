@@ -18,9 +18,11 @@
         id copyValue;
         if ([value respondsToSelector:@selector(zc_mutableDeepCopy)]) {
             copyValue = [value zc_mutableDeepCopy];
-        }else if([value respondsToSelector:@selector(mutableCopy)]) {
+        }else if([value respondsToSelector:@selector(mutableCopy)] &&
+                 [value respondsToSelector:@selector(mutableCopyWithZone:)]) {
             copyValue = [value mutableCopy];
-        }else if([value respondsToSelector:@selector(copy)]) {
+        }else if([value respondsToSelector:@selector(copy)] &&
+                 [value respondsToSelector:@selector(copyWithZone:)]) {
             copyValue = [value copy];
         }else{
             copyValue = value;
