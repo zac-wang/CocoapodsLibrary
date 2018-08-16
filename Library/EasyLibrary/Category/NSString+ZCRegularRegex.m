@@ -101,7 +101,10 @@
 }
 
 #pragma mark 银行卡号合法性
-- (BOOL)zc_isBankCard {
+- (BOOL)zc_isBankCard {//luhn算法
+    if(![self zc_isInt]) {
+        return NO;
+    }
     int oddSum = 0;     // 奇数和
     int evenSum = 0;    // 偶数和
     for (NSUInteger i = 0; i < self.length; i++){
