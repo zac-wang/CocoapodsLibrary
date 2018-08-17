@@ -39,17 +39,6 @@
     
 //    [[ZCAppUpdateVersion shared] zc_checkVersionAndUpdateWithTargetVC:nil];
     
-    
-    
-    //NSString *jsonStr = @"{\"9.70\":9.70, \"97.40\":97.40, \"80.40\":80.40, \"188.40\":188.40, \"8819.45\":8819.45, \"8679.45\":8679.45}";
-    //NSLog(@"json:%@", jsonStr);
-    //NSDictionary *_dic = jsonStr.zc_data.zc_toJsonObject;
-    //NSLog(@"dic:%@", _dic);
-//    NSNumber *num = @6666.6599999999999;//_dic[@"8679.45"];
-//    double value = [num doubleValue];
-//    NSLog(@"dic:%lf, %lf, %lf", value, ((long long)(value*10000000000))/10000000000.0, fabs(((long long)(value*10000000000))/10000000000.0 - value));
-//    NSLog(@"dic:%@", [NSString stringWithFormat:@"%lg", [_dic[@"9.70"] doubleValue]]);//.450000000001
-    
     return YES;
 }
 

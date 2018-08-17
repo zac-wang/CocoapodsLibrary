@@ -51,6 +51,8 @@
 		9392BBFB20DE4C6000B6F9B3 /* ZCLocationGeocode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9392BBF720DE4C5F00B6F9B3 /* ZCLocationGeocode.m */; };
 		9392BBFC20DE4C6000B6F9B3 /* ZCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9392BBF820DE4C5F00B6F9B3 /* ZCLocationManager.m */; };
 		9392BBFD20DE4C6000B6F9B3 /* ZCLocationGeocode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9392BBF920DE4C5F00B6F9B3 /* ZCLocationGeocode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9396A1A92126B9A100A8AE88 /* NSObject+ZCDoubleValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 9396A1A72126B9A100A8AE88 /* NSObject+ZCDoubleValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9396A1AA2126B9A100A8AE88 /* NSObject+ZCDoubleValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9396A1A82126B9A100A8AE88 /* NSObject+ZCDoubleValue.m */; };
 		9397AA2B20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397A9FC20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.m */; };
 		9397AA2C20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397A9FD20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.m */; };
 		9397AA2E20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397A9FF20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -150,12 +152,10 @@
 		9397AB1920DB98E100E7E789 /* NSDictionary+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA9720DB98E000E7E789 /* NSDictionary+ZCSupp.m */; };
 		9397AB1A20DB98E100E7E789 /* NSAttributedString+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA9820DB98E000E7E789 /* NSAttributedString+ZCSupp.m */; };
 		9397AB1B20DB98E100E7E789 /* NSAttributedString+ZCTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA9920DB98E000E7E789 /* NSAttributedString+ZCTag.m */; };
-		9397AB1C20DB98E100E7E789 /* NSNumber+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA9A20DB98E000E7E789 /* NSNumber+ZCSupp.m */; };
 		9397AB1D20DB98E100E7E789 /* NSObject+ZCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA9B20DB98E000E7E789 /* NSObject+ZCRuntime.m */; };
 		9397AB1E20DB98E100E7E789 /* NSDictionary+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA9C20DB98E000E7E789 /* NSDictionary+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB1F20DB98E100E7E789 /* NSMutableAttributedString+ZCSetStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA9D20DB98E000E7E789 /* NSMutableAttributedString+ZCSetStyle.m */; };
 		9397AB2020DB98E100E7E789 /* NSString+ZCSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA9E20DB98E000E7E789 /* NSString+ZCSize.m */; };
-		9397AB2120DB98E100E7E789 /* NSNumber+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA9F20DB98E000E7E789 /* NSNumber+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB2220DB98E100E7E789 /* NSAttributedString+ZCTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AAA020DB98E000E7E789 /* NSAttributedString+ZCTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB2320DB98E100E7E789 /* NSAttributedString+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AAA120DB98E000E7E789 /* NSAttributedString+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB2420DB98E100E7E789 /* ZCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AAA320DB98E000E7E789 /* ZCAlertView.m */; };
@@ -254,6 +254,8 @@
 		9392BBF720DE4C5F00B6F9B3 /* ZCLocationGeocode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationGeocode.m; sourceTree = "<group>"; };
 		9392BBF820DE4C5F00B6F9B3 /* ZCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationManager.m; sourceTree = "<group>"; };
 		9392BBF920DE4C5F00B6F9B3 /* ZCLocationGeocode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLocationGeocode.h; sourceTree = "<group>"; };
+		9396A1A72126B9A100A8AE88 /* NSObject+ZCDoubleValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZCDoubleValue.h"; sourceTree = "<group>"; };
+		9396A1A82126B9A100A8AE88 /* NSObject+ZCDoubleValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZCDoubleValue.m"; sourceTree = "<group>"; };
 		9397A9E120DB974A00E7E789 /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZCEasyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9397A9E520DB974A00E7E789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9397A9F120DB976C00E7E789 /* ZCMacEasyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZCMacEasyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,12 +342,10 @@
 		9397AA9720DB98E000E7E789 /* NSDictionary+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZCSupp.m"; sourceTree = "<group>"; };
 		9397AA9820DB98E000E7E789 /* NSAttributedString+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+ZCSupp.m"; sourceTree = "<group>"; };
 		9397AA9920DB98E000E7E789 /* NSAttributedString+ZCTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+ZCTag.m"; sourceTree = "<group>"; };
-		9397AA9A20DB98E000E7E789 /* NSNumber+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+ZCSupp.m"; sourceTree = "<group>"; };
 		9397AA9B20DB98E000E7E789 /* NSObject+ZCRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZCRuntime.m"; sourceTree = "<group>"; };
 		9397AA9C20DB98E000E7E789 /* NSDictionary+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZCSupp.h"; sourceTree = "<group>"; };
 		9397AA9D20DB98E000E7E789 /* NSMutableAttributedString+ZCSetStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+ZCSetStyle.m"; sourceTree = "<group>"; };
 		9397AA9E20DB98E000E7E789 /* NSString+ZCSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZCSize.m"; sourceTree = "<group>"; };
-		9397AA9F20DB98E000E7E789 /* NSNumber+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+ZCSupp.h"; sourceTree = "<group>"; };
 		9397AAA020DB98E000E7E789 /* NSAttributedString+ZCTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+ZCTag.h"; sourceTree = "<group>"; };
 		9397AAA120DB98E000E7E789 /* NSAttributedString+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+ZCSupp.h"; sourceTree = "<group>"; };
 		9397AAA320DB98E000E7E789 /* ZCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAlertView.m; sourceTree = "<group>"; };
@@ -744,8 +744,8 @@
 				9397AA9720DB98E000E7E789 /* NSDictionary+ZCSupp.m */,
 				9397AA9620DB98E000E7E789 /* NSMutableAttributedString+ZCSetStyle.h */,
 				9397AA9D20DB98E000E7E789 /* NSMutableAttributedString+ZCSetStyle.m */,
-				9397AA9F20DB98E000E7E789 /* NSNumber+ZCSupp.h */,
-				9397AA9A20DB98E000E7E789 /* NSNumber+ZCSupp.m */,
+				9396A1A72126B9A100A8AE88 /* NSObject+ZCDoubleValue.h */,
+				9396A1A82126B9A100A8AE88 /* NSObject+ZCDoubleValue.m */,
 				9397AA9420DB98E000E7E789 /* NSObject+ZCRuntime.h */,
 				9397AA9B20DB98E000E7E789 /* NSObject+ZCRuntime.m */,
 				9397AA9520DB98E000E7E789 /* NSString+ZCSize.h */,
@@ -958,7 +958,7 @@
 				9397AA3420DB979C00E7E789 /* NSDictionary+ZCJson.h in Headers */,
 				9397AA2E20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.h in Headers */,
 				9397AB1820DB98E100E7E789 /* NSMutableAttributedString+ZCSetStyle.h in Headers */,
-				9397AB2120DB98E100E7E789 /* NSNumber+ZCSupp.h in Headers */,
+				9396A1A92126B9A100A8AE88 /* NSObject+ZCDoubleValue.h in Headers */,
 				9397AB1620DB98E100E7E789 /* NSObject+ZCRuntime.h in Headers */,
 				9397AA3D20DB979C00E7E789 /* NSObject+ZCToString.h in Headers */,
 				9397AA3F20DB979C00E7E789 /* NSString+ZCEncrypt.h in Headers */,
@@ -1276,7 +1276,6 @@
 				9392BBFB20DE4C6000B6F9B3 /* ZCLocationGeocode.m in Sources */,
 				9397AB6220DB98E100E7E789 /* ZCSpinnerView.m in Sources */,
 				9397AB4220DB98E100E7E789 /* ZCTagView.m in Sources */,
-				9397AB1C20DB98E100E7E789 /* NSNumber+ZCSupp.m in Sources */,
 				9397AB5420DB98E100E7E789 /* iphoneDevice.m in Sources */,
 				9397AAEF20DB98E100E7E789 /* ZCBannerView.m in Sources */,
 				9397AB4E20DB98E100E7E789 /* ZCTimeCountDown.m in Sources */,
@@ -1325,6 +1324,7 @@
 				9397AB4320DB98E100E7E789 /* ZCPickerView.m in Sources */,
 				9397AB6020DB98E100E7E789 /* ZCPicturePreviewItem.m in Sources */,
 				9397AB4C20DB98E100E7E789 /* ZCUserDefaults.m in Sources */,
+				9396A1AA2126B9A100A8AE88 /* NSObject+ZCDoubleValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
