@@ -8,6 +8,7 @@
 
 #import "ZCTextView.h"
 #import "UITextView+ZCHandleMaxTextLength.h"
+#import "NSObject+ZCRuntime.h"
 
 @interface ZCTextView() {
     //是否开启了 监听文字变化事件
@@ -130,6 +131,14 @@
 
 - (NSAttributedString *)zc_placeholderAttributesString {
     return self.zc_placeholderTextView.attributedText;
+}
+
+- (UIColor *)zc_placeholderColor {
+    return [self zc_dynamicValueForKey:@"zc_placeholderColor"];
+}
+
+- (void)setZc_placeholderColor:(UIColor *)zc_placeholderColor {
+    [self zc_setDynamicValue:zc_placeholderColor forKey:@"zc_placeholderColor"];
 }
 
 - (void)updatePlaceholderTextViewStyle {

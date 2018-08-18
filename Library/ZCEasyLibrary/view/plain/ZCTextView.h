@@ -39,5 +39,5 @@
 ///设置提示文字
 @property(nonatomic,copy)   NSString *zc_placeholder;
 ///设置提示文字颜色
-@property(nonatomic,copy)   UIColor  *zc_placeholderColor;
+@property(nonatomic,readwrite) UIColor *zc_placeholderColor;
 @end
