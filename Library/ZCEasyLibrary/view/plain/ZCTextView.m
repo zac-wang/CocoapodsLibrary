@@ -134,7 +134,7 @@
 - (void)updatePlaceholderTextViewStyle {
     self.zc_placeholderTextView.frame = self.bounds;
     self.zc_placeholderTextView.font = self.font;
-    self.zc_placeholderTextView.textColor = [self.textColor colorWithAlphaComponent:0.7];
+    self.zc_placeholderTextView.textColor = self.zc_placeholderColor ?: [self.textColor colorWithAlphaComponent:0.7];
     [self textViewDidChangeText:nil];
 }
 
