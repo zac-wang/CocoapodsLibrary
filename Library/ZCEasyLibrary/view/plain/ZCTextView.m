@@ -112,6 +112,7 @@
 
 #pragma mark - ZCTextView (ZCPlaceholder)
 @implementation ZCTextView (ZCPlaceholder)
+@dynamic zc_placeholderColor;
 
 - (void)setZc_placeholder:(NSString *)_placeholder {
     self.zc_placeholderTextView.text = _placeholder;
