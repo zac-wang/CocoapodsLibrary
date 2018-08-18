@@ -79,7 +79,7 @@
 }
 
 - (BOOL)zc_isEmail {
-    NSString *regularRegex = @"^\\w+((\\-\\w+)|(\\.\\w+))*@[A-Za-z0-9]+((\\.|\\-)[A-Za-z0-9]+)*\\.[A-Za-z0-9]+$";
+    NSString *regularRegex = @"^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.[a-zA-Z0-9]{2,6}$";
     return [self zc_regular:regularRegex];
 }
 
