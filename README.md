@@ -1,6 +1,6 @@
-# MBProgressHUDEasy
+# ZCEasyLibrary
 
-##### 对MBProgressHUD进行简单封装，调用更加简单方便
+##### 对iOS常用功能进行封装，提交开发效率，降低多项目的维护难度
 Podfile:
 ```
 source 'https://github.com/CocoaPods/Specs.git'
