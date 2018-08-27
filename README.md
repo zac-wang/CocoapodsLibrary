@@ -26,7 +26,7 @@ self.banerScrollView.zc_selectImageView = ^(UIImageView *imgView, NSInteger inde
 [view zc_drawCornerRadius:0 borderWidth:1 borderColor:UIColorFromRGB(0xa3b1c4)];
 ```
 ```
-根据view样式生成对应的图片
+//根据view样式生成对应的图片
 UIImage *img = view.zc_screenCapture;
 ```
 
