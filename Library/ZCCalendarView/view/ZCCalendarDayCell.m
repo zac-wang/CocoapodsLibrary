@@ -19,6 +19,7 @@
 @end
 
 @implementation ZCCalendarDayCell
+@synthesize lunarCalendar;
 @synthesize dateComponents;
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -35,13 +36,13 @@
 
 - (void)updateDateComponents {
     if(!titleLabel) {
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/4, self.frame.size.width, self.frame.size.height/4)];
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/6, self.frame.size.width, self.frame.size.height/3)];
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.font = [UIFont systemFontOfSize:21];
         [self addSubview:titleLabel];
         
-        subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/2, self.frame.size.width, self.frame.size.height/4)];
+        subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/2, self.frame.size.width, self.frame.size.height/3)];
         subTitleLabel.textAlignment = NSTextAlignmentCenter;
         subTitleLabel.backgroundColor = [UIColor clearColor];
         subTitleLabel.font = [UIFont systemFontOfSize:8];
@@ -63,10 +64,8 @@
     subTitleLabel.textColor = [UIColor lightGrayColor];
     
     titleLabel.text = [NSString stringWithFormat:@"%ld", (long)self.dateComponents.day];
-    subTitleLabel.text = self.lunarCalendar;
-    
-    
-    
+    lunarCalendar = [[ZCCalendarDate sharedCalendarDate] getLunarCalendar:self.dateComponents];
+    subTitleLabel.text = lunarCalendar;
 }
 
 - (UIView *)getSelectedBackgroundView {

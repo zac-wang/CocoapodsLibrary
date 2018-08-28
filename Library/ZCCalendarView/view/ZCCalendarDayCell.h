@@ -25,7 +25,7 @@ typedef enum : NSUInteger {
 /// 当前日期
 @property(nonatomic, strong) NSDateComponents *dateComponents;
 /// 阴历
-@property(nonatomic, strong) NSString *lunarCalendar;
+@property(nonatomic, readonly) NSString *lunarCalendar;
 /// dateComponents对应的 是否是 当前日期
 @property(nonatomic, assign) BOOL isNowDay;
 

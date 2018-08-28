@@ -14,8 +14,7 @@
 - (void)initialView;
 @property(nonatomic, readwrite) CGRect monthFrame;
 
-@property(nonatomic, assign) void (^setCalendarView)(ZCCalendarView *calendarView);
-@property(nonatomic, readonly) ZCCalendarView *nowShowCalendarView;
+@property(nonatomic, readonly) ZCCalendarView *calendarView;
 
 
 

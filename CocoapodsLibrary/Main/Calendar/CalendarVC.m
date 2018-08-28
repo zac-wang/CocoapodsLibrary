@@ -58,14 +58,11 @@
         [self.view addSubview:self.dayView];
     }
     //日历设置
-    __weak typeof(self)weakSelf = self;
-    self.dayView.setCalendarView = ^(ZCCalendarView *calendarView) {
-        //[calendarView registerClass:[CalendarDayCell class]];
-        calendarView.backgroundColor = UIColorFromRGB(0xf1f1f1);
-        calendarView.isMultipleSelection = YES;
-        calendarView.date = [NSDate date];
-        calendarView.delegate = weakSelf;
-    };
+    //[self.dayView.calendarView registerClass:[CalendarDayCell class]];
+    self.dayView.calendarView.backgroundColor = UIColorFromRGB(0xf1f1f1);
+    self.dayView.calendarView.isMultipleSelection = YES;
+    self.dayView.calendarView.date = [NSDate date];
+    self.dayView.calendarView.delegate = self;
 }
 
 //- (void)viewDidLayoutSubviews {
@@ -83,7 +80,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self.dayView.nowShowCalendarView reloadData];
+    [self.dayView.calendarView reloadData];
 }
 
 #pragma mark - Delegate

@@ -9,17 +9,16 @@
 #import "ZCCalendarManageView.h"
 #import <ZCEasyLibrary/NSDate+ZCSupp.h>
 #import <ZCEasyLibrary/ZCCalendar.h>
+#import <ZCEasyLibrary/UIView+ZCScreenCapture.h>
 
 @interface ZCCalendarManageView () {
-    ZCCalendarView *oldView;
-    ZCCalendarView *newView;
-    BOOL isAnimat;
+    UIImageView *oldImageView;
 }
 
 @end
 
 @implementation ZCCalendarManageView
-@synthesize nowShowCalendarView = newView;
+@synthesize calendarView;
 @synthesize monthFrame;
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -34,7 +33,6 @@
 
 #pragma mark - init view
 - (void)initialView {
-    isAnimat = NO;
     self.date = [NSDate date];
     [ZCCalendar shared].firstWeekday = ZCCalendarSunday;
     
@@ -49,10 +47,11 @@
         dayView.layer.masksToBounds = YES;
         [self addSubview:dayView];
         
-        newView = [[ZCCalendarView alloc] init];
-        oldView = [[ZCCalendarView alloc] init];
-        [dayView addSubview:newView];
-        [dayView addSubview:oldView];
+        calendarView = [[ZCCalendarView alloc] init];
+        [dayView addSubview:calendarView];
+        oldImageView = [[UIImageView alloc] init];
+        [dayView addSubview:oldImageView];
+        oldImageView.hidden = YES;
     }
     self.date = nil;
 }
@@ -60,23 +59,17 @@
 - (void)setMonthFrame:(CGRect)_monthFrame {
     monthFrame = _monthFrame;
     self.frame = monthFrame;
-    newView.frame = oldView.frame = newView.superview.frame = self.bounds;
-}
-
-- (void)setSetCalendarView:(void (^)(ZCCalendarView *))block {
-    if(block) {
-        block(newView);
-        block(oldView);
-    }
+    calendarView.frame = oldImageView.frame = calendarView.superview.frame = self.bounds;
 }
 
 - (void)setDate:(NSDate *)_date {
-    oldView.date = _date;
+    oldImageView.image = calendarView.zc_screenCapture;
+    calendarView.date = _date;
     [self setNeedsDisplay];
 }
 
 - (void)reloadData {
-    [newView reloadData];
+    [calendarView reloadData];
 }
 
 #pragma mark - 切换月份
@@ -91,37 +84,35 @@
 }
 
 - (void)changePreviousMonth {
-    isAnimat = YES;
-    //oldView.frame = ({CGRect rect = oldView.frame; rect.origin.x = -rect.size.width; rect;}); // 左右
-    oldView.frame = ({CGRect rect = oldView.frame; rect.origin.y = -rect.size.height; rect;}); // 上下
-    self.date = self.nowShowCalendarView.date.zc_previousMonthStartDate;
+    //calendarView.frame = ({CGRect rect = calendarView.bounds; rect.origin.x = -rect.size.width; rect;}); // 左右
+    calendarView.frame = ({CGRect rect = calendarView.bounds; rect.origin.y = -rect.size.height; rect;}); // 上下
+    
+    self.date = self.calendarView.date.zc_previousMonthStartDate;
 }
 
 - (void)changeNextMonth {
-    isAnimat = YES;
-    //oldView.frame = ({CGRect rect = oldView.frame; rect.origin.x = rect.size.width; rect;}); // 左右
-    oldView.frame = ({CGRect rect = oldView.frame; rect.origin.y = rect.size.height; rect;}); // 上下
-    self.date = self.nowShowCalendarView.date.zc_nextMonthStartDate;
+    //calendarView.frame = ({CGRect rect = calendarView.bounds; rect.origin.x = rect.size.width; rect; }); // 左右
+    calendarView.frame = ({ CGRect rect = calendarView.bounds; rect.origin.y = rect.size.height; rect; }); // 上下
+    
+    self.date = self.calendarView.date.zc_nextMonthStartDate;
 }
 
 #pragma mark - 动画
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
     
-    oldView.hidden = NO;
+    oldImageView.frame = calendarView.bounds;
+    oldImageView.hidden = NO;
     
-    [UIView animateWithDuration:(isAnimat ? 0.35 : 0) animations:^{
-        CGRect tmp = self->oldView.frame;
-        self->oldView.frame = ({ CGRect rect = self->oldView.frame; rect.origin.y = 0; rect.origin.x = 0; rect; });
-        self->newView.frame = ({ CGRect rect = self->newView.frame; rect.origin.y = -tmp.origin.y; rect.origin.x = -tmp.origin.x; rect; });
+    CGRect imgViewRect = calendarView.frame;
+    imgViewRect.origin.x = -imgViewRect.origin.x;
+    imgViewRect.origin.y = -imgViewRect.origin.y;
+    [UIView animateWithDuration:(0.35) animations:^{
+        self->oldImageView.frame = imgViewRect;
+        self->calendarView.frame = self->calendarView.bounds;
     } completion:^(BOOL finished) {
-        id tmp = self->oldView;
-        self->oldView = self->newView;
-        self->newView = tmp;
-        
-        self->oldView.hidden = YES;
+        self->oldImageView.hidden = YES;
     }];
-    isAnimat = NO;
 }
 
 @end

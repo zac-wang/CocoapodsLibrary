@@ -131,7 +131,6 @@
         cell.type = ZCCalendarDayCellTypeNextMonth;
     }
     
-    cell.lunarCalendar = [[ZCCalendarDate sharedCalendarDate] getLunarCalendar:cell.dateComponents];
     cell.isNowDay = nowDateComponents.year == cell.dateComponents.year &&
                     nowDateComponents.month == cell.dateComponents.month &&
                     nowDateComponents.day == cell.dateComponents.day;
