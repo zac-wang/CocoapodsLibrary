@@ -15,16 +15,8 @@
 @property(nonatomic, strong) NSUserDefaults *zc_userDefaults;
 
 
-/**
- 是否以Setting.bundle文件为准，默认NO
-    YES：若文件存在 且 userDefaults有值，则返回此值；否则文件不存在 则返回默认值
-    NO ：userDefaults有值，则返回；否则返回默认值
- */
-@property(nonatomic, assign) BOOL zc_beSujectSettingFile;
-
-
 /// 设置默认值
-- (void)zc_setDefaultValue:(NSString *)value forKey:(NSString *)key;
+- (void)zc_setDefaultValue:(id)value forKey:(NSString *)key;
 
 
 /// 获取值

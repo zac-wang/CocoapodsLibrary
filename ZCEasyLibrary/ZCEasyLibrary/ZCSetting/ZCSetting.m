@@ -8,10 +8,8 @@
 
 #import "ZCSetting.h"
 
-@interface ZCSetting() {
-    BOOL haveSetting;
-}
-@property(nonatomic, strong) NSMutableDictionary *defaultValueDictionary;
+@interface ZCSetting()
+@property(nonatomic, strong) NSDictionary *settigBundleInfo;
 @end
 
 @implementation ZCSetting
@@ -30,34 +28,32 @@
     self = [super init];
     if (self) {
         self.zc_userDefaults = [NSUserDefaults standardUserDefaults];
-        self.zc_beSujectSettingFile = NO;
         
-        haveSetting = !![[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
-        self.defaultValueDictionary = [NSMutableDictionary dictionary];
+        NSString *setBundlePath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+        NSString *settingInfoPath = [setBundlePath stringByAppendingPathComponent:@"Root.plist"];
+        self.settigBundleInfo = [NSDictionary dictionaryWithContentsOfFile:settingInfoPath];
     }
     return self;
 }
 
-- (void)zc_setDefaultValue:(NSString *)value forKey:(NSString *)key {
-    id oldValue = [self.zc_userDefaults objectForKey:key];
-    if(!oldValue) {
-        [self.zc_userDefaults setValue:value forKey:key];
-        [self.zc_userDefaults synchronize];
-    }
-    [self.defaultValueDictionary setValue:value forKey:key];
+- (void)zc_setDefaultValue:(id)value forKey:(NSString *)key {
+    [self.zc_userDefaults setValue:value forKey:key];
+    [self.zc_userDefaults synchronize];
 }
 
 - (nullable id)zc_objectForKey:(NSString *)defaultName {
     id value = [self.zc_userDefaults objectForKey:defaultName];
-    if(!value) { // 本地无值
-        return self.defaultValueDictionary[defaultName];
-    }else if(self.zc_beSujectSettingFile && haveSetting) {
+    if(value) { // 本地有值
         return value;
-    }else if(self.zc_beSujectSettingFile && !haveSetting) {
-        return self.defaultValueDictionary[defaultName];
-    }else {
-        return value;
+    }else if(self.settigBundleInfo) {
+        NSArray *arr = self.settigBundleInfo[@"PreferenceSpecifiers"];
+        for (NSDictionary *dic in arr) {
+            if([defaultName isEqualToString:dic[@"Key"]]) {
+                return dic[@"DefaultValue"];
+            }
+        }
     }
+    return nil;
 }
 
 - (NSInteger)zc_integerForKey:(NSString *)defaultName {
