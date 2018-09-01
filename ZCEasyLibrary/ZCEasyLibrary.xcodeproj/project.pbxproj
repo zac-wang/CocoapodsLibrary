@@ -908,7 +908,8 @@
 				93A71A9920F092F2000C7209 /* ZCSetting.h */,
 				93A71A9A20F092F2000C7209 /* ZCSetting.m */,
 			);
-			path = ZCSetting;
+			name = ZCSetting;
+			path = ../../Library/ZCEasyLibrary/ZCSetting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
