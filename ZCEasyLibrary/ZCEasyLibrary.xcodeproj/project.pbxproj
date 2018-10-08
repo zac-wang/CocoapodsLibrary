@@ -1192,7 +1192,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"$ACTION\" = \"install\" ]; then\n    infoPlistPath=\"${PRODUCT_SETTINGS_PATH}\"\n    version=\"$(date +%Y%m%d.%H%M%S)\"\n    /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion '$version $infoPlistPath\nfi";
+			shellScript = "#if [ \"$ACTION\" = \"install\" ]; then\n    infoPlistPath=\"${PRODUCT_SETTINGS_PATH}\"\n    version=\"$(date +%Y%m%d.%H%M%S)\"\n    /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion '$version $infoPlistPath\n#fi";
 		};
 		9397AB6420DB998D00E7E789 /* 修改Headers头文件内容 */ = {
 			isa = PBXShellScriptBuildPhase;
