@@ -4,4 +4,5 @@ Pods
 CocoapodsLibrary/test
 Modules
 CocoapodsLibrary.xcodeproj/project.xcworkspace
-MyPods.xcworkspace/xcshareddata
+MyPods.xcworkspace
+**/*.xcodeproj/xcuserdata

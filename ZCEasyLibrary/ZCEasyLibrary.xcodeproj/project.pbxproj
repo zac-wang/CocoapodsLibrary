@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2DC91D2189C94C00BC5BDC /* ZCCitySelectAddressData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D2DC91C2189C94B00BC5BDC /* ZCCitySelectAddressData.plist */; };
 		937EF4CB20EB6C080040DE5C /* NSView+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 937EF4BE20EB6C080040DE5C /* NSView+ZCSupp.m */; };
 		937EF4CE20EB6C080040DE5C /* NSView+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 937EF4C120EB6C080040DE5C /* NSView+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		937EF4D320EB6C080040DE5C /* ZCMacEasyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 937EF4C820EB6C080040DE5C /* ZCMacEasyLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -211,7 +212,6 @@
 		9397AB5620DB98E100E7E789 /* ZCAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AADC20DB98E000E7E789 /* ZCAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB5720DB98E100E7E789 /* ZCAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AADD20DB98E000E7E789 /* ZCAlert.m */; };
 		9397AB5820DB98E100E7E789 /* ZCCitySelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AADF20DB98E000E7E789 /* ZCCitySelect.m */; };
-		9397AB5920DB98E100E7E789 /* ZCCitySelectDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AAE020DB98E000E7E789 /* ZCCitySelectDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB5A20DB98E100E7E789 /* ZCCitySelect.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AAE120DB98E000E7E789 /* ZCCitySelect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB5B20DB98E100E7E789 /* ZCPicturePreviewHeadbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AAE320DB98E100E7E789 /* ZCPicturePreviewHeadbar.m */; };
 		9397AB5C20DB98E100E7E789 /* ZCPicturePreview.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AAE420DB98E100E7E789 /* ZCPicturePreview.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -226,6 +226,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2DC91C2189C94B00BC5BDC /* ZCCitySelectAddressData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZCCitySelectAddressData.plist; sourceTree = "<group>"; };
 		937EF4BE20EB6C080040DE5C /* NSView+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ZCSupp.m"; sourceTree = "<group>"; };
 		937EF4C120EB6C080040DE5C /* NSView+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ZCSupp.h"; sourceTree = "<group>"; };
 		937EF4C820EB6C080040DE5C /* ZCMacEasyLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZCMacEasyLibrary.h; path = ../../Library/ZCMacEasyLibrary/ZCMacEasyLibrary.h; sourceTree = "<group>"; };
@@ -400,7 +401,6 @@
 		9397AADC20DB98E000E7E789 /* ZCAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAlert.h; sourceTree = "<group>"; };
 		9397AADD20DB98E000E7E789 /* ZCAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAlert.m; sourceTree = "<group>"; };
 		9397AADF20DB98E000E7E789 /* ZCCitySelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCitySelect.m; sourceTree = "<group>"; };
-		9397AAE020DB98E000E7E789 /* ZCCitySelectDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCitySelectDataSource.h; sourceTree = "<group>"; };
 		9397AAE120DB98E000E7E789 /* ZCCitySelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCitySelect.h; sourceTree = "<group>"; };
 		9397AAE320DB98E100E7E789 /* ZCPicturePreviewHeadbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPicturePreviewHeadbar.m; sourceTree = "<group>"; };
 		9397AAE420DB98E100E7E789 /* ZCPicturePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPicturePreview.h; sourceTree = "<group>"; };
@@ -872,7 +872,7 @@
 			children = (
 				9397AAE120DB98E000E7E789 /* ZCCitySelect.h */,
 				9397AADF20DB98E000E7E789 /* ZCCitySelect.m */,
-				9397AAE020DB98E000E7E789 /* ZCCitySelectDataSource.h */,
+				3D2DC91C2189C94B00BC5BDC /* ZCCitySelectAddressData.plist */,
 			);
 			name = ZCCitySelect;
 			path = ../../Library/ZCEasyLibrary/ZCCitySelect;
@@ -975,7 +975,6 @@
 				9397AA4920DB979C00E7E789 /* ZCCacheManage.h in Headers */,
 				9397AA4D20DB979C00E7E789 /* ZCCalendar.h in Headers */,
 				9397AB5A20DB98E100E7E789 /* ZCCitySelect.h in Headers */,
-				9397AB5920DB98E100E7E789 /* ZCCitySelectDataSource.h in Headers */,
 				937EF51020EB754C0040DE5C /* ZCContactStore.h in Headers */,
 				9397AB4120DB98E100E7E789 /* ZCElasticControl.h in Headers */,
 				9397AB3020DB98E100E7E789 /* ZCFont.h in Headers */,
@@ -1125,6 +1124,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2DC91D2189C94C00BC5BDC /* ZCCitySelectAddressData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
