@@ -7,9 +7,9 @@ build
 
 # cocoapod文件
 Pods
-MyPods.xcworkspace
+CocoapodsLibrary.xcworkspace
 
 # 测试文件
-CocoapodsLibrary/test
+CocoapodsLibrary/Demo/test
 
 Modules

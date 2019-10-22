@@ -3,21 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9336027320DBD3E3002079F9 /* ZCEasyLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9336027220DBD3E3002079F9 /* ZCEasyLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		108C6C59674999033892702D /* Pods_CocoapodsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16539FBD524BC55800A09CC /* Pods_CocoapodsLibrary.framework */; };
 		9336028020DBF93B002079F9 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336027720DBF93B002079F9 /* CalendarDayCell.m */; };
 		9336028120DBF93B002079F9 /* CalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336027920DBF93B002079F9 /* CalendarVC.m */; };
 		9336028220DBF93B002079F9 /* BannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336027B20DBF93B002079F9 /* BannerVC.m */; };
 		9336028320DBF93B002079F9 /* ZCPicturePreviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336027D20DBF93B002079F9 /* ZCPicturePreviewVC.m */; };
 		9336028420DBF93C002079F9 /* ViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336027E20DBF93B002079F9 /* ViewVC.m */; };
-		9336029220DBF966002079F9 /* ZCCalendarDateLunarCalendar.c in Sources */ = {isa = PBXBuildFile; fileRef = 9336028720DBF966002079F9 /* ZCCalendarDateLunarCalendar.c */; };
-		9336029320DBF966002079F9 /* ZCCalendarDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336028820DBF966002079F9 /* ZCCalendarDate.m */; };
-		9336029420DBF966002079F9 /* ZCCalendarManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336028C20DBF966002079F9 /* ZCCalendarManageView.m */; };
-		9336029520DBF966002079F9 /* ZCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336028D20DBF966002079F9 /* ZCCalendarView.m */; };
-		9336029620DBF966002079F9 /* ZCCalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336029120DBF966002079F9 /* ZCCalendarDayCell.m */; };
 		938197C020AE735700134EBC /* main_banner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 938197BF20AE735600134EBC /* main_banner.bundle */; };
 		938197C720AE779800134EBC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C620AE779800134EBC /* libz.tbd */; };
 		938197C920AE77A500134EBC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C820AE77A500134EBC /* MobileCoreServices.framework */; };
@@ -29,21 +24,6 @@
 		9398C51120A7645200C7C8AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9398C51020A7645200C7C8AA /* Assets.xcassets */; };
 		9398C51420A7645200C7C8AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9398C51220A7645200C7C8AA /* LaunchScreen.storyboard */; };
 		9398C51720A7645200C7C8AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C51620A7645200C7C8AA /* main.m */; };
-		9399FD8220B43BE400720592 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD5F20B43BE400720592 /* UIProgressView+AFNetworking.m */; };
-		9399FD8320B43BE400720592 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD6120B43BE400720592 /* UIRefreshControl+AFNetworking.m */; };
-		9399FD8420B43BE400720592 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD6420B43BE400720592 /* AFNetworkActivityIndicatorManager.m */; };
-		9399FD8520B43BE400720592 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD6A20B43BE400720592 /* UIImageView+AFNetworking.m */; };
-		9399FD8620B43BE400720592 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD6D20B43BE400720592 /* UIButton+AFNetworking.m */; };
-		9399FD8720B43BE400720592 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD6E20B43BE400720592 /* UIActivityIndicatorView+AFNetworking.m */; };
-		9399FD8820B43BE400720592 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD6F20B43BE400720592 /* UIWebView+AFNetworking.m */; };
-		9399FD8920B43BE400720592 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7020B43BE400720592 /* AFAutoPurgingImageCache.m */; };
-		9399FD8A20B43BE400720592 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7220B43BE400720592 /* AFImageDownloader.m */; };
-		9399FD8B20B43BE400720592 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7820B43BE400720592 /* AFURLResponseSerialization.m */; };
-		9399FD8C20B43BE400720592 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7920B43BE400720592 /* AFHTTPSessionManager.m */; };
-		9399FD8D20B43BE400720592 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7B20B43BE400720592 /* AFURLSessionManager.m */; };
-		9399FD8E20B43BE400720592 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7C20B43BE400720592 /* AFURLRequestSerialization.m */; };
-		9399FD8F20B43BE400720592 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7E20B43BE400720592 /* AFNetworkReachabilityManager.m */; };
-		9399FD9020B43BE400720592 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9399FD7F20B43BE400720592 /* AFSecurityPolicy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +33,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9336027320DBD3E3002079F9 /* ZCEasyLibrary.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,7 +40,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9336027220DBD3E3002079F9 /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZCEasyLibrary.framework; path = ZCEasyLibrary/build/ZCEasyLibrary.framework; sourceTree = "<group>"; };
 		9336027520DBF93B002079F9 /* ZCPicturePreviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPicturePreviewVC.h; sourceTree = "<group>"; };
 		9336027720DBF93B002079F9 /* CalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
 		9336027820DBF93B002079F9 /* CalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarVC.h; sourceTree = "<group>"; };
@@ -72,22 +50,12 @@
 		9336027D20DBF93B002079F9 /* ZCPicturePreviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPicturePreviewVC.m; sourceTree = "<group>"; };
 		9336027E20DBF93B002079F9 /* ViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewVC.m; sourceTree = "<group>"; };
 		9336027F20DBF93B002079F9 /* BannerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerVC.h; sourceTree = "<group>"; };
-		9336028720DBF966002079F9 /* ZCCalendarDateLunarCalendar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ZCCalendarDateLunarCalendar.c; sourceTree = "<group>"; };
-		9336028820DBF966002079F9 /* ZCCalendarDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarDate.m; sourceTree = "<group>"; };
-		9336028920DBF966002079F9 /* ZCCalendarDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDate.h; sourceTree = "<group>"; };
-		9336028A20DBF966002079F9 /* ZCCalendarDateLunarCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDateLunarCalendar.h; sourceTree = "<group>"; };
-		9336028C20DBF966002079F9 /* ZCCalendarManageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarManageView.m; sourceTree = "<group>"; };
-		9336028D20DBF966002079F9 /* ZCCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarView.m; sourceTree = "<group>"; };
-		9336028E20DBF966002079F9 /* ZCCalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarDayCell.h; sourceTree = "<group>"; };
-		9336028F20DBF966002079F9 /* ZCCalendarManageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarManageView.h; sourceTree = "<group>"; };
-		9336029020DBF966002079F9 /* ZCCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendarView.h; sourceTree = "<group>"; };
-		9336029120DBF966002079F9 /* ZCCalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendarDayCell.m; sourceTree = "<group>"; };
 		938197BE20AE735200134EBC /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		938197BF20AE735600134EBC /* main_banner.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = main_banner.bundle; sourceTree = "<group>"; };
 		938197C620AE779800134EBC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		938197C820AE77A500134EBC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		938E68F420D20F6D007A86AC /* ZCSystemVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZCSystemVariable.h; path = test/ZCSystemVariable.h; sourceTree = "<group>"; };
-		938E68F520D20F6D007A86AC /* ZCSystemVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZCSystemVariable.m; path = test/ZCSystemVariable.m; sourceTree = "<group>"; };
+		938E68F420D20F6D007A86AC /* ZCSystemVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSystemVariable.h; sourceTree = "<group>"; };
+		938E68F520D20F6D007A86AC /* ZCSystemVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSystemVariable.m; sourceTree = "<group>"; };
 		938E68F720D2435E007A86AC /* ZCSystemVariable.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ZCSystemVariable.plist; sourceTree = "<group>"; };
 		9398C50420A7645000C7C8AA /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9398C50720A7645000C7C8AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,41 +67,10 @@
 		9398C51320A7645200C7C8AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9398C51520A7645200C7C8AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9398C51620A7645200C7C8AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9399FD5F20B43BE400720592 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
-		9399FD6020B43BE400720592 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
-		9399FD6120B43BE400720592 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
-		9399FD6220B43BE400720592 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		9399FD6320B43BE400720592 /* AFImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageDownloader.h; sourceTree = "<group>"; };
-		9399FD6420B43BE400720592 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		9399FD6520B43BE400720592 /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAutoPurgingImageCache.h; sourceTree = "<group>"; };
-		9399FD6620B43BE400720592 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
-		9399FD6720B43BE400720592 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
-		9399FD6820B43BE400720592 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AFNetworking.h"; sourceTree = "<group>"; };
-		9399FD6920B43BE400720592 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
-		9399FD6A20B43BE400720592 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		9399FD6B20B43BE400720592 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		9399FD6C20B43BE400720592 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
-		9399FD6D20B43BE400720592 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
-		9399FD6E20B43BE400720592 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
-		9399FD6F20B43BE400720592 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		9399FD7020B43BE400720592 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAutoPurgingImageCache.m; sourceTree = "<group>"; };
-		9399FD7120B43BE400720592 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		9399FD7220B43BE400720592 /* AFImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageDownloader.m; sourceTree = "<group>"; };
-		9399FD7420B43BE400720592 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		9399FD7520B43BE400720592 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		9399FD7620B43BE400720592 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		9399FD7720B43BE400720592 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		9399FD7820B43BE400720592 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		9399FD7920B43BE400720592 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		9399FD7A20B43BE400720592 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		9399FD7B20B43BE400720592 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		9399FD7C20B43BE400720592 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		9399FD7D20B43BE400720592 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		9399FD7E20B43BE400720592 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		9399FD7F20B43BE400720592 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		9399FD8020B43BE400720592 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFCompatibilityMacros.h; sourceTree = "<group>"; };
-		9399FD8120B43BE400720592 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		93C7BFA520CA593300C7A25D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B16539FBD524BC55800A09CC /* Pods_CocoapodsLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoapodsLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF032312D2753580A9ACE4EE /* Pods-CocoapodsLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodsLibrary.debug.xcconfig"; path = "Target Support Files/Pods-CocoapodsLibrary/Pods-CocoapodsLibrary.debug.xcconfig"; sourceTree = "<group>"; };
+		E02C73D79E8E3ED1473E63B1 /* Pods-CocoapodsLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoapodsLibrary.release.xcconfig"; path = "Target Support Files/Pods-CocoapodsLibrary/Pods-CocoapodsLibrary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +80,23 @@
 			files = (
 				938197C920AE77A500134EBC /* MobileCoreServices.framework in Frameworks */,
 				938197C720AE779800134EBC /* libz.tbd in Frameworks */,
+				108C6C59674999033892702D /* Pods_CocoapodsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D4C5B63235EF1A10008BDB5 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				938E68F420D20F6D007A86AC /* ZCSystemVariable.h */,
+				938E68F520D20F6D007A86AC /* ZCSystemVariable.m */,
+				938E68F720D2435E007A86AC /* ZCSystemVariable.plist */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
 		9336027420DBF93B002079F9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,39 +122,6 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
-		9336028520DBF966002079F9 /* ZCCalendarView */ = {
-			isa = PBXGroup;
-			children = (
-				9336028620DBF966002079F9 /* date */,
-				9336028B20DBF966002079F9 /* view */,
-			);
-			path = ZCCalendarView;
-			sourceTree = "<group>";
-		};
-		9336028620DBF966002079F9 /* date */ = {
-			isa = PBXGroup;
-			children = (
-				9336028920DBF966002079F9 /* ZCCalendarDate.h */,
-				9336028820DBF966002079F9 /* ZCCalendarDate.m */,
-				9336028720DBF966002079F9 /* ZCCalendarDateLunarCalendar.c */,
-				9336028A20DBF966002079F9 /* ZCCalendarDateLunarCalendar.h */,
-			);
-			path = date;
-			sourceTree = "<group>";
-		};
-		9336028B20DBF966002079F9 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				9336028E20DBF966002079F9 /* ZCCalendarDayCell.h */,
-				9336029120DBF966002079F9 /* ZCCalendarDayCell.m */,
-				9336028F20DBF966002079F9 /* ZCCalendarManageView.h */,
-				9336028C20DBF966002079F9 /* ZCCalendarManageView.m */,
-				9336029020DBF966002079F9 /* ZCCalendarView.h */,
-				9336028D20DBF966002079F9 /* ZCCalendarView.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		9381976620AE6C1000134EBC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,20 +137,12 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9381976A20AE731700134EBC /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				9336028520DBF966002079F9 /* ZCCalendarView */,
-			);
-			path = Library;
-			sourceTree = SOURCE_ROOT;
-		};
 		938197C120AE771C00134EBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9399FD5D20B43BE400720592 /* AFNetworking */,
 				938197C820AE77A500134EBC /* MobileCoreServices.framework */,
 				938197C620AE779800134EBC /* libz.tbd */,
+				B16539FBD524BC55800A09CC /* Pods_CocoapodsLibrary.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -243,10 +150,10 @@
 		9398C4FB20A7645000C7C8AA = {
 			isa = PBXGroup;
 			children = (
-				9336027220DBD3E3002079F9 /* ZCEasyLibrary.framework */,
 				9398C50620A7645000C7C8AA /* CocoapodsLibrary */,
 				938197C120AE771C00134EBC /* Frameworks */,
 				9398C50520A7645000C7C8AA /* Products */,
+				B9E4C689AD24E0C5BD8C363D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,71 +172,20 @@
 				9398C50820A7645000C7C8AA /* AppDelegate.m */,
 				9398C50A20A7645000C7C8AA /* ViewController.h */,
 				9398C50B20A7645000C7C8AA /* ViewController.m */,
-				938E68F420D20F6D007A86AC /* ZCSystemVariable.h */,
-				938E68F520D20F6D007A86AC /* ZCSystemVariable.m */,
-				938E68F720D2435E007A86AC /* ZCSystemVariable.plist */,
+				3D4C5B63235EF1A10008BDB5 /* test */,
 				9336027420DBF93B002079F9 /* Main */,
-				9381976A20AE731700134EBC /* Library */,
 				9381976620AE6C1000134EBC /* Supporting Files */,
 			);
 			path = CocoapodsLibrary;
 			sourceTree = "<group>";
 		};
-		9399FD5D20B43BE400720592 /* AFNetworking */ = {
+		B9E4C689AD24E0C5BD8C363D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9399FD5E20B43BE400720592 /* UIKit+AFNetworking */,
-				9399FD7320B43BE400720592 /* AFNetworking */,
+				BF032312D2753580A9ACE4EE /* Pods-CocoapodsLibrary.debug.xcconfig */,
+				E02C73D79E8E3ED1473E63B1 /* Pods-CocoapodsLibrary.release.xcconfig */,
 			);
-			path = AFNetworking;
-			sourceTree = "<group>";
-		};
-		9399FD5E20B43BE400720592 /* UIKit+AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				9399FD5F20B43BE400720592 /* UIProgressView+AFNetworking.m */,
-				9399FD6020B43BE400720592 /* UIButton+AFNetworking.h */,
-				9399FD6120B43BE400720592 /* UIRefreshControl+AFNetworking.m */,
-				9399FD6220B43BE400720592 /* UIImageView+AFNetworking.h */,
-				9399FD6320B43BE400720592 /* AFImageDownloader.h */,
-				9399FD6420B43BE400720592 /* AFNetworkActivityIndicatorManager.m */,
-				9399FD6520B43BE400720592 /* AFAutoPurgingImageCache.h */,
-				9399FD6620B43BE400720592 /* UIWebView+AFNetworking.h */,
-				9399FD6720B43BE400720592 /* UIActivityIndicatorView+AFNetworking.h */,
-				9399FD6820B43BE400720592 /* UIImage+AFNetworking.h */,
-				9399FD6920B43BE400720592 /* UIProgressView+AFNetworking.h */,
-				9399FD6A20B43BE400720592 /* UIImageView+AFNetworking.m */,
-				9399FD6B20B43BE400720592 /* UIKit+AFNetworking.h */,
-				9399FD6C20B43BE400720592 /* UIRefreshControl+AFNetworking.h */,
-				9399FD6D20B43BE400720592 /* UIButton+AFNetworking.m */,
-				9399FD6E20B43BE400720592 /* UIActivityIndicatorView+AFNetworking.m */,
-				9399FD6F20B43BE400720592 /* UIWebView+AFNetworking.m */,
-				9399FD7020B43BE400720592 /* AFAutoPurgingImageCache.m */,
-				9399FD7120B43BE400720592 /* AFNetworkActivityIndicatorManager.h */,
-				9399FD7220B43BE400720592 /* AFImageDownloader.m */,
-			);
-			path = "UIKit+AFNetworking";
-			sourceTree = "<group>";
-		};
-		9399FD7320B43BE400720592 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				9399FD7420B43BE400720592 /* AFSecurityPolicy.h */,
-				9399FD7520B43BE400720592 /* AFNetworkReachabilityManager.h */,
-				9399FD7620B43BE400720592 /* AFURLSessionManager.h */,
-				9399FD7720B43BE400720592 /* AFURLRequestSerialization.h */,
-				9399FD7820B43BE400720592 /* AFURLResponseSerialization.m */,
-				9399FD7920B43BE400720592 /* AFHTTPSessionManager.m */,
-				9399FD7A20B43BE400720592 /* AFURLResponseSerialization.h */,
-				9399FD7B20B43BE400720592 /* AFURLSessionManager.m */,
-				9399FD7C20B43BE400720592 /* AFURLRequestSerialization.m */,
-				9399FD7D20B43BE400720592 /* AFNetworking.h */,
-				9399FD7E20B43BE400720592 /* AFNetworkReachabilityManager.m */,
-				9399FD7F20B43BE400720592 /* AFSecurityPolicy.m */,
-				9399FD8020B43BE400720592 /* AFCompatibilityMacros.h */,
-				9399FD8120B43BE400720592 /* AFHTTPSessionManager.h */,
-			);
-			path = AFNetworking;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,10 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9398C51A20A7645200C7C8AA /* Build configuration list for PBXNativeTarget "CocoapodsLibrary" */;
 			buildPhases = (
+				BE662822CF54DDA693EA4027 /* [CP] Check Pods Manifest.lock */,
 				9398C50020A7645000C7C8AA /* Sources */,
 				9398C50120A7645000C7C8AA /* Frameworks */,
 				9398C50220A7645000C7C8AA /* Resources */,
 				93AC699F20D13DB70071B781 /* Embed Frameworks */,
+				9DA7264A79A355327F02DDE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -401,37 +259,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9DA7264A79A355327F02DDE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocoapodsLibrary/Pods-CocoapodsLibrary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CocoapodsLibrary/Pods-CocoapodsLibrary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CocoapodsLibrary/Pods-CocoapodsLibrary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE662822CF54DDA693EA4027 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CocoapodsLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9398C50020A7645000C7C8AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9399FD8620B43BE400720592 /* UIButton+AFNetworking.m in Sources */,
-				9336029520DBF966002079F9 /* ZCCalendarView.m in Sources */,
-				9399FD8B20B43BE400720592 /* AFURLResponseSerialization.m in Sources */,
 				9398C50C20A7645000C7C8AA /* ViewController.m in Sources */,
-				9336029220DBF966002079F9 /* ZCCalendarDateLunarCalendar.c in Sources */,
-				9399FD8D20B43BE400720592 /* AFURLSessionManager.m in Sources */,
-				9399FD8C20B43BE400720592 /* AFHTTPSessionManager.m in Sources */,
-				9399FD8220B43BE400720592 /* UIProgressView+AFNetworking.m in Sources */,
-				9399FD8A20B43BE400720592 /* AFImageDownloader.m in Sources */,
-				9399FD8820B43BE400720592 /* UIWebView+AFNetworking.m in Sources */,
-				9399FD8720B43BE400720592 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				9336029420DBF966002079F9 /* ZCCalendarManageView.m in Sources */,
 				9336028120DBF93B002079F9 /* CalendarVC.m in Sources */,
-				9399FD8E20B43BE400720592 /* AFURLRequestSerialization.m in Sources */,
-				9399FD8420B43BE400720592 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				9399FD9020B43BE400720592 /* AFSecurityPolicy.m in Sources */,
 				938E68F620D20F6D007A86AC /* ZCSystemVariable.m in Sources */,
-				9336029620DBF966002079F9 /* ZCCalendarDayCell.m in Sources */,
-				9399FD8920B43BE400720592 /* AFAutoPurgingImageCache.m in Sources */,
 				9336028420DBF93C002079F9 /* ViewVC.m in Sources */,
 				9398C51720A7645200C7C8AA /* main.m in Sources */,
-				9399FD8F20B43BE400720592 /* AFNetworkReachabilityManager.m in Sources */,
 				9336028020DBF93B002079F9 /* CalendarDayCell.m in Sources */,
-				9399FD8520B43BE400720592 /* UIImageView+AFNetworking.m in Sources */,
-				9399FD8320B43BE400720592 /* UIRefreshControl+AFNetworking.m in Sources */,
-				9336029320DBF966002079F9 /* ZCCalendarDate.m in Sources */,
 				9336028220DBF93B002079F9 /* BannerVC.m in Sources */,
 				9398C50920A7645000C7C8AA /* AppDelegate.m in Sources */,
 				9336028320DBF93B002079F9 /* ZCPicturePreviewVC.m in Sources */,
@@ -572,6 +452,7 @@
 		};
 		9398C51B20A7645200C7C8AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF032312D2753580A9ACE4EE /* Pods-CocoapodsLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -598,6 +479,7 @@
 		};
 		9398C51C20A7645200C7C8AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E02C73D79E8E3ED1473E63B1 /* Pods-CocoapodsLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
