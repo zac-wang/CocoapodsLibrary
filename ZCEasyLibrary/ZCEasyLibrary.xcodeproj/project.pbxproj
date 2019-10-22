@@ -44,18 +44,32 @@
 		3D4C5B9A235F0D3F0008BDB5 /* NSDictionary+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B8F235F0D3F0008BDB5 /* NSDictionary+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4C5B9B235F0D3F0008BDB5 /* NSArray+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B90235F0D3F0008BDB5 /* NSArray+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4C5B9C235F0D3F0008BDB5 /* NSArray+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B90235F0D3F0008BDB5 /* NSArray+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D4C5BBC235F206B0008BDB5 /* NSString+ZCFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB4235F206B0008BDB5 /* NSString+ZCFile.h */; };
-		3D4C5BBD235F206B0008BDB5 /* NSString+ZCRegularRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB5235F206B0008BDB5 /* NSString+ZCRegularRegex.h */; };
+		3D4C5BBC235F206B0008BDB5 /* NSString+ZCFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB4235F206B0008BDB5 /* NSString+ZCFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BBD235F206B0008BDB5 /* NSString+ZCRegularRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB5235F206B0008BDB5 /* NSString+ZCRegularRegex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4C5BBE235F206B0008BDB5 /* NSString+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BB6235F206B0008BDB5 /* NSString+ZCSupp.m */; };
 		3D4C5BBF235F206B0008BDB5 /* NSObject+ZCToString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BB7235F206B0008BDB5 /* NSObject+ZCToString.m */; };
 		3D4C5BC0235F206B0008BDB5 /* NSString+ZCFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BB8235F206B0008BDB5 /* NSString+ZCFile.m */; };
-		3D4C5BC1235F206B0008BDB5 /* NSString+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB9235F206B0008BDB5 /* NSString+ZCSupp.h */; };
+		3D4C5BC1235F206B0008BDB5 /* NSString+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB9235F206B0008BDB5 /* NSString+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4C5BC2235F206B0008BDB5 /* NSString+ZCRegularRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BBA235F206B0008BDB5 /* NSString+ZCRegularRegex.m */; };
-		3D4C5BC3235F206B0008BDB5 /* NSObject+ZCToString.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BBB235F206B0008BDB5 /* NSObject+ZCToString.h */; };
+		3D4C5BC3235F206B0008BDB5 /* NSObject+ZCToString.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BBB235F206B0008BDB5 /* NSObject+ZCToString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4C5BC9235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BC5235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.m */; };
 		3D4C5BCA235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BC6235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.m */; };
-		3D4C5BCB235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BC7235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.h */; };
-		3D4C5BCC235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BC8235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.h */; };
+		3D4C5BCB235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BC7235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BCC235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BC8235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BE2235F24600008BDB5 /* UIView+ZCScreenCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BE0235F24600008BDB5 /* UIView+ZCScreenCapture.m */; };
+		3D4C5BE3235F24600008BDB5 /* UIView+ZCScreenCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BE1235F24600008BDB5 /* UIView+ZCScreenCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BE4235F24F70008BDB5 /* NSArray+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BC8235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BE5235F24F70008BDB5 /* NSArray+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BC5235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.m */; };
+		3D4C5BE6235F24F70008BDB5 /* NSDictionary+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BC7235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BE7235F24F70008BDB5 /* NSDictionary+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BC6235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.m */; };
+		3D4C5BE8235F25120008BDB5 /* NSObject+ZCToString.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BBB235F206B0008BDB5 /* NSObject+ZCToString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BE9235F25120008BDB5 /* NSObject+ZCToString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BB7235F206B0008BDB5 /* NSObject+ZCToString.m */; };
+		3D4C5BEA235F25120008BDB5 /* NSString+ZCFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB4235F206B0008BDB5 /* NSString+ZCFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BEB235F25120008BDB5 /* NSString+ZCFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BB8235F206B0008BDB5 /* NSString+ZCFile.m */; };
+		3D4C5BEC235F25120008BDB5 /* NSString+ZCRegularRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB5235F206B0008BDB5 /* NSString+ZCRegularRegex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BED235F25120008BDB5 /* NSString+ZCRegularRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BBA235F206B0008BDB5 /* NSString+ZCRegularRegex.m */; };
+		3D4C5BEE235F25120008BDB5 /* NSString+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5BB9235F206B0008BDB5 /* NSString+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5BEF235F25120008BDB5 /* NSString+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5BB6235F206B0008BDB5 /* NSString+ZCSupp.m */; };
 		937EF4CB20EB6C080040DE5C /* NSView+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 937EF4BE20EB6C080040DE5C /* NSView+ZCSupp.m */; };
 		937EF4CE20EB6C080040DE5C /* NSView+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 937EF4C120EB6C080040DE5C /* NSView+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		937EF4D320EB6C080040DE5C /* ZCMacEasyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 937EF4C820EB6C080040DE5C /* ZCMacEasyLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,7 +129,6 @@
 		9397AAFF20DB98E100E7E789 /* UITextView+ZCSelectedRange.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA7C20DB98DF00E7E789 /* UITextView+ZCSelectedRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB0020DB98E100E7E789 /* UIButton+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA7D20DB98DF00E7E789 /* UIButton+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB0120DB98E100E7E789 /* CALayer+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA7E20DB98DF00E7E789 /* CALayer+ZCSupp.m */; };
-		9397AB0220DB98E100E7E789 /* UIView+ZCScreenCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA7F20DB98DF00E7E789 /* UIView+ZCScreenCapture.m */; };
 		9397AB0320DB98E100E7E789 /* UIImage+ZCColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA8020DB98DF00E7E789 /* UIImage+ZCColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB0420DB98E100E7E789 /* UIColor+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA8120DB98DF00E7E789 /* UIColor+ZCSupp.m */; };
 		9397AB0520DB98E100E7E789 /* UITextField+ZCSelectedRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA8220DB98DF00E7E789 /* UITextField+ZCSelectedRange.m */; };
@@ -127,7 +140,6 @@
 		9397AB0B20DB98E100E7E789 /* UIImageView+ZCAnimat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA8820DB98DF00E7E789 /* UIImageView+ZCAnimat.m */; };
 		9397AB0C20DB98E100E7E789 /* UITableView+ZCPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA8920DB98DF00E7E789 /* UITableView+ZCPaging.m */; };
 		9397AB0D20DB98E100E7E789 /* UIImage+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA8A20DB98DF00E7E789 /* UIImage+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AB0E20DB98E100E7E789 /* UIView+ZCScreenCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA8B20DB98DF00E7E789 /* UIView+ZCScreenCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB0F20DB98E100E7E789 /* CALayer+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA8C20DB98DF00E7E789 /* CALayer+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AB1020DB98E100E7E789 /* UIButton+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA8D20DB98DF00E7E789 /* UIButton+ZCSupp.m */; };
 		9397AB1120DB98E100E7E789 /* UIView+ZCCornerRadius.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA8E20DB98DF00E7E789 /* UIView+ZCCornerRadius.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -245,6 +257,8 @@
 		3D4C5BC6235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZCMutableDeepCopy.m"; sourceTree = "<group>"; };
 		3D4C5BC7235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZCMutableDeepCopy.h"; sourceTree = "<group>"; };
 		3D4C5BC8235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZCMutableDeepCopy.h"; sourceTree = "<group>"; };
+		3D4C5BE0235F24600008BDB5 /* UIView+ZCScreenCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCScreenCapture.m"; sourceTree = "<group>"; };
+		3D4C5BE1235F24600008BDB5 /* UIView+ZCScreenCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCScreenCapture.h"; sourceTree = "<group>"; };
 		937EF4BE20EB6C080040DE5C /* NSView+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ZCSupp.m"; sourceTree = "<group>"; };
 		937EF4C120EB6C080040DE5C /* NSView+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ZCSupp.h"; sourceTree = "<group>"; };
 		937EF4C820EB6C080040DE5C /* ZCMacEasyLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZCMacEasyLibrary.h; path = ../../Library/ZCMacEasyLibrary/ZCMacEasyLibrary.h; sourceTree = "<group>"; };
@@ -304,7 +318,6 @@
 		9397AA7C20DB98DF00E7E789 /* UITextView+ZCSelectedRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+ZCSelectedRange.h"; sourceTree = "<group>"; };
 		9397AA7D20DB98DF00E7E789 /* UIButton+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZCSupp.h"; sourceTree = "<group>"; };
 		9397AA7E20DB98DF00E7E789 /* CALayer+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+ZCSupp.m"; sourceTree = "<group>"; };
-		9397AA7F20DB98DF00E7E789 /* UIView+ZCScreenCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCScreenCapture.m"; sourceTree = "<group>"; };
 		9397AA8020DB98DF00E7E789 /* UIImage+ZCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZCColor.h"; sourceTree = "<group>"; };
 		9397AA8120DB98DF00E7E789 /* UIColor+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZCSupp.m"; sourceTree = "<group>"; };
 		9397AA8220DB98DF00E7E789 /* UITextField+ZCSelectedRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ZCSelectedRange.m"; sourceTree = "<group>"; };
@@ -316,7 +329,6 @@
 		9397AA8820DB98DF00E7E789 /* UIImageView+ZCAnimat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZCAnimat.m"; sourceTree = "<group>"; };
 		9397AA8920DB98DF00E7E789 /* UITableView+ZCPaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZCPaging.m"; sourceTree = "<group>"; };
 		9397AA8A20DB98DF00E7E789 /* UIImage+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZCSupp.h"; sourceTree = "<group>"; };
-		9397AA8B20DB98DF00E7E789 /* UIView+ZCScreenCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCScreenCapture.h"; sourceTree = "<group>"; };
 		9397AA8C20DB98DF00E7E789 /* CALayer+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+ZCSupp.h"; sourceTree = "<group>"; };
 		9397AA8D20DB98DF00E7E789 /* UIButton+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZCSupp.m"; sourceTree = "<group>"; };
 		9397AA8E20DB98DF00E7E789 /* UIView+ZCCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCCornerRadius.h"; sourceTree = "<group>"; };
@@ -490,6 +502,16 @@
 			path = ../ZCMutableDeepCopy;
 			sourceTree = "<group>";
 		};
+		3D4C5BDF235F24600008BDB5 /* ZCScreenCapture */ = {
+			isa = PBXGroup;
+			children = (
+				3D4C5BE1235F24600008BDB5 /* UIView+ZCScreenCapture.h */,
+				3D4C5BE0235F24600008BDB5 /* UIView+ZCScreenCapture.m */,
+			);
+			name = ZCScreenCapture;
+			path = ../../Library/ZCScreenCapture;
+			sourceTree = "<group>";
+		};
 		937EF4BA20EB6C080040DE5C /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,6 +616,7 @@
 			children = (
 				9397AAA620DB98E000E7E789 /* ZCEasyLibrary.h */,
 				9397AAA520DB98E000E7E789 /* Macro.h */,
+				3D4C5BDF235F24600008BDB5 /* ZCScreenCapture */,
 				9397AA6B20DB98DF00E7E789 /* Category */,
 				9397AACD20DB98E000E7E789 /* class */,
 				9397AADB20DB98E000E7E789 /* vc */,
@@ -715,8 +738,6 @@
 				9397AA8420DB98DF00E7E789 /* UIView+ZCConvert.m */,
 				9397AA8E20DB98DF00E7E789 /* UIView+ZCCornerRadius.h */,
 				9397AA7B20DB98DF00E7E789 /* UIView+ZCCornerRadius.m */,
-				9397AA8B20DB98DF00E7E789 /* UIView+ZCScreenCapture.h */,
-				9397AA7F20DB98DF00E7E789 /* UIView+ZCScreenCapture.m */,
 				9397AA7820DB98DF00E7E789 /* UIView+ZCSupp.h */,
 				9397AA9220DB98DF00E7E789 /* UIView+ZCSupp.m */,
 				9390444E20FC7ED20005492B /* UIView+ZCSubview.h */,
@@ -934,24 +955,20 @@
 				9397AAF520DB98E100E7E789 /* UITextView+ZCHandleMaxTextLength.h in Headers */,
 				9397AB2920DB98E100E7E789 /* UITextView+ZCKeyBoardTopBar.h in Headers */,
 				9397AAFF20DB98E100E7E789 /* UITextView+ZCSelectedRange.h in Headers */,
-				3D4C5BC3235F206B0008BDB5 /* NSObject+ZCToString.h in Headers */,
 				9397AAF720DB98E100E7E789 /* UIView+ZCConvert.h in Headers */,
 				9397AB1120DB98E100E7E789 /* UIView+ZCCornerRadius.h in Headers */,
-				9397AB0E20DB98E100E7E789 /* UIView+ZCScreenCapture.h in Headers */,
 				9390445020FC7ED20005492B /* UIView+ZCSubview.h in Headers */,
 				9397AAFB20DB98E100E7E789 /* UIView+ZCSupp.h in Headers */,
 				9397AB2320DB98E100E7E789 /* NSAttributedString+ZCSupp.h in Headers */,
 				9397AB2220DB98E100E7E789 /* NSAttributedString+ZCTag.h in Headers */,
 				9397AB1820DB98E100E7E789 /* NSMutableAttributedString+ZCSetStyle.h in Headers */,
 				9396A1A92126B9A100A8AE88 /* NSObject+ZCDoubleValue.h in Headers */,
-				3D4C5BC1235F206B0008BDB5 /* NSString+ZCSupp.h in Headers */,
 				9397AB1620DB98E100E7E789 /* NSObject+ZCRuntime.h in Headers */,
 				9397AB1720DB98E100E7E789 /* NSString+ZCSize.h in Headers */,
 				9397AB5620DB98E100E7E789 /* ZCAlert.h in Headers */,
 				9397AB2520DB98E100E7E789 /* ZCAlertView.h in Headers */,
 				9397AB5520DB98E100E7E789 /* ZCApp.h in Headers */,
 				9397AB5220DB98E100E7E789 /* ZCAppUpdateVersion.h in Headers */,
-				3D4C5BBC235F206B0008BDB5 /* NSString+ZCFile.h in Headers */,
 				9397AA4320DB979C00E7E789 /* ZCBankcard.h in Headers */,
 				9397AAED20DB98E100E7E789 /* ZCBannerView.h in Headers */,
 				9397AA4920DB979C00E7E789 /* ZCCacheManage.h in Headers */,
@@ -983,9 +1000,13 @@
 				3D4C5B99235F0D3F0008BDB5 /* NSDictionary+ZCJson.h in Headers */,
 				3D4C5B71235F0C870008BDB5 /* NSDateFormatter+ZCSupp.h in Headers */,
 				3D4C5B70235F0C870008BDB5 /* ZCCalendar.h in Headers */,
-				3D4C5BBD235F206B0008BDB5 /* NSString+ZCRegularRegex.h in Headers */,
 				3D4C5B84235F0D260008BDB5 /* NSString+ZCEncrypt.h in Headers */,
 				9397AB4520DB98E100E7E789 /* ZCPickerView.h in Headers */,
+				3D4C5BE3235F24600008BDB5 /* UIView+ZCScreenCapture.h in Headers */,
+				3D4C5BC3235F206B0008BDB5 /* NSObject+ZCToString.h in Headers */,
+				3D4C5BC1235F206B0008BDB5 /* NSString+ZCSupp.h in Headers */,
+				3D4C5BBC235F206B0008BDB5 /* NSString+ZCFile.h in Headers */,
+				3D4C5BBD235F206B0008BDB5 /* NSString+ZCRegularRegex.h in Headers */,
 				3D4C5BCC235F20890008BDB5 /* NSArray+ZCMutableDeepCopy.h in Headers */,
 				3D4C5BCB235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.h in Headers */,
 				3D4C5B72235F0C870008BDB5 /* NSDateComponents+ZCSupp.h in Headers */,
@@ -1020,7 +1041,13 @@
 				937EF51320EB7B140040DE5C /* NSString+ZCQRCode.h in Headers */,
 				937EF54D20EB8BFE0040DE5C /* ZCMenuItem.h in Headers */,
 				937EF54E20EB8BFE0040DE5C /* ZCMenu.h in Headers */,
+				3D4C5BEC235F25120008BDB5 /* NSString+ZCRegularRegex.h in Headers */,
+				3D4C5BEA235F25120008BDB5 /* NSString+ZCFile.h in Headers */,
+				3D4C5BE8235F25120008BDB5 /* NSObject+ZCToString.h in Headers */,
+				3D4C5BEE235F25120008BDB5 /* NSString+ZCSupp.h in Headers */,
 				9391155220ECA7100016F643 /* NSAlert+ZCEasy.h in Headers */,
+				3D4C5BE4235F24F70008BDB5 /* NSArray+ZCMutableDeepCopy.h in Headers */,
+				3D4C5BE6235F24F70008BDB5 /* NSDictionary+ZCMutableDeepCopy.h in Headers */,
 				9397AA6120DB97B200E7E789 /* ZCCacheManage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1234,7 +1261,6 @@
 				9397AB0C20DB98E100E7E789 /* UITableView+ZCPaging.m in Sources */,
 				9397AB5720DB98E100E7E789 /* ZCAlert.m in Sources */,
 				9397AB3E20DB98E100E7E789 /* ZCVerticalButton.m in Sources */,
-				9397AB0220DB98E100E7E789 /* UIView+ZCScreenCapture.m in Sources */,
 				93A71A9C20F092F2000C7209 /* ZCSetting.m in Sources */,
 				3D4C5BC2235F206B0008BDB5 /* NSString+ZCRegularRegex.m in Sources */,
 				9397AB1520DB98E100E7E789 /* UIView+ZCSupp.m in Sources */,
@@ -1270,6 +1296,7 @@
 				9397AAEF20DB98E100E7E789 /* ZCBannerView.m in Sources */,
 				3D4C5BCA235F20890008BDB5 /* NSDictionary+ZCMutableDeepCopy.m in Sources */,
 				9397AB4E20DB98E100E7E789 /* ZCTimeCountDown.m in Sources */,
+				3D4C5BE2235F24600008BDB5 /* UIView+ZCScreenCapture.m in Sources */,
 				9397AB1F20DB98E100E7E789 /* NSMutableAttributedString+ZCSetStyle.m in Sources */,
 				9397AB1020DB98E100E7E789 /* UIButton+ZCSupp.m in Sources */,
 				9397AB1D20DB98E100E7E789 /* NSObject+ZCRuntime.m in Sources */,
@@ -1319,7 +1346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4C5BEF235F25120008BDB5 /* NSString+ZCSupp.m in Sources */,
 				3D4C5B7C235F0CF50008BDB5 /* ZCCalendar.m in Sources */,
+				3D4C5BED235F25120008BDB5 /* NSString+ZCRegularRegex.m in Sources */,
+				3D4C5BE5235F24F70008BDB5 /* NSArray+ZCMutableDeepCopy.m in Sources */,
+				3D4C5BE7235F24F70008BDB5 /* NSDictionary+ZCMutableDeepCopy.m in Sources */,
 				937EF52020EB7BF40040DE5C /* NSView+ZCBackgroundColor.m in Sources */,
 				937EF51C20EB7BAF0040DE5C /* NSView+ZCBorder.m in Sources */,
 				937EF4F820EB74C10040DE5C /* ZCBankcard.m in Sources */,
@@ -1327,6 +1358,7 @@
 				3D4C5B94235F0D3F0008BDB5 /* NSDictionary+ZCJson.m in Sources */,
 				937EF4F920EB74C10040DE5C /* ZCCacheManage.m in Sources */,
 				3D4C5B78235F0CF50008BDB5 /* NSDateComponents+ZCSupp.m in Sources */,
+				3D4C5BEB235F25120008BDB5 /* NSString+ZCFile.m in Sources */,
 				937EF54720EB8B770040DE5C /* ZCScanQRCode.m in Sources */,
 				937EF51420EB7B140040DE5C /* NSString+ZCQRCode.m in Sources */,
 				3D4C5B98235F0D3F0008BDB5 /* NSData+ZCJson.m in Sources */,
@@ -1337,6 +1369,7 @@
 				937EF4CB20EB6C080040DE5C /* NSView+ZCSupp.m in Sources */,
 				3D4C5B96235F0D3F0008BDB5 /* NSArray+ZCJson.m in Sources */,
 				3D4C5B83235F0D260008BDB5 /* NSData+ZCEncrypt.m in Sources */,
+				3D4C5BE9235F25120008BDB5 /* NSObject+ZCToString.m in Sources */,
 				3D4C5B87235F0D260008BDB5 /* NSString+ZCEncrypt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1533,6 +1566,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.ZCMacEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -1559,6 +1593,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 2.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.ZCMacEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;

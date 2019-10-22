@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCEasyLibrary"
-  spec.version      = "2.0.4"
+  spec.version      = "2.0.6"
   spec.summary      = "ZCEasyLibrary Kit"
   spec.description  = "ZCEasyLibrary 拓展库+UI库"
   spec.platform     = :ios, '8.0'
@@ -31,7 +31,11 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'ZCString' do |zcstring|
     zcstring.source_files = 'Library/ZCString/**/*.{h,m,c,mm}'
-    #zcstring.dependency 'AFNetworking', '~> 3.0'
+  end
+
+  spec.subspec 'ZCScreenCapture' do |zcscreenCapture|
+    zcscreenCapture.source_files = 'Library/ZCScreenCapture/**/*.{h,m,c,mm}'
+    #zcscreenCapture.dependency 'AFNetworking', '~> 3.0'
   end
 
   spec.requires_arc = true
