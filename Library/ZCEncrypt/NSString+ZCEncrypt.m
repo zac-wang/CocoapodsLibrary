@@ -7,18 +7,17 @@
 //
 
 #import "NSString+ZCEncrypt.h"
-#import "NSString+ZCSupp.h"
 #import "NSData+ZCEncrypt.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (ZCEncrypt)
 
 - (NSString *)zc_md5 {
-    return self.zc_data.zc_md5;
+    return [self dataUsingEncoding:NSUTF8StringEncoding].zc_md5;
 }
 
 - (NSString *)zc_sha1 {
-    return self.zc_data.zc_sha1;
+    return [self dataUsingEncoding:NSUTF8StringEncoding].zc_sha1;
 }
 
 #define EveryTimeReadSize 64 * 1024 * 1024
@@ -47,7 +46,7 @@
 }
 
 - (NSString *)zc_base64 {
-    return self.zc_data.zc_base64;
+    return [self dataUsingEncoding:NSUTF8StringEncoding].zc_base64;
 }
 
 - (NSData *)zc_base64DecodeData {

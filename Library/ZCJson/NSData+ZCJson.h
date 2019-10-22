@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+ZCToString.h"
 
 @interface NSData (ZCJson)
 

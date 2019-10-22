@@ -17,7 +17,7 @@
 
 - (NSString *)zc_toJsonString {
     NSData *data = [self zc_toJsonData];
-    return data.zc_toString;
+    return [[NSString alloc] initWithData:(NSData *)data encoding:NSUTF8StringEncoding];
 }
 
 @end
