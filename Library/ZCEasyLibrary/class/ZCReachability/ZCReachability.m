@@ -342,7 +342,7 @@ static void ZCReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
 }
 
 + (NSString *)networkingDescription {
-    int type = [self networkingType];
+    NetworkStatus type = [self networkingType];
     return NetworkingDescription[type];
 }
 

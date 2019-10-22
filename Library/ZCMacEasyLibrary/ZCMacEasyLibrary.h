@@ -34,4 +34,3 @@
 #import "ZCMenu.h"
 #import "ZCMenuItem.h"
 #import "ZCScanQRCode.h"
-#import "ZCSetting.h"

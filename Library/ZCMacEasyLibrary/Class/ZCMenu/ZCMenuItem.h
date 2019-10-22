@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef void (^MenuItemBlock)(NSMenuItem * _Nonnull);
+typedef void (^MenuItemBlock)(NSMenuItem *);
 
 @interface ZCMenuItem : NSMenuItem
 

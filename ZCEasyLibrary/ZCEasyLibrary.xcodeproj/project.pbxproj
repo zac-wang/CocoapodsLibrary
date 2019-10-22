@@ -1107,6 +1107,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9397A9D720DB974900E7E789;
 			productRefGroup = 9397A9E220DB974A00E7E789 /* Products */;
@@ -1164,7 +1165,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#头文件目录\nheadDir=${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/Headers/\n#public头文件路径\npublicFilePath=../Library/ZCMacEasyLibrary/${EXECUTABLE_NAME}.h\n#删除public头文件原数据\nsed -i '' '/#import \"/d' ${publicFilePath}\n#更新public头文件\nls ${headDir} | grep -v ${EXECUTABLE_NAME} | xargs -n 1 -I{} echo '#import \"{}\"' >> ${publicFilePath}";
+			shellScript = "#头文件目录\nheadDir=${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/Headers/\n#public头文件路径\npublicFilePath=../Library/ZCMacEasyLibrary/${EXECUTABLE_NAME}.h\n#删除public头文件原数据\nsed -i '' '/#import \"/d' ${publicFilePath}\n#更新public头文件\nls ${headDir} | grep -v ${EXECUTABLE_NAME} | xargs -n 1 -I{} echo '#import \"{}\"' >> ${publicFilePath}\n";
 		};
 		937EF52320EB87810040DE5C /* 修改ZCEasyLibrary.podspec 版本号 */ = {
 			isa = PBXShellScriptBuildPhase;

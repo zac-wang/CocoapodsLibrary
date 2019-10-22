@@ -20,7 +20,7 @@
 
 
 /// 获取值
-- (nullable id)zc_objectForKey:(NSString *)defaultName;
+- (id)zc_objectForKey:(NSString *)defaultName;
 
 /// 获取值
 - (NSInteger)zc_integerForKey:(NSString *)defaultName;
