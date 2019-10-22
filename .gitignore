@@ -1,6 +1,5 @@
 .DS_Store
 **/*.xcodeproj/xcuserdata
-CocoapodsLibrary.xcodeproj/project.xcworkspace
 
 # 编译临时文件
 build
@@ -8,8 +7,9 @@ build
 # cocoapod文件
 Pods
 CocoapodsLibrary.xcworkspace
+CocoapodsLibrary.xcodeproj/project.xcworkspace
 
 # 测试文件
-CocoapodsLibrary/Demo/test
+Demo/CocoapodsLibrary/test
 
 Modules
