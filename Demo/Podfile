@@ -10,7 +10,9 @@ target 'CocoapodsLibrary'  do
 
 pod 'AFNetworking'
 pod 'ZCCalendarView'
+#pod 'ZCCalendarView', :path =>'../'
 pod 'ZCEasyLibrary'
+#pod 'ZCEasyLibrary', :path =>'../'
 
 end
 

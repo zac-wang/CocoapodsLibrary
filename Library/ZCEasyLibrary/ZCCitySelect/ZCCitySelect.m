@@ -53,7 +53,8 @@
 {
     [self.zc_backView zc_drawCornerRadius:0];
     
-    NSString *addressPath = [[NSBundle mainBundle] pathForResource:@"ZCCitySelectAddressData" ofType:@"plist"];
+    NSBundle *easyLibrary = [NSBundle bundleWithIdentifier:@"org.cocoapods.ZCEasyLibrary"];
+    NSString *addressPath = [easyLibrary pathForResource:@"ZCCitySelectAddressData" ofType:@"plist"];
     self.dataArr = [NSArray arrayWithContentsOfFile:addressPath];
     
     self.pic = [[UIPickerView alloc] initWithFrame:CGRectZero];
