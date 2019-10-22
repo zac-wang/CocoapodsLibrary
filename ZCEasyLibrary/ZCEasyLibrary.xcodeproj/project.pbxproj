@@ -8,6 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		3D2DC91D2189C94C00BC5BDC /* ZCCitySelectAddressData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D2DC91C2189C94B00BC5BDC /* ZCCitySelectAddressData.plist */; };
+		3D4C5B6D235F0C870008BDB5 /* NSDateComponents+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B65235F0C870008BDB5 /* NSDateComponents+ZCSupp.m */; };
+		3D4C5B6E235F0C870008BDB5 /* NSDateFormatter+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B66235F0C870008BDB5 /* NSDateFormatter+ZCSupp.m */; };
+		3D4C5B6F235F0C870008BDB5 /* NSDate+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B67235F0C870008BDB5 /* NSDate+ZCSupp.m */; };
+		3D4C5B70235F0C870008BDB5 /* ZCCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B68235F0C870008BDB5 /* ZCCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B71235F0C870008BDB5 /* NSDateFormatter+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B69235F0C870008BDB5 /* NSDateFormatter+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B72235F0C870008BDB5 /* NSDateComponents+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B6A235F0C870008BDB5 /* NSDateComponents+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B73235F0C870008BDB5 /* NSDate+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B6B235F0C870008BDB5 /* NSDate+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B74235F0C870008BDB5 /* ZCCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B6C235F0C870008BDB5 /* ZCCalendar.m */; };
+		3D4C5B75235F0CEE0008BDB5 /* NSDate+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B6B235F0C870008BDB5 /* NSDate+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B76235F0CF10008BDB5 /* NSDate+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B67235F0C870008BDB5 /* NSDate+ZCSupp.m */; };
+		3D4C5B77235F0CF50008BDB5 /* NSDateComponents+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B6A235F0C870008BDB5 /* NSDateComponents+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B78235F0CF50008BDB5 /* NSDateComponents+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B65235F0C870008BDB5 /* NSDateComponents+ZCSupp.m */; };
+		3D4C5B79235F0CF50008BDB5 /* NSDateFormatter+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B69235F0C870008BDB5 /* NSDateFormatter+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B7A235F0CF50008BDB5 /* NSDateFormatter+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B66235F0C870008BDB5 /* NSDateFormatter+ZCSupp.m */; };
+		3D4C5B7B235F0CF50008BDB5 /* ZCCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B68235F0C870008BDB5 /* ZCCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B7C235F0CF50008BDB5 /* ZCCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B6C235F0C870008BDB5 /* ZCCalendar.m */; };
+		3D4C5B82235F0D260008BDB5 /* NSData+ZCEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B7E235F0D260008BDB5 /* NSData+ZCEncrypt.m */; };
+		3D4C5B83235F0D260008BDB5 /* NSData+ZCEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B7E235F0D260008BDB5 /* NSData+ZCEncrypt.m */; };
+		3D4C5B84235F0D260008BDB5 /* NSString+ZCEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B7F235F0D260008BDB5 /* NSString+ZCEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B85235F0D260008BDB5 /* NSString+ZCEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B7F235F0D260008BDB5 /* NSString+ZCEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B86235F0D260008BDB5 /* NSString+ZCEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B80235F0D260008BDB5 /* NSString+ZCEncrypt.m */; };
+		3D4C5B87235F0D260008BDB5 /* NSString+ZCEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B80235F0D260008BDB5 /* NSString+ZCEncrypt.m */; };
+		3D4C5B88235F0D260008BDB5 /* NSData+ZCEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B81235F0D260008BDB5 /* NSData+ZCEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B89235F0D260008BDB5 /* NSData+ZCEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B81235F0D260008BDB5 /* NSData+ZCEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B91235F0D3F0008BDB5 /* NSData+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B8B235F0D3F0008BDB5 /* NSData+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B92235F0D3F0008BDB5 /* NSData+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B8B235F0D3F0008BDB5 /* NSData+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B93235F0D3F0008BDB5 /* NSDictionary+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B8C235F0D3F0008BDB5 /* NSDictionary+ZCJson.m */; };
+		3D4C5B94235F0D3F0008BDB5 /* NSDictionary+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B8C235F0D3F0008BDB5 /* NSDictionary+ZCJson.m */; };
+		3D4C5B95235F0D3F0008BDB5 /* NSArray+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B8D235F0D3F0008BDB5 /* NSArray+ZCJson.m */; };
+		3D4C5B96235F0D3F0008BDB5 /* NSArray+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B8D235F0D3F0008BDB5 /* NSArray+ZCJson.m */; };
+		3D4C5B97235F0D3F0008BDB5 /* NSData+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B8E235F0D3F0008BDB5 /* NSData+ZCJson.m */; };
+		3D4C5B98235F0D3F0008BDB5 /* NSData+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4C5B8E235F0D3F0008BDB5 /* NSData+ZCJson.m */; };
+		3D4C5B99235F0D3F0008BDB5 /* NSDictionary+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B8F235F0D3F0008BDB5 /* NSDictionary+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B9A235F0D3F0008BDB5 /* NSDictionary+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B8F235F0D3F0008BDB5 /* NSDictionary+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B9B235F0D3F0008BDB5 /* NSArray+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B90235F0D3F0008BDB5 /* NSArray+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D4C5B9C235F0D3F0008BDB5 /* NSArray+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4C5B90235F0D3F0008BDB5 /* NSArray+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		937EF4CB20EB6C080040DE5C /* NSView+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 937EF4BE20EB6C080040DE5C /* NSView+ZCSupp.m */; };
 		937EF4CE20EB6C080040DE5C /* NSView+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 937EF4C120EB6C080040DE5C /* NSView+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		937EF4D320EB6C080040DE5C /* ZCMacEasyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 937EF4C820EB6C080040DE5C /* ZCMacEasyLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,15 +53,6 @@
 		937EF4F720EB74C10040DE5C /* NSString+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0B20DB979C00E7E789 /* NSString+ZCSupp.m */; };
 		937EF4F820EB74C10040DE5C /* ZCBankcard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA1720DB979C00E7E789 /* ZCBankcard.m */; };
 		937EF4F920EB74C10040DE5C /* ZCCacheManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA1F20DB979C00E7E789 /* ZCCacheManage.m */; };
-		937EF4FC20EB74C10040DE5C /* NSDate+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA2420DB979C00E7E789 /* NSDate+ZCSupp.m */; };
-		937EF4FD20EB74C10040DE5C /* NSDateComponents+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA2220DB979C00E7E789 /* NSDateComponents+ZCSupp.m */; };
-		937EF4FE20EB74C10040DE5C /* NSDateFormatter+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA2320DB979C00E7E789 /* NSDateFormatter+ZCSupp.m */; };
-		937EF4FF20EB74C10040DE5C /* ZCCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA2920DB979C00E7E789 /* ZCCalendar.m */; };
-		937EF50020EB74C10040DE5C /* NSData+ZCEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA1220DB979C00E7E789 /* NSData+ZCEncrypt.m */; };
-		937EF50120EB74C10040DE5C /* NSString+ZCEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA1420DB979C00E7E789 /* NSString+ZCEncrypt.m */; };
-		937EF50220EB74C10040DE5C /* NSArray+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0420DB979C00E7E789 /* NSArray+ZCJson.m */; };
-		937EF50320EB74C10040DE5C /* NSData+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0520DB979C00E7E789 /* NSData+ZCJson.m */; };
-		937EF50420EB74C10040DE5C /* NSDictionary+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0320DB979C00E7E789 /* NSDictionary+ZCJson.m */; };
 		937EF50520EB74C10040DE5C /* NSArray+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397A9FC20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.m */; };
 		937EF50620EB74C10040DE5C /* NSDictionary+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397A9FD20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.m */; };
 		937EF50D20EB754C0040DE5C /* CNContact+ZCToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 937EF50920EB754C0040DE5C /* CNContact+ZCToDictionary.m */; };
@@ -58,12 +85,6 @@
 		9397AA2C20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397A9FD20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.m */; };
 		9397AA2E20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397A9FF20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA2F20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0020DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA3020DB979C00E7E789 /* NSData+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0220DB979C00E7E789 /* NSData+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA3120DB979C00E7E789 /* NSDictionary+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0320DB979C00E7E789 /* NSDictionary+ZCJson.m */; };
-		9397AA3220DB979C00E7E789 /* NSArray+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0420DB979C00E7E789 /* NSArray+ZCJson.m */; };
-		9397AA3320DB979C00E7E789 /* NSData+ZCJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0520DB979C00E7E789 /* NSData+ZCJson.m */; };
-		9397AA3420DB979C00E7E789 /* NSDictionary+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0620DB979C00E7E789 /* NSDictionary+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA3520DB979C00E7E789 /* NSArray+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0720DB979C00E7E789 /* NSArray+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA3620DB979C00E7E789 /* NSString+ZCFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0920DB979C00E7E789 /* NSString+ZCFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA3720DB979C00E7E789 /* NSString+ZCRegularRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0A20DB979C00E7E789 /* NSString+ZCRegularRegex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA3820DB979C00E7E789 /* NSString+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0B20DB979C00E7E789 /* NSString+ZCSupp.m */; };
@@ -72,39 +93,18 @@
 		9397AA3B20DB979C00E7E789 /* NSString+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0E20DB979C00E7E789 /* NSString+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA3C20DB979C00E7E789 /* NSString+ZCRegularRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA0F20DB979C00E7E789 /* NSString+ZCRegularRegex.m */; };
 		9397AA3D20DB979C00E7E789 /* NSObject+ZCToString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA1020DB979C00E7E789 /* NSObject+ZCToString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA3E20DB979C00E7E789 /* NSData+ZCEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA1220DB979C00E7E789 /* NSData+ZCEncrypt.m */; };
-		9397AA3F20DB979C00E7E789 /* NSString+ZCEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA1320DB979C00E7E789 /* NSString+ZCEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA4020DB979C00E7E789 /* NSString+ZCEncrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA1420DB979C00E7E789 /* NSString+ZCEncrypt.m */; };
-		9397AA4120DB979C00E7E789 /* NSData+ZCEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA1520DB979C00E7E789 /* NSData+ZCEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA4220DB979C00E7E789 /* ZCBankcard.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA1720DB979C00E7E789 /* ZCBankcard.m */; };
 		9397AA4320DB979C00E7E789 /* ZCBankcard.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA1820DB979C00E7E789 /* ZCBankcard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA4820DB979C00E7E789 /* ZCCacheManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA1F20DB979C00E7E789 /* ZCCacheManage.m */; };
 		9397AA4920DB979C00E7E789 /* ZCCacheManage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2020DB979C00E7E789 /* ZCCacheManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA4A20DB979C00E7E789 /* NSDateComponents+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA2220DB979C00E7E789 /* NSDateComponents+ZCSupp.m */; };
-		9397AA4B20DB979C00E7E789 /* NSDateFormatter+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA2320DB979C00E7E789 /* NSDateFormatter+ZCSupp.m */; };
-		9397AA4C20DB979C00E7E789 /* NSDate+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA2420DB979C00E7E789 /* NSDate+ZCSupp.m */; };
-		9397AA4D20DB979C00E7E789 /* ZCCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2520DB979C00E7E789 /* ZCCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA4E20DB979C00E7E789 /* NSDateFormatter+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2620DB979C00E7E789 /* NSDateFormatter+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA4F20DB979C00E7E789 /* NSDateComponents+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2720DB979C00E7E789 /* NSDateComponents+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA5020DB979C00E7E789 /* NSDate+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2820DB979C00E7E789 /* NSDate+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA5120DB979C00E7E789 /* ZCCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA2920DB979C00E7E789 /* ZCCalendar.m */; };
 		9397AA5320DB97B200E7E789 /* NSDictionary+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397A9FF20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA5420DB97B200E7E789 /* NSArray+ZCMutableDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0020DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA5520DB97B200E7E789 /* NSData+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0220DB979C00E7E789 /* NSData+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA5620DB97B200E7E789 /* NSDictionary+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0620DB979C00E7E789 /* NSDictionary+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA5720DB97B200E7E789 /* NSArray+ZCJson.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0720DB979C00E7E789 /* NSArray+ZCJson.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA5820DB97B200E7E789 /* NSString+ZCFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0920DB979C00E7E789 /* NSString+ZCFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA5920DB97B200E7E789 /* NSString+ZCRegularRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0A20DB979C00E7E789 /* NSString+ZCRegularRegex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA5A20DB97B200E7E789 /* NSString+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA0E20DB979C00E7E789 /* NSString+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA5B20DB97B200E7E789 /* NSObject+ZCToString.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA1020DB979C00E7E789 /* NSObject+ZCToString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA5C20DB97B200E7E789 /* NSString+ZCEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA1320DB979C00E7E789 /* NSString+ZCEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA5D20DB97B200E7E789 /* NSData+ZCEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA1520DB979C00E7E789 /* NSData+ZCEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA5E20DB97B200E7E789 /* ZCBankcard.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA1820DB979C00E7E789 /* ZCBankcard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AA6120DB97B200E7E789 /* ZCCacheManage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2020DB979C00E7E789 /* ZCCacheManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA6220DB97B200E7E789 /* ZCCalendar.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2520DB979C00E7E789 /* ZCCalendar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA6320DB97B200E7E789 /* NSDateFormatter+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2620DB979C00E7E789 /* NSDateFormatter+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA6420DB97B200E7E789 /* NSDateComponents+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2720DB979C00E7E789 /* NSDateComponents+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9397AA6520DB97B200E7E789 /* NSDate+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA2820DB979C00E7E789 /* NSDate+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AAEC20DB98E100E7E789 /* ZCBannerImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA6720DB98DF00E7E789 /* ZCBannerImageView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9397AAED20DB98E100E7E789 /* ZCBannerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9397AA6820DB98DF00E7E789 /* ZCBannerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9397AAEE20DB98E100E7E789 /* ZCBannerImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9397AA6920DB98DF00E7E789 /* ZCBannerImageView.m */; };
@@ -227,6 +227,24 @@
 
 /* Begin PBXFileReference section */
 		3D2DC91C2189C94B00BC5BDC /* ZCCitySelectAddressData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZCCitySelectAddressData.plist; sourceTree = "<group>"; };
+		3D4C5B65235F0C870008BDB5 /* NSDateComponents+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+ZCSupp.m"; sourceTree = "<group>"; };
+		3D4C5B66235F0C870008BDB5 /* NSDateFormatter+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+ZCSupp.m"; sourceTree = "<group>"; };
+		3D4C5B67235F0C870008BDB5 /* NSDate+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZCSupp.m"; sourceTree = "<group>"; };
+		3D4C5B68235F0C870008BDB5 /* ZCCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendar.h; sourceTree = "<group>"; };
+		3D4C5B69235F0C870008BDB5 /* NSDateFormatter+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+ZCSupp.h"; sourceTree = "<group>"; };
+		3D4C5B6A235F0C870008BDB5 /* NSDateComponents+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+ZCSupp.h"; sourceTree = "<group>"; };
+		3D4C5B6B235F0C870008BDB5 /* NSDate+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZCSupp.h"; sourceTree = "<group>"; };
+		3D4C5B6C235F0C870008BDB5 /* ZCCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendar.m; sourceTree = "<group>"; };
+		3D4C5B7E235F0D260008BDB5 /* NSData+ZCEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZCEncrypt.m"; sourceTree = "<group>"; };
+		3D4C5B7F235F0D260008BDB5 /* NSString+ZCEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCEncrypt.h"; sourceTree = "<group>"; };
+		3D4C5B80235F0D260008BDB5 /* NSString+ZCEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZCEncrypt.m"; sourceTree = "<group>"; };
+		3D4C5B81235F0D260008BDB5 /* NSData+ZCEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ZCEncrypt.h"; sourceTree = "<group>"; };
+		3D4C5B8B235F0D3F0008BDB5 /* NSData+ZCJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ZCJson.h"; sourceTree = "<group>"; };
+		3D4C5B8C235F0D3F0008BDB5 /* NSDictionary+ZCJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZCJson.m"; sourceTree = "<group>"; };
+		3D4C5B8D235F0D3F0008BDB5 /* NSArray+ZCJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ZCJson.m"; sourceTree = "<group>"; };
+		3D4C5B8E235F0D3F0008BDB5 /* NSData+ZCJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZCJson.m"; sourceTree = "<group>"; };
+		3D4C5B8F235F0D3F0008BDB5 /* NSDictionary+ZCJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZCJson.h"; sourceTree = "<group>"; };
+		3D4C5B90235F0D3F0008BDB5 /* NSArray+ZCJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZCJson.h"; sourceTree = "<group>"; };
 		937EF4BE20EB6C080040DE5C /* NSView+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ZCSupp.m"; sourceTree = "<group>"; };
 		937EF4C120EB6C080040DE5C /* NSView+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ZCSupp.h"; sourceTree = "<group>"; };
 		937EF4C820EB6C080040DE5C /* ZCMacEasyLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZCMacEasyLibrary.h; path = ../../Library/ZCMacEasyLibrary/ZCMacEasyLibrary.h; sourceTree = "<group>"; };
@@ -264,12 +282,6 @@
 		9397A9FD20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZCMutableDeepCopy.m"; sourceTree = "<group>"; };
 		9397A9FF20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZCMutableDeepCopy.h"; sourceTree = "<group>"; };
 		9397AA0020DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZCMutableDeepCopy.h"; sourceTree = "<group>"; };
-		9397AA0220DB979C00E7E789 /* NSData+ZCJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ZCJson.h"; sourceTree = "<group>"; };
-		9397AA0320DB979C00E7E789 /* NSDictionary+ZCJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZCJson.m"; sourceTree = "<group>"; };
-		9397AA0420DB979C00E7E789 /* NSArray+ZCJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ZCJson.m"; sourceTree = "<group>"; };
-		9397AA0520DB979C00E7E789 /* NSData+ZCJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZCJson.m"; sourceTree = "<group>"; };
-		9397AA0620DB979C00E7E789 /* NSDictionary+ZCJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZCJson.h"; sourceTree = "<group>"; };
-		9397AA0720DB979C00E7E789 /* NSArray+ZCJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZCJson.h"; sourceTree = "<group>"; };
 		9397AA0920DB979C00E7E789 /* NSString+ZCFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCFile.h"; sourceTree = "<group>"; };
 		9397AA0A20DB979C00E7E789 /* NSString+ZCRegularRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCRegularRegex.h"; sourceTree = "<group>"; };
 		9397AA0B20DB979C00E7E789 /* NSString+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZCSupp.m"; sourceTree = "<group>"; };
@@ -278,22 +290,10 @@
 		9397AA0E20DB979C00E7E789 /* NSString+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCSupp.h"; sourceTree = "<group>"; };
 		9397AA0F20DB979C00E7E789 /* NSString+ZCRegularRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZCRegularRegex.m"; sourceTree = "<group>"; };
 		9397AA1020DB979C00E7E789 /* NSObject+ZCToString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZCToString.h"; sourceTree = "<group>"; };
-		9397AA1220DB979C00E7E789 /* NSData+ZCEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZCEncrypt.m"; sourceTree = "<group>"; };
-		9397AA1320DB979C00E7E789 /* NSString+ZCEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCEncrypt.h"; sourceTree = "<group>"; };
-		9397AA1420DB979C00E7E789 /* NSString+ZCEncrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZCEncrypt.m"; sourceTree = "<group>"; };
-		9397AA1520DB979C00E7E789 /* NSData+ZCEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ZCEncrypt.h"; sourceTree = "<group>"; };
 		9397AA1720DB979C00E7E789 /* ZCBankcard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCBankcard.m; sourceTree = "<group>"; };
 		9397AA1820DB979C00E7E789 /* ZCBankcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBankcard.h; sourceTree = "<group>"; };
 		9397AA1F20DB979C00E7E789 /* ZCCacheManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCacheManage.m; sourceTree = "<group>"; };
 		9397AA2020DB979C00E7E789 /* ZCCacheManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCacheManage.h; sourceTree = "<group>"; };
-		9397AA2220DB979C00E7E789 /* NSDateComponents+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+ZCSupp.m"; sourceTree = "<group>"; };
-		9397AA2320DB979C00E7E789 /* NSDateFormatter+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+ZCSupp.m"; sourceTree = "<group>"; };
-		9397AA2420DB979C00E7E789 /* NSDate+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZCSupp.m"; sourceTree = "<group>"; };
-		9397AA2520DB979C00E7E789 /* ZCCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalendar.h; sourceTree = "<group>"; };
-		9397AA2620DB979C00E7E789 /* NSDateFormatter+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+ZCSupp.h"; sourceTree = "<group>"; };
-		9397AA2720DB979C00E7E789 /* NSDateComponents+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+ZCSupp.h"; sourceTree = "<group>"; };
-		9397AA2820DB979C00E7E789 /* NSDate+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZCSupp.h"; sourceTree = "<group>"; };
-		9397AA2920DB979C00E7E789 /* ZCCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalendar.m; sourceTree = "<group>"; };
 		9397AA6720DB98DF00E7E789 /* ZCBannerImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBannerImageView.h; sourceTree = "<group>"; };
 		9397AA6820DB98DF00E7E789 /* ZCBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBannerView.h; sourceTree = "<group>"; };
 		9397AA6920DB98DF00E7E789 /* ZCBannerImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCBannerImageView.m; sourceTree = "<group>"; };
@@ -432,6 +432,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D4C5B64235F0C870008BDB5 /* ZCDate */ = {
+			isa = PBXGroup;
+			children = (
+				3D4C5B6B235F0C870008BDB5 /* NSDate+ZCSupp.h */,
+				3D4C5B67235F0C870008BDB5 /* NSDate+ZCSupp.m */,
+				3D4C5B6A235F0C870008BDB5 /* NSDateComponents+ZCSupp.h */,
+				3D4C5B65235F0C870008BDB5 /* NSDateComponents+ZCSupp.m */,
+				3D4C5B69235F0C870008BDB5 /* NSDateFormatter+ZCSupp.h */,
+				3D4C5B66235F0C870008BDB5 /* NSDateFormatter+ZCSupp.m */,
+				3D4C5B68235F0C870008BDB5 /* ZCCalendar.h */,
+				3D4C5B6C235F0C870008BDB5 /* ZCCalendar.m */,
+			);
+			name = ZCDate;
+			path = ../ZCDate;
+			sourceTree = "<group>";
+		};
+		3D4C5B7D235F0D260008BDB5 /* ZCEncrypt */ = {
+			isa = PBXGroup;
+			children = (
+				3D4C5B81235F0D260008BDB5 /* NSData+ZCEncrypt.h */,
+				3D4C5B7E235F0D260008BDB5 /* NSData+ZCEncrypt.m */,
+				3D4C5B7F235F0D260008BDB5 /* NSString+ZCEncrypt.h */,
+				3D4C5B80235F0D260008BDB5 /* NSString+ZCEncrypt.m */,
+			);
+			name = ZCEncrypt;
+			path = ../ZCEncrypt;
+			sourceTree = "<group>";
+		};
+		3D4C5B8A235F0D3F0008BDB5 /* ZCJson */ = {
+			isa = PBXGroup;
+			children = (
+				3D4C5B90235F0D3F0008BDB5 /* NSArray+ZCJson.h */,
+				3D4C5B8D235F0D3F0008BDB5 /* NSArray+ZCJson.m */,
+				3D4C5B8B235F0D3F0008BDB5 /* NSData+ZCJson.h */,
+				3D4C5B8E235F0D3F0008BDB5 /* NSData+ZCJson.m */,
+				3D4C5B8F235F0D3F0008BDB5 /* NSDictionary+ZCJson.h */,
+				3D4C5B8C235F0D3F0008BDB5 /* NSDictionary+ZCJson.m */,
+			);
+			name = ZCJson;
+			path = ../ZCJson;
+			sourceTree = "<group>";
+		};
 		937EF4BA20EB6C080040DE5C /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,12 +610,12 @@
 		9397A9F920DB979C00E7E789 /* EasyLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				9397AA0820DB979C00E7E789 /* Category */,
+				9397AA0820DB979C00E7E789 /* ZCString */,
 				9397AA1620DB979C00E7E789 /* ZCBankcard */,
 				9397AA1E20DB979C00E7E789 /* ZCCacheManage */,
-				9397AA2120DB979C00E7E789 /* ZCDate */,
-				9397AA1120DB979C00E7E789 /* ZCEncrypt */,
-				9397AA0120DB979C00E7E789 /* ZCJson */,
+				3D4C5B64235F0C870008BDB5 /* ZCDate */,
+				3D4C5B7D235F0D260008BDB5 /* ZCEncrypt */,
+				3D4C5B8A235F0D3F0008BDB5 /* ZCJson */,
 				9397A9FA20DB979C00E7E789 /* ZCMutableDeepCopy */,
 			);
 			name = EasyLibrary;
@@ -591,20 +633,7 @@
 			path = ZCMutableDeepCopy;
 			sourceTree = "<group>";
 		};
-		9397AA0120DB979C00E7E789 /* ZCJson */ = {
-			isa = PBXGroup;
-			children = (
-				9397AA0720DB979C00E7E789 /* NSArray+ZCJson.h */,
-				9397AA0420DB979C00E7E789 /* NSArray+ZCJson.m */,
-				9397AA0220DB979C00E7E789 /* NSData+ZCJson.h */,
-				9397AA0520DB979C00E7E789 /* NSData+ZCJson.m */,
-				9397AA0620DB979C00E7E789 /* NSDictionary+ZCJson.h */,
-				9397AA0320DB979C00E7E789 /* NSDictionary+ZCJson.m */,
-			);
-			path = ZCJson;
-			sourceTree = "<group>";
-		};
-		9397AA0820DB979C00E7E789 /* Category */ = {
+		9397AA0820DB979C00E7E789 /* ZCString */ = {
 			isa = PBXGroup;
 			children = (
 				9397AA1020DB979C00E7E789 /* NSObject+ZCToString.h */,
@@ -616,18 +645,7 @@
 				9397AA0E20DB979C00E7E789 /* NSString+ZCSupp.h */,
 				9397AA0B20DB979C00E7E789 /* NSString+ZCSupp.m */,
 			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		9397AA1120DB979C00E7E789 /* ZCEncrypt */ = {
-			isa = PBXGroup;
-			children = (
-				9397AA1520DB979C00E7E789 /* NSData+ZCEncrypt.h */,
-				9397AA1220DB979C00E7E789 /* NSData+ZCEncrypt.m */,
-				9397AA1320DB979C00E7E789 /* NSString+ZCEncrypt.h */,
-				9397AA1420DB979C00E7E789 /* NSString+ZCEncrypt.m */,
-			);
-			path = ZCEncrypt;
+			path = ZCString;
 			sourceTree = "<group>";
 		};
 		9397AA1620DB979C00E7E789 /* ZCBankcard */ = {
@@ -646,21 +664,6 @@
 				9397AA1F20DB979C00E7E789 /* ZCCacheManage.m */,
 			);
 			path = ZCCacheManage;
-			sourceTree = "<group>";
-		};
-		9397AA2120DB979C00E7E789 /* ZCDate */ = {
-			isa = PBXGroup;
-			children = (
-				9397AA2820DB979C00E7E789 /* NSDate+ZCSupp.h */,
-				9397AA2420DB979C00E7E789 /* NSDate+ZCSupp.m */,
-				9397AA2720DB979C00E7E789 /* NSDateComponents+ZCSupp.h */,
-				9397AA2220DB979C00E7E789 /* NSDateComponents+ZCSupp.m */,
-				9397AA2620DB979C00E7E789 /* NSDateFormatter+ZCSupp.h */,
-				9397AA2320DB979C00E7E789 /* NSDateFormatter+ZCSupp.m */,
-				9397AA2520DB979C00E7E789 /* ZCCalendar.h */,
-				9397AA2920DB979C00E7E789 /* ZCCalendar.m */,
-			);
-			path = ZCDate;
 			sourceTree = "<group>";
 		};
 		9397AA6620DB98DF00E7E789 /* ZCBannerView */ = {
@@ -946,22 +949,14 @@
 				9397AB0E20DB98E100E7E789 /* UIView+ZCScreenCapture.h in Headers */,
 				9390445020FC7ED20005492B /* UIView+ZCSubview.h in Headers */,
 				9397AAFB20DB98E100E7E789 /* UIView+ZCSupp.h in Headers */,
-				9397AA3520DB979C00E7E789 /* NSArray+ZCJson.h in Headers */,
 				9397AA2F20DB979C00E7E789 /* NSArray+ZCMutableDeepCopy.h in Headers */,
 				9397AB2320DB98E100E7E789 /* NSAttributedString+ZCSupp.h in Headers */,
 				9397AB2220DB98E100E7E789 /* NSAttributedString+ZCTag.h in Headers */,
-				9397AA4120DB979C00E7E789 /* NSData+ZCEncrypt.h in Headers */,
-				9397AA3020DB979C00E7E789 /* NSData+ZCJson.h in Headers */,
-				9397AA5020DB979C00E7E789 /* NSDate+ZCSupp.h in Headers */,
-				9397AA4F20DB979C00E7E789 /* NSDateComponents+ZCSupp.h in Headers */,
-				9397AA4E20DB979C00E7E789 /* NSDateFormatter+ZCSupp.h in Headers */,
-				9397AA3420DB979C00E7E789 /* NSDictionary+ZCJson.h in Headers */,
 				9397AA2E20DB979C00E7E789 /* NSDictionary+ZCMutableDeepCopy.h in Headers */,
 				9397AB1820DB98E100E7E789 /* NSMutableAttributedString+ZCSetStyle.h in Headers */,
 				9396A1A92126B9A100A8AE88 /* NSObject+ZCDoubleValue.h in Headers */,
 				9397AB1620DB98E100E7E789 /* NSObject+ZCRuntime.h in Headers */,
 				9397AA3D20DB979C00E7E789 /* NSObject+ZCToString.h in Headers */,
-				9397AA3F20DB979C00E7E789 /* NSString+ZCEncrypt.h in Headers */,
 				9397AA3620DB979C00E7E789 /* NSString+ZCFile.h in Headers */,
 				9397AB1720DB98E100E7E789 /* NSString+ZCSize.h in Headers */,
 				9397AA3720DB979C00E7E789 /* NSString+ZCRegularRegex.h in Headers */,
@@ -973,7 +968,6 @@
 				9397AA4320DB979C00E7E789 /* ZCBankcard.h in Headers */,
 				9397AAED20DB98E100E7E789 /* ZCBannerView.h in Headers */,
 				9397AA4920DB979C00E7E789 /* ZCCacheManage.h in Headers */,
-				9397AA4D20DB979C00E7E789 /* ZCCalendar.h in Headers */,
 				9397AB5A20DB98E100E7E789 /* ZCCitySelect.h in Headers */,
 				937EF51020EB754C0040DE5C /* ZCContactStore.h in Headers */,
 				9397AB4120DB98E100E7E789 /* ZCElasticControl.h in Headers */,
@@ -992,10 +986,19 @@
 				9397AB4920DB98E100E7E789 /* ZCTagView.h in Headers */,
 				9397AB3320DB98E100E7E789 /* ZCTextDecimalField.h in Headers */,
 				9397AB3720DB98E100E7E789 /* ZCTextField.h in Headers */,
+				3D4C5B9B235F0D3F0008BDB5 /* NSArray+ZCJson.h in Headers */,
 				9397AB4020DB98E100E7E789 /* ZCTextView.h in Headers */,
+				3D4C5B88235F0D260008BDB5 /* NSData+ZCEncrypt.h in Headers */,
+				3D4C5B73235F0C870008BDB5 /* NSDate+ZCSupp.h in Headers */,
+				3D4C5B91235F0D3F0008BDB5 /* NSData+ZCJson.h in Headers */,
 				9397AB5120DB98E100E7E789 /* ZCTimeCountDown.h in Headers */,
 				9397AB4420DB98E100E7E789 /* ZCPickerCirculateView.h in Headers */,
+				3D4C5B99235F0D3F0008BDB5 /* NSDictionary+ZCJson.h in Headers */,
+				3D4C5B71235F0C870008BDB5 /* NSDateFormatter+ZCSupp.h in Headers */,
+				3D4C5B70235F0C870008BDB5 /* ZCCalendar.h in Headers */,
+				3D4C5B84235F0D260008BDB5 /* NSString+ZCEncrypt.h in Headers */,
 				9397AB4520DB98E100E7E789 /* ZCPickerView.h in Headers */,
+				3D4C5B72235F0C870008BDB5 /* NSDateComponents+ZCSupp.h in Headers */,
 				9397AB5C20DB98E100E7E789 /* ZCPicturePreview.h in Headers */,
 				9397AB5F20DB98E100E7E789 /* ZCPicturePreviewHeadbar.h in Headers */,
 				9397AB5D20DB98E100E7E789 /* ZCPicturePreviewItem.h in Headers */,
@@ -1009,17 +1012,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9397AA5720DB97B200E7E789 /* NSArray+ZCJson.h in Headers */,
 				9397AA5420DB97B200E7E789 /* NSArray+ZCMutableDeepCopy.h in Headers */,
-				9397AA5D20DB97B200E7E789 /* NSData+ZCEncrypt.h in Headers */,
-				9397AA6520DB97B200E7E789 /* NSDate+ZCSupp.h in Headers */,
-				9397AA6420DB97B200E7E789 /* NSDateComponents+ZCSupp.h in Headers */,
-				9397AA6320DB97B200E7E789 /* NSDateFormatter+ZCSupp.h in Headers */,
-				9397AA5520DB97B200E7E789 /* NSData+ZCJson.h in Headers */,
-				9397AA5620DB97B200E7E789 /* NSDictionary+ZCJson.h in Headers */,
 				9397AA5320DB97B200E7E789 /* NSDictionary+ZCMutableDeepCopy.h in Headers */,
 				9397AA5B20DB97B200E7E789 /* NSObject+ZCToString.h in Headers */,
-				9397AA5C20DB97B200E7E789 /* NSString+ZCEncrypt.h in Headers */,
 				9397AA5820DB97B200E7E789 /* NSString+ZCFile.h in Headers */,
 				937EF4CE20EB6C080040DE5C /* NSView+ZCSupp.h in Headers */,
 				937EF4D320EB6C080040DE5C /* ZCMacEasyLibrary.h in Headers */,
@@ -1027,6 +1022,15 @@
 				9397AA5A20DB97B200E7E789 /* NSString+ZCSupp.h in Headers */,
 				9397AA5E20DB97B200E7E789 /* ZCBankcard.h in Headers */,
 				937EF51B20EB7BAF0040DE5C /* NSView+ZCBorder.h in Headers */,
+				3D4C5B85235F0D260008BDB5 /* NSString+ZCEncrypt.h in Headers */,
+				3D4C5B9A235F0D3F0008BDB5 /* NSDictionary+ZCJson.h in Headers */,
+				3D4C5B92235F0D3F0008BDB5 /* NSData+ZCJson.h in Headers */,
+				3D4C5B89235F0D260008BDB5 /* NSData+ZCEncrypt.h in Headers */,
+				3D4C5B9C235F0D3F0008BDB5 /* NSArray+ZCJson.h in Headers */,
+				3D4C5B7B235F0CF50008BDB5 /* ZCCalendar.h in Headers */,
+				3D4C5B75235F0CEE0008BDB5 /* NSDate+ZCSupp.h in Headers */,
+				3D4C5B79235F0CF50008BDB5 /* NSDateFormatter+ZCSupp.h in Headers */,
+				3D4C5B77235F0CF50008BDB5 /* NSDateComponents+ZCSupp.h in Headers */,
 				937EF51F20EB7BF40040DE5C /* NSView+ZCBackgroundColor.h in Headers */,
 				937EF54620EB8B770040DE5C /* ZCScanQRCode.h in Headers */,
 				937EF51320EB7B140040DE5C /* NSString+ZCQRCode.h in Headers */,
@@ -1034,7 +1038,6 @@
 				937EF54E20EB8BFE0040DE5C /* ZCMenu.h in Headers */,
 				9391155220ECA7100016F643 /* NSAlert+ZCEasy.h in Headers */,
 				9397AA6120DB97B200E7E789 /* ZCCacheManage.h in Headers */,
-				9397AA6220DB97B200E7E789 /* ZCCalendar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,7 +1210,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#头文件目录\nheadDir=${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/Headers/\n#public头文件路径\npublicFilePath=../Library/ZCEasyLibrary/${EXECUTABLE_NAME}.h\n#删除public头文件原数据\nsed -i '' '/#import \"/d' ${publicFilePath}\n#更新public头文件\nls ${headDir} | grep -v ${EXECUTABLE_NAME} | xargs -n 1 -I{} echo '#import \"{}\"' >> ${publicFilePath}";
+			shellScript = "#头文件目录\nheadDir=${TARGET_BUILD_DIR}/${FULL_PRODUCT_NAME}/Headers/\n#public头文件路径\npublicFilePath=../Library/ZCEasyLibrary/${EXECUTABLE_NAME}.h\n#删除public头文件原数据\nsed -i '' '/#import \"/d' ${publicFilePath}\n#更新public头文件\nls ${headDir} | grep -v ${EXECUTABLE_NAME} | xargs -n 1 -I{} echo '#import \"{}\"' >> ${publicFilePath}\n";
 		};
 		93FC2CD120DBA5B90005D0D6 /* 合并 虚拟机、真机 库 */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1245,11 +1248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9397AB0C20DB98E100E7E789 /* UITableView+ZCPaging.m in Sources */,
-				9397AA4C20DB979C00E7E789 /* NSDate+ZCSupp.m in Sources */,
 				9397AB5720DB98E100E7E789 /* ZCAlert.m in Sources */,
-				9397AA3E20DB979C00E7E789 /* NSData+ZCEncrypt.m in Sources */,
 				9397AB3E20DB98E100E7E789 /* ZCVerticalButton.m in Sources */,
-				9397AA4B20DB979C00E7E789 /* NSDateFormatter+ZCSupp.m in Sources */,
 				9397AB0220DB98E100E7E789 /* UIView+ZCScreenCapture.m in Sources */,
 				93A71A9C20F092F2000C7209 /* ZCSetting.m in Sources */,
 				9397AB1520DB98E100E7E789 /* UIView+ZCSupp.m in Sources */,
@@ -1258,7 +1258,9 @@
 				9397AAF320DB98E100E7E789 /* UIImage+ZCColor.m in Sources */,
 				9397AB5E20DB98E100E7E789 /* ZCPicturePreview.m in Sources */,
 				9397AB1220DB98E100E7E789 /* UITextView+ZCSelectedRange.m in Sources */,
+				3D4C5B97235F0D3F0008BDB5 /* NSData+ZCJson.m in Sources */,
 				9397AB1920DB98E100E7E789 /* NSDictionary+ZCSupp.m in Sources */,
+				3D4C5B93235F0D3F0008BDB5 /* NSDictionary+ZCJson.m in Sources */,
 				937EF50E20EB754C0040DE5C /* ZCContactStore.m in Sources */,
 				9397AB2D20DB98E100E7E789 /* UITextView+ZCKeyBoardTopBar.m in Sources */,
 				9397AAF820DB98E100E7E789 /* UIImage+ZCSupp.m in Sources */,
@@ -1275,16 +1277,17 @@
 				9397AB2C20DB98E100E7E789 /* ZCKeyBoardTopBar.m in Sources */,
 				9392BBFB20DE4C6000B6F9B3 /* ZCLocationGeocode.m in Sources */,
 				9397AB6220DB98E100E7E789 /* ZCSpinnerView.m in Sources */,
+				3D4C5B95235F0D3F0008BDB5 /* NSArray+ZCJson.m in Sources */,
 				9397AB4220DB98E100E7E789 /* ZCTagView.m in Sources */,
 				9397AB5420DB98E100E7E789 /* iphoneDevice.m in Sources */,
 				9397AAEF20DB98E100E7E789 /* ZCBannerView.m in Sources */,
 				9397AB4E20DB98E100E7E789 /* ZCTimeCountDown.m in Sources */,
 				9397AB1F20DB98E100E7E789 /* NSMutableAttributedString+ZCSetStyle.m in Sources */,
-				9397AA3120DB979C00E7E789 /* NSDictionary+ZCJson.m in Sources */,
 				9397AB1020DB98E100E7E789 /* UIButton+ZCSupp.m in Sources */,
 				9397AB1D20DB98E100E7E789 /* NSObject+ZCRuntime.m in Sources */,
 				9397AB0B20DB98E100E7E789 /* UIImageView+ZCAnimat.m in Sources */,
 				9397AB0720DB98E100E7E789 /* UIView+ZCConvert.m in Sources */,
+				3D4C5B82235F0D260008BDB5 /* NSData+ZCEncrypt.m in Sources */,
 				9397AB0920DB98E100E7E789 /* UITextView+ZCHandleMaxTextLength.m in Sources */,
 				9397AA3920DB979C00E7E789 /* NSObject+ZCToString.m in Sources */,
 				9397AB3D20DB98E100E7E789 /* ZCTextField.m in Sources */,
@@ -1293,7 +1296,7 @@
 				9392BBFC20DE4C6000B6F9B3 /* ZCLocationManager.m in Sources */,
 				937EF50D20EB754C0040DE5C /* CNContact+ZCToDictionary.m in Sources */,
 				9397AB1420DB98E100E7E789 /* UIImageView+ZCGif.m in Sources */,
-				9397AA5120DB979C00E7E789 /* ZCCalendar.m in Sources */,
+				3D4C5B86235F0D260008BDB5 /* NSString+ZCEncrypt.m in Sources */,
 				9397AB3820DB98E100E7E789 /* ZCElasticControl.m in Sources */,
 				9397AB5820DB98E100E7E789 /* ZCCitySelect.m in Sources */,
 				9397AA3A20DB979C00E7E789 /* NSString+ZCFile.m in Sources */,
@@ -1309,20 +1312,20 @@
 				9397AB0520DB98E100E7E789 /* UITextField+ZCSelectedRange.m in Sources */,
 				9397AAFC20DB98E100E7E789 /* UINavigationBar+ZCSupp.m in Sources */,
 				9397AB4D20DB98E100E7E789 /* ZCAppUpdateVersion.m in Sources */,
-				9397AA4A20DB979C00E7E789 /* NSDateComponents+ZCSupp.m in Sources */,
 				9397AB2420DB98E100E7E789 /* ZCAlertView.m in Sources */,
 				9390445120FC7ED20005492B /* UIView+ZCSubview.m in Sources */,
 				9397AB0A20DB98E100E7E789 /* UITableView+ZCSupp.m in Sources */,
-				9397AA4020DB979C00E7E789 /* NSString+ZCEncrypt.m in Sources */,
+				3D4C5B6D235F0C870008BDB5 /* NSDateComponents+ZCSupp.m in Sources */,
 				9397AB0120DB98E100E7E789 /* CALayer+ZCSupp.m in Sources */,
 				9397AB4A20DB98E100E7E789 /* ZCReachability.m in Sources */,
 				9397AB1A20DB98E100E7E789 /* NSAttributedString+ZCSupp.m in Sources */,
 				9397AA3820DB979C00E7E789 /* NSString+ZCSupp.m in Sources */,
 				9397AB4720DB98E100E7E789 /* ZCSelectDatePicker.m in Sources */,
-				9397AA3220DB979C00E7E789 /* NSArray+ZCJson.m in Sources */,
-				9397AA3320DB979C00E7E789 /* NSData+ZCJson.m in Sources */,
+				3D4C5B6F235F0C870008BDB5 /* NSDate+ZCSupp.m in Sources */,
+				3D4C5B6E235F0C870008BDB5 /* NSDateFormatter+ZCSupp.m in Sources */,
 				9397AB4320DB98E100E7E789 /* ZCPickerView.m in Sources */,
 				9397AB6020DB98E100E7E789 /* ZCPicturePreviewItem.m in Sources */,
+				3D4C5B74235F0C870008BDB5 /* ZCCalendar.m in Sources */,
 				9397AB4C20DB98E100E7E789 /* ZCUserDefaults.m in Sources */,
 				9396A1AA2126B9A100A8AE88 /* NSObject+ZCDoubleValue.m in Sources */,
 			);
@@ -1332,6 +1335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D4C5B7C235F0CF50008BDB5 /* ZCCalendar.m in Sources */,
 				937EF52020EB7BF40040DE5C /* NSView+ZCBackgroundColor.m in Sources */,
 				937EF4F420EB74C10040DE5C /* NSObject+ZCToString.m in Sources */,
 				937EF4F520EB74C10040DE5C /* NSString+ZCFile.m in Sources */,
@@ -1339,24 +1343,23 @@
 				937EF4F620EB74C10040DE5C /* NSString+ZCRegularRegex.m in Sources */,
 				937EF4F720EB74C10040DE5C /* NSString+ZCSupp.m in Sources */,
 				937EF4F820EB74C10040DE5C /* ZCBankcard.m in Sources */,
+				3D4C5B76235F0CF10008BDB5 /* NSDate+ZCSupp.m in Sources */,
+				3D4C5B94235F0D3F0008BDB5 /* NSDictionary+ZCJson.m in Sources */,
 				937EF4F920EB74C10040DE5C /* ZCCacheManage.m in Sources */,
+				3D4C5B78235F0CF50008BDB5 /* NSDateComponents+ZCSupp.m in Sources */,
 				937EF54720EB8B770040DE5C /* ZCScanQRCode.m in Sources */,
-				937EF4FC20EB74C10040DE5C /* NSDate+ZCSupp.m in Sources */,
-				937EF4FD20EB74C10040DE5C /* NSDateComponents+ZCSupp.m in Sources */,
-				937EF4FE20EB74C10040DE5C /* NSDateFormatter+ZCSupp.m in Sources */,
 				937EF51420EB7B140040DE5C /* NSString+ZCQRCode.m in Sources */,
+				3D4C5B98235F0D3F0008BDB5 /* NSData+ZCJson.m in Sources */,
 				937EF54F20EB8BFE0040DE5C /* ZCMenu.m in Sources */,
-				937EF4FF20EB74C10040DE5C /* ZCCalendar.m in Sources */,
-				937EF50020EB74C10040DE5C /* NSData+ZCEncrypt.m in Sources */,
-				937EF50120EB74C10040DE5C /* NSString+ZCEncrypt.m in Sources */,
-				937EF50220EB74C10040DE5C /* NSArray+ZCJson.m in Sources */,
+				3D4C5B7A235F0CF50008BDB5 /* NSDateFormatter+ZCSupp.m in Sources */,
 				937EF55020EB8BFE0040DE5C /* ZCMenuItem.m in Sources */,
-				937EF50320EB74C10040DE5C /* NSData+ZCJson.m in Sources */,
 				9391155320ECA7100016F643 /* NSAlert+ZCEasy.m in Sources */,
-				937EF50420EB74C10040DE5C /* NSDictionary+ZCJson.m in Sources */,
 				937EF50520EB74C10040DE5C /* NSArray+ZCMutableDeepCopy.m in Sources */,
 				937EF50620EB74C10040DE5C /* NSDictionary+ZCMutableDeepCopy.m in Sources */,
 				937EF4CB20EB6C080040DE5C /* NSView+ZCSupp.m in Sources */,
+				3D4C5B96235F0D3F0008BDB5 /* NSArray+ZCJson.m in Sources */,
+				3D4C5B83235F0D260008BDB5 /* NSData+ZCEncrypt.m in Sources */,
+				3D4C5B87235F0D260008BDB5 /* NSString+ZCEncrypt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1499,6 +1502,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.ZCEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1524,6 +1528,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.ZCEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

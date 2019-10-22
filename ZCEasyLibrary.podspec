@@ -12,6 +12,20 @@ Pod::Spec.new do |spec|
   spec.public_header_files = ['Library/EasyLibrary/**/*.{h}', 'Library/ZCEasyLibrary/**/*.{h}']
   spec.private_header_files = ['Library/EasyLibrary/ZCMutableDeepCopy/NSNumber+MutableDeepCopy.h', 'Library/ZCEasyLibrary/ZCBannerView/ZCBannerImageView.h']
   spec.resources    = 'Library/ZCEasyLibrary/**/*.png', 'Library/ZCEasyLibrary/**/*.plist'
+
+  spec.subspec 'ZCDate' do |zcdate|
+    zcdate.source_files = 'Library/ZCDate/**/*.{h,m,c,mm}'
+  end
+
+  spec.subspec 'ZCEncrypt' do |zcencrypt|
+    zcencrypt.source_files = 'Library/ZCEncrypt/**/*.{h,m,c,mm}'
+  end
+
+  spec.subspec 'ZCJson' do |zcjson|
+    zcjson.source_files = 'Library/ZCJson/**/*.{h,m,c,mm}'
+    #zcjson.dependency 'AFNetworking', '~> 3.0'
+  end
+
   spec.requires_arc = true
   spec.frameworks   = 'Foundation', 'UIKit'
   spec.libraries    = 'z'
