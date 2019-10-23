@@ -18,7 +18,6 @@
 #import "NSAttributedString+ZCTag.h"
 #import "NSData+ZCEncrypt.h"
 #import "NSData+ZCJson.h"
-#import "NSData+ZCString.h"
 #import "NSDate+ZCSupp.h"
 #import "NSDateComponents+ZCSupp.h"
 #import "NSDateFormatter+ZCSupp.h"

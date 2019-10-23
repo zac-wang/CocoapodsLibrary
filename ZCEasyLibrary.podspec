@@ -30,7 +30,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'ZCString' do |zcstring|
-    zcstring.source_files = 'Library/ZCString/**/*.{h,m,c,mm}'
+    zcstring.source_files = ['Library/ZCString/**/*.{h,m,c,mm}','Library/ZCJson/**/*.{h,m,c,mm}','Library/ZCDate/**/*.{h,m,c,mm}']
   end
 
   spec.subspec 'ZCScreenCapture' do |zcscreenCapture|

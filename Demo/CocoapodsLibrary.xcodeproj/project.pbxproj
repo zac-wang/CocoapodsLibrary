@@ -16,8 +16,6 @@
 		938197C020AE735700134EBC /* main_banner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 938197BF20AE735600134EBC /* main_banner.bundle */; };
 		938197C720AE779800134EBC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C620AE779800134EBC /* libz.tbd */; };
 		938197C920AE77A500134EBC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 938197C820AE77A500134EBC /* MobileCoreServices.framework */; };
-		938E68F620D20F6D007A86AC /* ZCSystemVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 938E68F520D20F6D007A86AC /* ZCSystemVariable.m */; };
-		938E68F820D2435E007A86AC /* ZCSystemVariable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 938E68F720D2435E007A86AC /* ZCSystemVariable.plist */; };
 		9398C50920A7645000C7C8AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C50820A7645000C7C8AA /* AppDelegate.m */; };
 		9398C50C20A7645000C7C8AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9398C50B20A7645000C7C8AA /* ViewController.m */; };
 		9398C50F20A7645000C7C8AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9398C50D20A7645000C7C8AA /* Main.storyboard */; };
@@ -54,9 +52,6 @@
 		938197BF20AE735600134EBC /* main_banner.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = main_banner.bundle; sourceTree = "<group>"; };
 		938197C620AE779800134EBC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		938197C820AE77A500134EBC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		938E68F420D20F6D007A86AC /* ZCSystemVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSystemVariable.h; sourceTree = "<group>"; };
-		938E68F520D20F6D007A86AC /* ZCSystemVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSystemVariable.m; sourceTree = "<group>"; };
-		938E68F720D2435E007A86AC /* ZCSystemVariable.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ZCSystemVariable.plist; sourceTree = "<group>"; };
 		9398C50420A7645000C7C8AA /* CocoapodsLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoapodsLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9398C50720A7645000C7C8AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9398C50820A7645000C7C8AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,9 +85,6 @@
 		3D4C5B63235EF1A10008BDB5 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				938E68F420D20F6D007A86AC /* ZCSystemVariable.h */,
-				938E68F520D20F6D007A86AC /* ZCSystemVariable.m */,
-				938E68F720D2435E007A86AC /* ZCSystemVariable.plist */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -249,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				938E68F820D2435E007A86AC /* ZCSystemVariable.plist in Resources */,
 				938197C020AE735700134EBC /* main_banner.bundle in Resources */,
 				9398C51420A7645200C7C8AA /* LaunchScreen.storyboard in Resources */,
 				9398C51120A7645200C7C8AA /* Assets.xcassets in Resources */,
@@ -308,7 +299,6 @@
 			files = (
 				9398C50C20A7645000C7C8AA /* ViewController.m in Sources */,
 				9336028120DBF93B002079F9 /* CalendarVC.m in Sources */,
-				938E68F620D20F6D007A86AC /* ZCSystemVariable.m in Sources */,
 				9336028420DBF93C002079F9 /* ViewVC.m in Sources */,
 				9398C51720A7645200C7C8AA /* main.m in Sources */,
 				9336028020DBF93B002079F9 /* CalendarDayCell.m in Sources */,

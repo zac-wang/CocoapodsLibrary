@@ -1165,7 +1165,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "infoPlistPath=\"${PRODUCT_SETTINGS_PATH}\"\nversion=\"$(date +%Y%m%d.%H%M%S)\"\n/usr/libexec/PlistBuddy -c 'Set :CFBundleVersion '$version $infoPlistPath";
+			shellScript = "infoPlistPath=\"${PRODUCT_SETTINGS_PATH}\"\nversion=\"$(date +%Y%m%d)\" #\"$(date +%Y%m%d.%H%M%S)\"\n/usr/libexec/PlistBuddy -c 'Set :CFBundleVersion '$version $infoPlistPath\n";
 		};
 		937EF52220EB87650040DE5C /* 修改Headers头文件内容 */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1193,7 +1193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "version=$(/usr/libexec/PlistBuddy -c \"print CFBundleShortVersionString\" \"${PRODUCT_SETTINGS_PATH}\")\npodFilePath=\"${SRCROOT}/../${EXECUTABLE_NAME}.podspec\"\nsed -i '' 's/\\(spec\\.version      = \"\\)\\(.*\\)\"/\\1'$version'\"/' $podFilePath";
+			shellScript = "version=$MARKETING_VERSION\npodFilePath=\"${SRCROOT}/../${EXECUTABLE_NAME}.podspec\"\nsed -i '' 's/\\(spec\\.version      = \"\\)\\(.*\\)\"/\\1'$version'\"/' $podFilePath\n";
 		};
 		9397AB6320DB998C00E7E789 /* Archive时, 修改 build version */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1207,7 +1207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#if [ \"$ACTION\" = \"install\" ]; then\n    infoPlistPath=\"${PRODUCT_SETTINGS_PATH}\"\n    version=\"$(date +%Y%m%d.%H%M%S)\"\n    /usr/libexec/PlistBuddy -c 'Set :CFBundleVersion '$version $infoPlistPath\n#fi";
+			shellScript = "infoPlistPath=\"${PRODUCT_SETTINGS_PATH}\"\nversion=\"$(date +%Y%m%d)\" #\"$(date +%Y%m%d.%H%M%S)\"\n/usr/libexec/PlistBuddy -c 'Set :CFBundleVersion '$version $infoPlistPath\n#if [ \"$ACTION\" = \"install\" ]; then\n#fi\n";
 		};
 		9397AB6420DB998D00E7E789 /* 修改Headers头文件内容 */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1235,7 +1235,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ $CONFIGURATION != 'Release' ]; then\n    echo 编译模式为：Debug\n#    exit\nfi\n\nexeName=\"${FULL_PRODUCT_NAME}\"\nexeDir=\"${TARGET_BUILD_DIR}/..\"\n#Debug/Release\nexeSimulatorPath=\"$exeDir/${CONFIGURATION}-iphonesimulator/$exeName\"\nexeIphoneOSPath=\"$exeDir/${CONFIGURATION}-iphoneos/$exeName\"\n\nif [ ! -d \"$exeSimulatorPath\" ];then\n    echo \"no have $exeSimulatorPath\"\n    exit;\nfi\nif [ ! -d \"$exeIphoneOSPath\" ];then\n    echo \"no have $exeIphoneOSPath\"\n    exit;\nfi\n\nif [ -h \"$exeIphoneOSPath\" ]; then\n    exeIphoneOSPath=$(readlink $exeIphoneOSPath)\nfi\n\n\n\nmyBuildTargetPath=${exeDir}/$exeName #生成目录\necho \"myBuildTargetPath=$myBuildTargetPath\"\nif [ -d \"$myBuildTargetPath\" ];then\n    rm -rf $myBuildTargetPath\nfi\n\npwd\n\ncp -a ${TARGET_BUILD_DIR}/$exeName $myBuildTargetPath\nrm $myBuildTargetPath/${EXECUTABLE_NAME}\n\nlipo -create $exeSimulatorPath/${EXECUTABLE_NAME} $exeIphoneOSPath/${EXECUTABLE_NAME} -output $myBuildTargetPath/${EXECUTABLE_NAME}";
+			shellScript = "if [ $CONFIGURATION != 'Release' ]; then\n    echo 编译模式为：Debug\n#    exit\nfi\n\nexeName=\"${FULL_PRODUCT_NAME}\"\nexeDir=\"${TARGET_BUILD_DIR}/..\"\n#Debug/Release\nexeSimulatorPath=\"$exeDir/${CONFIGURATION}-iphonesimulator/$exeName\"\nexeIphoneOSPath=\"$exeDir/${CONFIGURATION}-iphoneos/$exeName\"\n\nif [ ! -d \"$exeSimulatorPath\" ];then\n    echo \"no have $exeSimulatorPath\"\n    exit;\nfi\nif [ ! -d \"$exeIphoneOSPath\" ];then\n    echo \"no have $exeIphoneOSPath\"\n    exit;\nfi\n\nif [ -h \"$exeIphoneOSPath\" ]; then\n    exeIphoneOSPath=$(readlink $exeIphoneOSPath)\nfi\n\n\n\nmyBuildTargetPath=${exeDir}/$exeName #生成目录\necho \"myBuildTargetPath=$myBuildTargetPath\"\nif [ -d \"$myBuildTargetPath\" ];then\n    rm -rf $myBuildTargetPath\nfi\n\npwd\n\ncp -a ${TARGET_BUILD_DIR}/$exeName $myBuildTargetPath\nrm $myBuildTargetPath/${EXECUTABLE_NAME}\n\nlipo -create $exeSimulatorPath/${EXECUTABLE_NAME} $exeIphoneOSPath/${EXECUTABLE_NAME} -output $myBuildTargetPath/${EXECUTABLE_NAME}\n";
 		};
 		93FC2CD220DBAAA10005D0D6 /* 修改ZCEasyLibrary.podspec 版本号 */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1249,7 +1249,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "version=$(/usr/libexec/PlistBuddy -c \"print CFBundleShortVersionString\" \"${PRODUCT_SETTINGS_PATH}\")\npodFilePath=\"${SRCROOT}/../${EXECUTABLE_NAME}.podspec\"\nsed -i '' 's/\\(spec\\.version      = \"\\)\\(.*\\)\"/\\1'$version'\"/' $podFilePath";
+			shellScript = "version=$MARKETING_VERSION\npodFilePath=\"${SRCROOT}/../${EXECUTABLE_NAME}.podspec\"\nsed -i '' 's/\\(spec\\.version      = \"\\)\\(.*\\)\"/\\1'$version'\"/' $podFilePath\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
