@@ -1,45 +1,64 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCEasyLibrary"
-  spec.version      = "2.0.6"
+  spec.version      = "2.1.0"
   spec.summary      = "ZCEasyLibrary Kit"
-  spec.description  = "ZCEasyLibrary 拓展库+UI库"
-  spec.platform     = :ios, '8.0'
-  spec.license      = { :type => 'Copyright', :text => 'Zac Inc. 2017' }
+  spec.description  = "ZCEasyLibrary 拓展库+UI库, 包含 iOS and OS X. ZCMacEasyLibrary停止更新"
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary'
-  spec.author       = {'王志超' => 'love_iphone@qq.com'}
-  spec.source       =  {:git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
-  spec.source_files = ['Library/EasyLibrary/**/*.{h,m,c,mm}', 'Library/ZCEasyLibrary/**/*.{h,m,c,mm}']
-  spec.public_header_files = ['Library/EasyLibrary/**/*.{h}', 'Library/ZCEasyLibrary/**/*.{h}']
-  spec.private_header_files = ['Library/EasyLibrary/ZCMutableDeepCopy/NSNumber+MutableDeepCopy.h', 'Library/ZCEasyLibrary/ZCBannerView/ZCBannerImageView.h']
-  spec.resources    = 'Library/ZCEasyLibrary/**/*.png', 'Library/ZCEasyLibrary/**/*.plist'
+  spec.author       = { '王志超' => 'love_iphone@qq.com' }
+  spec.license      = { :type => 'BSD', :text => 'Zac Inc. 2017' }
+  spec.source       = { :git => 'https://github.com/zac-wang/CocoapodsLibrary.git', :tag => spec.version.to_s }
 
-  spec.subspec 'ZCDate' do |zcdate|
-    zcdate.source_files = 'Library/ZCDate/**/*.{h,m,c,mm}'
+  spec.ios.deployment_target = '8.0'
+  spec.osx.deployment_target = '10.10'
+
+  spec.source_files     = 'Library/ZCEasyLibrary/**/*.{h,m,c,mm}'
+  spec.ios.source_files = 'Library/ZCEasyLibraryIOS/**/*.{h,m,c,mm}'
+  spec.osx.source_files = 'Library/ZCEasyLibraryMac/**/*.{h,m,c,mm}'
+
+  spec.public_header_files     = 'Library/ZCEasyLibrary/**/*.{h}'
+  spec.ios.public_header_files = 'Library/ZCEasyLibraryIOS/**/*.{h}'
+  spec.osx.public_header_files = 'Library/ZCEasyLibraryMac/**/*.{h}'
+
+  spec.ios.resources = 'Library/ZCEasyLibraryIOS/**/*.png', 'Library/ZCEasyLibraryIOS/**/*.plist'
+
+  spec.subspec 'ZCDate' do |sp|
+    sp.source_files = 'Library/ZCEasyLibrary_sub/ZCDate/**/*.{h,m,c,mm}'
   end
 
-  spec.subspec 'ZCEncrypt' do |zcencrypt|
-    zcencrypt.source_files = 'Library/ZCEncrypt/**/*.{h,m,c,mm}'
+  spec.subspec 'ZCEncrypt' do |sp|
+    sp.source_files = 'Library/ZCEasyLibrary_sub/ZCEncrypt/**/*.{h,m,c,mm}'
   end
 
-  spec.subspec 'ZCJson' do |zcjson|
-    zcjson.source_files = 'Library/ZCJson/**/*.{h,m,c,mm}'
+  spec.subspec 'ZCJson' do |sp|
+    sp.source_files = 'Library/ZCEasyLibrary_sub/ZCJson/**/*.{h,m,c,mm}'
   end
 
-  spec.subspec 'ZCMutableDeepCopy' do |zcmutableDeepCopy|
-    zcmutableDeepCopy.source_files = 'Library/ZCMutableDeepCopy/**/*.{h,m,c,mm}'
+  spec.subspec 'ZCMutableDeepCopy' do |sp|
+    sp.source_files = 'Library/ZCEasyLibrary_sub/ZCMutableDeepCopy/**/*.{h,m,c,mm}'
   end
 
-  spec.subspec 'ZCString' do |zcstring|
-    zcstring.source_files = ['Library/ZCString/**/*.{h,m,c,mm}','Library/ZCJson/**/*.{h,m,c,mm}','Library/ZCDate/**/*.{h,m,c,mm}']
+  spec.subspec 'ZCString' do |sp|
+    sp.source_files = 'Library/ZCEasyLibrary_sub/ZCString/**/*.{h,m,c,mm}'
+    sp.dependency 'ZCEasyLibrary/ZCDate'
+    sp.dependency 'ZCEasyLibrary/ZCJson'
   end
 
-  spec.subspec 'ZCScreenCapture' do |zcscreenCapture|
-    zcscreenCapture.source_files = 'Library/ZCScreenCapture/**/*.{h,m,c,mm}'
-    #zcscreenCapture.dependency 'AFNetworking', '~> 3.0'
+  spec.subspec 'ZCBannerView' do |sp|
+    sp.platform = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCBannerView/**/*.{h,m,c,mm}'
+    sp.private_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCBannerView/ZCBannerImageView.h'
+  end
+
+  spec.subspec 'ZCScreenCapture' do |sp|
+    sp.platform = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCScreenCapture/**/*.{h,m,c,mm}'
   end
 
   spec.requires_arc = true
-  spec.frameworks   = 'Foundation', 'UIKit'
+  spec.frameworks   = 'Foundation'
+  spec.ios.framework  = 'UIKit'
   spec.libraries    = 'z'
+
+  #spec.dependency 'AFNetworking', '~> 3.0'
 
 end
