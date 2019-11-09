@@ -70,9 +70,9 @@
     return row * multiple;
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
     NSInteger originalRowCount = [self originalCount:component];
-    return [super pickerView:pickerView titleForRow:row % originalRowCount forComponent:component];
+    return [super pickerView:pickerView attributedTitleForRow:row % originalRowCount forComponent:component];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
