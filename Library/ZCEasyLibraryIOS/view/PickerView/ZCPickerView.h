@@ -8,9 +8,9 @@
 
 #import "ZCElasticControl.h"
 
-@interface ZCPickerView : ZCElasticControl
+IB_DESIGNABLE
 
-- (instancetype)initWithFrame:(CGRect)frame;
+@interface ZCPickerView : ZCElasticControl
 
 @property(nonatomic, readonly) UIPickerView *zc_pickerView;
 

@@ -8,12 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, ZCElasticControlTopToolBarStyle) {
+    ZCElasticControlTopToolBarStyleNone = 0,
+    ZCElasticControlTopToolBarStyleOkAndCancel = 1
+};
+
 /// 弹出页面
-@interface ZCElasticControl : UIControl
+@interface ZCElasticControl : UIControl {
+    /// view顶栏按钮样式，仅自定义控件调用
+    ZCElasticControlTopToolBarStyle zc_topToolBarStyle;
+}
 
-@property(nonatomic, strong) UIView *zc_contentView;
+@property(nonatomic, readonly) UIView *zc_contentView;
 
-@property(nonatomic, readonly) UIView *(^zc_newLineView)(CGRect frame);
+/// 初始化view，子类继承重写
+- (void)initView;
+
 
 - (void)zc_showView;
 - (void)zc_showView:(double)duration;

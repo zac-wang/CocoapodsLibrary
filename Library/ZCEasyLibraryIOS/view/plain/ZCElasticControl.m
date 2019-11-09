@@ -10,48 +10,103 @@
 #import "UIColor+ZCSupp.h"
 #import "UIView+ZCCornerRadius.h"
 
+#define OK_BUTTON_HEIGHT 35
+
+#define BackgroundViewColor [UIColor blackColor].zc_alpha(0.5)
+
+@interface ZCElasticControl ()
+
+/// view顶栏按钮
+@property(nonatomic, strong) UIToolbar *topToolBar;
+/// view顶栏按钮样式，仅自定义控件调用
+@property(nonatomic, assign) ZCElasticControlTopToolBarStyle topToolBarStyle;
+
+@end
+
 @implementation ZCElasticControl
+@synthesize zc_contentView;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor blackColor].zc_alpha(0.5);
-        [self addTarget:self action:@selector(zc_hiddenView) forControlEvents:UIControlEventTouchUpInside];
-        
-        self.zc_contentView = [[UIView alloc] initWithFrame:CGRectMake(frame.size.width/4, frame.size.height/4, frame.size.height/2, frame.size.width/2)];
-        self.zc_contentView.backgroundColor = [UIColor whiteColor];
-        [self addSubview:self.zc_contentView];
-        
-        [self.zc_contentView zc_drawCornerRadius:2];
+        [self initView];
     }
     return self;
 }
 
-- (void)setBackgroundColor:(UIColor *)backgroundColor {
-    super.backgroundColor = backgroundColor ?: self.backgroundColor;
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self initView];
+    }
+    return self;
 }
 
-- (UIView *(^)(CGRect))zc_newLineView {
-    return ^UIView *(CGRect frame) {
-        UIView *lineView = [[UIView alloc] initWithFrame:frame];
-        lineView.backgroundColor = UIColorFromRGB(0xf2f2f2);
-        return lineView;
-    };
+- (void)initView {
+    zc_topToolBarStyle = ZCElasticControlTopToolBarStyleNone;
+    
+    self.backgroundColor = self.backgroundColor ?: BackgroundViewColor;
+    [self addTarget:self action:@selector(zc_hiddenView) forControlEvents:UIControlEventTouchUpInside];
 }
 
-//- (void)setBodyFrame:(CGRect)bodyFrame {
-//    super.bodyFrame = bodyFrame;
-//
-//}
-//
-//- (void)showView {
-//    [super showView];
-//}
-//
-//- (void)hiddenView {
-//    [super hiddenView];
-//}
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    self.topToolBarStyle = zc_topToolBarStyle;
+}
+
+- (void)prepareForInterfaceBuilder {
+    self.backgroundColor = self.backgroundColor ?: BackgroundViewColor;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if (self.zc_contentView == object && [keyPath isEqualToString:@"frame"]) {
+        self.topToolBar.frame = CGRectMake(0, CGRectGetMinY(self.zc_contentView.frame) - OK_BUTTON_HEIGHT, self.frame.size.width, OK_BUTTON_HEIGHT);
+    }
+}
+
+- (UIView *)zc_contentView {
+    if (!zc_contentView) {
+        zc_contentView = [[UIView alloc] initWithFrame:CGRectMake(self.frame.size.width/4, self.frame.size.height/4, self.frame.size.height/2, self.frame.size.width/2)];
+        zc_contentView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:zc_contentView];
+        
+        [self.zc_contentView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
+    }
+    return zc_contentView;
+}
+
+- (UIView *)topToolBar {
+    if (!_topToolBar) {
+        _topToolBar = [[UIToolbar alloc] init];
+        _topToolBar.clipsToBounds = YES;
+        _topToolBar.hidden = YES;
+        [self addSubview:_topToolBar];
+    }
+    return _topToolBar;
+}
+
+- (void)setTopToolBarStyle:(ZCElasticControlTopToolBarStyle)style {
+    if (_topToolBarStyle == style)
+        return;
+    
+    _topToolBarStyle = style;
+    
+    if (_topToolBarStyle == ZCElasticControlTopToolBarStyleOkAndCancel) {
+        self.topToolBar.hidden = NO;
+        
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(zc_hiddenView)];
+        cancelItem.tintColor = UIColorFromRGB(0x666666);
+        UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        UIBarButtonItem *okItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(okClick:)];
+        self.topToolBar.items = @[cancelItem, flexibleSpace, okItem];
+    } else if (_topToolBarStyle == ZCElasticControlTopToolBarStyleNone) {
+        self.topToolBar.hidden = YES;
+    }
+}
+
+- (void)okClick:(UIBarButtonItem *)okItem {
+}
 
 - (void)zc_showView {
     [self zc_showView:0];
@@ -59,6 +114,8 @@
 
 - (void)zc_showView:(double)duration {
     [self.superview endEditing:YES];
+
+    self.topToolBarStyle = zc_topToolBarStyle;
     
     self.alpha = 0;
     self.hidden = NO;

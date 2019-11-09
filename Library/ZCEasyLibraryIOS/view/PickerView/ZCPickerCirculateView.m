@@ -18,12 +18,9 @@
 
 @implementation ZCPickerCirculateView
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.rowDataMultipleWithComponent = [[NSMutableDictionary alloc] init];
-    }
-    return self;
+- (void)initView {
+    [super initView];
+    self.rowDataMultipleWithComponent = [[NSMutableDictionary alloc] init];
 }
 
 - (void)didMoveToSuperview {

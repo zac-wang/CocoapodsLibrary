@@ -12,8 +12,6 @@ IB_DESIGNABLE
 
 @interface ZCSelectDatePicker : ZCElasticControl
 
-- (instancetype)initWithFrame:(CGRect)frame;
-
 @property(nonatomic, readonly) UIDatePicker *zc_datePicker;
 
 

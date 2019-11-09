@@ -80,8 +80,6 @@
 		3D3DA294236301AD005D7F1E /* ZCContactStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA206236301AD005D7F1E /* ZCContactStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA295236301AD005D7F1E /* ZCAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA208236301AD005D7F1E /* ZCAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA296236301AD005D7F1E /* ZCAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA209236301AD005D7F1E /* ZCAlert.m */; };
-		3D3DA297236301AD005D7F1E /* ZCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA20B236301AD005D7F1E /* ZCAlertView.m */; };
-		3D3DA298236301AD005D7F1E /* ZCAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA20C236301AD005D7F1E /* ZCAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA299236301AD005D7F1E /* ZCLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA20E236301AD005D7F1E /* ZCLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA29A236301AD005D7F1E /* ZCLocationGeocode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA20F236301AD005D7F1E /* ZCLocationGeocode.m */; };
 		3D3DA29B236301AD005D7F1E /* ZCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA210236301AD005D7F1E /* ZCLocationManager.m */; };
@@ -299,8 +297,6 @@
 		3D3DA206236301AD005D7F1E /* ZCContactStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCContactStore.h; sourceTree = "<group>"; };
 		3D3DA208236301AD005D7F1E /* ZCAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAlert.h; sourceTree = "<group>"; };
 		3D3DA209236301AD005D7F1E /* ZCAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAlert.m; sourceTree = "<group>"; };
-		3D3DA20B236301AD005D7F1E /* ZCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAlertView.m; sourceTree = "<group>"; };
-		3D3DA20C236301AD005D7F1E /* ZCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAlertView.h; sourceTree = "<group>"; };
 		3D3DA20E236301AD005D7F1E /* ZCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLocationManager.h; sourceTree = "<group>"; };
 		3D3DA20F236301AD005D7F1E /* ZCLocationGeocode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationGeocode.m; sourceTree = "<group>"; };
 		3D3DA210236301AD005D7F1E /* ZCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationManager.m; sourceTree = "<group>"; };
@@ -469,7 +465,6 @@
 				3D3DA231236301AD005D7F1E /* class */,
 				3D3DA207236301AD005D7F1E /* vc */,
 				3D3DA212236301AD005D7F1E /* view */,
-				3D3DA20A236301AD005D7F1E /* ZCAlertView */,
 				3D3DA23F236301AD005D7F1E /* ZCCitySelect */,
 				3D3DA202236301AD005D7F1E /* ZCContactStore */,
 				3D3DA1F7236301AD005D7F1E /* ZCKeyBoardTopBar */,
@@ -597,15 +592,6 @@
 				3D3DA209236301AD005D7F1E /* ZCAlert.m */,
 			);
 			path = vc;
-			sourceTree = "<group>";
-		};
-		3D3DA20A236301AD005D7F1E /* ZCAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				3D3DA20C236301AD005D7F1E /* ZCAlertView.h */,
-				3D3DA20B236301AD005D7F1E /* ZCAlertView.m */,
-			);
-			path = ZCAlertView;
 			sourceTree = "<group>";
 		};
 		3D3DA20D236301AD005D7F1E /* ZCLocation */ = {
@@ -1026,7 +1012,6 @@
 				3D3DA259236301AD005D7F1E /* UITextView+ZCHandleMaxTextLength.h in Headers */,
 				3D3DA2AE236301AD005D7F1E /* ZCTableViewCell.h in Headers */,
 				3D3DA2C0236301AD005D7F1E /* ZCTimeCountDown.h in Headers */,
-				3D3DA298236301AD005D7F1E /* ZCAlertView.h in Headers */,
 				3D3DA2CD236301AD005D7F1E /* ZCPicturePreviewItem.h in Headers */,
 				3D3DA29E236301AD005D7F1E /* ZCSelectDatePicker.h in Headers */,
 				3D3DA251236301AD005D7F1E /* ZCBannerView.h in Headers */,
@@ -1314,7 +1299,6 @@
 				3D3DA2B9236301AD005D7F1E /* ZCReachability.m in Sources */,
 				3D3DA261236301AD005D7F1E /* UINavigationBar+ZCSupp.m in Sources */,
 				3D3DA266236301AD005D7F1E /* CALayer+ZCSupp.m in Sources */,
-				3D3DA297236301AD005D7F1E /* ZCAlertView.m in Sources */,
 				3D3DA2A3236301AD005D7F1E /* ZCTextView.m in Sources */,
 				3D3DA291236301AD005D7F1E /* CNContact+ZCToDictionary.m in Sources */,
 				3D3DA274236301AD005D7F1E /* UIButton+ZCSupp.m in Sources */,

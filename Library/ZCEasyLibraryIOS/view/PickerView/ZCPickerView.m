@@ -11,14 +11,11 @@
 #import "UIView+ZCCornerRadius.h"
 
 
-@interface ZCPickerView()<UIPickerViewDelegate, UIPickerViewDataSource> {
-    UIButton *zc_okButton;
-    UIButton *zc_cancelButton;
-    UIView *lineView;
-//    UIView *zc_datePicBackground;
-}
+@interface ZCPickerView()<UIPickerViewDelegate, UIPickerViewDataSource>
+
 @property(nonatomic, assign) NSInteger zc_sectionCount;
 @property(nonatomic, copy)   int (^zc_rowCount)(UIPickerView *, NSInteger component);
+
 @end
 
 #define OK_BUTTON_HEIGHT 35
@@ -27,53 +24,35 @@
 @synthesize zc_pickerView;
 @synthesize zc_dataSource;
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        if(!zc_pickerView) {
-            [self.zc_contentView zc_drawCornerRadius:0];
-            
-            zc_cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [zc_cancelButton setTitle:@"取消" forState:UIControlStateNormal];
-            [zc_cancelButton setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
-            [zc_cancelButton addTarget:self action:@selector(zc_hiddenView) forControlEvents:UIControlEventTouchUpInside];
-            [self.zc_contentView addSubview:zc_cancelButton];
-            
-            zc_okButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [zc_okButton setTitle:@"确定" forState:UIControlStateNormal];
-            [zc_okButton setTitleColor:UIColorFromRGB(0x4996fe) forState:UIControlStateNormal];
-            [zc_okButton addTarget:self action:@selector(okClick:) forControlEvents:UIControlEventTouchUpInside];
-            [self.zc_contentView addSubview:zc_okButton];
-            
-            lineView = [[UIView alloc] init];
-            lineView.backgroundColor = UIColorFromRGB(0xd8d8d8);
-            [self.zc_contentView addSubview:lineView];
-            
-            zc_pickerView = [[UIPickerView alloc] init];
-            zc_pickerView.delegate = self;
-            zc_pickerView.dataSource = self;
-            [self.zc_contentView addSubview:zc_pickerView];
-            
-            self.frame = frame;
-        }
-    }
-    return self;
+- (void)initView {
+    [super initView];
+    zc_topToolBarStyle = ZCElasticControlTopToolBarStyleOkAndCancel;
 }
 
 - (void)setFrame:(CGRect)frame {
     super.frame = frame;
     
-    if(zc_pickerView) {
-        zc_cancelButton.frame = CGRectMake(0, 0, 80, OK_BUTTON_HEIGHT);
-        zc_okButton.frame = CGRectMake(self.frame.size.width-80, 0, 80, OK_BUTTON_HEIGHT);
-        lineView.frame = CGRectMake(10, zc_okButton.frame.size.height, self.frame.size.width-10*2, 0.5);
-        
-        float height = zc_pickerView.frame.size.height + OK_BUTTON_HEIGHT;
-        self.zc_contentView.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
-        
-        zc_pickerView.frame = CGRectMake(0, zc_okButton.frame.size.height, self.frame.size.width, zc_pickerView.frame.size.height);
+    float height = CGRectGetHeight(self.zc_pickerView.frame);
+    self.zc_contentView.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
+    
+    self.zc_pickerView.frame = self.zc_contentView.bounds;
+}
+
+- (void)prepareForInterfaceBuilder {
+    [super prepareForInterfaceBuilder];
+    
+    self.zc_dataSource = @[@"Mouuntain View", @"Sunnyvale", @"Cupertino", @"Santa Clara", @"San Jose"];
+    [self.zc_pickerView selectRow:2 inComponent:0 animated:YES];
+}
+
+- (UIPickerView *)zc_pickerView {
+    if (!zc_pickerView) {
+        zc_pickerView = [[UIPickerView alloc] init];
+        zc_pickerView.delegate = self;
+        zc_pickerView.dataSource = self;
+        [self.zc_contentView addSubview:zc_pickerView];
     }
+    return zc_pickerView;
 }
 
 - (NSInteger(^)(NSInteger))zc_selectRow {
@@ -82,7 +61,7 @@
     };
 }
 
-- (void)okClick:(UIDatePicker *)sender {
+- (void)okClick:(UIBarButtonItem *)okItem {
     NSMutableArray<NSNumber *> *selectRowArray = [NSMutableArray array];
     NSMutableArray<NSString *> *selectTitleArray = [NSMutableArray array];
     for (int i = 0; i < self.zc_sectionCount; i++) {

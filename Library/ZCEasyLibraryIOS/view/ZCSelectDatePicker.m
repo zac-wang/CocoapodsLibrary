@@ -11,7 +11,6 @@
 
 @interface ZCSelectDatePicker() {
     UIToolbar *toolBar;
-//    UIView *zc_datePicBackground;
 }
 @end
 
@@ -20,48 +19,36 @@
 @implementation ZCSelectDatePicker
 @synthesize zc_datePicker;
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        if(!zc_datePicker) {
-            [self.zc_contentView zc_drawCornerRadius:0];
-            
-            toolBar = [[UIToolbar alloc] init];
-            UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(zc_hiddenView)];
-            UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-            UIBarButtonItem *okItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(okClick)];
-            toolBar.items = @[cancelItem, flexibleSpace, okItem];
-            [self.zc_contentView addSubview:toolBar];
-            
-            zc_datePicker = [[UIDatePicker alloc] init];
-            zc_datePicker.locale = [NSLocale currentLocale];
-            zc_datePicker.datePickerMode = UIDatePickerModeDateAndTime;
-            //zc_datePicker.minimumDate = [NSDate date];
-            zc_datePicker.date = [NSDate date];
-            [zc_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
-            [self.zc_contentView addSubview:zc_datePicker];
-            
-            self.frame = self.frame;
-        }
-    }
-    return self;
+- (void)initView {
+    [super initView];
+    zc_topToolBarStyle = ZCElasticControlTopToolBarStyleOkAndCancel;
 }
 
 - (void)setFrame:(CGRect)frame {
     super.frame = frame;
     
-    if(zc_datePicker) {
-        toolBar.frame = CGRectMake(0, 0, self.frame.size.width, OK_BUTTON_HEIGHT);
-        zc_datePicker.frame = CGRectMake(0, OK_BUTTON_HEIGHT, self.frame.size.width, zc_datePicker.frame.size.height);
-        
-        float height = CGRectGetMaxY(zc_datePicker.frame);
-        self.zc_contentView.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
-    }
+    float height = CGRectGetHeight(self.zc_datePicker.frame);
+    self.zc_contentView.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
+    
+    self.zc_datePicker.frame = self.zc_contentView.bounds;
 }
 
-- (void)okClick {
+- (UIDatePicker *)zc_datePicker {
+    if (!zc_datePicker) {
+        zc_datePicker = [[UIDatePicker alloc] init];
+        zc_datePicker.locale = [NSLocale currentLocale];
+        zc_datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+        //zc_datePicker.minimumDate = [NSDate date];
+        zc_datePicker.date = [NSDate date];
+        [zc_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+        [self.zc_contentView addSubview:zc_datePicker];
+    }
+    return zc_datePicker;
+}
+
+- (void)okClick:(UIBarButtonItem *)okItem {
     [self dateChanged:self.zc_datePicker];
+    
     [self zc_hiddenView];
 }
 

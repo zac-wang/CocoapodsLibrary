@@ -15,8 +15,6 @@
 @interface ZCCitySelect ()<UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property(nonatomic, strong) UIPickerView * pic;
-@property(nonatomic, strong) UIButton * button;
-@property(nonatomic, strong) UIView *lineView;
 
 @property(nonatomic, copy)   NSArray * dataArr;
 
@@ -25,78 +23,41 @@
 #define buttonWidth     60
 #define buttonHeight    35
 
-#define GetRowForComponent(component) [self.pic selectedRowInComponent:0]
+#define GetRowForComponent(component) [self.pic selectedRowInComponent:component]
 
 @implementation ZCCitySelect
 @synthesize zc_componentCount;
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self initialAndCreateSubView];
-        self.frame = self.frame;
-    }
-    return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        [self initialAndCreateSubView];
-    }
-    return self;
-}
-
-- (void)initialAndCreateSubView
-{
-    [self.zc_contentView zc_drawCornerRadius:0];
+- (void)initView {
+    [super initView];
+    
+    zc_topToolBarStyle = ZCElasticControlTopToolBarStyleOkAndCancel;
     
     NSBundle *easyLibrary = [NSBundle bundleWithIdentifier:@"org.cocoapods.ZCEasyLibrary"];
     NSString *addressPath = [easyLibrary pathForResource:@"ZCCitySelectAddressData" ofType:@"plist"];
     self.dataArr = [NSArray arrayWithContentsOfFile:addressPath];
-    
-    self.pic = [[UIPickerView alloc] initWithFrame:CGRectZero];
-    self.pic.showsSelectionIndicator = YES;
-    self.pic.delegate = self;
-    [self.zc_contentView addSubview:self.pic];
-    
-    self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.button setTitle:@"确定" forState:UIControlStateNormal];
-    [self.button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.zc_contentView addSubview:self.button];
-    
-    self.lineView = [[UIView alloc] init];
-    self.lineView.backgroundColor = UIColorFromRGB(0xd8d8d8);
-    [self.zc_contentView addSubview:self.lineView];
 }
 
 - (void)setFrame:(CGRect)frame {
     super.frame = frame;
     
-    self.zc_bodyFrame = CGRectMake(0,
-                                frame.size.height - self.pic.frame.size.height - buttonHeight,
-                                frame.size.width,
-                                self.pic.frame.size.height + buttonHeight);
+    float height = CGRectGetHeight(self.pic.frame);
+    self.zc_contentView.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
+
+    self.pic.frame = self.zc_contentView.bounds;
 }
 
-- (void)setZc_bodyFrame:(CGRect)bodyFrame {
-    super.zc_contentView.frame = bodyFrame;
-    
-    self.button.frame = CGRectMake(bodyFrame.size.width - buttonWidth,
-                                   0,
-                                   buttonWidth,
-                                   buttonHeight);
-    
-    self.lineView.frame = CGRectMake(10, self.button.frame.size.height, self.frame.size.width-10*2, 0.5);
-    
-    self.pic.frame = CGRectMake(0,
-                                buttonHeight,
-                                bodyFrame.size.width,
-                                self.pic.frame.size.height);
+- (UIPickerView *)pic {
+    if (!_pic) {
+        _pic = [[UIPickerView alloc] initWithFrame:CGRectZero];
+        _pic.showsSelectionIndicator = YES;
+        _pic.delegate = self;
+        [self.zc_contentView addSubview:_pic];
+    }
+    return _pic;
 }
 
+#pragma mark -
 - (void)setZc_componentCount:(int)comp {
     zc_componentCount = comp;
     [self.pic reloadAllComponents];
@@ -158,18 +119,18 @@
     }
 }
 
--(IBAction)btnClick:(id)sender{
+- (void)okClick:(UIBarButtonItem *)okItem {
     if(self.zc_eventClick) {
         NSNumber *code;
         
-        NSInteger one = [self.pic selectedRowInComponent:0];
+        NSInteger one = GetRowForComponent(0);
         NSDictionary *oneDictionary = self.dataArr[one];
         NSArray *oneArray = oneDictionary[@"aearList"];
         code = oneDictionary[@"areaId"];
         
         NSDictionary *twoDictionary;
         if(self.pic.numberOfComponents >= 2) {
-            NSInteger two = [self.pic selectedRowInComponent:1];
+            NSInteger two = GetRowForComponent(1);
             twoDictionary = oneArray[two];
             code = twoDictionary[@"areaId"];
         }
@@ -177,15 +138,15 @@
         
         NSDictionary *threeDictionary;
         if(self.pic.numberOfComponents >= 3) {
-            NSInteger three = [self.pic selectedRowInComponent:2];
+            NSInteger three = GetRowForComponent(2);
             threeDictionary = twoArray[three];
             code = threeDictionary[@"areaId"];
         }
         
         self.zc_eventClick(oneDictionary[@"areaName"], twoDictionary[@"areaName"], threeDictionary[@"areaName"], code);
-
-        [self zc_hiddenView];
     }
+    
+    [self zc_hiddenView];
 }
 
 @end

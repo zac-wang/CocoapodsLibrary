@@ -10,8 +10,6 @@
 
 @interface ZCCitySelect : ZCElasticControl
 
-- (instancetype)initWithFrame:(CGRect)frame;
-
 @property(nonatomic, assign) int zc_componentCount;
 
 @property(nonatomic, copy) void(^zc_eventClick)(NSString *province, NSString *city, NSString *district, NSNumber *code);
