@@ -49,6 +49,10 @@
     [ZCTagView zc_tagViews:self.zc_tagButtons btnHorizontalGap:self.zc_btnHorizontalGap btnVerticalGap:self.zc_btnVerticalGap btnHeight:self.zc_btnHeight isDisperse:self.zc_tagStyle];
 }
 
+- (void)prepareForInterfaceBuilder {
+    self.zc_tagTitles = @[@"第一个标签", @"第2个", @"第三个标签", @"第四个标签", @"这是第五个标签", @"第六个标签", @"第7个标签"];
+}
+
 - (void)setZc_tagTitles:(NSArray<NSString *> *)tagTitles {
     zc_tagTitles = tagTitles;
     

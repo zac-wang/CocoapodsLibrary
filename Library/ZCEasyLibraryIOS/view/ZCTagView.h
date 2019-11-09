@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, ZCTagViewStyle) {
+typedef NS_ENUM(NSUInteger, ZCTagViewStyle) {
     /// 默认居左
     ZCTagViewStyleDefault  = 0,
     /// 分散
@@ -17,18 +17,20 @@ typedef NS_ENUM(NSInteger, ZCTagViewStyle) {
     ZCTagViewStyleCenter   = 2
 };
 
+IB_DESIGNABLE
+
 /// 标签
 @interface ZCTagView : UIView
 
 /// 标签 水平间距
-@property(nonatomic, assign) double zc_btnHorizontalGap;
+@property(nonatomic, assign) IBInspectable double zc_btnHorizontalGap;
 /// 标签 垂直间距
-@property(nonatomic, assign) double zc_btnVerticalGap;
+@property(nonatomic, assign) IBInspectable double zc_btnVerticalGap;
 /// 标签 高度，默认15
-@property(nonatomic, assign) double zc_btnHeight;
+@property(nonatomic, assign) IBInspectable double zc_btnHeight;
 
 /// 标签 分布类型
-@property(nonatomic, assign) ZCTagViewStyle zc_tagStyle;
+@property(nonatomic, assign) IBInspectable ZCTagViewStyle zc_tagStyle;
 
 /// 设置标签名称数组
 @property(nonatomic, strong) NSArray<NSString *> *zc_tagTitles;
