@@ -36,10 +36,10 @@
         self.backgroundColor = [UIColor blackColor].zc_alpha(0.5);
         [self removeTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
         
-        [self.zc_backView zc_drawCornerRadius:10];
+        [self.zc_contentView zc_drawCornerRadius:10];
         
         self.headBackView = [[UIView alloc] init];
-        [self.zc_backView addSubview:self.headBackView];
+        [self.zc_contentView addSubview:self.headBackView];
         
         self.titleLabel = [[UILabel alloc] init];
         self.titleLabel.font = [UIFont boldSystemFontOfSize:17];
@@ -54,7 +54,7 @@
         [self.headBackView addSubview:self.msgLabel];
         
         self.btnBackView = [[UIView alloc] init];
-        [self.zc_backView addSubview:self.btnBackView];
+        [self.zc_contentView addSubview:self.btnBackView];
         
         self.buttonArray = [NSMutableArray array];
         self.buttonHandleMap = [NSMutableDictionary dictionary];
@@ -164,8 +164,8 @@
     
     [self updateButtons];
     
-    self.zc_backView.frame = CGRectMake(0, 0, BackViewWidth, self.btnBackView.frame.origin.y + self.btnBackView.frame.size.height);
-    self.zc_backView.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+    self.zc_contentView.frame = CGRectMake(0, 0, BackViewWidth, self.btnBackView.frame.origin.y + self.btnBackView.frame.size.height);
+    self.zc_contentView.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
 
     
     [[UIApplication sharedApplication].keyWindow addSubview:self];

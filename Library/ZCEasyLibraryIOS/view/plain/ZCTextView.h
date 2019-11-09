@@ -10,9 +10,6 @@
 
 @interface ZCTextView : UITextView
 
-///设置属性key
-@property(nonatomic, strong) NSString *zc_keyPath;
-
 ///设置文字最大输入长度
 @property(nonatomic, assign) int zc_textMaxLength;
 

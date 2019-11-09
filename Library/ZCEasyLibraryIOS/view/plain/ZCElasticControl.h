@@ -11,8 +11,7 @@
 /// 弹出页面
 @interface ZCElasticControl : UIControl
 
-@property(nonatomic, strong) UIView *zc_backView;
-@property(nonatomic, assign) CGRect zc_bodyFrame;
+@property(nonatomic, strong) UIView *zc_contentView;
 
 @property(nonatomic, readonly) UIView *(^zc_newLineView)(CGRect frame);
 

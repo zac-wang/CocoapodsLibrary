@@ -32,28 +32,28 @@
     self = [super initWithFrame:frame];
     if (self) {
         if(!zc_pickerView) {
-            [self.zc_backView zc_drawCornerRadius:0];
+            [self.zc_contentView zc_drawCornerRadius:0];
             
             zc_cancelButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [zc_cancelButton setTitle:@"取消" forState:UIControlStateNormal];
             [zc_cancelButton setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
             [zc_cancelButton addTarget:self action:@selector(zc_hiddenView) forControlEvents:UIControlEventTouchUpInside];
-            [self.zc_backView addSubview:zc_cancelButton];
+            [self.zc_contentView addSubview:zc_cancelButton];
             
             zc_okButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [zc_okButton setTitle:@"确定" forState:UIControlStateNormal];
             [zc_okButton setTitleColor:UIColorFromRGB(0x4996fe) forState:UIControlStateNormal];
             [zc_okButton addTarget:self action:@selector(okClick:) forControlEvents:UIControlEventTouchUpInside];
-            [self.zc_backView addSubview:zc_okButton];
+            [self.zc_contentView addSubview:zc_okButton];
             
             lineView = [[UIView alloc] init];
             lineView.backgroundColor = UIColorFromRGB(0xd8d8d8);
-            [self.zc_backView addSubview:lineView];
+            [self.zc_contentView addSubview:lineView];
             
             zc_pickerView = [[UIPickerView alloc] init];
             zc_pickerView.delegate = self;
             zc_pickerView.dataSource = self;
-            [self.zc_backView addSubview:zc_pickerView];
+            [self.zc_contentView addSubview:zc_pickerView];
             
             self.frame = frame;
         }
@@ -70,7 +70,7 @@
         lineView.frame = CGRectMake(10, zc_okButton.frame.size.height, self.frame.size.width-10*2, 0.5);
         
         float height = zc_pickerView.frame.size.height + OK_BUTTON_HEIGHT;
-        self.zc_bodyFrame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
+        self.zc_contentView.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
         
         zc_pickerView.frame = CGRectMake(0, zc_okButton.frame.size.height, self.frame.size.width, zc_pickerView.frame.size.height);
     }

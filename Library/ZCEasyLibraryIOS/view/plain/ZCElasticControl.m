@@ -19,13 +19,17 @@
         self.backgroundColor = [UIColor blackColor].zc_alpha(0.5);
         [self addTarget:self action:@selector(zc_hiddenView) forControlEvents:UIControlEventTouchUpInside];
         
-        self.zc_backView = [[UIView alloc] initWithFrame:CGRectMake(frame.size.width/4, frame.size.height/4, frame.size.height/2, frame.size.width/2)];
-        self.zc_backView.backgroundColor = [UIColor whiteColor];
-        [self addSubview:self.zc_backView];
+        self.zc_contentView = [[UIView alloc] initWithFrame:CGRectMake(frame.size.width/4, frame.size.height/4, frame.size.height/2, frame.size.width/2)];
+        self.zc_contentView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:self.zc_contentView];
         
-        [self.zc_backView zc_drawCornerRadius:2];
+        [self.zc_contentView zc_drawCornerRadius:2];
     }
     return self;
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    super.backgroundColor = backgroundColor ?: self.backgroundColor;
 }
 
 - (UIView *(^)(CGRect))zc_newLineView {
@@ -48,10 +52,6 @@
 //- (void)hiddenView {
 //    [super hiddenView];
 //}
-
-- (void)setZc_bodyFrame:(CGRect)bodyFrame {
-    self.zc_backView.frame = bodyFrame;
-}
 
 - (void)zc_showView {
     [self zc_showView:0];

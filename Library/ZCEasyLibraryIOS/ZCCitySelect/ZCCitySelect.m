@@ -51,7 +51,7 @@
 
 - (void)initialAndCreateSubView
 {
-    [self.zc_backView zc_drawCornerRadius:0];
+    [self.zc_contentView zc_drawCornerRadius:0];
     
     NSBundle *easyLibrary = [NSBundle bundleWithIdentifier:@"org.cocoapods.ZCEasyLibrary"];
     NSString *addressPath = [easyLibrary pathForResource:@"ZCCitySelectAddressData" ofType:@"plist"];
@@ -60,16 +60,16 @@
     self.pic = [[UIPickerView alloc] initWithFrame:CGRectZero];
     self.pic.showsSelectionIndicator = YES;
     self.pic.delegate = self;
-    [self.zc_backView addSubview:self.pic];
+    [self.zc_contentView addSubview:self.pic];
     
     self.button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.button setTitle:@"确定" forState:UIControlStateNormal];
     [self.button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.zc_backView addSubview:self.button];
+    [self.zc_contentView addSubview:self.button];
     
     self.lineView = [[UIView alloc] init];
     self.lineView.backgroundColor = UIColorFromRGB(0xd8d8d8);
-    [self.zc_backView addSubview:self.lineView];
+    [self.zc_contentView addSubview:self.lineView];
 }
 
 - (void)setFrame:(CGRect)frame {
@@ -82,7 +82,7 @@
 }
 
 - (void)setZc_bodyFrame:(CGRect)bodyFrame {
-    super.zc_bodyFrame = bodyFrame;
+    super.zc_contentView.frame = bodyFrame;
     
     self.button.frame = CGRectMake(bodyFrame.size.width - buttonWidth,
                                    0,
