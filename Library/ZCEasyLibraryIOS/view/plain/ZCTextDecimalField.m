@@ -12,9 +12,10 @@
 - (void)textFieldDidChange:(UITextField *)textField;
 @end
 
-@interface ZCTextDecimalField()
-/// 用户是否修改过要保留的小数位数，即zc_decimalLength
-@property(nonatomic, assign) BOOL zc_isUserChangeDecimalLength;
+@interface ZCTextDecimalField() {
+    /// 用户要保留的小数位数，即zc_decimalLength
+    NSNumber *zc_decimalLengthNumber;
+}
 @end
 
 @implementation ZCTextDecimalField
@@ -29,21 +30,16 @@
     }
 }
 
-- (int)zc_integerLength {
+- (NSUInteger)zc_integerLength {
     return zc_integerLength <= 0 ? 12 : zc_integerLength;
 }
 
-- (int)zc_decimalLength {
-    if(self.zc_isUserChangeDecimalLength) { // 用户是否修改过zc_decimalLength
-        return zc_decimalLength;
-    }else {
-        return 2; // 默认保留两位小数
-    }
+- (NSUInteger)zc_decimalLength {
+    return zc_decimalLengthNumber ? zc_decimalLengthNumber.unsignedIntegerValue : 2; // 默认保留两位小数
 }
 
-- (void)setZc_decimalLength:(int)decimalLength {
-    zc_decimalLength = decimalLength;
-    self.zc_isUserChangeDecimalLength = YES;
+- (void)setZc_decimalLength:(NSUInteger)decimalLength {
+    zc_decimalLengthNumber = @(decimalLength);
 }
 
 - (void)textFieldDidChange:(UITextField *)textField {
@@ -53,72 +49,66 @@
 }
 
 - (NSString *)zc_changeTextFieldNumber:(NSString *)text {
-    //是否可以为负数
-    if(self.zc_isMinus && [text isEqualToString:@"-"]) {
-        return text;
+    // 1、字符串 不允许出现 非数字、小数点 以外的字符, 除开头外不允许出现减号
+    NSMutableString *newText = [NSMutableString string];
+    for (int i = 0; i < text.length; i++) {
+        unichar single = [text characterAtIndex:i];
+        if ((single >= '0' && single <= '9') || single == '.') {
+            [newText appendFormat:@"%c", single];
+        }
     }
     
-    if(text.length) {
-        BOOL isMinus = self.zc_isMinus && [text hasPrefix:@"-"];
-        if(isMinus) {
-            text = [text substringFromIndex:1];
+    // 2、开头不能是 小数点
+    for (int i = 0; i < newText.length; i++) {
+        if([newText characterAtIndex:0] == '.') {
+            [newText deleteCharactersInRange:NSMakeRange(0, 1)];
+        } else {
+            break;
         }
-        
-        NSMutableString *string = [NSMutableString string];
-        // 去除 非数字、非小数点 字符
-        for (int i = 0; i < text.length; i++) {
-            unichar single = [text characterAtIndex:i];
-            if ((single < '0' || single > '9') && single != '.') {
-                break;
-            }
-            
-            
-            if(string.length == 0) {
-                if(single == '.') { // 开头不能是 小数点
-                    continue;
-                }
-            }else if(string.length == 1) {
-                // 第一个字符不能是 0（第二个字符不是小数点的情况下）
-                if([string characterAtIndex:0] == '0') {
-                    if(single != '.') {
-                        [string deleteCharactersInRange:NSMakeRange(0, 1)];
-                    }
-                }
-            }
-            
-            // 不能存在两个小数点
-            if(single == '.') {
-                NSRange range = [string rangeOfString:@"."];
-                if(range.location != NSNotFound) {//已存在小数点，忽略后面
-                    break;
-                }
-            }
-            
-            [string appendFormat:@"%c", single];
-        }
-        
-        NSUInteger integerLength = string.length;
-        // 小数点后留n位
-        NSRange range = [string rangeOfString:@"."];
-        if(range.location != NSNotFound) {
-            NSUInteger maxLength = range.location + (self.zc_decimalLength <= 0 ? 0 : 1) + self.zc_decimalLength;
-            if(string.length > maxLength) {
-                NSRange deleteRange = NSMakeRange(maxLength, string.length - maxLength);
-                [string deleteCharactersInRange:deleteRange];
-            }
-            integerLength = range.location;
-        }
-        // 限制整数部分 最大长度
-        if(self.zc_integerLength < integerLength) {
-            NSRange deleteRange = NSMakeRange(self.zc_integerLength, string.length - self.zc_integerLength);
-            [string deleteCharactersInRange:deleteRange];
-        }
-        
-        NSString *head = isMinus ? @"-" : @"";
-        NSString *result = [NSString stringWithFormat:@"%@%@", head, string.length ? string : @"0"];
-        return result;
     }
-    return text;
+    
+    // 3、开头不能是 0（字符串有两个以上字符 且 第二个字符不是小数点的情况下）
+    for (int i = 0; i < newText.length - 1; i++) {
+        if([newText characterAtIndex:0] == '0' && [newText characterAtIndex:1] != '.') {
+            [newText deleteCharactersInRange:NSMakeRange(0, 1)];
+        } else {
+            break;
+        }
+    }
+    
+    // 4、不能存在两个小数点
+    NSRange pointRange = [newText rangeOfString:@"."];
+    if(pointRange.location != NSNotFound) {//已存在小数点，忽略后面
+        NSUInteger start = pointRange.location+pointRange.length;
+        NSRange rane = NSMakeRange(start, newText.length - start);
+        [newText replaceOccurrencesOfString:@"." withString:@"" options:NSLiteralSearch range:rane];
+    }
+            
+    // 5、限制整数位、小数位长度
+    NSArray *numArr = [newText componentsSeparatedByString:@"."];
+    NSString *integerString = numArr.firstObject;
+    NSString *decimalString = numArr.count > 1 ? numArr[1] : @"";
+    if (integerString.length > self.zc_integerLength) {
+        integerString = [integerString substringToIndex:self.zc_integerLength];
+    }
+    if (decimalString.length > self.zc_decimalLength) {
+        decimalString = [decimalString substringToIndex:self.zc_decimalLength];
+    }
+    if (numArr.count > 1) {
+        newText = [NSMutableString stringWithFormat:@"%@.%@", integerString, decimalString];
+    } else {
+        newText = [NSMutableString stringWithFormat:@"%@", integerString];
+    }
+    
+    // 6、是否可以为负数
+    if ([text hasPrefix:@"-"] && self.zc_isMinus) {
+        [newText insertString:@"-" atIndex:0];
+    }
+    return newText;
+}
+
+- (void)prepareForInterfaceBuilder {
+    [self textFieldDidChange:self];
 }
 
 - (double)zc_textValue {

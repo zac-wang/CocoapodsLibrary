@@ -50,7 +50,7 @@
 }
 
 - (void)prepareForInterfaceBuilder {
-    self.zc_tagTitles = @[@"第一个标签", @"第2个", @"第三个标签", @"第四个标签", @"这是第五个标签", @"第六个标签", @"第7个标签"];
+    self.zc_tagTitles = @[@"San Jose", @"Sunnyvale", @"Cupertino", @"Saratoga", @"Los Gatos", @"Santa Clara", @"Los Altos", @"Milpitas", @"Mountain View", @"Other Location"];
 }
 
 - (void)setZc_tagTitles:(NSArray<NSString *> *)tagTitles {

@@ -44,6 +44,15 @@
     return self;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self initView];
+    }
+    return self;
+}
+
 - (void)initView {
     zc_topToolBarStyle = ZCElasticControlTopToolBarStyleNone;
     

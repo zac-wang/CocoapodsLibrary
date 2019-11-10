@@ -30,7 +30,11 @@ IB_DESIGNABLE
 @property(nonatomic, assign) IBInspectable double zc_btnHeight;
 
 /// 标签 分布类型
-@property(nonatomic, assign) IBInspectable ZCTagViewStyle zc_tagStyle;
+#if TARGET_INTERFACE_BUILDER
+@property (nonatomic, assign) IBInspectable NSUInteger zc_tagStyle;
+#else
+@property(nonatomic, assign) ZCTagViewStyle zc_tagStyle;
+#endif
 
 /// 设置标签名称数组
 @property(nonatomic, strong) NSArray<NSString *> *zc_tagTitles;
