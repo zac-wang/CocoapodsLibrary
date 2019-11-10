@@ -23,7 +23,6 @@
 		3D3DA25B236301AD005D7F1E /* UIView+ZCConvert.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1C9236301AD005D7F1E /* UIView+ZCConvert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA25C236301AD005D7F1E /* UIView+ZCSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1CA236301AD005D7F1E /* UIView+ZCSubview.m */; };
 		3D3DA25D236301AD005D7F1E /* UIImage+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1CB236301AD005D7F1E /* UIImage+ZCSupp.m */; };
-		3D3DA25E236301AD005D7F1E /* UITableView+ZCPaging.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1CC236301AD005D7F1E /* UITableView+ZCPaging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA25F236301AD005D7F1E /* UIImageView+ZCAnimat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1CD236301AD005D7F1E /* UIImageView+ZCAnimat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA260236301AD005D7F1E /* UIView+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1CE236301AD005D7F1E /* UIView+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA261236301AD005D7F1E /* UINavigationBar+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1CF236301AD005D7F1E /* UINavigationBar+ZCSupp.m */; };
@@ -41,7 +40,6 @@
 		3D3DA26D236301AD005D7F1E /* UITextView+ZCHandleMaxTextLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1DB236301AD005D7F1E /* UITextView+ZCHandleMaxTextLength.m */; };
 		3D3DA26E236301AD005D7F1E /* UITableView+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1DC236301AD005D7F1E /* UITableView+ZCSupp.m */; };
 		3D3DA26F236301AD005D7F1E /* UIImageView+ZCAnimat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1DD236301AD005D7F1E /* UIImageView+ZCAnimat.m */; };
-		3D3DA270236301AD005D7F1E /* UITableView+ZCPaging.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1DE236301AD005D7F1E /* UITableView+ZCPaging.m */; };
 		3D3DA271236301AD005D7F1E /* UIImage+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1DF236301AD005D7F1E /* UIImage+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA272236301AD005D7F1E /* UIView+ZCSubview.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1E0236301AD005D7F1E /* UIView+ZCSubview.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA273236301AD005D7F1E /* CALayer+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1E1236301AD005D7F1E /* CALayer+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -236,7 +234,6 @@
 		3D3DA1C9236301AD005D7F1E /* UIView+ZCConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCConvert.h"; sourceTree = "<group>"; };
 		3D3DA1CA236301AD005D7F1E /* UIView+ZCSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCSubview.m"; sourceTree = "<group>"; };
 		3D3DA1CB236301AD005D7F1E /* UIImage+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZCSupp.m"; sourceTree = "<group>"; };
-		3D3DA1CC236301AD005D7F1E /* UITableView+ZCPaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ZCPaging.h"; sourceTree = "<group>"; };
 		3D3DA1CD236301AD005D7F1E /* UIImageView+ZCAnimat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZCAnimat.h"; sourceTree = "<group>"; };
 		3D3DA1CE236301AD005D7F1E /* UIView+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCSupp.h"; sourceTree = "<group>"; };
 		3D3DA1CF236301AD005D7F1E /* UINavigationBar+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ZCSupp.m"; sourceTree = "<group>"; };
@@ -254,7 +251,6 @@
 		3D3DA1DB236301AD005D7F1E /* UITextView+ZCHandleMaxTextLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ZCHandleMaxTextLength.m"; sourceTree = "<group>"; };
 		3D3DA1DC236301AD005D7F1E /* UITableView+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZCSupp.m"; sourceTree = "<group>"; };
 		3D3DA1DD236301AD005D7F1E /* UIImageView+ZCAnimat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZCAnimat.m"; sourceTree = "<group>"; };
-		3D3DA1DE236301AD005D7F1E /* UITableView+ZCPaging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ZCPaging.m"; sourceTree = "<group>"; };
 		3D3DA1DF236301AD005D7F1E /* UIImage+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZCSupp.h"; sourceTree = "<group>"; };
 		3D3DA1E0236301AD005D7F1E /* UIView+ZCSubview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCSubview.h"; sourceTree = "<group>"; };
 		3D3DA1E1236301AD005D7F1E /* CALayer+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+ZCSupp.h"; sourceTree = "<group>"; };
@@ -499,8 +495,6 @@
 				3D3DA1CF236301AD005D7F1E /* UINavigationBar+ZCSupp.m */,
 				3D3DA1C8236301AD005D7F1E /* UIResponder+ZCGetNextResponderObj.h */,
 				3D3DA1DA236301AD005D7F1E /* UIResponder+ZCGetNextResponderObj.m */,
-				3D3DA1CC236301AD005D7F1E /* UITableView+ZCPaging.h */,
-				3D3DA1DE236301AD005D7F1E /* UITableView+ZCPaging.m */,
 				3D3DA1C6236301AD005D7F1E /* UITableView+ZCSupp.h */,
 				3D3DA1DC236301AD005D7F1E /* UITableView+ZCSupp.m */,
 				3D3DA1D8236301AD005D7F1E /* UITextField+ZCHandleMaxTextLength.h */,
@@ -947,7 +941,6 @@
 				3D3DA2B7236301AD005D7F1E /* ZCSelectImagePicker.h in Headers */,
 				3D3DA2A6236301AD005D7F1E /* ZCTextField.h in Headers */,
 				3D3DA277236301AD005D7F1E /* UINavigationBar+ZCSupp.h in Headers */,
-				3D3DA25E236301AD005D7F1E /* UITableView+ZCPaging.h in Headers */,
 				3D3DA262236301AD005D7F1E /* UIImageView+ZCGif.h in Headers */,
 				3D3DA2C2236301AD005D7F1E /* ZCUserDefaults.h in Headers */,
 				3D3DA2C1236301AD005D7F1E /* ZCAppUpdateVersion.h in Headers */,
@@ -1258,7 +1251,6 @@
 				3D3DA2C3236301AD005D7F1E /* iphoneDevice.m in Sources */,
 				3D3DA26B236301AD005D7F1E /* UIView+ZCConvert.m in Sources */,
 				3D3DA2CE236301AD005D7F1E /* ZCPicturePreview.m in Sources */,
-				3D3DA270236301AD005D7F1E /* UITableView+ZCPaging.m in Sources */,
 				3D3DA29A236301AD005D7F1E /* ZCLocationGeocode.m in Sources */,
 				3D3DA281236301AD005D7F1E /* NSObject+ZCRuntime.m in Sources */,
 				3D3DA2BB236301AD005D7F1E /* ZCUserDefaults.m in Sources */,

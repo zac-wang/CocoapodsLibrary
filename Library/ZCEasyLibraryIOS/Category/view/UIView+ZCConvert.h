@@ -10,7 +10,7 @@
 
 @interface UIView (ZCConvert)
 
-/// 获取 view 在当前视图中 的 相对frame
-- (CGRect)zc_convertView:(UIView *)view;
+/// 获取 当前视图 在view坐标系中 的 相对frame
+@property(nonatomic, readonly) CGRect(^zc_frameForView)(UIView *view);
 
 @end

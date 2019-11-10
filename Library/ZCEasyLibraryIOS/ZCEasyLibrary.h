@@ -41,7 +41,6 @@
 #import "UIImageView+ZCGif.h"
 #import "UINavigationBar+ZCSupp.h"
 #import "UIResponder+ZCGetNextResponderObj.h"
-#import "UITableView+ZCPaging.h"
 #import "UITableView+ZCSupp.h"
 #import "UITextField+ZCHandleMaxTextLength.h"
 #import "UITextField+ZCKeyBoardTopBar.h"

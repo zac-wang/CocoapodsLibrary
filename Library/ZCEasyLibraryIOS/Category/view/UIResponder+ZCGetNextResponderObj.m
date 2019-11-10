@@ -10,15 +10,17 @@
 
 @implementation UIResponder (ZCGetNextResponderObj)
 
-- (id)zc_getNextResponderForClass:(Class)_class {
-    UIResponder *target = self;
-    while (target) {
-        target = target.nextResponder;
-        if ([target isKindOfClass:_class]) {
-            return target;
+- (id (^)(__unsafe_unretained Class))zc_getNextResponderForClass {
+    return ^(Class className) {
+        UIResponder *target = self;
+        while (target) {
+            target = target.nextResponder;
+            if ([target isKindOfClass:className]) {
+                return target;
+            }
         }
-    }
-    return target;
+        return target;
+    };
 }
 
 @end

@@ -23,7 +23,8 @@
 }
 
 - (void)zc_drawCornerRadius:(double)radius borderColor:(UIColor *)color {
-    [self zc_drawCornerRadius:radius borderWidth:0.5 borderColor:color];
+    CGFloat lineWidth = 1/[UIScreen mainScreen].scale;
+    [self zc_drawCornerRadius:radius borderWidth:lineWidth borderColor:color];
 }
 
 - (void)zc_drawCornerRadius:(double)radius borderWidth:(double)width borderColor:(UIColor *)color {

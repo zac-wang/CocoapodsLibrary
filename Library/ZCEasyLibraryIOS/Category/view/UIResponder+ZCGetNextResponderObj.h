@@ -10,6 +10,7 @@
 
 @interface UIResponder (ZCGetNextResponderObj)
 
-- (id)zc_getNextResponderForClass:(Class)_class;
+/// 获取上一级响应链
+@property(nonatomic, readonly) id (^zc_getNextResponderForClass)(Class class);
 
 @end

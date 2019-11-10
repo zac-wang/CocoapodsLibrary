@@ -10,9 +10,11 @@
 
 @implementation UIView (ZCConvert)
 
-- (CGRect)zc_convertView:(UIView *)view {
-    CGRect rc = [view convertRect:view.bounds toView:self];
-    return rc;
+- (CGRect (^)(UIView *))zc_frameForView {
+    return ^(UIView *view) {
+        CGRect rc = [self convertRect:self.bounds toView:view];
+        return rc;
+    };
 }
 
 @end
