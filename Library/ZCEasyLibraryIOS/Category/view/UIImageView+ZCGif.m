@@ -20,6 +20,10 @@
 }
 
 - (void)zc_gifImagePath:(NSString *)gifPath repeatCount:(float)repeatCount {
+    [self zc_gifImagePath:gifPath repeatCount:repeatCount calculationMode:kCAAnimationDiscrete];
+}
+
+- (void)zc_gifImagePath:(NSString *)gifPath repeatCount:(float)repeatCount calculationMode:(CAAnimationCalculationMode)calculationMode {
     [self.layer removeAnimationForKey:GifAnimationKey];
     
     if(![[NSFileManager defaultManager] fileExistsAtPath:gifPath]) {
@@ -70,6 +74,7 @@
     [animation setKeyTimes:keyTimes];
     animation.duration = totalTime;
     animation.repeatCount = repeatCount;
+    animation.calculationMode = calculationMode;
     animation.delegate = self;
     [self.layer addAnimation:animation forKey:GifAnimationKey];
 }

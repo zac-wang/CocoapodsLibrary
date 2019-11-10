@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		108C6C59674999033892702D /* Pods_CocoapodsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16539FBD524BC55800A09CC /* Pods_CocoapodsLibrary.framework */; };
+		3DBDCCAB237809E400828121 /* precheck.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3DBDCCAA237809E400828121 /* precheck.gif */; };
 		9336028020DBF93B002079F9 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336027720DBF93B002079F9 /* CalendarDayCell.m */; };
 		9336028120DBF93B002079F9 /* CalendarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336027920DBF93B002079F9 /* CalendarVC.m */; };
 		9336028220DBF93B002079F9 /* BannerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9336027B20DBF93B002079F9 /* BannerVC.m */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3DBDCCAA237809E400828121 /* precheck.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = precheck.gif; sourceTree = "<group>"; };
 		9336027520DBF93B002079F9 /* ZCPicturePreviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPicturePreviewVC.h; sourceTree = "<group>"; };
 		9336027720DBF93B002079F9 /* CalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
 		9336027820DBF93B002079F9 /* CalendarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarVC.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				938197BE20AE735200134EBC /* iconfont.ttf */,
+				3DBDCCAA237809E400828121 /* precheck.gif */,
 				938197BF20AE735600134EBC /* main_banner.bundle */,
 				9398C50D20A7645000C7C8AA /* Main.storyboard */,
 				9398C51020A7645200C7C8AA /* Assets.xcassets */,
@@ -244,6 +247,7 @@
 				938197C020AE735700134EBC /* main_banner.bundle in Resources */,
 				9398C51420A7645200C7C8AA /* LaunchScreen.storyboard in Resources */,
 				9398C51120A7645200C7C8AA /* Assets.xcassets in Resources */,
+				3DBDCCAB237809E400828121 /* precheck.gif in Resources */,
 				9398C50F20A7645000C7C8AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

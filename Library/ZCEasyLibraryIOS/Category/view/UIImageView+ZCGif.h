@@ -21,4 +21,13 @@
  */
 - (void)zc_gifImagePath:(NSString *)gifPath repeatCount:(float)repeatCount;
 
+/**
+ 播放gif动画
+
+ @param gifPath gif图片地址
+ @param repeatCount 重复次数, 0 表示无限
+ @param calculationMode 重复次数, 0 表示无限
+ */
+- (void)zc_gifImagePath:(NSString *)gifPath repeatCount:(float)repeatCount calculationMode:(CAAnimationCalculationMode)calculationMode;
+
 @end

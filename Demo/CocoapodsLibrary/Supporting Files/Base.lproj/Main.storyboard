@@ -152,7 +152,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Yq-rM-cjI" customClass="ZCTextView">
-                                <rect key="frame" x="26" y="462" width="323" height="120"/>
+                                <rect key="frame" x="199" y="462" width="150" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="blw-jc-MEB"/>
@@ -277,6 +277,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="precheck.gif" translatesAutoresizingMaskIntoConstraints="NO" id="B8r-8o-xB7">
+                                <rect key="frame" x="16" y="467" width="150" height="78.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="C3J-8N-vh7"/>
+                                    <constraint firstAttribute="width" secondItem="B8r-8o-xB7" secondAttribute="height" multiplier="771:404" id="Lbo-pT-sYu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="zc_gifImageName" value="precheck.gif"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.42154017857142856" green="1" blue="0.86455816702857136" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -293,7 +306,6 @@
                             <constraint firstItem="LPp-OC-mmA" firstAttribute="leading" secondItem="fzG-1Q-ps7" secondAttribute="trailing" id="Amv-UE-HLR"/>
                             <constraint firstItem="Eeg-VG-vaJ" firstAttribute="top" secondItem="Fb4-bn-uQf" secondAttribute="bottom" constant="10" id="BRx-VG-crd"/>
                             <constraint firstItem="Fb4-bn-uQf" firstAttribute="leading" secondItem="YA4-Jk-WfA" secondAttribute="trailing" id="BhB-bd-2z7"/>
-                            <constraint firstItem="2Yq-rM-cjI" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" constant="10" id="BtD-Ae-CYv"/>
                             <constraint firstItem="hDB-dh-mD5" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" id="D51-Ak-2Tp"/>
                             <constraint firstItem="R24-Sk-PD1" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" constant="10" id="D8z-mi-yaQ"/>
                             <constraint firstItem="vJX-Rm-s2D" firstAttribute="width" secondItem="33P-r4-Awf" secondAttribute="width" id="Dmz-8P-DkX"/>
@@ -309,6 +321,7 @@
                             <constraint firstItem="Ga4-gx-996" firstAttribute="width" secondItem="33P-r4-Awf" secondAttribute="width" id="QZ5-3T-0sz"/>
                             <constraint firstItem="YA4-Jk-WfA" firstAttribute="leading" secondItem="h4c-r6-4D5" secondAttribute="trailing" id="SYU-Mt-dLl"/>
                             <constraint firstItem="fzG-1Q-ps7" firstAttribute="leading" secondItem="em4-Pa-FvZ" secondAttribute="trailing" id="SZF-X2-XgR"/>
+                            <constraint firstItem="2Yq-rM-cjI" firstAttribute="leading" secondItem="B8r-8o-xB7" secondAttribute="trailing" constant="33" id="SnN-C7-qIb"/>
                             <constraint firstItem="h4c-r6-4D5" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" id="Tr7-Lc-LBm"/>
                             <constraint firstItem="z9o-kf-StD" firstAttribute="leading" secondItem="hDB-dh-mD5" secondAttribute="trailing" id="XE8-dk-J6s"/>
                             <constraint firstItem="qqq-Ny-MIX" firstAttribute="width" secondItem="lHM-T9-ZRy" secondAttribute="width" id="YmJ-gu-gie"/>
@@ -338,9 +351,11 @@
                             <constraint firstItem="Knb-QG-lts" firstAttribute="top" secondItem="Eeg-VG-vaJ" secondAttribute="bottom" constant="10" id="jn0-ys-2zP"/>
                             <constraint firstItem="Fb4-bn-uQf" firstAttribute="top" secondItem="pLw-iR-w9N" secondAttribute="bottom" constant="10" id="kQ2-Oj-gFp"/>
                             <constraint firstItem="qqq-Ny-MIX" firstAttribute="top" secondItem="YA4-Jk-WfA" secondAttribute="bottom" constant="10" id="kVP-ue-7zj"/>
+                            <constraint firstItem="B8r-8o-xB7" firstAttribute="top" secondItem="R24-Sk-PD1" secondAttribute="bottom" constant="15" id="khR-GP-mj0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LPp-OC-mmA" secondAttribute="trailing" id="kv5-0k-sKV"/>
                             <constraint firstItem="YA4-Jk-WfA" firstAttribute="top" secondItem="B9o-1k-2P2" secondAttribute="bottom" constant="10" id="l2S-9d-A70"/>
                             <constraint firstItem="LPp-OC-mmA" firstAttribute="top" secondItem="Ga4-gx-996" secondAttribute="bottom" constant="10" id="liv-AF-fop"/>
+                            <constraint firstItem="B8r-8o-xB7" firstAttribute="leading" secondItem="PyB-2h-0EI" secondAttribute="leadingMargin" id="lzY-tT-j8Z"/>
                             <constraint firstItem="Knb-QG-lts" firstAttribute="leading" secondItem="cOe-vx-sJg" secondAttribute="trailing" id="n1f-qZ-MF9"/>
                             <constraint firstItem="g37-yG-J2T" firstAttribute="leading" secondItem="z9o-kf-StD" secondAttribute="trailing" id="nE4-14-kPP"/>
                             <constraint firstItem="z9o-kf-StD" firstAttribute="top" secondItem="fzG-1Q-ps7" secondAttribute="bottom" constant="10" id="oZO-Fk-F5t"/>
@@ -479,4 +494,7 @@
             <point key="canvasLocation" x="1525.5999999999999" y="28.335832083958024"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="precheck.gif" width="771" height="404"/>
+    </resources>
 </document>
