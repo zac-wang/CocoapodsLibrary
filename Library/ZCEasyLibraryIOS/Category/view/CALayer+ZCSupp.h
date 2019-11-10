@@ -11,6 +11,7 @@
 @class UIColor;
 @interface CALayer (ZCSupp)
 
+/// 设置边框颜色
 @property(nonatomic, nullable, readwrite) UIColor *zc_borderColor;
 
 @end

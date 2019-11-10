@@ -13,10 +13,10 @@
 
 /// 源数据扩充倍数
 #define ExpansionMultipleForComponent(component) ({\
-    NSInteger originalCount = OriginalCountForComponent(component);\
+    NSUInteger originalCount = OriginalCountForComponent(component);\
     if(originalCount == 0)\
         originalCount = 151;\
-    int multiple = MAX(150/originalCount, 1);\
+    NSUInteger multiple = MAX(150/originalCount, 1);\
     multiple = multiple * 2 + 1;\
 })
 
@@ -50,7 +50,7 @@
 }
 
 - (void)autoSelect:(NSInteger)component {
-    int multiple = ExpansionMultipleForComponent(component);
+    NSUInteger multiple = ExpansionMultipleForComponent(component);
     NSInteger originalRowCount = OriginalCountForComponent(component);
     NSInteger selectRow = self.zc_selectRow(component);
     
@@ -72,7 +72,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    int multiple = ExpansionMultipleForComponent(component);
+    NSUInteger multiple = ExpansionMultipleForComponent(component);
     if(row/[super pickerView:pickerView numberOfRowsInComponent:component] != (multiple/2 + 1)) {
         [self autoSelect:component];
     }

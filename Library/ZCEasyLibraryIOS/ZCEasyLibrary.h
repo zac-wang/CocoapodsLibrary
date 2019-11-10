@@ -66,7 +66,6 @@
 #import "ZCElasticControl.h"
 #import "ZCFont.h"
 #import "ZCKeyBoardTopBar.h"
-#import "ZCLabel.h"
 #import "ZCLocationGeocode.h"
 #import "ZCLocationManager.h"
 #import "ZCPickerCirculateView.h"
@@ -87,5 +86,4 @@
 #import "ZCTextView.h"
 #import "ZCTimeCountDown.h"
 #import "ZCUserDefaults.h"
-#import "ZCVerticalButton.h"
 #import "iphoneDevice.h"

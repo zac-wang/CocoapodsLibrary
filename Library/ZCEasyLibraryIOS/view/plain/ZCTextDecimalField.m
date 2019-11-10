@@ -28,27 +28,42 @@
     if (@available(iOS 11.0, *)) {
         self.smartDashesType = UITextSmartDashesTypeNo;
     }
+    [self textFieldDidChange:self];
 }
 
 - (NSUInteger)zc_integerLength {
     return zc_integerLength <= 0 ? 12 : zc_integerLength;
 }
 
+- (void)setZc_integerLength:(NSUInteger)integerLength {
+    zc_integerLength = integerLength;
+    [self textFieldDidChange:self];
+}
+
+// 默认保留两位小数
 - (NSUInteger)zc_decimalLength {
-    return zc_decimalLengthNumber ? zc_decimalLengthNumber.unsignedIntegerValue : 2; // 默认保留两位小数
+    return zc_decimalLengthNumber ? zc_decimalLengthNumber.unsignedIntegerValue : 2;
 }
 
 - (void)setZc_decimalLength:(NSUInteger)decimalLength {
     zc_decimalLengthNumber = @(decimalLength);
+    [self textFieldDidChange:self];
 }
 
 - (void)textFieldDidChange:(UITextField *)textField {
     [super textFieldDidChange:textField];
     
-    self.text = [self zc_changeTextFieldNumber:self.text];
+    NSString *newText = [self zc_changeTextFieldNumber:self.text];
+    if (![newText isEqualToString:self.text]) {
+        self.text = newText;
+    }
 }
 
 - (NSString *)zc_changeTextFieldNumber:(NSString *)text {
+    if (!text.length) {
+        return text;
+    }
+    
     // 1、字符串 不允许出现 非数字、小数点 以外的字符, 除开头外不允许出现减号
     NSMutableString *newText = [NSMutableString string];
     for (int i = 0; i < text.length; i++) {
@@ -68,7 +83,7 @@
     }
     
     // 3、开头不能是 0（字符串有两个以上字符 且 第二个字符不是小数点的情况下）
-    for (int i = 0; i < newText.length - 1; i++) {
+    for (int i = 0; i < (int)newText.length - 1; i++) {
         if([newText characterAtIndex:0] == '0' && [newText characterAtIndex:1] != '.') {
             [newText deleteCharactersInRange:NSMakeRange(0, 1)];
         } else {
@@ -105,10 +120,6 @@
         [newText insertString:@"-" atIndex:0];
     }
     return newText;
-}
-
-- (void)prepareForInterfaceBuilder {
-    [self textFieldDidChange:self];
 }
 
 - (double)zc_textValue {

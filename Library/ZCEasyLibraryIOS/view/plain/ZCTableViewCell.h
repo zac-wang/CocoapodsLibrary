@@ -10,6 +10,7 @@
 
 @interface ZCTableViewCell : UITableViewCell
 
+/// 选中状态改变时回调，可用于修改cell样式
 @property(nonatomic, copy) void(^zc_selectedBlock)(ZCTableViewCell *cell, BOOL selected);
 
 @end

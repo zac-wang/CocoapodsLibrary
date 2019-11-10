@@ -19,7 +19,6 @@
 }
 
 @property (weak, nonatomic) IBOutlet ZCTagView *tagBackView;
-@property (weak, nonatomic) IBOutlet ZCVerticalButton *btn;
 @property (weak, nonatomic) IBOutlet ZCTextView *textView;
 
 @end
@@ -47,7 +46,7 @@
     //self.tagBackView.zc_btnVerticalGap = 2;
     //self.tagBackView.zc_btnHeight = 15;
     self.tagBackView.zc_tagStyle = ZCTagViewStyleCenter;
-    self.tagBackView.zc_tagTitles = @[@" 按时蒂芬v ", @" 俗为别人 ", @" 三大沃尔 ", @" 白色 ", @" 按时斯蒂芬v ", @" 俗人 ", @" 三沃尔 ", @" 是款白色 ", @" 按时蒂芬v ", @" 俗人不为别人 ", @" 三大部分沃尔 ", @" 白色 ", @" 按蒂芬v ", @" 为别人 ", @" 三大部分沃尔 ", @" 是到付款白色 "];
+    self.tagBackView.zc_tagTitles = @[@" 按时蒂芬v ", @" 俗为别人 ", @" 三大沃尔 ", @" 白色 ", @" 按时斯蒂芬v ", @" 俗人 ", @" 三沃尔 ", @" 是款白色 ", @" 按时蒂芬v ", @" 俗人不为别人 "];
     self.tagBackView.zc_btnClickBlock = ^(UIButton *btn) {
         NSLog(@"%ld", (long)btn.tag);
     };
