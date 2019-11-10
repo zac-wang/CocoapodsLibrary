@@ -12,12 +12,18 @@
 #define GifAnimationKey @"gifAnimation"
 
 @implementation UIImageView (ZCGif)
+@dynamic zc_gifImageName;
 
-- (void)zc_gifImage:(NSString *)gifPath repeatCount:(float)repeatCount {
+- (void)setZc_gifImageName:(NSString *)gifImageName {
+    NSString *gifPath = [[NSBundle mainBundle] pathForResource:gifImageName ofType:nil];
+    [self zc_gifImagePath:gifPath repeatCount:0];
+}
+
+- (void)zc_gifImagePath:(NSString *)gifPath repeatCount:(float)repeatCount {
     [self.layer removeAnimationForKey:GifAnimationKey];
     
     if(![[NSFileManager defaultManager] fileExistsAtPath:gifPath]) {
-        NSLog(@"ZCGif gi文件不存在");
+        NSLog(@"ZCGif gif文件不存在");
         return;
     }
     if(repeatCount == 0) {
@@ -59,7 +65,7 @@
     
     
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
-    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear]];
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
     [animation setValues:images];
     [animation setKeyTimes:keyTimes];
     animation.duration = totalTime;

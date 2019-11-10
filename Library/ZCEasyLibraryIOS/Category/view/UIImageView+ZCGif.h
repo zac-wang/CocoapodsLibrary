@@ -10,12 +10,15 @@
 
 @interface UIImageView (ZCGif) <CAAnimationDelegate>
 
+/// 播放gif动画，设置gifName
+@property(nonatomic, readwrite) NSString *zc_gifImageName;
+
 /**
  播放gif动画
 
  @param gifPath gif图片地址
  @param repeatCount 重复次数, 0 表示无限
  */
-- (void)zc_gifImage:(NSString *)gifPath repeatCount:(float)repeatCount;
+- (void)zc_gifImagePath:(NSString *)gifPath repeatCount:(float)repeatCount;
 
 @end
