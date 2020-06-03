@@ -7,12 +7,10 @@
 //
 
 #import "ZCElasticControl.h"
-#import "UIColor+ZCSupp.h"
-#import "UIView+ZCCornerRadius.h"
 
 #define OK_BUTTON_HEIGHT 35
 
-#define BackgroundViewColor [UIColor blackColor].zc_alpha(0.5)
+#define BackgroundViewColor [[UIColor blackColor] colorWithAlphaComponent:0.5]
 
 @interface ZCElasticControl ()
 
@@ -105,7 +103,7 @@
         self.topToolBar.hidden = NO;
         
         UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(zc_hiddenView)];
-        cancelItem.tintColor = UIColorFromRGB(0x666666);
+        cancelItem.tintColor = [UIColor colorWithRed:0x66/255.0 green:0x66/255.0 blue:0x66/255.0 alpha:1];
         UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
         UIBarButtonItem *okItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(okClick:)];
         self.topToolBar.items = @[cancelItem, flexibleSpace, okItem];

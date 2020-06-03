@@ -7,7 +7,6 @@
 //
 
 #import "NSDictionary+ZCJson.h"
-#import "NSData+ZCJson.h"
 
 @implementation NSDictionary (ZCJson)
 

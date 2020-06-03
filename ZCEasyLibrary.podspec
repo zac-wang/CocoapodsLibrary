@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCEasyLibrary"
-  spec.version      = "2.1.0"
+  spec.version      = "2.1.1"
   spec.summary      = "ZCEasyLibrary Kit"
   spec.description  = "ZCEasyLibrary 拓展库+UI库, 包含 iOS and OS X. ZCMacEasyLibrary停止更新"
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary'
@@ -19,7 +19,6 @@ Pod::Spec.new do |spec|
   spec.ios.public_header_files = 'Library/ZCEasyLibraryIOS/**/*.{h}'
   spec.osx.public_header_files = 'Library/ZCEasyLibraryMac/**/*.{h}'
 
-  spec.ios.resources = 'Library/ZCEasyLibraryIOS/**/*.png', 'Library/ZCEasyLibraryIOS/**/*.plist'
 
   spec.subspec 'ZCDate' do |sp|
     sp.source_files = 'Library/ZCEasyLibrary_sub/ZCDate/**/*.{h,m,c,mm}'
@@ -43,15 +42,49 @@ Pod::Spec.new do |spec|
     sp.dependency 'ZCEasyLibrary/ZCJson'
   end
 
+
   spec.subspec 'ZCBannerView' do |sp|
     sp.platform = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCBannerView/**/*.{h,m,c,mm}'
     sp.private_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCBannerView/ZCBannerImageView.h'
   end
 
+  spec.subspec 'ZCCitySelect' do |sp|
+    sp.platform = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCCitySelect/**/*.{h,m,c,mm}'
+    sp.resources = 'Library/ZCEasyLibraryIOS_sub/ZCCitySelect/**/*.plist'
+  end
+
+  spec.subspec 'ZCKeyBoardTopBar' do |sp|
+    sp.platform = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCKeyBoardTopBar/**/*.{h,m,c,mm}'
+    sp.dependency 'ZCEasyLibrary/ZCTextSelectedRange'
+  end
+
+  spec.subspec 'ZCReachability' do |sp|
+    sp.platform = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCReachability/**/*.{h,m,c,mm}'
+  end
+
   spec.subspec 'ZCScreenCapture' do |sp|
     sp.platform = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCScreenCapture/**/*.{h,m,c,mm}'
+  end
+
+  spec.subspec 'ZCSpinnerView' do |sp|
+    sp.platform = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCSpinnerView/**/*.{h,m,c,mm}'
+  end
+
+  spec.subspec 'ZCTextSelectedRange' do |sp|
+    sp.platform = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCTextSelectedRange/**/*.{h,m,c,mm}'
+  end
+
+
+  spec.subspec 'ZCScanQRCode' do |sp|
+    sp.platform = :osx
+    sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCScanQRCode/**/*.{h,m,c,mm}'
   end
 
   spec.requires_arc = true

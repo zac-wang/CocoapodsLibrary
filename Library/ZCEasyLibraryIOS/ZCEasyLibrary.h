@@ -85,4 +85,3 @@
 #import "ZCTextView.h"
 #import "ZCTimeCountDown.h"
 #import "ZCUserDefaults.h"
-#import "iphoneDevice.h"

@@ -7,10 +7,6 @@
 //
 
 #import "ZCCitySelect.h"
-#import "UIColor+ZCSupp.h"
-#import "UIView+ZCCornerRadius.h"
-#import "NSData+ZCJson.h"
-#import "NSString+ZCSupp.h"
 
 @interface ZCCitySelect ()<UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -33,7 +29,7 @@
     
     zc_topToolBarStyle = ZCElasticControlTopToolBarStyleOkAndCancel;
     
-    NSBundle *easyLibrary = [NSBundle bundleWithIdentifier:@"org.cocoapods.ZCEasyLibrary"];
+    NSBundle *easyLibrary = [NSBundle bundleForClass:[self class]];
     NSString *addressPath = [easyLibrary pathForResource:@"ZCCitySelectAddressData" ofType:@"plist"];
     self.dataArr = [NSArray arrayWithContentsOfFile:addressPath];
 }

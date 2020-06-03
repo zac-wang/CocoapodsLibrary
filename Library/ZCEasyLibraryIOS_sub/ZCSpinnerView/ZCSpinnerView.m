@@ -7,7 +7,6 @@
 //
 
 #import "ZCSpinnerView.h"
-#import "UIColor+ZCSupp.h"
 
 @interface ZCSpinnerView ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -54,7 +53,7 @@
         self.zc_tableView.delegate = self;
         self.zc_tableView.dataSource = self;
         self.zc_tableView.tableFooterView = [[UIView alloc] init];
-        self.zc_tableView.separatorColor = UIColorFromRGB(0xe3e4e5);
+        self.zc_tableView.separatorColor = [UIColor colorWithRed:0xe3/255.0 green:0xe4/255.0 blue:0xe5/255.0 alpha:1];
         self.zc_tableView.separatorInset = UIEdgeInsetsMake(0, 15, 0, 0);
     }
     self.zc_tableView.frame = frame;

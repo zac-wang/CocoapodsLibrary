@@ -7,14 +7,12 @@
 //
 
 #import "ZCKeyBoardTopBar.h"
-#import "Macro.h"
 #import "UITextField+ZCSelectedRange.h"
 #import "UITextView+ZCSelectedRange.h"
-#import "ZCTextField.h"
 
-@interface ZCKeyBoardTopBar()
+@interface ZCKeyBoardTopBar()<UITextFieldDelegate>
 
-@property(nonatomic, strong) ZCTextField *zc_barTextField;
+@property(nonatomic, strong) UITextField *zc_barTextField;
 
 @property(nonatomic, assign) ZCKeyBoardTopBarStyle topBarStyle;
 
@@ -37,11 +35,11 @@
 
 - (instancetype)init
 {
-    self = [super initWithFrame:CGRectMake(0, 0, ZC_SCREEN_WIDTH, ZCKeyBoardTopBarHeight)];
+    self = [super initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, ZCKeyBoardTopBarHeight)];
     if (self) {
         [self setBarStyle:UIBarStyleDefault];
         
-        self.zc_barTextField = [[ZCTextField alloc] initWithFrame:CGRectMake(0, 0, ZC_SCREEN_WIDTH - 90, 30)];
+        self.zc_barTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width - 90, 30)];
         self.zc_barTextField.borderStyle = UITextBorderStyleRoundedRect;
 //        [self.zc_barTextField zc_drawCornerRadius:3 borderColor:[UIColor grayColor]];
         self.zc_barTextField.backgroundColor = [UIColor whiteColor];
@@ -84,15 +82,15 @@
     [textView setInputAccessoryView:self];
     
     self.zc_barTextField.text = textView.text;
-    
-    __weak typeof(self)weakSelf = self;
-    self.zc_barTextField.zc_updateEvent = ^(ZCTextField *textField) {
-        if(weakSelf.zc_textField) {
-            weakSelf.zc_textField.text = textField.text;
-        }else {
-            weakSelf.zc_textView.text = textField.text;
-        }
-    };
+    self.zc_barTextField.delegate = self;
+}
+
+- (void)textFieldDidChange:(UITextField *)textField {
+    if(self.zc_textField) {
+        self.zc_textField.text = textField.text;
+    }else {
+        self.zc_textView.text = textField.text;
+    }
 }
 
 #pragma mark - 取消键盘
