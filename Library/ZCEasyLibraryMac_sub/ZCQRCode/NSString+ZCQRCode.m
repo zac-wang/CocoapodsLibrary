@@ -31,6 +31,7 @@
     size_t height = CGRectGetHeight(extent) * scale;
     CGColorSpaceRef cs = CGColorSpaceCreateDeviceRGB();
     CGContextRef bitmapRef = CGBitmapContextCreate(nil, width, height, 8, 256*4, cs, (CGBitmapInfo)kCGImageAlphaPremultipliedFirst);
+    CGColorSpaceRelease(cs);
     
 #if TARGET_OS_IPHONE
     CIContext *context = [CIContext contextWithOptions:nil];
@@ -51,7 +52,9 @@
     CGContextRelease(bitmapRef);
     CGImageRelease(bitmapImage);
     
-    return [[NSImage alloc] initWithCGImage:scaledImage size:NSZeroSize];
+    NSImage *img = [[NSImage alloc] initWithCGImage:scaledImage size:NSZeroSize];
+    CGImageRelease(scaledImage);
+    return img;
 }
 
 @end

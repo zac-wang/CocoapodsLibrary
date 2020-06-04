@@ -58,6 +58,7 @@
         _size.width = [[properties valueForKey:(NSString*)kCGImagePropertyPixelWidth] floatValue];
         _size.height = [[properties valueForKey:(NSString*)kCGImagePropertyPixelHeight] floatValue];
     }
+    CFRelease(cImageSource);
     
     NSMutableArray *keyTimes = [[NSMutableArray alloc] initWithCapacity:imageCount];
     float currentTime = 0;

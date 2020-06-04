@@ -115,16 +115,12 @@
 		3D3DA2EB236301BD005D7F1E /* NSView+ZCBackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA2D7236301BD005D7F1E /* NSView+ZCBackgroundColor.m */; };
 		3D3DA2EC236301BD005D7F1E /* NSView+ZCBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA2D8236301BD005D7F1E /* NSView+ZCBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2ED236301BD005D7F1E /* NSView+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA2D9236301BD005D7F1E /* NSView+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D3DA2EE236301BD005D7F1E /* NSString+ZCQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA2DB236301BD005D7F1E /* NSString+ZCQRCode.m */; };
-		3D3DA2EF236301BD005D7F1E /* NSString+ZCQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA2DC236301BD005D7F1E /* NSString+ZCQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2F0236301BD005D7F1E /* ZCMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA2DF236301BD005D7F1E /* ZCMenuItem.m */; };
 		3D3DA2F1236301BD005D7F1E /* ZCMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA2E0236301BD005D7F1E /* ZCMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2F2236301BD005D7F1E /* ZCMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA2E1236301BD005D7F1E /* ZCMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2F3236301BD005D7F1E /* ZCMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA2E2236301BD005D7F1E /* ZCMenu.m */; };
 		3D3DA2F4236301BD005D7F1E /* NSAlert+ZCEasy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA2E3236301BD005D7F1E /* NSAlert+ZCEasy.m */; };
-		3D3DA2F5236301BD005D7F1E /* ZCScanQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA2E4236301BD005D7F1E /* ZCScanQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2F6236301BD005D7F1E /* NSAlert+ZCEasy.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA2E5236301BD005D7F1E /* NSAlert+ZCEasy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D3DA2F7236301BD005D7F1E /* ZCScanQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA2E6236301BD005D7F1E /* ZCScanQRCode.m */; };
 		3D3DA2F8236301BD005D7F1E /* ZCEasyLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA2E7236301BD005D7F1E /* ZCEasyLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA3712363033C005D7F1E /* NSString+ZCFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA3482363033C005D7F1E /* NSString+ZCFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA3722363033C005D7F1E /* NSString+ZCFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA3482363033C005D7F1E /* NSString+ZCFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -213,6 +209,10 @@
 		3D418ECB2487D39900AC0B34 /* UITextView+ZCSelectedRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D418EC72487D39900AC0B34 /* UITextView+ZCSelectedRange.m */; };
 		3DDE73192487DD9B004F70A7 /* ZCElasticControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE73172487DD9A004F70A7 /* ZCElasticControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DDE731A2487DD9B004F70A7 /* ZCElasticControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE73182487DD9A004F70A7 /* ZCElasticControl.m */; };
+		3DDE73352488CC43004F70A7 /* ZCScanQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE73312488CC43004F70A7 /* ZCScanQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDE73362488CC43004F70A7 /* NSString+ZCQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE73322488CC43004F70A7 /* NSString+ZCQRCode.m */; };
+		3DDE73372488CC43004F70A7 /* NSString+ZCQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE73332488CC43004F70A7 /* NSString+ZCQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDE73382488CC43004F70A7 /* ZCScanQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE73342488CC43004F70A7 /* ZCScanQRCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -324,16 +324,12 @@
 		3D3DA2D7236301BD005D7F1E /* NSView+ZCBackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+ZCBackgroundColor.m"; sourceTree = "<group>"; };
 		3D3DA2D8236301BD005D7F1E /* NSView+ZCBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ZCBorder.h"; sourceTree = "<group>"; };
 		3D3DA2D9236301BD005D7F1E /* NSView+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ZCSupp.h"; sourceTree = "<group>"; };
-		3D3DA2DB236301BD005D7F1E /* NSString+ZCQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZCQRCode.m"; sourceTree = "<group>"; };
-		3D3DA2DC236301BD005D7F1E /* NSString+ZCQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCQRCode.h"; sourceTree = "<group>"; };
 		3D3DA2DF236301BD005D7F1E /* ZCMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMenuItem.m; sourceTree = "<group>"; };
 		3D3DA2E0236301BD005D7F1E /* ZCMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMenu.h; sourceTree = "<group>"; };
 		3D3DA2E1236301BD005D7F1E /* ZCMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMenuItem.h; sourceTree = "<group>"; };
 		3D3DA2E2236301BD005D7F1E /* ZCMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMenu.m; sourceTree = "<group>"; };
 		3D3DA2E3236301BD005D7F1E /* NSAlert+ZCEasy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+ZCEasy.m"; sourceTree = "<group>"; };
-		3D3DA2E4236301BD005D7F1E /* ZCScanQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCScanQRCode.h; sourceTree = "<group>"; };
 		3D3DA2E5236301BD005D7F1E /* NSAlert+ZCEasy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+ZCEasy.h"; sourceTree = "<group>"; };
-		3D3DA2E6236301BD005D7F1E /* ZCScanQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCScanQRCode.m; sourceTree = "<group>"; };
 		3D3DA2E7236301BD005D7F1E /* ZCEasyLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCEasyLibrary.h; sourceTree = "<group>"; };
 		3D3DA3482363033C005D7F1E /* NSString+ZCFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCFile.h"; sourceTree = "<group>"; };
 		3D3DA3492363033C005D7F1E /* NSString+ZCRegularRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCRegularRegex.h"; sourceTree = "<group>"; };
@@ -388,6 +384,10 @@
 		3D418EC72487D39900AC0B34 /* UITextView+ZCSelectedRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ZCSelectedRange.m"; sourceTree = "<group>"; };
 		3DDE73172487DD9A004F70A7 /* ZCElasticControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCElasticControl.h; sourceTree = "<group>"; };
 		3DDE73182487DD9A004F70A7 /* ZCElasticControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCElasticControl.m; sourceTree = "<group>"; };
+		3DDE73312488CC43004F70A7 /* ZCScanQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCScanQRCode.h; sourceTree = "<group>"; };
+		3DDE73322488CC43004F70A7 /* NSString+ZCQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZCQRCode.m"; sourceTree = "<group>"; };
+		3DDE73332488CC43004F70A7 /* NSString+ZCQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCQRCode.h"; sourceTree = "<group>"; };
+		3DDE73342488CC43004F70A7 /* ZCScanQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCScanQRCode.m; sourceTree = "<group>"; };
 		9397A9E120DB974A00E7E789 /* ZCEasyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZCEasyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9397A9F120DB976C00E7E789 /* ZCMacEasyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZCMacEasyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -659,7 +659,6 @@
 		3D3DA2D2236301BD005D7F1E /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				3D3DA2DA236301BD005D7F1E /* class */,
 				3D3DA2D3236301BD005D7F1E /* view */,
 			);
 			path = Category;
@@ -678,23 +677,12 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		3D3DA2DA236301BD005D7F1E /* class */ = {
-			isa = PBXGroup;
-			children = (
-				3D3DA2DC236301BD005D7F1E /* NSString+ZCQRCode.h */,
-				3D3DA2DB236301BD005D7F1E /* NSString+ZCQRCode.m */,
-			);
-			path = class;
-			sourceTree = "<group>";
-		};
 		3D3DA2DD236301BD005D7F1E /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				3D3DA2E5236301BD005D7F1E /* NSAlert+ZCEasy.h */,
 				3D3DA2E3236301BD005D7F1E /* NSAlert+ZCEasy.m */,
 				3D3DA2DE236301BD005D7F1E /* ZCMenu */,
-				3D3DA2E4236301BD005D7F1E /* ZCScanQRCode.h */,
-				3D3DA2E6236301BD005D7F1E /* ZCScanQRCode.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -879,6 +867,26 @@
 			name = Public;
 			sourceTree = "<group>";
 		};
+		3DDE732F2488CC43004F70A7 /* ZCEasyLibraryMac_sub */ = {
+			isa = PBXGroup;
+			children = (
+				3DDE73302488CC43004F70A7 /* ZCQRCode */,
+			);
+			name = ZCEasyLibraryMac_sub;
+			path = ../Library/ZCEasyLibraryMac_sub;
+			sourceTree = "<group>";
+		};
+		3DDE73302488CC43004F70A7 /* ZCQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				3DDE73332488CC43004F70A7 /* NSString+ZCQRCode.h */,
+				3DDE73322488CC43004F70A7 /* NSString+ZCQRCode.m */,
+				3DDE73312488CC43004F70A7 /* ZCScanQRCode.h */,
+				3DDE73342488CC43004F70A7 /* ZCScanQRCode.m */,
+			);
+			path = ZCQRCode;
+			sourceTree = "<group>";
+		};
 		9397A9D720DB974900E7E789 = {
 			isa = PBXGroup;
 			children = (
@@ -911,6 +919,7 @@
 			isa = PBXGroup;
 			children = (
 				3D3DA2D1236301BD005D7F1E /* ZCEasyLibraryMac */,
+				3DDE732F2488CC43004F70A7 /* ZCEasyLibraryMac_sub */,
 			);
 			name = Mac;
 			sourceTree = "<group>";
@@ -1007,7 +1016,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3DA2F5236301BD005D7F1E /* ZCScanQRCode.h in Headers */,
 				3D3DA39C2363033C005D7F1E /* NSData+ZCEncrypt.h in Headers */,
 				3D3DA3802363033C005D7F1E /* NSObject+ZCToString.h in Headers */,
 				3D3DA3A42363033C005D7F1E /* ZCCalendar.h in Headers */,
@@ -1030,7 +1038,8 @@
 				3D3DA2F2236301BD005D7F1E /* ZCMenuItem.h in Headers */,
 				3D3DA2F8236301BD005D7F1E /* ZCEasyLibrary.h in Headers */,
 				3D3DA2F6236301BD005D7F1E /* NSAlert+ZCEasy.h in Headers */,
-				3D3DA2EF236301BD005D7F1E /* NSString+ZCQRCode.h in Headers */,
+				3DDE73372488CC43004F70A7 /* NSString+ZCQRCode.h in Headers */,
+				3DDE73352488CC43004F70A7 /* ZCScanQRCode.h in Headers */,
 				3D3DA2EC236301BD005D7F1E /* NSView+ZCBorder.h in Headers */,
 				3D3DA2F1236301BD005D7F1E /* ZCMenu.h in Headers */,
 			);
@@ -1313,18 +1322,17 @@
 				3D3DA39A2363033C005D7F1E /* NSString+ZCEncrypt.m in Sources */,
 				3D3DA3AC2363033C005D7F1E /* ZCCalendar.m in Sources */,
 				3D3DA3AE2363033C005D7F1E /* ZCBankcard.m in Sources */,
+				3DDE73382488CC43004F70A7 /* ZCScanQRCode.m in Sources */,
 				3D3DA3782363033C005D7F1E /* NSObject+ZCToString.m in Sources */,
 				3D3DA3962363033C005D7F1E /* NSData+ZCEncrypt.m in Sources */,
 				3D3DA3822363033C005D7F1E /* NSArray+ZCMutableDeepCopy.m in Sources */,
 				3D3DA3842363033C005D7F1E /* NSDictionary+ZCMutableDeepCopy.m in Sources */,
 				3D3DA37E2363033C005D7F1E /* NSString+ZCRegularRegex.m in Sources */,
-				3D3DA2F7236301BD005D7F1E /* ZCScanQRCode.m in Sources */,
 				3D3DA3A22363033C005D7F1E /* NSDate+ZCSupp.m in Sources */,
 				3D3DA3762363033C005D7F1E /* NSString+ZCSupp.m in Sources */,
 				3D3DA2F0236301BD005D7F1E /* ZCMenuItem.m in Sources */,
 				3D3DA39E2363033C005D7F1E /* NSDateComponents+ZCSupp.m in Sources */,
 				3D3DA38C2363033C005D7F1E /* NSDictionary+ZCJson.m in Sources */,
-				3D3DA2EE236301BD005D7F1E /* NSString+ZCQRCode.m in Sources */,
 				3D3DA2F3236301BD005D7F1E /* ZCMenu.m in Sources */,
 				3D3DA3B22363033C005D7F1E /* ZCCacheManage.m in Sources */,
 				3D3DA2EA236301BD005D7F1E /* NSView+ZCSupp.m in Sources */,
@@ -1332,6 +1340,7 @@
 				3D3DA3902363033C005D7F1E /* NSData+ZCJson.m in Sources */,
 				3D3DA2EB236301BD005D7F1E /* NSView+ZCBackgroundColor.m in Sources */,
 				3D3DA3A02363033C005D7F1E /* NSDateFormatter+ZCSupp.m in Sources */,
+				3DDE73362488CC43004F70A7 /* NSString+ZCQRCode.m in Sources */,
 				3D3DA38E2363033C005D7F1E /* NSArray+ZCJson.m in Sources */,
 				3D3DA2E9236301BD005D7F1E /* NSView+ZCBorder.m in Sources */,
 				3D3DA2F4236301BD005D7F1E /* NSAlert+ZCEasy.m in Sources */,
@@ -1465,7 +1474,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				CURRENT_PROJECT_VERSION = 20200603;
+				CURRENT_PROJECT_VERSION = 20200605;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1478,7 +1487,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.1;
+				MARKETING_VERSION = 2.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.ZCEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1492,7 +1501,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = "${PROJECT_DIR}/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				CURRENT_PROJECT_VERSION = 20200603;
+				CURRENT_PROJECT_VERSION = 20200605;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1505,7 +1514,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.1;
+				MARKETING_VERSION = 2.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.ZCEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1519,6 +1528,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 20200605;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1532,7 +1542,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.ZCMacEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -1546,6 +1556,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 20200605;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1559,7 +1570,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.workai.ZCMacEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;

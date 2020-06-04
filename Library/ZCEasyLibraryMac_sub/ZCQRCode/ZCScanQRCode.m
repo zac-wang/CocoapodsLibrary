@@ -50,12 +50,16 @@
     for (unsigned int displaysIndex = 0; displaysIndex < dspCount; displaysIndex++)
     {
         /* Make a snapshot image of the current display. */
-        CGImageRef image = CGDisplayCreateImage(displays[displaysIndex]);
-        NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image]];
-        for (CIQRCodeFeature *feature in features) {
-            //NSLog(@"%@, %@", feature.messageString, NSStringFromRect(NSRectFromCGRect(feature.bounds)));
-            block(feature.messageString, feature.bounds);
-            [foundSSUrls addObject:feature.messageString];
+        @autoreleasepool {
+            CGImageRef image = CGDisplayCreateImage(displays[displaysIndex]);
+            NSArray *features = [detector featuresInImage:[CIImage imageWithCGImage:image]];
+            CGImageRelease(image);
+            for (CIQRCodeFeature *feature in features) {
+                //NSLog(@"%@, %@", feature.messageString, NSStringFromRect(NSRectFromCGRect(feature.bounds)));
+                block(feature.messageString, feature.bounds);
+                [foundSSUrls addObject:feature.messageString];
+            }
+            features = nil;
         }
     }
     
