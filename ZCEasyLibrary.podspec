@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "ZCEasyLibrary"
-  spec.version      = "2.1.2"
+  spec.version      = "2.1.3"
   spec.summary      = "ZCEasyLibrary Kit"
   spec.description  = "ZCEasyLibrary 拓展库+UI库, 包含 iOS and OS X. ZCMacEasyLibrary停止更新"
   spec.homepage     = 'https://github.com/zac-wang/CocoapodsLibrary'
@@ -82,9 +82,19 @@ Pod::Spec.new do |spec|
   end
 
 
+  spec.subspec 'ZCDrag' do |sp|
+    sp.platform = :osx
+    sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCDrag/**/*.{h,m,c,mm}'
+  end
+
   spec.subspec 'ZCQRCode' do |sp|
     sp.platform = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCQRCode/**/*.{h,m,c,mm}'
+  end
+
+  spec.subspec 'ZCScrollTextView' do |sp|
+    sp.platform = :osx
+    sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCScrollTextView/**/*.{h,m,c,mm}'
   end
 
   spec.requires_arc = true
