@@ -41,12 +41,12 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    [ZCTagView zc_tagViews:self.zc_tagButtons btnHorizontalGap:self.zc_btnHorizontalGap btnVerticalGap:self.zc_btnVerticalGap btnHeight:self.zc_btnHeight isDisperse:self.zc_tagStyle];
+    [self zc_updateViewFrame];
 }
 
 - (void)setFrame:(CGRect)frame {
     super.frame = frame;
-    [ZCTagView zc_tagViews:self.zc_tagButtons btnHorizontalGap:self.zc_btnHorizontalGap btnVerticalGap:self.zc_btnVerticalGap btnHeight:self.zc_btnHeight isDisperse:self.zc_tagStyle];
+    [self zc_updateViewFrame];
 }
 
 - (void)prepareForInterfaceBuilder {
@@ -70,7 +70,7 @@
     }
     zc_tagButtons = btnArr;
     
-    [ZCTagView zc_tagViews:self.zc_tagButtons btnHorizontalGap:self.zc_btnHorizontalGap btnVerticalGap:self.zc_btnVerticalGap btnHeight:self.zc_btnHeight isDisperse:self.zc_tagStyle];
+    [self zc_updateViewFrame];
 }
 
 - (UIButton *)zc_dequeueReusableView {
@@ -105,12 +105,8 @@
     return maxHeight;
 }
 
-+ (void)zc_tagViews:(NSArray<UIView *> *)tagViews btnHorizontalGap:(double)btnHorizontalGap btnVerticalGap:(double)btnVerticalGap btnHeight:(double)btnHeight {
-    [self zc_tagViews:tagViews btnHorizontalGap:btnHorizontalGap btnVerticalGap:btnVerticalGap btnHeight:btnHeight isDisperse:ZCTagViewStyleDefault];
-}
-
-+ (void)zc_tagViews:(NSArray<UIView *> *)tagViews btnHorizontalGap:(double)btnHorizontalGap btnVerticalGap:(double)btnVerticalGap btnHeight:(double)btnHeight isDisperse:(ZCTagViewStyle)isDisperse {
-    if(tagViews.count == 0) {
+- (void)zc_updateViewFrame {
+    if(self.zc_tagButtons.count == 0) {
         return;
     }
         
@@ -118,33 +114,33 @@
     double rightGap = 0;
     double topGap = 0;
     
-    double superViewWidth = tagViews.firstObject.superview.frame.size.width;
+    double superViewWidth = self.zc_tagButtons.firstObject.superview.frame.size.width;
     double maxWidth = superViewWidth - leftGap - rightGap;
     double btnX = leftGap, btnY = topGap;
     
     NSMutableArray *lineButtonArr = [NSMutableArray array];
-    for (int i= 0; i < tagViews.count; i++) {
-        UIView *tagView = tagViews[i];
-        CGSize btnSize = [tagView sizeThatFits:CGSizeMake(maxWidth, btnHeight)];
+    for (int i= 0; i < self.zc_tagButtons.count; i++) {
+        UIView *tagView = self.zc_tagButtons[i];
+        CGSize btnSize = [tagView sizeThatFits:CGSizeMake(maxWidth, self.zc_btnHeight)];
         if((maxWidth + leftGap - btnX) < btnSize.width) {
             btnX = leftGap;
-            btnY = btnY + btnHeight + btnVerticalGap;
+            btnY = btnY + self.zc_btnHeight + self.zc_btnVerticalGap;
             
-            [self disperseButtons:lineButtonArr isDisperse:isDisperse];
+            [self disperseButtons:lineButtonArr];
             [lineButtonArr removeAllObjects];
         }
         double btnWidth = btnSize.width < maxWidth ? btnSize.width : maxWidth;
-        tagView.frame = CGRectMake(btnX, btnY, btnWidth, btnHeight);
-        btnX = btnX + tagView.frame.size.width + btnHorizontalGap;
+        tagView.frame = CGRectMake(btnX, btnY, btnWidth, self.zc_btnHeight);
+        btnX = btnX + tagView.frame.size.width + self.zc_btnHorizontalGap;
         
         [lineButtonArr addObject:tagView];
     }
     
-    [self disperseButtons:lineButtonArr isDisperse:isDisperse];
+    [self disperseButtons:lineButtonArr];
 }
 
-+ (void)disperseButtons:(NSArray<UIView *> *)btns isDisperse:(ZCTagViewStyle)isDisperse {
-    if(btns.count == 0 || isDisperse == ZCTagViewStyleDefault) {
+- (void)disperseButtons:(NSArray<UIView *> *)btns {
+    if(btns.count == 0 || self.zc_tagStyle == ZCTagViewStyleDefault) {
         return;
     }
     
@@ -152,12 +148,12 @@
     for (UIView *v in btns) {
         gapSum -= v.frame.size.width;
     }
-    if(isDisperse == ZCTagViewStyleCenter && btns.count == 1) {
+    if(self.zc_tagStyle == ZCTagViewStyleCenter && btns.count == 1) {
         double gap = gapSum/2;
         CGRect r = btns.firstObject.frame;
         r.origin.x = gap;
         btns.firstObject.frame = r;
-    }else {
+    } else {
         double gap = gapSum/(btns.count - 1);
         double x = 0;
         for (UIView *v in btns) {

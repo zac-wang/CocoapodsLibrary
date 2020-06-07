@@ -23,51 +23,32 @@ IB_DESIGNABLE
 @interface ZCTagView : UIView
 
 /// 标签 水平间距
-@property(nonatomic, assign) IBInspectable double zc_btnHorizontalGap;
+@property(nonatomic, assign)  IBInspectable double zc_btnHorizontalGap;
 /// 标签 垂直间距
-@property(nonatomic, assign) IBInspectable double zc_btnVerticalGap;
+@property(nonatomic, assign)  IBInspectable double zc_btnVerticalGap;
 /// 标签 高度，默认15
-@property(nonatomic, assign) IBInspectable double zc_btnHeight;
+@property(nonatomic, assign)  IBInspectable double zc_btnHeight;
 
 /// 标签 分布类型
 #if TARGET_INTERFACE_BUILDER
 @property (nonatomic, assign) IBInspectable NSUInteger zc_tagStyle;
 #else
-@property(nonatomic, assign) ZCTagViewStyle zc_tagStyle;
+@property(nonatomic, assign)  ZCTagViewStyle zc_tagStyle;
 #endif
 
 /// 设置标签名称数组
-@property(nonatomic, strong) NSArray<NSString *> *zc_tagTitles;
+@property(nonatomic, strong)  NSArray<NSString *> *zc_tagTitles;
+
+
+
 
 /// 标签控件数组
 @property(nonatomic, readonly) NSArray<UIButton *> *zc_tagButtons;
 
 /// 标签触发事件
-@property(nonatomic, copy) void(^zc_btnClickBlock)(UIButton *btn);
+@property(nonatomic, copy)     void(^zc_btnClickBlock)(UIButton *btn);
 
 /// 获取当前高度
-@property(nonatomic, assign) double zc_viewHeight;
-
-
-/**
- 排列标签位置
-
- @param tagViews 标签控件数组
- @param btnHorizontalGap 标签 水平间距
- @param btnVerticalGap 标签 垂直间距
- @param btnHeight 标签 高度
- */
-+ (void)zc_tagViews:(NSArray<UIView *> *)tagViews btnHorizontalGap:(double)btnHorizontalGap btnVerticalGap:(double)btnVerticalGap btnHeight:(double)btnHeight;
-
-/**
- 排列标签位置
-
- @param tagViews 标签控件数组
- @param btnHorizontalGap 标签 水平间距
- @param btnVerticalGap 标签 垂直间距
- @param btnHeight 标签 高度
- @param isDisperse 标签 YES分散分布，NO居左
- */
-+ (void)zc_tagViews:(NSArray<UIView *> *)tagViews btnHorizontalGap:(double)btnHorizontalGap btnVerticalGap:(double)btnVerticalGap btnHeight:(double)btnHeight isDisperse:(ZCTagViewStyle)isDisperse;
+@property(nonatomic, readonly) double zc_viewHeight;
 
 @end

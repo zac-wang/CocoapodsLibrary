@@ -15,7 +15,6 @@
 #import "NSArray+ZCJson.h"
 #import "NSArray+ZCMutableDeepCopy.h"
 #import "NSAttributedString+ZCSupp.h"
-#import "NSAttributedString+ZCTag.h"
 #import "NSData+ZCEncrypt.h"
 #import "NSData+ZCJson.h"
 #import "NSDate+ZCSupp.h"
