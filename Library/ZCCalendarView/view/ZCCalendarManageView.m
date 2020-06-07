@@ -19,47 +19,41 @@
 
 @implementation ZCCalendarManageView
 @synthesize calendarView;
-@synthesize monthFrame;
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)initWithMaxFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        [self initialVariable];
         [self initialView];
-        self.monthFrame = frame;
+        
+        oldImageView.frame = self.bounds;
+        calendarView.frame = self.bounds;
+        calendarView.superview.frame = self.bounds;
+        
+        self.frame = frame;
     }
     return self;
 }
 
-#pragma mark - init view
-- (void)initialView {
+#pragma mark - initial
+/// 初始化数据
+- (void)initialVariable {
     self.date = [NSDate date];
     [ZCCalendar shared].firstWeekday = ZCCalendarSunday;
-    
+}
+
+- (void)initialView {
     self.backgroundColor = [UIColor clearColor];
     self.layer.masksToBounds = YES;
     
     [self addSwipeGesture];
     
-    {
-        UIView *dayView = [[UIView alloc] init];
-        dayView.backgroundColor = [UIColor clearColor];
-        dayView.layer.masksToBounds = YES;
-        [self addSubview:dayView];
-        
-        calendarView = [[ZCCalendarView alloc] init];
-        [dayView addSubview:calendarView];
-        oldImageView = [[UIImageView alloc] init];
-        [dayView addSubview:oldImageView];
-        oldImageView.hidden = YES;
-    }
-    self.date = nil;
-}
-
-- (void)setMonthFrame:(CGRect)_monthFrame {
-    monthFrame = _monthFrame;
-    self.frame = monthFrame;
-    calendarView.frame = oldImageView.frame = calendarView.superview.frame = self.bounds;
+    calendarView = [[ZCCalendarView alloc] init];
+    [self addSubview:calendarView];
+    oldImageView = [[UIImageView alloc] init];
+    [self addSubview:oldImageView];
+    oldImageView.hidden = YES;
 }
 
 - (void)setDate:(NSDate *)_date {
@@ -72,7 +66,7 @@
     [calendarView reloadData];
 }
 
-#pragma mark - 切换月份
+#pragma mark - 手势切换月份
 - (void)addSwipeGesture{
     UISwipeGestureRecognizer *previousSGR = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(changePreviousMonth)];
     [previousSGR setDirection:UISwipeGestureRecognizerDirectionDown];

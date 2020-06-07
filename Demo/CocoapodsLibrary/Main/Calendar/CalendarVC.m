@@ -14,8 +14,7 @@
 @interface CalendarVC ()<ZCCalendarViewDelegate>
 
 @property (strong, nonatomic) UILabel *yearMonthLabel;
-//@property (weak, nonatomic) IBOutlet NSLayoutConstraint *gapLayoutConstraint;
-
+@property (strong, nonatomic) UIView *weekBackGroundView;
 @property (strong, nonatomic) ZCCalendarManageView *dayView;
 
 @end
@@ -24,45 +23,65 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor darkGrayColor];
     
-    //显示年月Label
-    {
-        self.yearMonthLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-        self.yearMonthLabel.center = CGPointMake(self.view.center.x, 85);
-        [self.view addSubview:self.yearMonthLabel];
+    self.view.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9];
+
+    self.dayView.calendarView.delegate = self;
+}
+
+//显示年月Label
+- (UILabel *)yearMonthLabel {
+    if (!_yearMonthLabel) {
+        CGFloat yearX = 30;
+        CGFloat yearW = self.view.frame.size.width - yearX * 2;
+        _yearMonthLabel = [[UILabel alloc] initWithFrame:CGRectMake(yearX, 164, yearW, 30)];
+        _yearMonthLabel.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:_yearMonthLabel];
     }
-    //显示星期
-    UIView *weekBackGroundView = [[UIView alloc] initWithFrame:CGRectMake(0, self.yearMonthLabel.frame.origin.y+self.yearMonthLabel.frame.size.height, self.view.frame.size.width, 43)];
-    weekBackGroundView.backgroundColor = [UIColor whiteColor];
-    {
+    return _yearMonthLabel;
+}
+
+- (UIView *)weekBackGroundView {
+    if (!_weekBackGroundView) {
+        //显示星期
+        CGFloat weekX = self.yearMonthLabel.frame.origin.x;
+        CGFloat weekY = CGRectGetMaxY(self.yearMonthLabel.frame);
+        CGFloat weekW = self.yearMonthLabel.frame.size.width;
+        _weekBackGroundView = [[UIView alloc] initWithFrame:CGRectMake(weekX, weekY, weekW, 30)];
+        _weekBackGroundView.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:_weekBackGroundView];
+        
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.locale = [NSLocale currentLocale];
         NSArray *dayTitles = [dateFormatter shortStandaloneWeekdaySymbols];
-        int width = self.view.frame.size.width/7;
+        int width = self.weekBackGroundView.frame.size.width/7;
         for (int i = 0; i < 7; i++) {
-            UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(width*i, 0, width, weekBackGroundView.bounds.size.height)];
+            UILabel *week = [[UILabel alloc] initWithFrame:CGRectMake(width*i, 0, width, _weekBackGroundView.bounds.size.height)];
             week.textAlignment = NSTextAlignmentCenter;
             week.font = [UIFont systemFontOfSize:8];
             week.text = dayTitles[([ZCCalendar shared].firstWeekday-1+i)%7];
-            [weekBackGroundView addSubview:week];
+            [_weekBackGroundView addSubview:week];
         }
     }
-    [self.view addSubview:weekBackGroundView];
-    
-    
-    
-    //日历主体
-    if(!self.dayView) {
-        self.dayView = [[ZCCalendarManageView alloc] initWithFrame:CGRectMake(0, weekBackGroundView.frame.origin.y+weekBackGroundView.frame.size.height, self.view.frame.size.width, self.view.frame.size.width/7*6)];
-        [self.view addSubview:self.dayView];
+    return _weekBackGroundView;
+}
+
+//日历主体
+- (ZCCalendarManageView *)dayView {
+    if(!_dayView) {
+        CGFloat dayX = self.weekBackGroundView.frame.origin.x;
+        CGFloat dayY = CGRectGetMaxY(self.weekBackGroundView.frame);
+        CGFloat dayW = self.weekBackGroundView.frame.size.width;
+        _dayView = [[ZCCalendarManageView alloc] initWithMaxFrame:CGRectMake(dayX, dayY, dayW, dayW/7*6)];
+        [self.view addSubview:_dayView];
+        
+        //日历设置
+        //[_dayView.calendarView registerClass:[CalendarDayCell class]];
+        _dayView.calendarView.backgroundColor = UIColorFromRGB(0xf1f1f1);
+        _dayView.calendarView.isMultipleSelection = YES;
+        _dayView.calendarView.date = [NSDate date];
     }
-    //日历设置
-    //[self.dayView.calendarView registerClass:[CalendarDayCell class]];
-    self.dayView.calendarView.backgroundColor = UIColorFromRGB(0xf1f1f1);
-    self.dayView.calendarView.isMultipleSelection = YES;
-    self.dayView.calendarView.date = [NSDate date];
-    self.dayView.calendarView.delegate = self;
+    return _dayView;
 }
 
 //- (void)viewDidLayoutSubviews {
@@ -85,8 +104,7 @@
 
 #pragma mark - Delegate
 -(void)calendarView:(ZCCalendarView *)collectionView updateSize:(CGSize)size {
-    self.dayView.frame = ({CGRect r = self.dayView.monthFrame; r.size.height = size.height; r;});
-    //self.gapLayoutConstraint.constant = height - self.dayView.frame.size.height;
+    self.dayView.frame = ({CGRect r = self.dayView.frame; r.size.height = size.height; r;});
     NSDateComponents *com = collectionView.date.zc_dateComponents;
     self.yearMonthLabel.text = [NSString stringWithFormat:@"%ld年%.2ld月", (long)com.year, (long)com.month];
 }

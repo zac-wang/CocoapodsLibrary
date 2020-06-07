@@ -7,13 +7,9 @@
 //
 
 #import "ZCCalendarDayCell.h"
-#import <ZCEasyLibrary/ZCCalendar.h>
 #import "ZCCalendarDate.h"
 
 @interface ZCCalendarDayCell () {
-    CAShapeLayer *layer;
-    UILabel *titleLabel;
-    UILabel *subTitleLabel;
 }
 
 @end
@@ -28,64 +24,68 @@
     if (self) {
         dateComponents = [[NSDateComponents alloc] init];
         self.backgroundColor = [UIColor clearColor];
-        
-        self.selectedBackgroundView = self.getSelectedBackgroundView;
     }
     return self;
 }
 
-- (void)updateDateComponents {
-    if(!titleLabel) {
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/6, self.frame.size.width, self.frame.size.height/3)];
-        titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.font = [UIFont systemFontOfSize:21];
-        [self addSubview:titleLabel];
-        
-        subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height/2, self.frame.size.width, self.frame.size.height/3)];
-        subTitleLabel.textAlignment = NSTextAlignmentCenter;
-        subTitleLabel.backgroundColor = [UIColor clearColor];
-        subTitleLabel.font = [UIFont systemFontOfSize:8];
-        [self addSubview:subTitleLabel];
+- (UILabel *)titleLabel {
+    if(!_titleLabel) {
+        CGFloat titleWH = self.frame.size.height / 3 * 2;
+        CGFloat titleX = (self.frame.size.width - titleWH)/2;
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleX, 0, titleWH, titleWH)];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.backgroundColor = [UIColor clearColor];
+        _titleLabel.font = [UIFont systemFontOfSize:15];
+        [self addSubview:_titleLabel];
     }
-    if(self.type == ZCCalendarDayCellTypePreviousMonth){
-        titleLabel.textColor = [UIColor colorWithWhite:0x81/255 alpha:1];
-    }else if (self.type == ZCCalendarDayCellTypeNowMonth){
-        if(self.isNowDay){
-            titleLabel.textColor = UIColor.redColor;
-        }else if(self.dateComponents.weekday == ZCCalendarSunday ||
-                 self.dateComponents.weekday == ZCCalendarSaturday)
-            titleLabel.textColor = [UIColor colorWithRed:0xff/255 green:0x52/255 blue:0x49/255 alpha:1];
-        else
-            titleLabel.textColor = [UIColor colorWithWhite:0x3c/255 alpha:1];
-    }else{
-        titleLabel.textColor = [UIColor colorWithWhite:0x81/255 alpha:1];
-    }
-    subTitleLabel.textColor = [UIColor lightGrayColor];
-    
-    titleLabel.text = [NSString stringWithFormat:@"%ld", (long)self.dateComponents.day];
-    lunarCalendar = [[ZCCalendarDate sharedCalendarDate] getLunarCalendar:self.dateComponents];
-    subTitleLabel.text = lunarCalendar;
+    return _titleLabel;
 }
 
-- (UIView *)getSelectedBackgroundView {
-    UIView *view;
-    
-    if(!view) {
-        UIBezierPath *beizPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:self.bounds.size.width/2];
-        layer=[CAShapeLayer layer];
-        layer.path = beizPath.CGPath;
-        layer.lineWidth = 0.0f;
-        layer.lineCap = kCALineCapRound;
-        
-        layer.fillColor = [UIColor redColor].CGColor;
-        layer.strokeColor = [UIColor redColor].CGColor;
-        
-        view = [[UIView alloc] initWithFrame:self.bounds];
-        [view.layer insertSublayer:layer atIndex:0];
+- (UILabel *)subTitleLabel {
+    if(!_subTitleLabel) {
+        _subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height / 3 * 2, self.frame.size.width, self.frame.size.height / 3)];
+        _subTitleLabel.textAlignment = NSTextAlignmentCenter;
+        _subTitleLabel.backgroundColor = [UIColor clearColor];
+        _subTitleLabel.font = [UIFont systemFontOfSize:8];
+        [self addSubview:_subTitleLabel];
     }
+    return _subTitleLabel;
+}
+
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
     
-    return view;
+    self.titleLabel.clipsToBounds = YES;
+    self.titleLabel.layer.cornerRadius = self.titleLabel.frame.size.height/2;
+    if (selected) {
+        self.titleLabel.backgroundColor = [UIColor redColor];
+    } else {
+        self.titleLabel.backgroundColor = [UIColor clearColor];
+    }
+}
+
+- (void)updateDateComponents {
+    if (self.type == ZCCalendarDayCellTypeNowMonth) {
+        if (self.isNowDay) {
+            // 今日
+            self.titleLabel.textColor = UIColor.redColor;
+        } else if (self.dateComponents.weekday == 1 || // 周日
+                 self.dateComponents.weekday == 7) { // 周六
+            // 周日
+            self.titleLabel.textColor = [UIColor colorWithWhite:0x55/255.0 alpha:1];
+        } else {
+            // 普通
+            self.titleLabel.textColor = [UIColor colorWithWhite:0x33/255.0 alpha:1];
+        }
+    }else{
+        // 非本月日期
+        self.titleLabel.textColor = [UIColor colorWithWhite:0x99/255.0 alpha:1];
+    }
+    self.subTitleLabel.textColor = [UIColor lightGrayColor];
+    
+    self.titleLabel.text = [NSString stringWithFormat:@"%ld", (long)self.dateComponents.day];
+    lunarCalendar = [[ZCCalendarDate sharedCalendarDate] getLunarCalendar:self.dateComponents];
+    self.subTitleLabel.text = lunarCalendar;
 }
 
 @end

@@ -11,14 +11,14 @@
 
 @interface ZCCalendarManageView : UIView
 
-- (void)initialView;
-@property(nonatomic, readwrite) CGRect monthFrame;
+- (instancetype)initWithMaxFrame:(CGRect)frame;
 
 @property(nonatomic, readonly) ZCCalendarView *calendarView;
 
 
-
+/// 展示上个月
 - (void)changePreviousMonth;
+/// 展示下个月
 - (void)changeNextMonth;
 
 @end

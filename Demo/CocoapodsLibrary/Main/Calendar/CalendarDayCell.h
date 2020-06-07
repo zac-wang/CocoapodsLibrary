@@ -10,6 +10,4 @@
 
 @interface CalendarDayCell : ZCCalendarDayCell
 
-@property(nonatomic, readonly) UILabel *titleLabel;
-
 @end

@@ -48,10 +48,4 @@
     titleLabel.text = [NSString stringWithFormat:@"%ld", (long)self.dateComponents.day];
 }
 
-- (UIView *)getSelectedBackgroundView {
-    UIView *view = [[UIView alloc] initWithFrame:self.bounds];
-    view.backgroundColor = UIColorFromRGB(0xeef4ff);
-    return view;
-}
-
 @end

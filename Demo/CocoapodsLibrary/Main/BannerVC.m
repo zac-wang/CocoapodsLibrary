@@ -23,14 +23,12 @@
 //    self.banerScrollView = [[ZCBannerView alloc] initWithFrame:CGRectMake(0, 240, self.view.frame.size.width, 200)];
 //    self.banerScrollView.center = self.view.center;
 //    [self.view addSubview:self.banerScrollView];
-//    [self.banerScrollView initBanner:[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"main_banner.bundle"]];
-}
-
-- (void)viewDidLayoutSubviews {
-    [self.banerScrollView zc_initBanner:[[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"main_banner.bundle"]];
+    
     self.banerScrollView.zc_selectImageView = ^(UIImageView *imgView, NSInteger index) {
         NSLog(@"%ld", (long)index);
     };
+    NSArray *imgPaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"main_banner.bundle"];
+    [self.banerScrollView zc_initBanner:imgPaths];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

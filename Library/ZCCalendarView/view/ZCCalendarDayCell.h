@@ -20,6 +20,12 @@ typedef enum : NSUInteger {
 
 @interface ZCCalendarDayCell : UICollectionViewCell
 
+/// 日期
+@property(nonatomic, strong) UILabel *titleLabel;
+/// 阴历 / 标记
+@property(nonatomic, strong) UILabel *subTitleLabel;
+
+
 /// 当前日期显示类型
 @property(nonatomic, assign) ZCCalendarDayCellType type;
 /// 当前日期
@@ -29,7 +35,8 @@ typedef enum : NSUInteger {
 /// dateComponents对应的 是否是 当前日期
 @property(nonatomic, assign) BOOL isNowDay;
 
-/// 选中时的背景
-- (UIView *)getSelectedBackgroundView;
+
+/// 重写方法，设置day展示样式
+- (void)updateDateComponents;
 
 @end

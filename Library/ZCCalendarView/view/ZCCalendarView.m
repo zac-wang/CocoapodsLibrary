@@ -24,10 +24,6 @@
 
 @end
 
-@interface ZCCalendarDayCell ()
-- (void)updateDateComponents;
-@end
-
 @implementation ZCCalendarView
 @synthesize isMultipleSelection;
 @synthesize sectionInset;
@@ -69,7 +65,7 @@
 - (void)setFrame:(CGRect)frame sectionInset:(UIEdgeInsets)ei {
     sectionInset = ei;
     if(!CGRectEqualToRect(CGRectZero, frame)) {
-        cellSize = CGSizeMake(((int)(frame.size.width/7*10))/10.0, ((int)(frame.size.height/6*10))/10.0);
+        cellSize = CGSizeMake((round(frame.size.width/7)), (round(frame.size.height/6)));
         frame.size = CGSizeMake(cellSize.width*7, cellSize.height*6);
         
         UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)m_collectionView.collectionViewLayout;
@@ -114,10 +110,11 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSInteger count = showMothArray.total;
-    if(count && self.delegate && [self.delegate respondsToSelector:@selector(calendarView:updateSize:)])
-        [self.delegate calendarView:self updateSize:CGSizeMake(self.frame.size.width, cellSize.height * count/7)];
-    return count;
+    NSInteger dayCount = showMothArray.total;
+    NSInteger rowCount = dayCount/7;
+    if(dayCount && self.delegate && [self.delegate respondsToSelector:@selector(calendarView:updateSize:)])
+        [self.delegate calendarView:self updateSize:CGSizeMake(self.frame.size.width, cellSize.height * rowCount)];
+    return dayCount;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
