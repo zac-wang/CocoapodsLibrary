@@ -50,11 +50,11 @@
 }
 
 - (void)zc_viewDidAppear {
-    self.zc_loadding = NO;
+    self.zc_firstLoadding = NO;
 }
 
 - (void)zc_viewDidDisappear {
-    self.zc_loadding = NO;
+    self.zc_firstLoadding = NO;
     self.zoomScale = 1;
 }
 

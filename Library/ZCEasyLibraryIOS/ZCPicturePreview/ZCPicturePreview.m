@@ -137,11 +137,12 @@
     ZCPicturePreviewItem *item = self.zc_previewItemArray[itemIndex];
     [item updateIndex:index count:self.zc_imageCount];
     [self.zc_headBar zc_pageNum:index totalNum:self.zc_imageCount];
-    if(self.zc_willChangeBlock) {
-        if(item.zc_loadding != YES)
+    if(item.zc_firstLoadding != YES) {
+        if(self.zc_willChangeBlock) {
             self.zc_willChangeBlock(self, item);
-        item.zc_loadding = YES;
+        }
     }
+    item.zc_firstLoadding = YES;
 }
 
 - (void)didUpdateShow {

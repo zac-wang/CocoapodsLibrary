@@ -33,14 +33,11 @@
     picturePreview.zc_willChangeBlock = ^(ZCPicturePreview *preview, ZCPicturePreviewItem *item) {
         item.zc_imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];
     };
-    picturePreview.zc_didChangeBlock = ^(ZCPicturePreview *preview, ZCPicturePreviewItem *item) {
-        item.zc_imgView.image = [UIImage imageWithContentsOfFile:imgArray[item.zc_index]];
-    };
     picturePreview.zc_headBar.zc_deleteImageBlock = ^{
         NSLog(@"== %lu", (unsigned long)picturePreview.zc_nowShowImgIndex);
     };
     
-    for (int i = 0; i < self.imageViews.count; i++) {
+    for (int i = 0; i < self.imageViews.count && i < imgArray.count; i++) {
         UIImageView *imgView = self.imageViews[i];
         [picturePreview zc_monitorImageView:imgView index:i];
         imgView.image = [UIImage imageWithContentsOfFile:imgArray[i]];

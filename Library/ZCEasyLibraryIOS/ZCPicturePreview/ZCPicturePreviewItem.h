@@ -17,7 +17,7 @@
 /// 页面ImageView
 @property(nonatomic, readonly) UIImageView *zc_imgView;
 
-@property(nonatomic, assign)   BOOL zc_loadding;
+@property(nonatomic, assign)   BOOL zc_firstLoadding;
 
 - (void)zc_viewDidAppear;
 - (void)zc_viewDidDisappear;

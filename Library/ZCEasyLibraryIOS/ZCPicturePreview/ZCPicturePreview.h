@@ -10,7 +10,7 @@
 #import "ZCPicturePreviewItem.h"
 #import "ZCPicturePreviewHeadbar.h"
 
-/// 图片浏览
+/// 图片浏览（内部仅有三个UIImageView 进行左右切换，节省内存 不会因zc_imageCount图片数的增加而增加）
 @interface ZCPicturePreview : UIScrollView
 
 + (instancetype)shared;
