@@ -19,10 +19,10 @@ typedef enum : NSUInteger {
 
 + (instancetype)shared;
 
-@property(nonatomic, weak) UITextField *zc_textField;
+/// 设置样式
+@property(nonatomic, assign) ZCKeyBoardTopBarStyle zc_topBarStyle;
 
-@property(nonatomic, weak) UITextView *zc_textView;
-
-@property(nonatomic, readonly) ZCKeyBoardTopBar *(^zc_style)(ZCKeyBoardTopBarStyle style);
+/// UITextField 或者 UITextView
+@property(nonatomic, weak)   id<UITextInput, NSCoding> zc_textInputView;
 
 @end

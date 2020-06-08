@@ -12,7 +12,7 @@
 @dynamic zc_keyBoardTopBar;
 
 - (void)setZc_keyBoardTopBar:(ZCKeyBoardTopBar *)zc_keyBoardTopBar {
-    zc_keyBoardTopBar.zc_textView = self;
+    zc_keyBoardTopBar.zc_textInputView = self;
 }
 
 @end

@@ -14,15 +14,11 @@
 
 @property(nonatomic, strong) UITextField *zc_barTextField;
 
-@property(nonatomic, assign) ZCKeyBoardTopBarStyle topBarStyle;
-
 @end
 
 #define ZCKeyBoardTopBarHeight 45
 
 @implementation ZCKeyBoardTopBar
-@synthesize zc_textView;
-@synthesize zc_textField;
 
 + (instancetype)shared {
     static id _sharedInstance = nil;
@@ -39,106 +35,152 @@
     if (self) {
         [self setBarStyle:UIBarStyleDefault];
         
-        self.zc_barTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width - 90, 30)];
-        self.zc_barTextField.borderStyle = UITextBorderStyleRoundedRect;
-//        [self.zc_barTextField zc_drawCornerRadius:3 borderColor:[UIColor grayColor]];
-        self.zc_barTextField.backgroundColor = [UIColor whiteColor];
-        UIView *textFieldBackView = [[UIView alloc] initWithFrame:self.zc_barTextField.bounds];
-        textFieldBackView.backgroundColor = [UIColor clearColor];
-        [textFieldBackView addSubview:self.zc_barTextField];
-        UIBarButtonItem *editSpace = [[UIBarButtonItem alloc] initWithCustomView:textFieldBackView];
+        [self setTopBarItem];
         
-        UIBarButtonItem *nonepace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-        
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(dismissKeyBoard)];
-
-        [self setItems:@[editSpace, nonepace, doneButton]];
-        
-        self.zc_style(ZCKeyBoardTopBarStylePlain);
+        self.zc_topBarStyle = ZCKeyBoardTopBarStyleTextField;
     }
     return self;
 }
 
-#pragma mark - 设置TextView
-- (void)setZc_textView:(UITextView *)_textView {
-    [self cleanView];
-    
-    zc_textView = _textView;
-    [self initialView:(id)zc_textView];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewDidBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:zc_textView];
+- (UITextField *)zc_barTextField {
+    if (!_zc_barTextField) {
+        _zc_barTextField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width - 90, 30)];
+        _zc_barTextField.borderStyle = UITextBorderStyleRoundedRect;
+//        [self.zc_barTextField zc_drawCornerRadius:3 borderColor:[UIColor grayColor]];
+        _zc_barTextField.backgroundColor = [UIColor whiteColor];
+        _zc_barTextField.delegate = self;
+    }
+    return _zc_barTextField;
 }
 
-- (void)setZc_textField:(UITextField *)_textField {
-    [self cleanView];
+- (void)setTopBarItem {
+    UIView *textFieldBackView = [[UIView alloc] initWithFrame:self.zc_barTextField.bounds];
+    textFieldBackView.backgroundColor = [UIColor clearColor];
+    [textFieldBackView addSubview:self.zc_barTextField];
     
-    zc_textField = _textField;
-    [self initialView:zc_textField];
+    UIBarButtonItem *marginSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    marginSpace.width = 10;
     
-    [zc_textField addTarget:self action:@selector(textFieldDidBeginEditing:) forControlEvents:UIControlEventEditingDidBegin];
+    UIBarButtonItem *editSpace = [[UIBarButtonItem alloc] initWithCustomView:textFieldBackView];
+    
+    UIBarButtonItem *nonepace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(dismissKeyBoard)];
+
+    [self setItems:@[marginSpace, editSpace, nonepace, doneButton, marginSpace]];
+}
+
+#pragma mark - 设置样式
+- (void)setZc_topBarStyle:(ZCKeyBoardTopBarStyle)zc_topBarStyle {
+    _zc_topBarStyle = zc_topBarStyle;
+    //NSLog(@"%d", style);
+    
+    if(self.zc_topBarStyle == ZCKeyBoardTopBarStylePlain) {
+        self.items.firstObject.customView.hidden = YES;
+    }else if(self.zc_topBarStyle == ZCKeyBoardTopBarStyleTextField) {
+        self.items.firstObject.customView.hidden = NO;
+    }
+}
+
+#pragma mark - 设置TextView
+- (void)setZc_textInputView:(id<UITextInput,NSCoding>)zc_textInputView {
+    if (_zc_textInputView) {
+        [self cleanView];
+    }
+    
+    _zc_textInputView = zc_textInputView;
+    
+    [self initialView:(UITextField *)zc_textInputView];
 }
 
 - (void)initialView:(UITextField *)textView {
     [textView setInputAccessoryView:self];
     
-    self.zc_barTextField.text = textView.text;
-    self.zc_barTextField.delegate = self;
+    [self updateBarTextField];
+    
+    if ([textView isKindOfClass:[UITextView class]]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(zc_textInputViewDidBeginEditing)
+                                                     name:UITextViewTextDidBeginEditingNotification
+                                                   object:textView];
+    
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(updateBarTextField)
+                                                     name:UITextViewTextDidChangeNotification
+                                                   object:textView];
+    } else if ([textView isKindOfClass:[UITextField class]]) {
+        [(UITextField *)textView addTarget:self
+                                    action:@selector(zc_textInputViewDidBeginEditing)
+                          forControlEvents:UIControlEventEditingDidBegin];
+        
+        [(UITextField *)textView addTarget:self
+                                    action:@selector(updateBarTextField)
+                          forControlEvents:UIControlEventEditingChanged];
+    }
 }
 
-- (void)textFieldDidChange:(UITextField *)textField {
-    if(self.zc_textField) {
-        self.zc_textField.text = textField.text;
-    }else {
-        self.zc_textView.text = textField.text;
+#pragma mark - 重置数据
+- (void)cleanView {
+    if ([self.zc_textInputView isKindOfClass:[UITextView class]]) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UITextViewTextDidBeginEditingNotification
+                                                      object:self.zc_textInputView];
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UITextViewTextDidChangeNotification
+                                                      object:self.zc_textInputView];
+    } else if ([self.zc_textInputView isKindOfClass:[UITextField class]]) {
+        [(UITextField *)self.zc_textInputView removeTarget:self
+                                               action:@selector(zc_textInputViewDidBeginEditing)
+                                     forControlEvents:UIControlEventEditingDidBegin];
+        
+        [(UITextField *)self.zc_textInputView removeTarget:self
+                                                    action:@selector(updateBarTextField)
+                                          forControlEvents:UIControlEventEditingChanged];
+    }
+    
+    self.zc_textInputView = nil;
+}
+
+#pragma mark - 开始编辑事件 - 焦点转移到zc_barTextField上
+- (void)zc_textInputViewDidBeginEditing {
+    if(self.zc_topBarStyle == ZCKeyBoardTopBarStyleTextField) {
+        [self becomeFirstResponderForBarTextField];
+    }
+}
+
+- (void)becomeFirstResponderForBarTextField {
+    [self updateBarTextField];
+    
+    [self.zc_barTextField becomeFirstResponder];
+}
+
+#pragma mark - 更新文本
+- (void)textFieldDidChangeSelection:(UITextField *)textField {
+    [self updateTextInputView];
+}
+
+- (void)updateTextInputView {
+    if([self.zc_textInputView respondsToSelector:@selector(setText:)]) {
+        [self.zc_textInputView performSelector:@selector(setText:) withObject:self.zc_barTextField.text];
+    }
+}
+
+- (void)updateBarTextField {
+    if([self.zc_textInputView respondsToSelector:@selector(text)]) {
+        self.zc_barTextField.text = [self.zc_textInputView performSelector:@selector(text)];
     }
 }
 
 #pragma mark - 取消键盘
 - (void)dismissKeyBoard {
-    [self.zc_textView resignFirstResponder];
-    [self.zc_textField resignFirstResponder];
-    [self.zc_barTextField resignFirstResponder];
-}
-
-#pragma mark - 重置数据
-- (void)cleanView {
-    zc_textField = nil;
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextViewTextDidBeginEditingNotification object:self.zc_textView];
+    [self updateTextInputView];
     
-    zc_textView = nil;
-    [zc_textField removeTarget:self action:@selector(textFieldDidBeginEditing:) forControlEvents:UIControlEventEditingDidBegin];
-}
-
-#pragma mark - 开始编辑事件
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    if(self.topBarStyle == ZCKeyBoardTopBarStyleTextField) {
-        [self.zc_barTextField becomeFirstResponder];
-        
-        self.zc_barTextField.zc_selectedRange = self.zc_textField.zc_selectedRange;
+    [self.zc_barTextField resignFirstResponder];
+    
+    if([self.zc_textInputView respondsToSelector:@selector(resignFirstResponder)]) {
+        [self.zc_textInputView performSelector:@selector(resignFirstResponder)];
     }
-}
-
-- (void)textViewDidBeginEditing:(NSNotification *)notification {
-    if(self.topBarStyle == ZCKeyBoardTopBarStyleTextField) {
-        [self.zc_barTextField becomeFirstResponder];
-        
-        self.zc_barTextField.zc_selectedRange = self.zc_textView.zc_selectedRange;
-    }
-}
-
-#pragma mark - 设置样式
-- (ZCKeyBoardTopBar *(^)(ZCKeyBoardTopBarStyle))zc_style {
-    return ^ZCKeyBoardTopBar *(ZCKeyBoardTopBarStyle style) {
-        self.topBarStyle = style;
-        //NSLog(@"%d", style);
-        
-        if(self.zc_style == ZCKeyBoardTopBarStylePlain) {
-            self.items.firstObject.customView.hidden = YES;
-        }else if(self.topBarStyle == ZCKeyBoardTopBarStyleTextField) {
-            self.items.firstObject.customView.hidden = NO;
-        }
-        return self;
-    };
 }
 
 - (void)dealloc {
