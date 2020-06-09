@@ -9,13 +9,17 @@
 #import "ZCPicturePreview.h"
 
 @interface ZCPicturePreviewItem (update)
-- (void)updateIndex:(NSUInteger)index count:(NSUInteger)count;
+/// 图片是否已设置加载，防止scrollf滚动过程中多次调用
+@property(nonatomic, assign)   BOOL zc_loadding;
+/// 当前图片下标
+- (void)setZc_index:(NSUInteger)index;
+/// 图片不在显示范围
+- (void)zc_viewDidDisappear;
 @end
-@implementation ZCPicturePreviewItem (update)
-- (void)updateIndex:(NSUInteger)index count:(NSUInteger)count {
-    [self setValue:@(index) forKey:@"zc_index"];
-//    self.zc_pageLabel.text = [NSString stringWithFormat:@"%lu / %lu", (unsigned long)index + 1, (unsigned long)count];
-}
+
+@interface ZCPicturePreviewHeadbar (deleteBlock)
+/// 删除事件
+@property(nonatomic, copy) void(^zc_deleteImageBlock)(void);
 @end
 
 
@@ -25,8 +29,13 @@
 /// 预览item数组
 @property(nonatomic, strong) NSMutableArray<ZCPicturePreviewItem *> *zc_previewItemArray;
 
-/// 预览的 原UIImageView数组
-@property(nonatomic, strong) NSMutableDictionary<NSNumber *, UIView *> *zc_originalImgViewMap;
+/// 记录起始滑动位置，用于判断滑动方向
+@property(nonatomic, assign) float lastContentOffset;
+/// 记录是否处于滑动中，用于判断是否连续滑动 即上次滑动未结束 又立即滑动多次，造成lastContentOffset被多次修改，失去准确性
+@property(nonatomic, assign) BOOL isScrollStarting;
+
+/// 外部view，用于动画 展示/放大 起点frame，动画 隐藏/缩小 结束frame
+@property(nonatomic, strong) UIView *zc_outsideShowView;
 
 @end
 
@@ -60,10 +69,7 @@
         
         [self initialPicturePreviewItem];
         
-        zc_headBar = [[ZCPicturePreviewHeadbar alloc] init];
-        [self addSubview:zc_headBar];
-        
-        self.zc_originalImgViewMap = [NSMutableDictionary dictionary];
+        [self bringSubviewToFront:self.zc_headBar];
     }
     return self;
 }
@@ -78,6 +84,20 @@
     }
 }
 
+- (ZCPicturePreviewHeadbar *)zc_headBar {
+    if (!zc_headBar) {
+        zc_headBar = [[ZCPicturePreviewHeadbar alloc] init];
+        [self addSubview:zc_headBar];
+        __weak typeof(self)weakSelf = self;
+        zc_headBar.zc_deleteImageBlock = ^{
+            if (weakSelf.zc_deleteImageBlock) {
+                weakSelf.zc_deleteImageBlock(weakSelf.zc_nowShowImgIndex);
+            }
+        };
+    }
+    return zc_headBar;
+}
+
 - (void)setFrame:(CGRect)frame {
     super.frame = frame;
     
@@ -86,115 +106,156 @@
         ZCPicturePreviewItem *item = self.zc_previewItemArray[i];
         item.frame = CGRectMake(i*imgWidth, 0, imgWidth, self.frame.size.height);
     }
-    int index = self.contentOffset.x/self.bounds.size.width;
-    self.contentOffset = CGPointMake(self.frame.size.width * index, 0);
     
-    self.zc_imageCount = self.zc_imageCount;
     
-    zc_headBar.frame = CGRectMake(self.contentOffset.x, 20, self.frame.size.width, 44);
+    [self updateScrollViewContent];
+    
+    [self updateHeadBarFrame];
+}
+
+- (void)updateHeadBarFrame {
+    if (@available(iOS 11.0, *)) {
+        self.zc_headBar.frame = CGRectMake(self.contentOffset.x, self.window.safeAreaInsets.top, self.frame.size.width, 44);
+    } else {
+        self.zc_headBar.frame = CGRectMake(self.contentOffset.x, 20, self.frame.size.width, 44);
+    }
 }
 
 - (void)setZc_imageCount:(NSUInteger)imageCount {
     zc_imageCount = imageCount;
-    if(imageCount <= 0)
-        [self.zc_originalImgViewMap removeAllObjects];
-    
-    NSUInteger maxPageNum = zc_imageCount > 3 ? 3 : zc_imageCount;
-    self.contentSize = CGSizeMake(self.frame.size.width * maxPageNum, self.frame.size.height);
+
+    [self updateScrollViewContent];
 }
 
-#pragma mark -
+- (void)updateScrollViewContent {
+    NSUInteger showIndex = 1;
+    if (self.zc_nowShowImgIndex <= 0) {
+        showIndex = 0;
+    } else if (self.zc_nowShowImgIndex >= self.zc_imageCount - 1) {
+        showIndex = 2;
+    }
+    self.contentOffset = CGPointMake(self.frame.size.width * showIndex, 0);
+    self.contentSize   = CGSizeMake (self.frame.size.width * (self.zc_imageCount > 3 ? 3 : self.zc_imageCount), self.bounds.size.height);
+}
+
+#pragma mark - UIScrollViewDelegate
+/// 滑动开始
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (self.isScrollStarting == NO) {
+        self.lastContentOffset = scrollView.contentOffset.x;
+        
+        self.isScrollStarting = YES;
+    }
+}
+
+/// 滑动过程
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if(self.hidden)
         return;
+    [self updateHeadBarFrame];
     
-    zc_headBar.frame = CGRectMake(self.contentOffset.x, 20, self.frame.size.width, 44);
-    
-    float minIndex = self.contentOffset.x/self.bounds.size.width;
-    if(minIndex <= 0) {
-        
-    }else if(minIndex < [self itemIndexForImageIndex:zc_nowShowImgIndex]) {
-        [self willUpdateShow:zc_nowShowImgIndex - 1 itemIndex:(int)(minIndex-1)];
-    }else if(minIndex > [self itemIndexForImageIndex:zc_nowShowImgIndex]) {
-        [self willUpdateShow:zc_nowShowImgIndex + 1 itemIndex:(int)(minIndex+1)];
+    if (self.contentOffset.x > self.lastContentOffset) { // 左滑
+        // 当前是否为第一个
+        if (zc_nowShowImgIndex == 0) {
+            [self willUpdateShow:zc_nowShowImgIndex + 1 item:self.zc_previewItemArray[1]];
+        } else {
+            [self willUpdateShow:zc_nowShowImgIndex + 1 item:self.zc_previewItemArray[2]];
+        }
+    } else if (self.contentOffset.x < self.lastContentOffset) { // 右滑
+        // 是否为最后一个
+        if (zc_nowShowImgIndex == self.zc_imageCount - 1) {
+            [self willUpdateShow:zc_nowShowImgIndex - 1 item:self.zc_previewItemArray[1]];
+        } else {
+            [self willUpdateShow:zc_nowShowImgIndex - 1 item:self.zc_previewItemArray[0]];
+        }
     }
 }
 
+/// 滑动结束
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if(self.hidden)
         return;
+    self.isScrollStarting = NO;
+    
+    [self scrollViewDidScroll:scrollView];
     [self didUpdateShow];
 }
 
-- (void)willUpdateShow:(NSUInteger)index itemIndex:(NSUInteger)itemIndex {
-    if(index >= self.zc_imageCount) {
+- (void)willUpdateShow:(NSUInteger)index item:(ZCPicturePreviewItem *)item {
+    if(index < 0 || index >= self.zc_imageCount) {
         return;
     }
-    if(itemIndex > 2) {//为什么会出现这个
-        return;
-    }
-        
-    ZCPicturePreviewItem *item = self.zc_previewItemArray[itemIndex];
-    [item updateIndex:index count:self.zc_imageCount];
-    [self.zc_headBar zc_pageNum:index totalNum:self.zc_imageCount];
-    if(item.zc_firstLoadding != YES) {
+    item.zc_index = index;
+    
+    if(item.zc_loadding != YES) {
         if(self.zc_willChangeBlock) {
-            self.zc_willChangeBlock(self, item);
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                self.zc_willChangeBlock(self, item);
+            });
         }
+        item.zc_loadding = YES;
     }
-    item.zc_firstLoadding = YES;
 }
 
 - (void)didUpdateShow {
-    ZCPicturePreviewItem *item = [self nowShowItem];
-    NSUInteger itemTargetIndex = [self itemIndexForImageIndex:item.zc_index];
-    NSUInteger itemNowIndex = [self.zc_previewItemArray indexOfObject:item];
-    zc_nowShowImgIndex = item.zc_index;
+    NSUInteger nowShowItemIndex = [self nowShowItemIndex];
+    ZCPicturePreviewItem *nowShowItem = self.zc_previewItemArray[nowShowItemIndex];
+    
+    zc_nowShowImgIndex = nowShowItem.zc_index;
+    self.zc_headBar.zc_title = [NSString stringWithFormat:@"%lu / %lu", nowShowItem.zc_index + 1, self.zc_imageCount];
 
-    if(itemNowIndex != itemTargetIndex) {
-        [self exchangeItemIndex:itemNowIndex withItemAtIndex:itemTargetIndex];
-    }
-    self.contentOffset = CGPointMake(self.frame.size.width * itemTargetIndex, 0);
-    if(self.zc_didChangeBlock) {
-        self.zc_didChangeBlock(self, item);
+    [self exchangeItem];
+    
+    for (int i = 0; i < self.zc_previewItemArray.count; i++) {
+        ZCPicturePreviewItem *item = self.zc_previewItemArray[i];
+        if(nowShowItem != item) {
+            [item zc_viewDidDisappear];
+            item.zc_index = i - nowShowItemIndex + nowShowItem.zc_index;
+        }
+        item.zc_loadding = NO;
     }
     
-    for (ZCPicturePreviewItem *i in self.zc_previewItemArray) {
-        if(item == i) {
-            [i zc_viewDidAppear];
-        }else{
-            [i zc_viewDidDisappear];
-        }
+    if(self.zc_didChangeBlock) {
+        self.zc_didChangeBlock(self, [self nowShowItem]);
     }
 }
 
-- (void)exchangeItemIndex:(NSUInteger)index withItemAtIndex:(NSUInteger)atIndex {
-    ZCPicturePreviewItem *item = self.zc_previewItemArray[index];
-    ZCPicturePreviewItem *atItem = self.zc_previewItemArray[atIndex];
+- (void)exchangeItem {
+    /// 根据当前显示图片的下标值，获取应该显示的item下标值
+    //判断是两头还是中间
+    if(zc_nowShowImgIndex <= 0) { // 第一个、第二个位置不用变
+        return;
+    }else if(zc_nowShowImgIndex >= self.zc_imageCount - 1) { // 最后一个位置不用变
+        return;
+    }else if(zc_nowShowImgIndex >= self.zc_imageCount) {
+        return;
+    }
+        
+    ZCPicturePreviewItem *item = self.zc_previewItemArray[1];
+    ZCPicturePreviewItem *atItem = self.zc_previewItemArray[[self nowShowItemIndex]];
+    
     CGRect tmpFrame = item.frame;
     item.frame = atItem.frame;
     atItem.frame = tmpFrame;
     
-    [self.zc_previewItemArray exchangeObjectAtIndex:index withObjectAtIndex:atIndex];
+    [self.zc_previewItemArray exchangeObjectAtIndex:1 withObjectAtIndex:[self nowShowItemIndex]];
+    self.contentOffset = CGPointMake(self.frame.size.width * 1, 0);
 }
 
 /// 实时显示的item
 - (ZCPicturePreviewItem *)nowShowItem {
-    int index = self.contentOffset.x/self.bounds.size.width;
-    ZCPicturePreviewItem *item = self.zc_previewItemArray[index];
-    return item;
+    return self.zc_previewItemArray[[self nowShowItemIndex]];
 }
 
-/// 根据当前显示图片的下标值，获取应该显示的item下标值
-- (NSUInteger)itemIndexForImageIndex:(NSUInteger)showIndex {
-    //判断是两头还是中间
-    if(showIndex == 0) {
-        return 0;
-    }else if((showIndex + 1) < self.zc_imageCount || self.zc_imageCount == 2){
-        return 1;
-    }else{
-        return 2;
+/// 当前显示的itemIndex
+- (NSUInteger)nowShowItemIndex {
+    int index = self.contentOffset.x/self.bounds.size.width;
+    if (index < 0) {
+        index = 0;
+    } else if (index > 2) {
+        index = 2;
     }
+    return index;
 }
 
 #pragma mark -
@@ -205,65 +266,41 @@
 @end
 
 
-@implementation ZCPicturePreview (ZCMonitorImageView)
-
-- (void)zc_monitorView:(UIView *)view index:(NSUInteger)index {
-    self.zc_originalImgViewMap[@(index)] = view;
-}
-
-- (void)zc_monitorImageView:(UIImageView *)imgView index:(NSUInteger)index {
-    imgView.userInteractionEnabled = YES;
-    [self zc_monitorView:imgView index:index];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapMonitorImageView:)];
-    [imgView addGestureRecognizer:tap];
-}
-
-- (void)tapMonitorImageView:(UITapGestureRecognizer *)tap {
-    UIImageView *imgView = (UIImageView *)tap.view;
-    [self zc_showViewWithView:imgView];
-}
-
-@end
-
-
-
 @implementation ZCPicturePreview (ZCAnimat)
 
-- (void)zc_showViewWithView:(UIView *)view {
-    NSNumber *indexNum = [self.zc_originalImgViewMap allKeysForObject:view].firstObject;
-    [self zc_showViewWithView:view index:indexNum.unsignedIntegerValue];
+-(void)zc_showViewWithIndex:(NSUInteger)index {
+    [self zc_showViewWithView:nil index:index];
 }
 
 - (void)zc_showViewWithView:(UIView *)view index:(NSUInteger)index {
     [self.superview endEditing:YES];
+    self.zc_outsideShowView = view;
     
-    if(view) {
-        self.zc_originalImgViewMap[@(index)] = view;
-        self.contentOffset = CGPointMake(0, 0);
-        ZCPicturePreviewItem *item = self.zc_previewItemArray.firstObject;
-        [item updateIndex:index count:self.zc_imageCount];
-        if(self.zc_willChangeBlock)
-            self.zc_willChangeBlock(self, item);
-        [self.zc_headBar zc_pageNum:index totalNum:self.zc_imageCount];
-        
-        self.frame = [view convertRect:view.bounds toView:self.superview];
+    
+    CGRect rect = self.superview.bounds;
+    {
+        self.frame = rect;
+        zc_nowShowImgIndex = index;
+        [self updateScrollViewContent];
+        [self willUpdateShow:index item:[self nowShowItem]];
     }
     
-    [self zc_showView];
+    
+    if(view) {
+        rect = [self.zc_outsideShowView convertRect:self.zc_outsideShowView.bounds toView:self.superview];
+    }
+    [self zc_showViewWithCGRect:rect];
 }
 
-- (void)zc_showView {
+- (void)zc_showViewWithCGRect:(CGRect)rect {
+    self.frame = rect;
 //    self.backgroundColor = [UIColor clearColor];
     self.hidden = NO;
-    zc_headBar.hidden = NO;
     
     [UIView transitionWithView:self.superview
                       duration:0.25
                        options:UIViewAnimationOptionLayoutSubviews | UIViewAnimationOptionAllowAnimatedContent
                     animations:^{
-//    [UIView animateWithDuration:0.25
-//                     animations:^{
                         self.frame = self.superview.bounds;
                         self.alpha = 1;
 //                        self.backgroundColor = [UIColor colorWithWhite:30/255.0 alpha:1];
@@ -273,23 +310,18 @@
 }
 
 - (void)zc_hiddenView {
-    UIView *imgView = self.zc_originalImgViewMap[@(zc_nowShowImgIndex)];
     CGRect rect = self.frame;
-    if(imgView) {
-        rect = [imgView convertRect:imgView.bounds toView:self.superview];
+    if(self.zc_outsideShowView) {
+        rect = [self.zc_outsideShowView convertRect:self.zc_outsideShowView.bounds toView:self.superview];
     }
     [self zc_hiddenViewWithCGRect:rect];
 }
 
 - (void)zc_hiddenViewWithCGRect:(CGRect)rect {
-    zc_headBar.hidden = YES;
-    
     [UIView transitionWithView:self.superview
                       duration:0.25
                        options:UIViewAnimationOptionLayoutSubviews | UIViewAnimationOptionAllowAnimatedContent
                     animations:^{
-//    [UIView animateWithDuration:0.25
-//                     animations:^{
                         self.frame = rect;
                         self.alpha = 0;
 //                        self.backgroundColor = [UIColor clearColor];

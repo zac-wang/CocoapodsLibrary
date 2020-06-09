@@ -9,18 +9,12 @@
 #import <UIKit/UIKit.h>
 
 /// 图片浏览导航栏
-@interface ZCPicturePreviewHeadbar : UIToolbar
+@interface ZCPicturePreviewHeadbar : UINavigationBar
 
-@property(nonatomic, strong) UIBarButtonItem *zc_leftItem;
+/// 显示deleteButton
+- (void)zc_showDeleteItem;
 
-@property(nonatomic, strong) UIBarButtonItem *zc_pageItem;
-
-@property(nonatomic, strong) UIBarButtonItem *zc_deleteItem;
-
-- (void)zc_hiddenDeleteItem;
-
-- (void)zc_pageNum:(NSUInteger)pageNum totalNum:(NSUInteger)totalNum;
-
-@property(nonatomic, copy) void(^zc_deleteImageBlock)(void);
+/// 设置标题
+@property(nonatomic, readwrite) NSString *zc_title;
 
 @end

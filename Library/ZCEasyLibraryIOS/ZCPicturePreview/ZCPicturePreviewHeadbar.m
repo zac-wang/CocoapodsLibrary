@@ -8,42 +8,40 @@
 
 #import "ZCPicturePreviewHeadbar.h"
 
+@interface ZCPicturePreviewHeadbar ()
+/// 删除事件
+@property(nonatomic, copy) void(^zc_deleteImageBlock)(void);
+@end
+
 @implementation ZCPicturePreviewHeadbar
-@synthesize zc_leftItem, zc_pageItem, zc_deleteItem;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        zc_leftItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleDone target:nil action:nil];
+        UINavigationItem *items = [[UINavigationItem alloc] initWithTitle:@""];
+        NSDictionary *dic = @{NSFontAttributeName : [UIFont systemFontOfSize:17],
+                              NSForegroundColorAttributeName : [UIColor whiteColor]};
+        self.titleTextAttributes =dic;
+        [self pushNavigationItem:items animated:YES];
         
-        zc_pageItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleDone target:nil action:nil];
-        
-        zc_deleteItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteImageItem:)];
-        
-        UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
-        
-        zc_leftItem.tintColor = [UIColor whiteColor];
-        zc_pageItem.tintColor = [UIColor whiteColor];
-        zc_deleteItem.tintColor = [UIColor whiteColor];
-        
-        [self setShadowImage:[UIImage new] forToolbarPosition:UIBarPositionAny];
-        [self setBackgroundImage:[UIImage new] forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-        [self setItems:@[zc_leftItem, space, zc_pageItem, space, zc_deleteItem]];
+        [self setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+        [self setShadowImage:[UIImage new]];
     }
     return self;
 }
 
-- (void)zc_hiddenDeleteItem {
-    NSMutableArray *itemArr = [self.items mutableCopy];
-    [itemArr removeLastObject];
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleDone target:nil action:nil];
-    [itemArr addObject:item];
-    self.items = itemArr;
+- (void)zc_showDeleteItem {
+    if (!self.topItem.rightBarButtonItem) {
+        self.topItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                                                                        target:self
+                                                                                        action:@selector(deleteImageItem:)];
+        self.topItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+    }
 }
 
-- (void)zc_pageNum:(NSUInteger)pageNum totalNum:(NSUInteger)totalNum {
-    self.zc_pageItem.title = [NSString stringWithFormat:@"%lu / %lu", (unsigned long)pageNum + 1, (unsigned long)totalNum];
+- (void)setZc_title:(NSString *)zc_title {
+    self.topItem.title = zc_title;
 }
 
 - (void)deleteImageItem:(UIBarButtonItem *)deleteItem {

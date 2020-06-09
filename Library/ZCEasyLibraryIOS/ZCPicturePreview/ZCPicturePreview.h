@@ -19,39 +19,33 @@
 @property(nonatomic, readonly) ZCPicturePreviewHeadbar *zc_headBar;
 
 /// 设置 预览 图片总个数
-@property(nonatomic, assign) NSUInteger zc_imageCount;
+@property(nonatomic, assign)   NSUInteger zc_imageCount;
 
 /// 获取 正在预览的图片下标
 @property(nonatomic, readonly) NSUInteger zc_nowShowImgIndex;
 
-/// 即将刷新，初始化界面
+/// 即将刷新，设置item.zc_imgView.image
 @property(nonatomic, copy) void(^zc_willChangeBlock)(ZCPicturePreview *picturePreview, ZCPicturePreviewItem *item);
 
-/// 刷新，初始化界面
+/// 刷新完成
 @property(nonatomic, copy) void(^zc_didChangeBlock)(ZCPicturePreview *picturePreview, ZCPicturePreviewItem *item);
 
-@end
-
-
-@interface ZCPicturePreview (ZCMonitorImageView)
-
-/// 绑定 UIImageView 与 对应 预览下标
-- (void)zc_monitorImageView:(UIImageView *)imgView index:(NSUInteger)index;
-
-/// 绑定 UIView子类 与 对应 预览下标
-- (void)zc_monitorView:(UIView *)view index:(NSUInteger)index;
+/// 删除事件
+@property(nonatomic, copy) void(^zc_deleteImageBlock)(NSUInteger showImgIndex);
 
 @end
 
 
 @interface ZCPicturePreview (ZCAnimat)
 
-- (void)zc_showViewWithView:(UIView *)view;
-
+/// 显示，图片view  当前图片下标 (用于切换至其他图片)
 - (void)zc_showViewWithView:(UIView *)view index:(NSUInteger)index;
+/// 显示， 当前图片下标 (用于切换至其他图片)
+- (void)zc_showViewWithIndex:(NSUInteger)index;
 
+/// 隐藏
 - (void)zc_hiddenView;
-
+/// 隐藏
 - (void)zc_hiddenViewWithCGRect:(CGRect)rect;
 
 @end
