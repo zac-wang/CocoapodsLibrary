@@ -23,3 +23,11 @@
 - (void)zc_setLeftImage:(UIImage *)image frame:(CGRect)frame;
 
 @end
+
+
+@interface UITextField (ZCHandleMaxTextLength)
+
+/// 设置最大长度
+- (void)zc_handleMaxTextLengthWithLength:(int)textMaxLength;
+
+@end

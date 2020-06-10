@@ -30,6 +30,14 @@
 @end
 
 
+@interface UITextView (ZCHandleMaxTextLength)
+
+/// 设置最大长度
+- (void)zc_handleMaxTextLengthWithLength:(int)textMaxLength;
+
+@end
+
+
 @interface ZCTextView (ZCPlaceholder)
 ///设置提示文字
 @property(nonatomic,strong) NSAttributedString *zc_placeholderAttributesString;

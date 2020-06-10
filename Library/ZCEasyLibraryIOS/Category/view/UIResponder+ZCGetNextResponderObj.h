@@ -10,7 +10,7 @@
 
 @interface UIResponder (ZCGetNextResponderObj)
 
-/// 获取上一级响应链
+/// 向上寻找指定类型的响应链
 @property(nonatomic, readonly) id (^zc_getNextResponderForClass)(Class class);
 
 @end
