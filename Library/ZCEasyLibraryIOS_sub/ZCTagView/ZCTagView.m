@@ -7,8 +7,6 @@
 //
 
 #import "ZCTagView.h"
-#import "UIColor+ZCSupp.h"
-#import "UIView+ZCCornerRadius.h"
 
 @interface ZCTagView()
 @property(nonatomic, strong) NSMutableArray<UIButton *> *dequeueReusableButtonArray;
@@ -80,10 +78,11 @@
         [self.dequeueReusableButtonArray removeObject:btn];
     }else {
         btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.backgroundColor = UIColorFromRGB(0x50a6fa);
+        btn.backgroundColor = [UIColor colorWithRed:0x50/255.0 green:0xa6/255.0 blue:0xfa/255.0 alpha:1];
         btn.titleLabel.font = [UIFont systemFontOfSize:13];
+        btn.layer.cornerRadius = 2;
+        btn.layer.masksToBounds = YES;
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [btn zc_drawCornerRadius:2 borderColor:nil];
         [btn addTarget:self action:@selector(zc_btnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return btn;

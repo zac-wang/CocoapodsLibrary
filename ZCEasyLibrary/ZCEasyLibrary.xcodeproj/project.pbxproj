@@ -21,7 +21,7 @@
 		3D3DA25C236301AD005D7F1E /* UIView+ZCSubview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1CA236301AD005D7F1E /* UIView+ZCSubview.m */; };
 		3D3DA25D236301AD005D7F1E /* UIImage+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1CB236301AD005D7F1E /* UIImage+ZCSupp.m */; };
 		3D3DA25F236301AD005D7F1E /* UIImageView+ZCAnimat.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1CD236301AD005D7F1E /* UIImageView+ZCAnimat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D3DA260236301AD005D7F1E /* UIView+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1CE236301AD005D7F1E /* UIView+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D3DA260236301AD005D7F1E /* UIView+ZCBackground.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1CE236301AD005D7F1E /* UIView+ZCBackground.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA261236301AD005D7F1E /* UINavigationBar+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1CF236301AD005D7F1E /* UINavigationBar+ZCSupp.m */; };
 		3D3DA262236301AD005D7F1E /* UIImageView+ZCGif.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1D0236301AD005D7F1E /* UIImageView+ZCGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA263236301AD005D7F1E /* UIView+ZCCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1D1236301AD005D7F1E /* UIView+ZCCornerRadius.m */; };
@@ -40,7 +40,7 @@
 		3D3DA275236301AD005D7F1E /* UIView+ZCCornerRadius.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1E3236301AD005D7F1E /* UIView+ZCCornerRadius.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA277236301AD005D7F1E /* UINavigationBar+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1E5236301AD005D7F1E /* UINavigationBar+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA278236301AD005D7F1E /* UIImageView+ZCGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1E6236301AD005D7F1E /* UIImageView+ZCGif.m */; };
-		3D3DA279236301AD005D7F1E /* UIView+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1E7236301AD005D7F1E /* UIView+ZCSupp.m */; };
+		3D3DA279236301AD005D7F1E /* UIView+ZCBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA1E7236301AD005D7F1E /* UIView+ZCBackground.m */; };
 		3D3DA27A236301AD005D7F1E /* NSObject+ZCDoubleValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1E9236301AD005D7F1E /* NSObject+ZCDoubleValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA27B236301AD005D7F1E /* NSObject+ZCRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1EA236301AD005D7F1E /* NSObject+ZCRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA27C236301AD005D7F1E /* NSString+ZCSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA1EB236301AD005D7F1E /* NSString+ZCSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,20 +64,16 @@
 		3D3DA29E236301AD005D7F1E /* ZCSelectDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA214236301AD005D7F1E /* ZCSelectDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2A2236301AD005D7F1E /* ZCTextDecimalField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA219236301AD005D7F1E /* ZCTextDecimalField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2A3236301AD005D7F1E /* ZCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA21A236301AD005D7F1E /* ZCTextView.m */; };
-		3D3DA2A4236301AD005D7F1E /* ZCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA21B236301AD005D7F1E /* ZCTableViewCell.m */; };
 		3D3DA2A6236301AD005D7F1E /* ZCTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA21D236301AD005D7F1E /* ZCTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2AB236301AD005D7F1E /* ZCTextDecimalField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA222236301AD005D7F1E /* ZCTextDecimalField.m */; };
 		3D3DA2AC236301AD005D7F1E /* ZCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA223236301AD005D7F1E /* ZCTextField.m */; };
-		3D3DA2AE236301AD005D7F1E /* ZCTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA225236301AD005D7F1E /* ZCTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2AF236301AD005D7F1E /* ZCTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA226236301AD005D7F1E /* ZCTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D3DA2B1236301AD005D7F1E /* ZCTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA228236301AD005D7F1E /* ZCTagView.m */; };
 		3D3DA2B2236301AD005D7F1E /* ZCPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA22A236301AD005D7F1E /* ZCPickerView.m */; };
 		3D3DA2B3236301AD005D7F1E /* ZCPickerCirculateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA22B236301AD005D7F1E /* ZCPickerCirculateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2B4236301AD005D7F1E /* ZCPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA22C236301AD005D7F1E /* ZCPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2B5236301AD005D7F1E /* ZCPickerCirculateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA22D236301AD005D7F1E /* ZCPickerCirculateView.m */; };
 		3D3DA2B6236301AD005D7F1E /* ZCSelectDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA22E236301AD005D7F1E /* ZCSelectDatePicker.m */; };
 		3D3DA2B7236301AD005D7F1E /* ZCSelectImagePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA22F236301AD005D7F1E /* ZCSelectImagePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D3DA2B8236301AD005D7F1E /* ZCTagView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D3DA230236301AD005D7F1E /* ZCTagView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D3DA2BB236301AD005D7F1E /* ZCUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA235236301AD005D7F1E /* ZCUserDefaults.m */; };
 		3D3DA2BC236301AD005D7F1E /* ZCAppUpdateVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA236236301AD005D7F1E /* ZCAppUpdateVersion.m */; };
 		3D3DA2BD236301AD005D7F1E /* ZCTimeCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3DA237236301AD005D7F1E /* ZCTimeCountDown.m */; };
@@ -191,6 +187,8 @@
 		3D4814B82490D45C0026F572 /* UIFont+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4814B62490D45C0026F572 /* UIFont+ZCSupp.m */; };
 		3D4814BC2490D85D0026F572 /* UIAlertController+ZCSupp.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4814BA2490D85D0026F572 /* UIAlertController+ZCSupp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4814BD2490D85D0026F572 /* UIAlertController+ZCSupp.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4814BB2490D85D0026F572 /* UIAlertController+ZCSupp.m */; };
+		3D4814C12490E6660026F572 /* ZCTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4814BF2490E6660026F572 /* ZCTagView.m */; };
+		3D4814C22490E6660026F572 /* ZCTagView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4814C02490E6660026F572 /* ZCTagView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DDBA2FE24907D6C00240559 /* CNContact+ZCToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBA2FA24907D6C00240559 /* CNContact+ZCToDictionary.m */; };
 		3DDBA2FF24907D6C00240559 /* ZCContactStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBA2FB24907D6C00240559 /* ZCContactStore.m */; };
 		3DDBA30024907D6C00240559 /* CNContact+ZCToDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDBA2FC24907D6C00240559 /* CNContact+ZCToDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -226,7 +224,7 @@
 		3D3DA1CA236301AD005D7F1E /* UIView+ZCSubview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCSubview.m"; sourceTree = "<group>"; };
 		3D3DA1CB236301AD005D7F1E /* UIImage+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZCSupp.m"; sourceTree = "<group>"; };
 		3D3DA1CD236301AD005D7F1E /* UIImageView+ZCAnimat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZCAnimat.h"; sourceTree = "<group>"; };
-		3D3DA1CE236301AD005D7F1E /* UIView+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCSupp.h"; sourceTree = "<group>"; };
+		3D3DA1CE236301AD005D7F1E /* UIView+ZCBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCBackground.h"; sourceTree = "<group>"; };
 		3D3DA1CF236301AD005D7F1E /* UINavigationBar+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ZCSupp.m"; sourceTree = "<group>"; };
 		3D3DA1D0236301AD005D7F1E /* UIImageView+ZCGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ZCGif.h"; sourceTree = "<group>"; };
 		3D3DA1D1236301AD005D7F1E /* UIView+ZCCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCCornerRadius.m"; sourceTree = "<group>"; };
@@ -245,7 +243,7 @@
 		3D3DA1E3236301AD005D7F1E /* UIView+ZCCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZCCornerRadius.h"; sourceTree = "<group>"; };
 		3D3DA1E5236301AD005D7F1E /* UINavigationBar+ZCSupp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ZCSupp.h"; sourceTree = "<group>"; };
 		3D3DA1E6236301AD005D7F1E /* UIImageView+ZCGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ZCGif.m"; sourceTree = "<group>"; };
-		3D3DA1E7236301AD005D7F1E /* UIView+ZCSupp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCSupp.m"; sourceTree = "<group>"; };
+		3D3DA1E7236301AD005D7F1E /* UIView+ZCBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZCBackground.m"; sourceTree = "<group>"; };
 		3D3DA1E9236301AD005D7F1E /* NSObject+ZCDoubleValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZCDoubleValue.h"; sourceTree = "<group>"; };
 		3D3DA1EA236301AD005D7F1E /* NSObject+ZCRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZCRuntime.h"; sourceTree = "<group>"; };
 		3D3DA1EB236301AD005D7F1E /* NSString+ZCSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCSize.h"; sourceTree = "<group>"; };
@@ -269,20 +267,16 @@
 		3D3DA214236301AD005D7F1E /* ZCSelectDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSelectDatePicker.h; sourceTree = "<group>"; };
 		3D3DA219236301AD005D7F1E /* ZCTextDecimalField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTextDecimalField.h; sourceTree = "<group>"; };
 		3D3DA21A236301AD005D7F1E /* ZCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTextView.m; sourceTree = "<group>"; };
-		3D3DA21B236301AD005D7F1E /* ZCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTableViewCell.m; sourceTree = "<group>"; };
 		3D3DA21D236301AD005D7F1E /* ZCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTextField.h; sourceTree = "<group>"; };
 		3D3DA222236301AD005D7F1E /* ZCTextDecimalField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTextDecimalField.m; sourceTree = "<group>"; };
 		3D3DA223236301AD005D7F1E /* ZCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTextField.m; sourceTree = "<group>"; };
-		3D3DA225236301AD005D7F1E /* ZCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTableViewCell.h; sourceTree = "<group>"; };
 		3D3DA226236301AD005D7F1E /* ZCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTextView.h; sourceTree = "<group>"; };
-		3D3DA228236301AD005D7F1E /* ZCTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTagView.m; sourceTree = "<group>"; };
 		3D3DA22A236301AD005D7F1E /* ZCPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPickerView.m; sourceTree = "<group>"; };
 		3D3DA22B236301AD005D7F1E /* ZCPickerCirculateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPickerCirculateView.h; sourceTree = "<group>"; };
 		3D3DA22C236301AD005D7F1E /* ZCPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPickerView.h; sourceTree = "<group>"; };
 		3D3DA22D236301AD005D7F1E /* ZCPickerCirculateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPickerCirculateView.m; sourceTree = "<group>"; };
 		3D3DA22E236301AD005D7F1E /* ZCSelectDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSelectDatePicker.m; sourceTree = "<group>"; };
 		3D3DA22F236301AD005D7F1E /* ZCSelectImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSelectImagePicker.h; sourceTree = "<group>"; };
-		3D3DA230236301AD005D7F1E /* ZCTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTagView.h; sourceTree = "<group>"; };
 		3D3DA235236301AD005D7F1E /* ZCUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCUserDefaults.m; sourceTree = "<group>"; };
 		3D3DA236236301AD005D7F1E /* ZCAppUpdateVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAppUpdateVersion.m; sourceTree = "<group>"; };
 		3D3DA237236301AD005D7F1E /* ZCTimeCountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTimeCountDown.m; sourceTree = "<group>"; };
@@ -362,6 +356,8 @@
 		3D4814B62490D45C0026F572 /* UIFont+ZCSupp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ZCSupp.m"; sourceTree = "<group>"; };
 		3D4814BA2490D85D0026F572 /* UIAlertController+ZCSupp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ZCSupp.h"; sourceTree = "<group>"; };
 		3D4814BB2490D85D0026F572 /* UIAlertController+ZCSupp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ZCSupp.m"; sourceTree = "<group>"; };
+		3D4814BF2490E6660026F572 /* ZCTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTagView.m; sourceTree = "<group>"; };
+		3D4814C02490E6660026F572 /* ZCTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTagView.h; sourceTree = "<group>"; };
 		3DDBA2FA24907D6C00240559 /* CNContact+ZCToDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CNContact+ZCToDictionary.m"; sourceTree = "<group>"; };
 		3DDBA2FB24907D6C00240559 /* ZCContactStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCContactStore.m; sourceTree = "<group>"; };
 		3DDBA2FC24907D6C00240559 /* CNContact+ZCToDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CNContact+ZCToDictionary.h"; sourceTree = "<group>"; };
@@ -405,27 +401,30 @@
 		3D3DA1B6236301AD005D7F1E /* ZCEasyLibraryIOS_sub */ = {
 			isa = PBXGroup;
 			children = (
+				3D3DA1B7236301AD005D7F1E /* UIViewCategory */,
 				3D3DA1BA236301AD005D7F1E /* ZCBannerView */,
 				3D418EAF2487D32A00AC0B34 /* ZCCitySelect */,
 				3DDBA2F924907D6C00240559 /* ZCContactStore */,
 				3D418EB32487D32A00AC0B34 /* ZCKeyBoardTopBar */,
 				3DDBA30224907E2500240559 /* ZCPicturePreview */,
 				3D418EA52487CBB300AC0B34 /* ZCReachability */,
-				3D3DA1B7236301AD005D7F1E /* ZCScreenCapture */,
 				3D418EA82487CBB300AC0B34 /* ZCSpinnerView */,
+				3D4814BE2490E6660026F572 /* ZCTagView */,
 				3D418EC32487D39900AC0B34 /* ZCTextSelectedRange */,
 			);
 			name = ZCEasyLibraryIOS_sub;
 			path = ../Library/ZCEasyLibraryIOS_sub;
 			sourceTree = "<group>";
 		};
-		3D3DA1B7236301AD005D7F1E /* ZCScreenCapture */ = {
+		3D3DA1B7236301AD005D7F1E /* UIViewCategory */ = {
 			isa = PBXGroup;
 			children = (
+				3D3DA1CE236301AD005D7F1E /* UIView+ZCBackground.h */,
+				3D3DA1E7236301AD005D7F1E /* UIView+ZCBackground.m */,
 				3D3DA1B9236301AD005D7F1E /* UIView+ZCScreenCapture.h */,
 				3D3DA1B8236301AD005D7F1E /* UIView+ZCScreenCapture.m */,
 			);
-			path = ZCScreenCapture;
+			path = UIViewCategory;
 			sourceTree = "<group>";
 		};
 		3D3DA1BA236301AD005D7F1E /* ZCBannerView */ = {
@@ -446,7 +445,6 @@
 				3D3DA243236301AD005D7F1E /* ZCEasyLibrary.h */,
 				3D3DA1C0236301AD005D7F1E /* Category */,
 				3D3DA231236301AD005D7F1E /* class */,
-				3D3DA212236301AD005D7F1E /* view */,
 				3D3DA20D236301AD005D7F1E /* ZCLocation */,
 				3D3DA229236301AD005D7F1E /* ZCPicker */,
 				3D3DA1FE236301AD005D7F1E /* ZCSetting */,
@@ -499,8 +497,6 @@
 				3D3DA1D1236301AD005D7F1E /* UIView+ZCCornerRadius.m */,
 				3D3DA1E0236301AD005D7F1E /* UIView+ZCSubview.h */,
 				3D3DA1CA236301AD005D7F1E /* UIView+ZCSubview.m */,
-				3D3DA1CE236301AD005D7F1E /* UIView+ZCSupp.h */,
-				3D3DA1E7236301AD005D7F1E /* UIView+ZCSupp.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -542,25 +538,6 @@
 				3D3DA210236301AD005D7F1E /* ZCLocationManager.m */,
 			);
 			path = ZCLocation;
-			sourceTree = "<group>";
-		};
-		3D3DA212236301AD005D7F1E /* view */ = {
-			isa = PBXGroup;
-			children = (
-				3D3DA215236301AD005D7F1E /* plain */,
-				3D3DA230236301AD005D7F1E /* ZCTagView.h */,
-				3D3DA228236301AD005D7F1E /* ZCTagView.m */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		3D3DA215236301AD005D7F1E /* plain */ = {
-			isa = PBXGroup;
-			children = (
-				3D3DA225236301AD005D7F1E /* ZCTableViewCell.h */,
-				3D3DA21B236301AD005D7F1E /* ZCTableViewCell.m */,
-			);
-			path = plain;
 			sourceTree = "<group>";
 		};
 		3D3DA229236301AD005D7F1E /* ZCPicker */ = {
@@ -817,6 +794,15 @@
 			path = vc;
 			sourceTree = "<group>";
 		};
+		3D4814BE2490E6660026F572 /* ZCTagView */ = {
+			isa = PBXGroup;
+			children = (
+				3D4814BF2490E6660026F572 /* ZCTagView.m */,
+				3D4814C02490E6660026F572 /* ZCTagView.h */,
+			);
+			path = ZCTagView;
+			sourceTree = "<group>";
+		};
 		3DDA48432362EA2800E431BA /* Public */ = {
 			isa = PBXGroup;
 			children = (
@@ -937,7 +923,6 @@
 				3D3DA2C8236301AD005D7F1E /* ZCEasyLibrary.h in Headers */,
 				3D3DA27A236301AD005D7F1E /* NSObject+ZCDoubleValue.h in Headers */,
 				3D3DA290236301AD005D7F1E /* Macro.h in Headers */,
-				3D3DA2B8236301AD005D7F1E /* ZCTagView.h in Headers */,
 				3D3DA273236301AD005D7F1E /* CALayer+ZCSupp.h in Headers */,
 				3D3DA2B7236301AD005D7F1E /* ZCSelectImagePicker.h in Headers */,
 				3D3DA2A6236301AD005D7F1E /* ZCTextField.h in Headers */,
@@ -953,7 +938,7 @@
 				3D3DA25A236301AD005D7F1E /* UIResponder+ZCGetNextResponderObj.h in Headers */,
 				3D3DA2AF236301AD005D7F1E /* ZCTextView.h in Headers */,
 				3D3DA258236301AD005D7F1E /* UITableView+ZCSupp.h in Headers */,
-				3D3DA260236301AD005D7F1E /* UIView+ZCSupp.h in Headers */,
+				3D3DA260236301AD005D7F1E /* UIView+ZCBackground.h in Headers */,
 				3D3DA275236301AD005D7F1E /* UIView+ZCCornerRadius.h in Headers */,
 				3D3DA265236301AD005D7F1E /* UIButton+ZCSupp.h in Headers */,
 				3D3DA299236301AD005D7F1E /* ZCLocationManager.h in Headers */,
@@ -982,7 +967,6 @@
 				3D418EC82487D39900AC0B34 /* UITextField+ZCSelectedRange.h in Headers */,
 				3D418EBE2487D32A00AC0B34 /* UITextView+ZCKeyBoardTopBar.h in Headers */,
 				3D418EC02487D32A00AC0B34 /* UITextField+ZCKeyBoardTopBar.h in Headers */,
-				3D3DA2AE236301AD005D7F1E /* ZCTableViewCell.h in Headers */,
 				3D3DA2C0236301AD005D7F1E /* ZCTimeCountDown.h in Headers */,
 				3D3DA29E236301AD005D7F1E /* ZCSelectDatePicker.h in Headers */,
 				3D418EBC2487D32A00AC0B34 /* ZCCitySelect.h in Headers */,
@@ -999,6 +983,7 @@
 				3D4814BC2490D85D0026F572 /* UIAlertController+ZCSupp.h in Headers */,
 				3D4814B32490D2B50026F572 /* UITabBarItem+ZCTitleImage.h in Headers */,
 				3D4814B72490D45C0026F572 /* UIFont+ZCSupp.h in Headers */,
+				3D4814C22490E6660026F572 /* ZCTagView.h in Headers */,
 				3DDBA31E2490C67D00240559 /* ZCCitySelectView.h in Headers */,
 				3D3DA25F236301AD005D7F1E /* UIImageView+ZCAnimat.h in Headers */,
 				3D3DA287236301AD005D7F1E /* NSAttributedString+ZCSupp.h in Headers */,
@@ -1236,6 +1221,7 @@
 				3D3DA3832363033C005D7F1E /* NSDictionary+ZCMutableDeepCopy.m in Sources */,
 				3D3DA263236301AD005D7F1E /* UIView+ZCCornerRadius.m in Sources */,
 				3D3DA2AB236301AD005D7F1E /* ZCTextDecimalField.m in Sources */,
+				3D4814C12490E6660026F572 /* ZCTagView.m in Sources */,
 				3D418EAB2487CBB300AC0B34 /* ZCReachability.m in Sources */,
 				3DDBA2FF24907D6C00240559 /* ZCContactStore.m in Sources */,
 				3D3DA3A12363033C005D7F1E /* NSDate+ZCSupp.m in Sources */,
@@ -1252,9 +1238,8 @@
 				3D4814BD2490D85D0026F572 /* UIAlertController+ZCSupp.m in Sources */,
 				3D3DA29B236301AD005D7F1E /* ZCLocationManager.m in Sources */,
 				3D3DA29D236301AD005D7F1E /* ZCSelectImagePicker.m in Sources */,
-				3D3DA279236301AD005D7F1E /* UIView+ZCSupp.m in Sources */,
+				3D3DA279236301AD005D7F1E /* UIView+ZCBackground.m in Sources */,
 				3D3DA39D2363033C005D7F1E /* NSDateComponents+ZCSupp.m in Sources */,
-				3D3DA2B1236301AD005D7F1E /* ZCTagView.m in Sources */,
 				3DDBA30E24907E2500240559 /* ZCPicturePreviewItem.m in Sources */,
 				3D3DA253236301AD005D7F1E /* ZCBannerView.m in Sources */,
 				3DDBA30924907E2500240559 /* ZCPicturePreviewHeadbar.m in Sources */,
@@ -1290,7 +1275,6 @@
 				3D3DA3952363033C005D7F1E /* NSData+ZCEncrypt.m in Sources */,
 				3D418EBA2487D32A00AC0B34 /* ZCCitySelect.m in Sources */,
 				3DDBA2FE24907D6C00240559 /* CNContact+ZCToDictionary.m in Sources */,
-				3D3DA2A4236301AD005D7F1E /* ZCTableViewCell.m in Sources */,
 				3D3DA3812363033C005D7F1E /* NSArray+ZCMutableDeepCopy.m in Sources */,
 				3D3DA3992363033C005D7F1E /* NSString+ZCEncrypt.m in Sources */,
 				3D418EBD2487D32A00AC0B34 /* UITextField+ZCKeyBoardTopBar.m in Sources */,

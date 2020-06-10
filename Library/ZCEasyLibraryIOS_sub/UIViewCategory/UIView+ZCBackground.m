@@ -1,23 +1,21 @@
 //
-//  UIView+ZCSupp.m
+//  UIView+ZCBackground.m
 //  ZCEasyLibrary
 //
 //  Created by zac on 2017/10/22.
 //  Copyright © 2017年 love_iphone@qq.com. All rights reserved.
 //
 
-#import "UIView+ZCSupp.h"
+#import "UIView+ZCBackground.h"
 #import "NSObject+ZCRuntime.h"
 //#import "ZCListenFrameSizeChange.h"
 
-@implementation UIView (ZCSupp)
+@implementation UIView (ZCBackground)
 
 - (void)zc_shadowColor:(UIColor *)shadowColor shadowOffset:(CGSize)shadowOffset shadowOpacity:(float)shadowOpacity {
     self.layer.shadowOffset = shadowOffset;
-    if(shadowColor)
-        self.layer.shadowColor = shadowColor.CGColor;
-    if(shadowOpacity)
-        self.layer.shadowOpacity = shadowOpacity;
+    self.layer.shadowColor = shadowColor.CGColor;
+    self.layer.shadowOpacity = shadowOpacity;
 }
 
 #define ZCColor_GradientLayer @"ZCColor_GradientLayer"

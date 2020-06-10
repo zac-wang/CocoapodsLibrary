@@ -43,6 +43,11 @@ Pod::Spec.new do |spec|
   end
 
 
+  spec.subspec 'UIViewCategory' do |sp|
+    sp.platform     = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/UIViewCategory/**/*.{h,m,c,mm}'
+  end
+
   spec.subspec 'ZCBannerView' do |sp|
     sp.platform = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCBannerView/**/*.{h,m,c,mm}'
@@ -76,21 +81,21 @@ Pod::Spec.new do |spec|
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCReachability/**/*.{h,m,c,mm}'
   end
 
-  spec.subspec 'ZCScreenCapture' do |sp|
-    sp.platform     = :ios
-    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCScreenCapture/**/*.{h,m,c,mm}'
-  end
 
   spec.subspec 'ZCSpinnerView' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCSpinnerView/**/*.{h,m,c,mm}'
   end
 
+  spec.subspec 'ZCTagView' do |sp|
+    sp.platform     = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCTagView/**/*.{h,m,c,mm}'
+  end
+
   spec.subspec 'ZCTextSelectedRange' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCTextSelectedRange/**/*.{h,m,c,mm}'
   end
-
 
   spec.subspec 'ZCDrag' do |sp|
     sp.platform     = :osx

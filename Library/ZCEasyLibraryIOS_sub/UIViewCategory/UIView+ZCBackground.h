@@ -1,5 +1,5 @@
 //
-//  UIView+ZCSupp.h
+//  UIView+ZCBackground.h
 //  ZCEasyLibrary
 //
 //  Created by zac on 2017/10/22.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (ZCSupp)
+@interface UIView (ZCBackground)
 
 /**
  阴影
