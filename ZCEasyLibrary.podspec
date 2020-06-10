@@ -38,8 +38,8 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'ZCString' do |sp|
     sp.source_files = 'Library/ZCEasyLibrary_sub/ZCString/**/*.{h,m,c,mm}'
-    sp.dependency 'ZCEasyLibrary/ZCDate'
-    sp.dependency 'ZCEasyLibrary/ZCJson'
+    sp.dependency     'ZCEasyLibrary/ZCDate'
+    sp.dependency     'ZCEasyLibrary/ZCJson'
   end
 
 
@@ -52,55 +52,65 @@ Pod::Spec.new do |spec|
   spec.subspec 'ZCCitySelect' do |sp|
     sp.platform = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCCitySelect/**/*.{h,m,c,mm}'
-    sp.resources = 'Library/ZCEasyLibraryIOS_sub/ZCCitySelect/**/*.plist'
+    sp.resources    = 'Library/ZCEasyLibraryIOS_sub/ZCCitySelect/**/*.plist'
+  end
+
+  spec.subspec 'ZCContactStore' do |sp|
+    sp.platform     = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCContactStore/**/*.{h,m,c,mm}'
   end
 
   spec.subspec 'ZCKeyBoardTopBar' do |sp|
-    sp.platform = :ios
+    sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCKeyBoardTopBar/**/*.{h,m,c,mm}'
     sp.dependency 'ZCEasyLibrary/ZCTextSelectedRange'
   end
 
+  spec.subspec 'ZCPicturePreview' do |sp|
+    sp.platform     = :ios
+    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCPicturePreview/**/*.{h,m,c,mm}'
+  end
+
   spec.subspec 'ZCReachability' do |sp|
-    sp.platform = :ios
+    sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCReachability/**/*.{h,m,c,mm}'
   end
 
   spec.subspec 'ZCScreenCapture' do |sp|
-    sp.platform = :ios
+    sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCScreenCapture/**/*.{h,m,c,mm}'
   end
 
   spec.subspec 'ZCSpinnerView' do |sp|
-    sp.platform = :ios
+    sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCSpinnerView/**/*.{h,m,c,mm}'
   end
 
   spec.subspec 'ZCTextSelectedRange' do |sp|
-    sp.platform = :ios
+    sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCTextSelectedRange/**/*.{h,m,c,mm}'
   end
 
 
   spec.subspec 'ZCDrag' do |sp|
-    sp.platform = :osx
+    sp.platform     = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCDrag/**/*.{h,m,c,mm}'
   end
 
   spec.subspec 'ZCQRCode' do |sp|
-    sp.platform = :osx
+    sp.platform     = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCQRCode/**/*.{h,m,c,mm}'
   end
 
   spec.subspec 'ZCScrollTextView' do |sp|
-    sp.platform = :osx
+    sp.platform     = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCScrollTextView/**/*.{h,m,c,mm}'
   end
 
-  spec.requires_arc = true
-  spec.frameworks   = 'Foundation'
-  spec.ios.framework  = 'UIKit'
-  spec.libraries    = 'z'
+  spec.requires_arc  = true
+  spec.frameworks    = 'Foundation'
+  spec.ios.framework = 'UIKit'
+  spec.libraries     = 'z'
 
   #spec.dependency 'AFNetworking', '~> 3.0'
 

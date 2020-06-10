@@ -202,7 +202,7 @@
     ZCPicturePreviewItem *nowShowItem = self.zc_previewItemArray[nowShowItemIndex];
     
     zc_nowShowImgIndex = nowShowItem.zc_index;
-    self.zc_headBar.zc_title = [NSString stringWithFormat:@"%lu / %lu", nowShowItem.zc_index + 1, self.zc_imageCount];
+    self.zc_headBar.zc_title = [NSString stringWithFormat:@"%d / %d", (int)zc_nowShowImgIndex + 1, (int)self.zc_imageCount];
 
     [self exchangeItem];
     
@@ -210,7 +210,7 @@
         ZCPicturePreviewItem *item = self.zc_previewItemArray[i];
         if(nowShowItem != item) {
             [item zc_viewDidDisappear];
-            item.zc_index = i - nowShowItemIndex + nowShowItem.zc_index;
+            item.zc_index = i - nowShowItemIndex + zc_nowShowImgIndex;
         }
         item.zc_loadding = NO;
     }
