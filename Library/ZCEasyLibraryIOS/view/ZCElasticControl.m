@@ -85,9 +85,15 @@
 
 - (UIView *)topToolBar {
     if (!_topToolBar) {
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(zc_hiddenView)];
+        cancelItem.tintColor = [UIColor colorWithRed:0x66/255.0 green:0x66/255.0 blue:0x66/255.0 alpha:1];
+        UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        UIBarButtonItem *okItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(okClick:)];
+        
         _topToolBar = [[UIToolbar alloc] init];
         _topToolBar.clipsToBounds = YES;
         _topToolBar.hidden = YES;
+        _topToolBar.items = @[cancelItem, flexibleSpace, okItem];
         [self addSubview:_topToolBar];
     }
     return _topToolBar;
@@ -101,12 +107,6 @@
     
     if (_topToolBarStyle == ZCElasticControlTopToolBarStyleOkAndCancel) {
         self.topToolBar.hidden = NO;
-        
-        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(zc_hiddenView)];
-        cancelItem.tintColor = [UIColor colorWithRed:0x66/255.0 green:0x66/255.0 blue:0x66/255.0 alpha:1];
-        UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        UIBarButtonItem *okItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(okClick:)];
-        self.topToolBar.items = @[cancelItem, flexibleSpace, okItem];
     } else if (_topToolBarStyle == ZCElasticControlTopToolBarStyleNone) {
         self.topToolBar.hidden = YES;
     }

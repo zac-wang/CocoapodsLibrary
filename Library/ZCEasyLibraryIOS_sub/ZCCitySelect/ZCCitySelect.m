@@ -8,141 +8,95 @@
 
 #import "ZCCitySelect.h"
 
-@interface ZCCitySelect ()<UIPickerViewDelegate, UIPickerViewDataSource>
+@interface ZCCitySelect ()
 
-@property(nonatomic, strong) UIPickerView * pic;
-
-@property(nonatomic, copy)   NSArray * dataArr;
+/// view顶栏按钮
+@property(nonatomic, strong) UIToolbar *topToolBar;
 
 @end
 
-#define buttonWidth     60
-#define buttonHeight    35
-
-#define GetRowForComponent(component) [self.pic selectedRowInComponent:component]
-
 @implementation ZCCitySelect
-@synthesize zc_componentCount;
 
-- (void)initView {
-    [super initView];
-    
-    zc_topToolBarStyle = ZCElasticControlTopToolBarStyleOkAndCancel;
-    
-    NSBundle *easyLibrary = [NSBundle bundleForClass:[self class]];
-    NSString *addressPath = [easyLibrary pathForResource:@"ZCCitySelectAddressData" ofType:@"plist"];
-    self.dataArr = [NSArray arrayWithContentsOfFile:addressPath];
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+        [self addTarget:self action:@selector(zc_hiddenView) forControlEvents:UIControlEventTouchUpInside];
+        
+        self.frame = frame;
+    }
+    return self;
 }
 
 - (void)setFrame:(CGRect)frame {
     super.frame = frame;
     
-    float height = CGRectGetHeight(self.pic.frame);
-    self.zc_contentView.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
-
-    self.pic.frame = self.zc_contentView.bounds;
+    float citySelectViewH = 216;
+    self.zc_citySelectView.frame = CGRectMake(0, self.frame.size.height - citySelectViewH, self.frame.size.width, citySelectViewH);
+    float topToolBarH = 44;
+    self.topToolBar.frame        = CGRectMake(0, self.zc_citySelectView.frame.origin.y - topToolBarH, frame.size.width, topToolBarH);
 }
 
-- (UIPickerView *)pic {
-    if (!_pic) {
-        _pic = [[UIPickerView alloc] initWithFrame:CGRectZero];
-        _pic.showsSelectionIndicator = YES;
-        _pic.delegate = self;
-        [self.zc_contentView addSubview:_pic];
+- (UIView *)topToolBar {
+    if (!_topToolBar) {
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(zc_hiddenView)];
+        cancelItem.tintColor = [UIColor colorWithRed:0x66/255.0 green:0x66/255.0 blue:0x66/255.0 alpha:1];
+        UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        UIBarButtonItem *okItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(okClick:)];
+        
+        _topToolBar = [[UIToolbar alloc] init];
+        _topToolBar.clipsToBounds = YES;
+        _topToolBar.items = @[cancelItem, flexibleSpace, okItem];
+        [self addSubview:_topToolBar];
     }
-    return _pic;
+    return _topToolBar;
 }
 
-#pragma mark -
-- (void)setZc_componentCount:(int)comp {
-    zc_componentCount = comp;
-    [self.pic reloadAllComponents];
-}
-
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return self.zc_componentCount > 0 && self.zc_componentCount <= 3 ? self.zc_componentCount : 3;
-}
-
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    if(component == 0) {
-        return self.dataArr.count;
+- (ZCCitySelectView *)zc_citySelectView {
+    if (!_zc_citySelectView) {
+        _zc_citySelectView = [[ZCCitySelectView alloc] initWithFrame:CGRectZero];
+        [self addSubview:_zc_citySelectView];
     }
-    if(component == 1) {
-        NSInteger one = [pickerView selectedRowInComponent:0];
-        return [(NSArray *)self.dataArr[one][@"aearList"] count];
-    }
-    if(component == 2) {
-        NSInteger one = [pickerView selectedRowInComponent:0];
-        NSInteger two = [pickerView selectedRowInComponent:1];
-        return [(NSArray *)self.dataArr[one][@"aearList"][two][@"aearList"] count];
-    }
-    return 0;
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    if(component == 0) {
-        return self.dataArr[row][@"areaName"];
-    }
-    NSInteger one = [pickerView selectedRowInComponent:0];
-    NSArray *oneArray = self.dataArr[one][@"aearList"];
-    if(component == 1) {
-        return row < oneArray.count ? oneArray[row][@"areaName"] : @"";
-    }
-    NSInteger two = [pickerView selectedRowInComponent:1];
-    NSArray *twoArray = oneArray[two][@"aearList"];
-    if(component == 2) {
-        return row < twoArray.count ? twoArray[row][@"areaName"] : @"";
-    }
-    return @"";
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    if(component == 0) {
-        if(self.pic.numberOfComponents >= 2) {
-            [pickerView reloadComponent:1];
-            [pickerView selectRow:0 inComponent:1 animated:YES];
-        }
-        if(self.pic.numberOfComponents >= 3) {
-            [pickerView reloadComponent:2];
-            [pickerView selectRow:0 inComponent:2 animated:YES];
-        }
-    }
-    if(component == 1) {
-        if(self.pic.numberOfComponents >= 3) {
-            [pickerView reloadComponent:2];
-            [pickerView selectRow:0 inComponent:2 animated:YES];
-        }
-    }
+    return _zc_citySelectView;
 }
 
 - (void)okClick:(UIBarButtonItem *)okItem {
     if(self.zc_eventClick) {
-        NSNumber *code;
-        
-        NSInteger one = GetRowForComponent(0);
-        NSDictionary *oneDictionary = self.dataArr[one];
-        NSArray *oneArray = oneDictionary[@"aearList"];
-        code = oneDictionary[@"areaId"];
-        
-        NSDictionary *twoDictionary;
-        if(self.pic.numberOfComponents >= 2) {
-            NSInteger two = GetRowForComponent(1);
-            twoDictionary = oneArray[two];
-            code = twoDictionary[@"areaId"];
-        }
-        NSArray *twoArray = twoDictionary[@"aearList"];
-        
-        NSDictionary *threeDictionary;
-        if(self.pic.numberOfComponents >= 3) {
-            NSInteger three = GetRowForComponent(2);
-            threeDictionary = twoArray[three];
-            code = threeDictionary[@"areaId"];
-        }
-        
-        self.zc_eventClick(oneDictionary[@"areaName"], twoDictionary[@"areaName"], threeDictionary[@"areaName"], code);
+        [self.zc_citySelectView zc_nowSelectCityInfo:self.zc_eventClick];
     }
-    
     [self zc_hiddenView];
+}
+
+- (void)zc_showView {
+    [self zc_showView:0];
+}
+
+- (void)zc_showView:(double)duration {
+    [self.superview endEditing:YES];
+    
+    self.alpha = 0;
+    self.hidden = NO;
+    [UIView animateWithDuration:duration animations:^{
+        self.alpha = 1;
+    }];
+}
+
+- (void)zc_hiddenView {
+    [self zc_hiddenView:0 completion:nil];
+}
+
+- (void)zc_hiddenView:(double)duration completion:(void (^)(BOOL))completion {
+    self.alpha = 1;
+    [UIView animateWithDuration:duration animations:^{
+        self.alpha  = 0;
+    } completion:^(BOOL finished) {
+        self.hidden = YES;
+        self.alpha  = 1;
+        if(completion) {
+            completion(finished);
+        }
+    }];
 }
 
 @end

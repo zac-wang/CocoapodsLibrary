@@ -6,12 +6,20 @@
 //  Copyright © 2017年 love_iphone@qq.com. All rights reserved.
 //
 
-#import "ZCElasticControl.h"
+#import <UIKit/UIKit.h>
+#import "ZCCitySelectView.h"
 
-@interface ZCCitySelect : ZCElasticControl
+@interface ZCCitySelect : UIControl
 
-@property(nonatomic, assign) int zc_componentCount;
+/// 地图选择展示view
+@property(nonatomic, strong) ZCCitySelectView   *zc_citySelectView;
 
-@property(nonatomic, copy) void(^zc_eventClick)(NSString *province, NSString *city, NSString *district, NSNumber *code);
+/// 最后选择的地区信息
+@property(nonatomic, copy)   SelectCityInfoBlock zc_eventClick;
+
+/// 显示
+- (void)zc_showView;
+/// 隐藏
+- (void)zc_hiddenView;
 
 @end

@@ -3123,7 +3123,7 @@
 		<key>areaId</key>
 		<string>150000</string>
 		<key>areaName</key>
-		<string>内蒙古自治区</string>
+		<string>内蒙古</string>
 	</dict>
 	<dict>
 		<key>aearList</key>
@@ -11673,7 +11673,7 @@
 				<key>areaId</key>
 				<string>419000</string>
 				<key>areaName</key>
-				<string>省直辖县级行政区划</string>
+				<string>直辖县</string>
 			</dict>
 		</array>
 		<key>areaId</key>
@@ -12498,7 +12498,7 @@
 				<key>areaId</key>
 				<string>429000</string>
 				<key>areaName</key>
-				<string>省直辖县级行政区划</string>
+				<string>直辖县</string>
 			</dict>
 		</array>
 		<key>areaId</key>
@@ -15360,7 +15360,7 @@
 		<key>areaId</key>
 		<string>450000</string>
 		<key>areaName</key>
-		<string>广西壮族自治区</string>
+		<string>广西</string>
 	</dict>
 	<dict>
 		<key>aearList</key>
@@ -15549,7 +15549,7 @@
 				<key>areaId</key>
 				<string>469000</string>
 				<key>areaName</key>
-				<string>省直辖县级行政区划</string>
+				<string>直辖县</string>
 			</dict>
 		</array>
 		<key>areaId</key>
@@ -19359,7 +19359,7 @@
 		<key>areaId</key>
 		<string>540000</string>
 		<key>areaName</key>
-		<string>西藏自治区</string>
+		<string>西藏</string>
 	</dict>
 	<dict>
 		<key>aearList</key>
@@ -21444,7 +21444,7 @@
 		<key>areaId</key>
 		<string>640000</string>
 		<key>areaName</key>
-		<string>宁夏回族自治区</string>
+		<string>宁夏</string>
 	</dict>
 	<dict>
 		<key>aearList</key>
@@ -22188,13 +22188,13 @@
 				<key>areaId</key>
 				<string>659000</string>
 				<key>areaName</key>
-				<string>自治区直辖县级行政区划</string>
+				<string>直辖县</string>
 			</dict>
 		</array>
 		<key>areaId</key>
 		<string>650000</string>
 		<key>areaName</key>
-		<string>新疆维吾尔自治区</string>
+		<string>新疆</string>
 	</dict>
 	<dict>
 		<key>aearList</key>
@@ -22242,7 +22242,7 @@
 		<key>areaId</key>
 		<string>810000</string>
 		<key>areaName</key>
-		<string>香港特别行政区</string>
+		<string>香港</string>
 	</dict>
 	<dict>
 		<key>aearList</key>
@@ -22266,7 +22266,7 @@
 		<key>areaId</key>
 		<string>820000</string>
 		<key>areaName</key>
-		<string>澳门特别行政区</string>
+		<string>澳门</string>
 	</dict>
 </array>
 </plist>
