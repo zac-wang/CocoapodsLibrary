@@ -7,14 +7,13 @@
 //
 
 #import "UIView+ZCBackground.h"
-#import "NSObject+ZCRuntime.h"
-//#import "ZCListenFrameSizeChange.h"
+#import <objc/runtime.h>
 
 @implementation UIView (ZCBackground)
 
 - (void)zc_shadowColor:(UIColor *)shadowColor shadowOffset:(CGSize)shadowOffset shadowOpacity:(float)shadowOpacity {
-    self.layer.shadowOffset = shadowOffset;
-    self.layer.shadowColor = shadowColor.CGColor;
+    self.layer.shadowOffset  = shadowOffset;
+    self.layer.shadowColor   = shadowColor.CGColor;
     self.layer.shadowOpacity = shadowOpacity;
 }
 
@@ -25,10 +24,10 @@
     //endPoint = CGPointMake(1.0, 0.5);
     //locations = @[@(0.0), @(1.0)]
     //NSLog(@"%@", colors);
-    CAGradientLayer *gradientLayer = (CAGradientLayer *)[self zc_dynamicValueForKey:ZCColor_GradientLayer];
+    CAGradientLayer *gradientLayer = (CAGradientLayer *)objc_getAssociatedObject(self, ZCColor_GradientLayer);
     if(!gradientLayer) {
         gradientLayer = [CAGradientLayer layer];
-        [self zc_setDynamicValue:gradientLayer forKey:ZCColor_GradientLayer];
+        objc_setAssociatedObject(self, ZCColor_GradientLayer, gradientLayer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     [self.layer insertSublayer:gradientLayer atIndex:0];
     gradientLayer.frame = self.frame;
