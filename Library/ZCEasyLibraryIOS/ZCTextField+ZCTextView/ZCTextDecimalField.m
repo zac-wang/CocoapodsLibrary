@@ -23,6 +23,7 @@
 @synthesize zc_integerLength;
 @synthesize zc_decimalLength;
 
+/// 是否允许负数，默认只允许正数
 - (void)setZc_isMinus:(BOOL)isMinus {
     zc_isMinus = isMinus;
     if (@available(iOS 11.0, *)) {
@@ -31,6 +32,7 @@
     [self textFieldDidChange:self];
 }
 
+/// 整数部分 最大长度，默认12位
 - (NSUInteger)zc_integerLength {
     return zc_integerLength <= 0 ? 12 : zc_integerLength;
 }
@@ -40,7 +42,7 @@
     [self textFieldDidChange:self];
 }
 
-// 默认保留两位小数
+/// 保留小数点后几位，默认两位小数
 - (NSUInteger)zc_decimalLength {
     return zc_decimalLengthNumber ? zc_decimalLengthNumber.unsignedIntegerValue : 2;
 }
@@ -50,6 +52,7 @@
     [self textFieldDidChange:self];
 }
 
+/// text发生变化
 - (void)textFieldDidChange:(UITextField *)textField {
     [super textFieldDidChange:textField];
     

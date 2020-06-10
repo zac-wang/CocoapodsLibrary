@@ -1,18 +1,15 @@
 //
-//  ZCAlert.m
+//  UIAlertController+ZCSupp.m
 //  ZCEasyLibrary
 //
-//  Created by zac on 2017/10/26.
-//  Copyright © 2017年 love_iphone@qq.com. All rights reserved.
+//  Created by wzc on 2020/6/10.
+//  Copyright © 2020 zac. All rights reserved.
 //
 
-#import "ZCAlert.h"
-#import "Macro.h"
+#import "UIAlertController+ZCSupp.h"
 
-@implementation ZCAlertAction
-@end
 
-@implementation ZCAlert
+@implementation UIAlertController (ZCSupp)
 
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)message {
     return [self alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
@@ -22,25 +19,19 @@
     return [self alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
 }
 
-- (void)zc_addDefaultActions:(NSArray<NSString *> *)titles handler:(void (^)(ZCAlertAction *))handler {
-    for (int i = 0; i < titles.count; i++) {
-        NSString *title = titles[i];
-        ZCAlertAction *action = [ZCAlertAction actionWithTitle:title style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            if(handler) {
-                handler((ZCAlertAction *)action);
-            }
-        }];
-        action.zc_index = i;
-        [self addAction:action];
+
+- (UIAlertAction *)zc_addDefaultAction:(NSString *)title handler:(void (^)(UIAlertAction *action))handler {
+    return [self zc_addAction:title style:UIAlertActionStyleDefault handler:handler];
+}
+
+- (void)zc_addDefaultActions:(NSArray<NSString *> *)titles handler:(void (^)(UIAlertAction *))handler {
+    for (NSString *title in titles) {
+        [self zc_addDefaultAction:title handler:handler];
     }
 }
 
 - (UIAlertAction *)zc_addCancelAction:(NSString *)title {
     return [self zc_addCancelAction:title?:@"取消" handler:nil];
-}
-
-- (UIAlertAction *)zc_addDefaultAction:(NSString *)title handler:(void (^)(UIAlertAction *action))handler {
-    return [self zc_addAction:title style:UIAlertActionStyleDefault handler:handler];
 }
 
 - (UIAlertAction *)zc_addCancelAction:(NSString *)title handler:(void (^)(UIAlertAction *action))handler {
@@ -57,9 +48,11 @@
     [self addTextFieldWithConfigurationHandler:configurationHandler];
 }
 
+
 - (void)zc_showWithViewController:(UIViewController *)vc {
     dispatch_async(dispatch_get_main_queue(), ^(void) {
-        if(ZC_IS_IPAD && !self.popoverPresentationController.sourceView){
+        if((UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+           && !self.popoverPresentationController.sourceView){
             UIPopoverPresentationController *popPresenter = [self popoverPresentationController];
             popPresenter.sourceView = vc.view; // 这就是挂靠的对象
             //popPresenter.sourceRect = CGRectMake(ZC_SCREEN_WIDTH/2, ZC_SCREEN_HEIGHT/2, 0, 0);

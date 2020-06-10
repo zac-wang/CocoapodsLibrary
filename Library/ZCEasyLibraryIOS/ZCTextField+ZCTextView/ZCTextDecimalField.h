@@ -20,7 +20,7 @@ IB_DESIGNABLE
 @property(nonatomic, assign) IBInspectable NSUInteger zc_integerLength;
 
 /// 保留小数点后几位，默认两位小数
-@property(nonatomic, assign) NSUInteger zc_decimalLength;
+@property(nonatomic, assign) IBInspectable NSUInteger zc_decimalLength;
 
 /// 得到text数值
 @property(nonatomic, readonly) double zc_textValue;

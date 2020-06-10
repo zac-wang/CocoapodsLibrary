@@ -9,7 +9,6 @@
 #import "ZCLocationManager.h"
 #import <CoreLocation/CoreLocation.h>
 #import "Macro.h"
-#import "ZCAlert.h"
 #import "ZCUserDefaults.h"
 
 NSNotificationName const ZCLocationChangedNotification = @"ZCLocationChangedNotification";
