@@ -201,8 +201,8 @@
 		3DDBA30C24907E2500240559 /* ZCPicturePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBA30624907E2500240559 /* ZCPicturePreview.m */; };
 		3DDBA30D24907E2500240559 /* ZCPicturePreviewHeadbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDBA30724907E2500240559 /* ZCPicturePreviewHeadbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DDBA30E24907E2500240559 /* ZCPicturePreviewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBA30824907E2500240559 /* ZCPicturePreviewItem.m */; };
-		3DDE73192487DD9B004F70A7 /* ZCElasticControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE73172487DD9A004F70A7 /* ZCElasticControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3DDE731A2487DD9B004F70A7 /* ZCElasticControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE73182487DD9A004F70A7 /* ZCElasticControl.m */; };
+		3DDBA3192490C65A00240559 /* ZCElasticControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDBA3172490C65A00240559 /* ZCElasticControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDBA31A2490C65A00240559 /* ZCElasticControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBA3182490C65A00240559 /* ZCElasticControl.m */; };
 		3DDBA31D2490C67D00240559 /* ZCCitySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBA31B2490C67C00240559 /* ZCCitySelectView.m */; };
 		3DDBA31E2490C67D00240559 /* ZCCitySelectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDBA31C2490C67C00240559 /* ZCCitySelectView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DDE73352488CC43004F70A7 /* ZCScanQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE73312488CC43004F70A7 /* ZCScanQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -267,7 +267,7 @@
 		3D3DA20F236301AD005D7F1E /* ZCLocationGeocode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationGeocode.m; sourceTree = "<group>"; };
 		3D3DA210236301AD005D7F1E /* ZCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationManager.m; sourceTree = "<group>"; };
 		3D3DA211236301AD005D7F1E /* ZCLocationGeocode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLocationGeocode.h; sourceTree = "<group>"; };
-		3D3DA213236301AD005D7F1E /* ZCSelectImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSelectImagePicker.m; sourceTree = "<group>"; };
+		3D3DA213236301AD005D7F1E /* ZCSelectImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZCSelectImagePicker.m; path = ZCSelectImagePicker.m; sourceTree = "<group>"; };
 		3D3DA214236301AD005D7F1E /* ZCSelectDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSelectDatePicker.h; sourceTree = "<group>"; };
 		3D3DA216236301AD005D7F1E /* ZCFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCFont.h; sourceTree = "<group>"; };
 		3D3DA218236301AD005D7F1E /* ZCTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTabBarItem.m; sourceTree = "<group>"; };
@@ -286,8 +286,8 @@
 		3D3DA22B236301AD005D7F1E /* ZCPickerCirculateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPickerCirculateView.h; sourceTree = "<group>"; };
 		3D3DA22C236301AD005D7F1E /* ZCPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPickerView.h; sourceTree = "<group>"; };
 		3D3DA22D236301AD005D7F1E /* ZCPickerCirculateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPickerCirculateView.m; sourceTree = "<group>"; };
-		3D3DA22E236301AD005D7F1E /* ZCSelectDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSelectDatePicker.m; sourceTree = "<group>"; };
-		3D3DA22F236301AD005D7F1E /* ZCSelectImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSelectImagePicker.h; sourceTree = "<group>"; };
+		3D3DA22E236301AD005D7F1E /* ZCSelectDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZCSelectDatePicker.m; path = ZCSelectDatePicker.m; sourceTree = "<group>"; };
+		3D3DA22F236301AD005D7F1E /* ZCSelectImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZCSelectImagePicker.h; path = ZCSelectImagePicker.h; sourceTree = "<group>"; };
 		3D3DA230236301AD005D7F1E /* ZCTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTagView.h; sourceTree = "<group>"; };
 		3D3DA235236301AD005D7F1E /* ZCUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCUserDefaults.m; sourceTree = "<group>"; };
 		3D3DA236236301AD005D7F1E /* ZCAppUpdateVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAppUpdateVersion.m; sourceTree = "<group>"; };
@@ -372,8 +372,8 @@
 		3DDBA30624907E2500240559 /* ZCPicturePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPicturePreview.m; sourceTree = "<group>"; };
 		3DDBA30724907E2500240559 /* ZCPicturePreviewHeadbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPicturePreviewHeadbar.h; sourceTree = "<group>"; };
 		3DDBA30824907E2500240559 /* ZCPicturePreviewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPicturePreviewItem.m; sourceTree = "<group>"; };
-		3DDE73172487DD9A004F70A7 /* ZCElasticControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCElasticControl.h; sourceTree = "<group>"; };
-		3DDE73182487DD9A004F70A7 /* ZCElasticControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCElasticControl.m; sourceTree = "<group>"; };
+		3DDBA3172490C65A00240559 /* ZCElasticControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZCElasticControl.h; path = ZCElasticControl.h; sourceTree = "<group>"; };
+		3DDBA3182490C65A00240559 /* ZCElasticControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZCElasticControl.m; path = ZCElasticControl.m; sourceTree = "<group>"; };
 		3DDBA31B2490C67C00240559 /* ZCCitySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCitySelectView.m; sourceTree = "<group>"; };
 		3DDBA31C2490C67C00240559 /* ZCCitySelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCitySelectView.h; sourceTree = "<group>"; };
 		3DDE73312488CC43004F70A7 /* ZCScanQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCScanQRCode.h; sourceTree = "<group>"; };
@@ -449,6 +449,7 @@
 				3D3DA207236301AD005D7F1E /* vc */,
 				3D3DA212236301AD005D7F1E /* view */,
 				3D3DA20D236301AD005D7F1E /* ZCLocation */,
+				3D3DA229236301AD005D7F1E /* ZCPicker */,
 				3D3DA1FE236301AD005D7F1E /* ZCSetting */,
 			);
 			name = ZCEasyLibraryIOS;
@@ -550,12 +551,7 @@
 		3D3DA212236301AD005D7F1E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				3D3DA229236301AD005D7F1E /* PickerView */,
 				3D3DA215236301AD005D7F1E /* plain */,
-				3D3DA214236301AD005D7F1E /* ZCSelectDatePicker.h */,
-				3D3DA22E236301AD005D7F1E /* ZCSelectDatePicker.m */,
-				3D3DA22F236301AD005D7F1E /* ZCSelectImagePicker.h */,
-				3D3DA213236301AD005D7F1E /* ZCSelectImagePicker.m */,
 				3D3DA230236301AD005D7F1E /* ZCTagView.h */,
 				3D3DA228236301AD005D7F1E /* ZCTagView.m */,
 			);
@@ -581,15 +577,21 @@
 			path = plain;
 			sourceTree = "<group>";
 		};
-		3D3DA229236301AD005D7F1E /* PickerView */ = {
+		3D3DA229236301AD005D7F1E /* ZCPicker */ = {
 			isa = PBXGroup;
 			children = (
+				3DDBA3172490C65A00240559 /* ZCElasticControl.h */,
+				3DDBA3182490C65A00240559 /* ZCElasticControl.m */,
 				3D3DA22B236301AD005D7F1E /* ZCPickerCirculateView.h */,
 				3D3DA22D236301AD005D7F1E /* ZCPickerCirculateView.m */,
 				3D3DA22C236301AD005D7F1E /* ZCPickerView.h */,
 				3D3DA22A236301AD005D7F1E /* ZCPickerView.m */,
+				3D3DA214236301AD005D7F1E /* ZCSelectDatePicker.h */,
+				3D3DA22E236301AD005D7F1E /* ZCSelectDatePicker.m */,
+				3D3DA22F236301AD005D7F1E /* ZCSelectImagePicker.h */,
+				3D3DA213236301AD005D7F1E /* ZCSelectImagePicker.m */,
 			);
-			path = PickerView;
+			path = ZCPicker;
 			sourceTree = "<group>";
 		};
 		3D3DA231236301AD005D7F1E /* class */ = {
@@ -789,8 +791,6 @@
 			children = (
 				3D418EB22487D32A00AC0B34 /* ZCCitySelect.h */,
 				3D418EB02487D32A00AC0B34 /* ZCCitySelect.m */,
-				3DDE73172487DD9A004F70A7 /* ZCElasticControl.h */,
-				3DDE73182487DD9A004F70A7 /* ZCElasticControl.m */,
 				3D418EB12487D32A00AC0B34 /* ZCCitySelectAddressData.plist */,
 				3DDBA31C2490C67C00240559 /* ZCCitySelectView.h */,
 				3DDBA31B2490C67C00240559 /* ZCCitySelectView.m */,
@@ -990,9 +990,9 @@
 				3DDBA30A24907E2500240559 /* ZCPicturePreview.h in Headers */,
 				3DDBA30B24907E2500240559 /* ZCPicturePreviewItem.h in Headers */,
 				3DDBA30124907D6C00240559 /* ZCContactStore.h in Headers */,
+				3DDBA3192490C65A00240559 /* ZCElasticControl.h in Headers */,
 				3DDBA31E2490C67D00240559 /* ZCCitySelectView.h in Headers */,
 				3D3DA25F236301AD005D7F1E /* UIImageView+ZCAnimat.h in Headers */,
-				3DDE73192487DD9B004F70A7 /* ZCElasticControl.h in Headers */,
 				3D3DA287236301AD005D7F1E /* NSAttributedString+ZCSupp.h in Headers */,
 				3D3DA250236301AD005D7F1E /* ZCBannerImageView.h in Headers */,
 			);
@@ -1236,7 +1236,6 @@
 				3D3DA2BC236301AD005D7F1E /* ZCAppUpdateVersion.m in Sources */,
 				3D3DA2B2236301AD005D7F1E /* ZCPickerView.m in Sources */,
 				3D418ECB2487D39900AC0B34 /* UITextView+ZCSelectedRange.m in Sources */,
-				3DDE731A2487DD9B004F70A7 /* ZCElasticControl.m in Sources */,
 				3D418ECA2487D39900AC0B34 /* UITextField+ZCSelectedRange.m in Sources */,
 				3D418EC22487D32A00AC0B34 /* UITextView+ZCKeyBoardTopBar.m in Sources */,
 				3D3DA25C236301AD005D7F1E /* UIView+ZCSubview.m in Sources */,
@@ -1251,6 +1250,7 @@
 				3D3DA253236301AD005D7F1E /* ZCBannerView.m in Sources */,
 				3DDBA30924907E2500240559 /* ZCPicturePreviewHeadbar.m in Sources */,
 				3D3DA24E236301AD005D7F1E /* UIView+ZCScreenCapture.m in Sources */,
+				3DDBA31A2490C65A00240559 /* ZCElasticControl.m in Sources */,
 				3D3DA26B236301AD005D7F1E /* UIView+ZCConvert.m in Sources */,
 				3D3DA29A236301AD005D7F1E /* ZCLocationGeocode.m in Sources */,
 				3D3DA281236301AD005D7F1E /* NSObject+ZCRuntime.m in Sources */,
