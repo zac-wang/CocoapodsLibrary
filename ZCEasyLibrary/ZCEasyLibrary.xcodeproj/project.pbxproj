@@ -203,6 +203,8 @@
 		3DDBA30E24907E2500240559 /* ZCPicturePreviewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBA30824907E2500240559 /* ZCPicturePreviewItem.m */; };
 		3DDE73192487DD9B004F70A7 /* ZCElasticControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE73172487DD9A004F70A7 /* ZCElasticControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DDE731A2487DD9B004F70A7 /* ZCElasticControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE73182487DD9A004F70A7 /* ZCElasticControl.m */; };
+		3DDBA31D2490C67D00240559 /* ZCCitySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDBA31B2490C67C00240559 /* ZCCitySelectView.m */; };
+		3DDBA31E2490C67D00240559 /* ZCCitySelectView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDBA31C2490C67C00240559 /* ZCCitySelectView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DDE73352488CC43004F70A7 /* ZCScanQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE73312488CC43004F70A7 /* ZCScanQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DDE73362488CC43004F70A7 /* NSString+ZCQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DDE73322488CC43004F70A7 /* NSString+ZCQRCode.m */; };
 		3DDE73372488CC43004F70A7 /* NSString+ZCQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDE73332488CC43004F70A7 /* NSString+ZCQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -372,6 +374,8 @@
 		3DDBA30824907E2500240559 /* ZCPicturePreviewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPicturePreviewItem.m; sourceTree = "<group>"; };
 		3DDE73172487DD9A004F70A7 /* ZCElasticControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCElasticControl.h; sourceTree = "<group>"; };
 		3DDE73182487DD9A004F70A7 /* ZCElasticControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCElasticControl.m; sourceTree = "<group>"; };
+		3DDBA31B2490C67C00240559 /* ZCCitySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCitySelectView.m; sourceTree = "<group>"; };
+		3DDBA31C2490C67C00240559 /* ZCCitySelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCitySelectView.h; sourceTree = "<group>"; };
 		3DDE73312488CC43004F70A7 /* ZCScanQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCScanQRCode.h; sourceTree = "<group>"; };
 		3DDE73322488CC43004F70A7 /* NSString+ZCQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZCQRCode.m"; sourceTree = "<group>"; };
 		3DDE73332488CC43004F70A7 /* NSString+ZCQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZCQRCode.h"; sourceTree = "<group>"; };
@@ -788,6 +792,8 @@
 				3DDE73172487DD9A004F70A7 /* ZCElasticControl.h */,
 				3DDE73182487DD9A004F70A7 /* ZCElasticControl.m */,
 				3D418EB12487D32A00AC0B34 /* ZCCitySelectAddressData.plist */,
+				3DDBA31C2490C67C00240559 /* ZCCitySelectView.h */,
+				3DDBA31B2490C67C00240559 /* ZCCitySelectView.m */,
 			);
 			path = ZCCitySelect;
 			sourceTree = "<group>";
@@ -984,6 +990,7 @@
 				3DDBA30A24907E2500240559 /* ZCPicturePreview.h in Headers */,
 				3DDBA30B24907E2500240559 /* ZCPicturePreviewItem.h in Headers */,
 				3DDBA30124907D6C00240559 /* ZCContactStore.h in Headers */,
+				3DDBA31E2490C67D00240559 /* ZCCitySelectView.h in Headers */,
 				3D3DA25F236301AD005D7F1E /* UIImageView+ZCAnimat.h in Headers */,
 				3DDE73192487DD9B004F70A7 /* ZCElasticControl.h in Headers */,
 				3D3DA287236301AD005D7F1E /* NSAttributedString+ZCSupp.h in Headers */,
@@ -1217,6 +1224,7 @@
 			files = (
 				3D3DA278236301AD005D7F1E /* UIImageView+ZCGif.m in Sources */,
 				3D3DA26C236301AD005D7F1E /* UIResponder+ZCGetNextResponderObj.m in Sources */,
+				3DDBA31D2490C67D00240559 /* ZCCitySelectView.m in Sources */,
 				3D3DA3832363033C005D7F1E /* NSDictionary+ZCMutableDeepCopy.m in Sources */,
 				3D3DA263236301AD005D7F1E /* UIView+ZCCornerRadius.m in Sources */,
 				3D3DA2AB236301AD005D7F1E /* ZCTextDecimalField.m in Sources */,

@@ -11,7 +11,7 @@
 @interface UIImageView (ZCGif) <CAAnimationDelegate>
 
 /// 播放gif动画，设置gifName
-@property(nonatomic, readwrite) NSString *zc_gifImageName;
+@property(nonatomic, readwrite) IBInspectable NSString *zc_gifImageName;
 
 /**
  播放gif动画

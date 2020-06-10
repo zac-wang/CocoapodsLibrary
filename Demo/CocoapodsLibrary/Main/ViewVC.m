@@ -108,7 +108,7 @@
 - (IBAction)selectLocation:(UIButton *)sender {
     if(!citySelect) {
         citySelect = [[ZCCitySelect alloc] initWithFrame:self.view.bounds];
-        //select.zc_componentCount = 2;
+        //citySelect.zc_citySelectView.zc_componentCount = 2;
         citySelect.zc_eventClick = ^(NSString *province, NSNumber *provinceCode, NSString *city, NSNumber *cityCode, NSString *district, NSNumber *districtCode) {
             NSLog(@"%@-%@-%@", province, city, district);
         };

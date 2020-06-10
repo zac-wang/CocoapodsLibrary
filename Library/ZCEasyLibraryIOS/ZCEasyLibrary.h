@@ -58,6 +58,7 @@
 #import "ZCCacheManage.h"
 #import "ZCCalendar.h"
 #import "ZCCitySelect.h"
+#import "ZCCitySelectView.h"
 #import "ZCContactStore.h"
 #import "ZCElasticControl.h"
 #import "ZCFont.h"
