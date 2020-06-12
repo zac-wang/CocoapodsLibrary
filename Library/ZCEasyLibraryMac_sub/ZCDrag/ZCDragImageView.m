@@ -31,8 +31,7 @@
     NSDraggingItem *dragItem = [[NSDraggingItem alloc] initWithPasteboardWriter:pbItem];
     
     {
-        NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"1.png"];
-        NSURL *url = [NSURL fileURLWithPath:path];
+        NSURL *url = [NSURL fileURLWithPath:[self getFileName]];
         [self.image.TIFFRepresentation writeToURL:url atomically:YES];
         if (@available(macOS 10.13, *)) {
             [pbItem setString:url.absoluteString forType:NSPasteboardTypeFileURL];
@@ -77,15 +76,18 @@
 
 // 松手，删除临时文件
 -(void)draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation {
-    // 松手了，但是可能提示用户已存在同名文件，需要选择替换；如果立即删除，用户操作后，才会触发拷贝，但文件已不存在
-    // 也可以通过动态生成文件名来保证不会出现同名问题，但也可能出现权限提示框……
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-        sleep(10);
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
-            NSString *path = [session.draggingPasteboard stringForType:@"public.file-url"];
-            [[NSFileManager defaultManager] removeItemAtURL:[NSURL URLWithString:path] error:nil];
-        });
-    });
+    NSString *path = [session.draggingPasteboard stringForType:@"public.file-url"];
+    [[NSFileManager defaultManager] removeItemAtURL:[NSURL URLWithString:path] error:nil];
+}
+
+// 随机生成文件临时路径
+- (NSString *)getFileName {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    dateFormat.dateFormat = @"yyyy-MM-dd HH.mm.ss";
+    NSString *name = [dateFormat stringFromDate:[NSDate date]];
+    name = [name stringByAppendingPathExtension:@"png"];
+    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:name];
+    return path;
 }
 
 @end
