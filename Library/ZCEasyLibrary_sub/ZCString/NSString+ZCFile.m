@@ -16,10 +16,12 @@
 @implementation NSString (ZCFile)
 
 - (NSString *)zc_mimeType {
-    NSString *extension = [self pathExtension];
-    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (CFStringRef)CFBridgingRetain(extension), NULL);
+    CFStringRef extension = CFBridgingRetain(self.pathExtension);
+    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, extension, NULL);
+    CFBridgingRelease(extension);
     CFStringRef MIMEType = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassMIMEType);
-    return (__bridge NSString *)MIMEType;
+    CFBridgingRelease(UTI);
+    return CFBridgingRelease(MIMEType);
 }
 
 @end

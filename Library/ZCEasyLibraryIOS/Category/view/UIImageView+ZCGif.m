@@ -45,7 +45,7 @@
         [images addObject:(__bridge id)cgimage];
         CGImageRelease(cgimage);
         
-        NSDictionary *properties = (__bridge NSDictionary *)CGImageSourceCopyPropertiesAtIndex(cImageSource, i, NULL);
+        NSDictionary *properties = CFBridgingRelease(CGImageSourceCopyPropertiesAtIndex(cImageSource, i, NULL));
         NSDictionary *gifProperties = [properties valueForKey:(__bridge NSString *)kCGImagePropertyGIFDictionary];
         NSString *gifDelayTime = [gifProperties valueForKey:(__bridge NSString* )kCGImagePropertyGIFDelayTime];
         if(!gifDelayTime) {

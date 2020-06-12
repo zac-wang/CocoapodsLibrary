@@ -44,7 +44,7 @@
 
 /// 保留小数点后几位，默认两位小数
 - (NSUInteger)zc_decimalLength {
-    return zc_decimalLengthNumber ? zc_decimalLengthNumber.unsignedIntegerValue : 2;
+    return zc_decimalLengthNumber != nil ? zc_decimalLengthNumber.unsignedIntegerValue : 2;
 }
 
 - (void)setZc_decimalLength:(NSUInteger)decimalLength {
