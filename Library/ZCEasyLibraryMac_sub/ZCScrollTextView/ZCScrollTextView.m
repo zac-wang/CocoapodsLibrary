@@ -13,6 +13,7 @@
 @end
 
 @implementation ZCScrollTextView
+@synthesize textView;
 
 - (instancetype)initWithFrame:(NSRect)frame
 {
@@ -35,36 +36,36 @@
 }
 
 - (NSTextView *)textView {
-    if (!_textView) {
-        _textView = [[NSTextView alloc] initWithFrame:self.bounds];
-        [_textView setDrawsBackground:NO];
-        [_textView setTextColor:[NSColor blackColor]];
-        [_textView setFont:[NSFont systemFontOfSize:12]];
-        [_textView setUsesFontPanel:NO];
-        [_textView setVerticallyResizable:YES];
-        [_textView setHorizontallyResizable:NO];
-        [_textView setAutomaticLinkDetectionEnabled:NO];
-        [_textView.textContainer setWidthTracksTextView:YES];
+    if (!textView) {
+        textView = [[NSTextView alloc] initWithFrame:self.bounds];
+        [textView setDrawsBackground:NO];
+        [textView setTextColor:[NSColor blackColor]];
+        [textView setFont:[NSFont systemFontOfSize:12]];
+        [textView setUsesFontPanel:NO];
+        [textView setVerticallyResizable:YES];
+        [textView setHorizontallyResizable:NO];
+        [textView setAutomaticLinkDetectionEnabled:NO];
+        [textView.textContainer setWidthTracksTextView:YES];
         [self updateTextView];
         
         NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         [paragraphStyle setLineSpacing:4.0];
-        [_textView setDefaultParagraphStyle:paragraphStyle];
+        [textView setDefaultParagraphStyle:paragraphStyle];
     }
-    return _textView;
+    return textView;
 }
 
 - (void)updateTextView {
     self.textView.frame = self.bounds;
     
-    [_textView setMinSize:NSMakeSize(self.frame.size.width, self.frame.size.height)];
-    [_textView setMaxSize:NSMakeSize(self.frame.size.width, FLT_MAX)];
-    [_textView.textContainer setContainerSize:NSMakeSize(self.frame.size.width, FLT_MAX)];
+    [textView setMinSize:NSMakeSize(self.frame.size.width, self.frame.size.height)];
+    [textView setMaxSize:NSMakeSize(self.frame.size.width, FLT_MAX)];
+    [textView.textContainer setContainerSize:NSMakeSize(self.frame.size.width, FLT_MAX)];
 }
 
 - (void)dealloc
 {
-    _textView = nil;
+    [textView removeFromSuperview];
 }
 
 @end

@@ -40,6 +40,7 @@
     if(err != CGDisplayNoErr)
     {
         NSLog(@"Could not get active display list (%d)\n", err);
+        free(displays);
         return;
     }
     

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZCScrollTextView : NSScrollView
 
-@property(nonatomic, strong) NSTextView *textView;
+@property(nonatomic, readonly) NSTextView *textView;
 
 @end
 
