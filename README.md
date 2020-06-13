@@ -1,13 +1,14 @@
 # ZCEasyLibrary
 
-##### 对iOS常用功能进行封装，提交开发效率，降低多项目的维护难度
+##### 对iOS常用功能进行封装，提交开发效率
 Podfile:
+
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 platform :iOS, '8.0'
 
 target 'TargetName' do
-pod 'ZCEasyLibrary', '~>2.0.1'
+pod 'ZCEasyLibrary', '~>2.1.3'
 end
 ```
 代码使用示例
@@ -22,11 +23,7 @@ self.banerScrollView.zc_selectImageView = ^(UIImageView *imgView, NSInteger inde
 };
 ```
 ```
-//设置圆角
-[view zc_drawCornerRadius:0 borderWidth:1 borderColor:UIColorFromRGB(0xa3b1c4)];
-```
-```
-//根据view样式生成对应的图片
+//view截屏
 UIImage *img = view.zc_screenCapture;
 ```
 

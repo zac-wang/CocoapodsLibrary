@@ -112,8 +112,12 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     NSInteger dayCount = showMothArray.total;
     NSInteger rowCount = dayCount/7;
-    if(dayCount && self.delegate && [self.delegate respondsToSelector:@selector(calendarView:updateSize:)])
-        [self.delegate calendarView:self updateSize:CGSizeMake(self.frame.size.width, cellSize.height * rowCount)];
+    if(dayCount
+       && self.delegate
+       && [self.delegate respondsToSelector:@selector(calendarView:updateSize:linesNumber:)]) {
+        CGSize newFrame = CGSizeMake(self.frame.size.width, cellSize.height * rowCount);
+        [self.delegate calendarView:self updateSize:newFrame linesNumber:rowCount];
+    }
     return dayCount;
 }
 

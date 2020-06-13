@@ -15,10 +15,10 @@
 @protocol ZCCalendarViewDelegate <NSObject>
 @optional
 
-/// 更新日历显示大小（一般用不到）
-- (void)calendarView:(ZCCalendarView *)collectionView updateSize:(CGSize)size;
+/// 更新日历显示大小，以及当前月份日期行数linesNumber（可能4行、5行、6行）
+- (void)calendarView:(ZCCalendarView *)collectionView updateSize:(CGSize)size linesNumber:(NSUInteger)linesNumber;
 
-/// 设置cell显示的内容
+/// 设置subtitle、cell样式等
 - (void)calendarView:(ZCCalendarView *)collectionView cell:(ZCCalendarDayCell *)cell;
 
 /// 设置cell是否可以被选中
@@ -44,7 +44,7 @@
 - (void)registerClass:(Class)cellClass;
 
 
-
+/// 刷新界面数据
 - (void)reloadData;
 ///是否可以多选
 @property(nonatomic, assign)   BOOL isMultipleSelection;

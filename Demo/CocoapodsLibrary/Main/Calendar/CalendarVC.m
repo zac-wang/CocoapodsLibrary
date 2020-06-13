@@ -41,6 +41,7 @@
     return _yearMonthLabel;
 }
 
+/// 星期view
 - (UIView *)weekBackGroundView {
     if (!_weekBackGroundView) {
         //显示星期
@@ -66,7 +67,7 @@
     return _weekBackGroundView;
 }
 
-//日历主体
+//日历主体view
 - (ZCCalendarManageView *)dayView {
     if(!_dayView) {
         CGFloat dayX = self.weekBackGroundView.frame.origin.x;
@@ -88,10 +89,12 @@
 //    self.dayView.monthFrame = self.dayView.frame;
 //}
 //
+// 切换上个月
 //- (IBAction)changePreviousMonth {
 //    [self.dayView changePreviousMonth];
 //}
 //
+// 切换下个月
 //- (IBAction)changeNextMonth {
 //    [self.dayView changeNextMonth];
 //}
@@ -103,21 +106,25 @@
 }
 
 #pragma mark - Delegate
--(void)calendarView:(ZCCalendarView *)collectionView updateSize:(CGSize)size {
+/// 日历大小变化
+-(void)calendarView:(ZCCalendarView *)collectionView updateSize:(CGSize)size linesNumber:(NSUInteger)linesNumber {
     self.dayView.frame = ({CGRect r = self.dayView.frame; r.size.height = size.height; r;});
     NSDateComponents *com = collectionView.date.zc_dateComponents;
     self.yearMonthLabel.text = [NSString stringWithFormat:@"%ld年%.2ld月", (long)com.year, (long)com.month];
 }
 
+/// 设置subtitle、cell样式等
 - (void)calendarView:(ZCCalendarView *)collectionView cell:(ZCCalendarDayCell *)cell {
     if(cell.type == ZCCalendarDayCellTypeNowMonth && cell.dateComponents.day == 1) {
     }
 }
 
-- (BOOL)calendarView:(ZCCalendarView *)collectionView shouldSelectCell:(ZCCalendarDayCell *)cell {
-    return cell.type == ZCCalendarDayCellTypeNowMonth && YES;
-}
+/// 即将被选中，返回是否可以被选中，默认只能选中本月日期
+//- (BOOL)calendarView:(ZCCalendarView *)collectionView shouldSelectCell:(ZCCalendarDayCell *)cell {
+//    return cell.type == ZCCalendarDayCellTypeNowMonth;
+//}
 
+/// 被选中
 -(void)calendarView:(ZCCalendarView *)collectionView didSelectCell:(CalendarDayCell *)cell {
     //cell.titleLable.textColor = UIColor.whiteColor;
     NSLog(@"%lu-%lu-%lu--%@", (long)cell.dateComponents.year, (long)cell.dateComponents.month, (long)cell.dateComponents.day, cell.lunarCalendar);
@@ -125,6 +132,7 @@
     //NSLog(@"%@", self.dayView.nowShowCalendarView.selectDays);
 }
 
+/// 取消选中
 - (void)calendarView:(ZCCalendarView *)collectionView didDeselectCell:(CalendarDayCell *)cell {
 }
 
