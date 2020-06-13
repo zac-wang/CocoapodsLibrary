@@ -31,6 +31,8 @@
 #import "ZCBankcard.h"
 #import "ZCCacheManage.h"
 #import "ZCCalendar.h"
+#import "ZCDragImageView.h"
 #import "ZCMenu.h"
 #import "ZCMenuItem.h"
 #import "ZCScanQRCode.h"
+#import "ZCScrollTextView.h"
