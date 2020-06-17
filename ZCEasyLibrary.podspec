@@ -107,6 +107,11 @@ Pod::Spec.new do |spec|
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCQRCode/**/*.{h,m,c,mm}'
   end
 
+  spec.subspec 'ZCScreenCapture' do |sp|
+    sp.platform     = :osx
+    sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCScreenCapture/**/*.{h,m,c,mm}'
+  end
+
   spec.subspec 'ZCScrollTextView' do |sp|
     sp.platform     = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCScrollTextView/**/*.{h,m,c,mm}'
