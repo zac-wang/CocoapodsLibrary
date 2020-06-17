@@ -35,4 +35,5 @@
 #import "ZCMenu.h"
 #import "ZCMenuItem.h"
 #import "ZCScanQRCode.h"
+#import "ZCScreenCapture.h"
 #import "ZCScrollTextView.h"
