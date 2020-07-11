@@ -87,11 +87,6 @@ Pod::Spec.new do |spec|
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCSpinnerView/**/*.{h,m,c,mm}'
   end
 
-  spec.subspec 'ZCTagView' do |sp|
-    sp.platform     = :ios
-    sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCTagView/**/*.{h,m,c,mm}'
-  end
-
   spec.subspec 'ZCTextSelectedRange' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCTextSelectedRange/**/*.{h,m,c,mm}'

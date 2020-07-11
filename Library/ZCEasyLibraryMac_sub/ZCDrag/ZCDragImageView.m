@@ -60,11 +60,11 @@
 - (NSDragOperation)draggingSession:(NSDraggingSession *)session sourceOperationMaskForDraggingContext:(NSDraggingContext)context {
     switch (context) {
         case NSDraggingContextOutsideApplication://app外
-            return NSDragOperationCopy;
+            return NSDragOperationMove;
         case NSDraggingContextWithinApplication://app内
             return NSDragOperationNone;
         default://其余情况
-            return NSDragOperationNone;
+            return NSDragOperationDelete;
             break;
     }
 }
@@ -76,8 +76,10 @@
 
 // 松手，删除临时文件
 -(void)draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation {
-    NSString *path = [session.draggingPasteboard stringForType:@"public.file-url"];
-    [[NSFileManager defaultManager] removeItemAtURL:[NSURL URLWithString:path] error:nil];
+    if (operation == NSDragOperationNone) {
+        NSString *path = [session.draggingPasteboard stringForType:@"public.file-url"];
+        [[NSFileManager defaultManager] removeItemAtURL:[NSURL URLWithString:path] error:nil];
+    }
 }
 
 // 随机生成文件临时路径

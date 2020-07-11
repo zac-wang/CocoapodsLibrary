@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+/// 截屏
 @interface ZCScreenCapture : NSObject
 
 /// 是否有 屏幕录制权限
