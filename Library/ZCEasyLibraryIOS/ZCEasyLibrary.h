@@ -76,7 +76,6 @@
 #import "ZCSelectImagePicker.h"
 #import "ZCSetting.h"
 #import "ZCSpinnerView.h"
-#import "ZCTagView.h"
 #import "ZCTextDecimalField.h"
 #import "ZCTextField.h"
 #import "ZCTextView.h"

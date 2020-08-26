@@ -156,8 +156,6 @@
 		3D4FEBB82494A1A800677967 /* ZCElasticControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4FEB3A2494A1A700677967 /* ZCElasticControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4FEBB92494A1A800677967 /* ZCReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FEB3D2494A1A700677967 /* ZCReachability.m */; };
 		3D4FEBBA2494A1A800677967 /* ZCReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4FEB3E2494A1A700677967 /* ZCReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D4FEBBB2494A1A800677967 /* ZCTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FEB402494A1A700677967 /* ZCTagView.m */; };
-		3D4FEBBC2494A1A800677967 /* ZCTagView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4FEB412494A1A700677967 /* ZCTagView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4FEBBD2494A1A800677967 /* UITextField+ZCKeyBoardTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4FEB432494A1A700677967 /* UITextField+ZCKeyBoardTopBar.m */; };
 		3D4FEBBE2494A1A800677967 /* UITextView+ZCKeyBoardTopBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4FEB442494A1A700677967 /* UITextView+ZCKeyBoardTopBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D4FEBBF2494A1A800677967 /* ZCKeyBoardTopBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D4FEB452494A1A700677967 /* ZCKeyBoardTopBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -350,8 +348,6 @@
 		3D4FEB3A2494A1A700677967 /* ZCElasticControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCElasticControl.h; sourceTree = "<group>"; };
 		3D4FEB3D2494A1A700677967 /* ZCReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCReachability.m; sourceTree = "<group>"; };
 		3D4FEB3E2494A1A700677967 /* ZCReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCReachability.h; sourceTree = "<group>"; };
-		3D4FEB402494A1A700677967 /* ZCTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTagView.m; sourceTree = "<group>"; };
-		3D4FEB412494A1A700677967 /* ZCTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTagView.h; sourceTree = "<group>"; };
 		3D4FEB432494A1A700677967 /* UITextField+ZCKeyBoardTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ZCKeyBoardTopBar.m"; sourceTree = "<group>"; };
 		3D4FEB442494A1A700677967 /* UITextView+ZCKeyBoardTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+ZCKeyBoardTopBar.h"; sourceTree = "<group>"; };
 		3D4FEB452494A1A700677967 /* ZCKeyBoardTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCKeyBoardTopBar.h; sourceTree = "<group>"; };
@@ -776,7 +772,6 @@
 				3D4FEB5C2494A1A700677967 /* ZCPicturePreview */,
 				3D4FEB3C2494A1A700677967 /* ZCReachability */,
 				3D4FEB592494A1A700677967 /* ZCSpinnerView */,
-				3D4FEB3F2494A1A700677967 /* ZCTagView */,
 				3D4FEB682494A1A700677967 /* ZCTextSelectedRange */,
 			);
 			name = ZCEasyLibraryIOS_sub;
@@ -790,15 +785,6 @@
 				3D4FEB3D2494A1A700677967 /* ZCReachability.m */,
 			);
 			path = ZCReachability;
-			sourceTree = "<group>";
-		};
-		3D4FEB3F2494A1A700677967 /* ZCTagView */ = {
-			isa = PBXGroup;
-			children = (
-				3D4FEB412494A1A700677967 /* ZCTagView.h */,
-				3D4FEB402494A1A700677967 /* ZCTagView.m */,
-			);
-			path = ZCTagView;
 			sourceTree = "<group>";
 		};
 		3D4FEB422494A1A700677967 /* ZCKeyBoardTopBar */ = {
@@ -1191,7 +1177,6 @@
 				3D4FEBA22494A1A800677967 /* ZCLocationManager.h in Headers */,
 				3D4FEBD42494A1A800677967 /* ZCPicturePreviewItem.h in Headers */,
 				3D4FEBC02494A1A800677967 /* UITextField+ZCKeyBoardTopBar.h in Headers */,
-				3D4FEBBC2494A1A800677967 /* ZCTagView.h in Headers */,
 				3D4FE93B2494A12200677967 /* NSString+ZCFile.h in Headers */,
 				3D4FEB9D2494A1A800677967 /* ZCTextField.h in Headers */,
 				3D4FEBBF2494A1A800677967 /* ZCKeyBoardTopBar.h in Headers */,
@@ -1553,7 +1538,6 @@
 				3D4FEBA92494A1A800677967 /* ZCApp.m in Sources */,
 				3D4FEB812494A1A800677967 /* UIResponder+ZCGetNextResponderObj.m in Sources */,
 				3D4FEBA42494A1A800677967 /* ZCLocationManager.m in Sources */,
-				3D4FEBBB2494A1A800677967 /* ZCTagView.m in Sources */,
 				3D4FEB9E2494A1A800677967 /* ZCTextDecimalField.m in Sources */,
 				3D4FEB7F2494A1A800677967 /* UIColor+ZCSupp.m in Sources */,
 				3D4FE9592494A12200677967 /* NSData+ZCJson.m in Sources */,
@@ -1661,7 +1645,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.3;
+				MARKETING_VERSION = 2.1.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wzc.ZCMacEasyLibrary;
@@ -1691,7 +1675,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.3;
+				MARKETING_VERSION = 2.1.4;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wzc.ZCMacEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1720,7 +1704,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.3;
+				MARKETING_VERSION = 2.1.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wzc.ZCIOSEasyLibrary;
@@ -1751,7 +1735,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.3;
+				MARKETING_VERSION = 2.1.4;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wzc.ZCIOSEasyLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
