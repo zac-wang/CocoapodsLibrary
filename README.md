@@ -4,7 +4,7 @@
 Podfile:
 
 ```
-source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:CocoaPods/Specs.git'
 platform :iOS, '8.0'
 
 target 'TargetName' do
