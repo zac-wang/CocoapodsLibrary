@@ -18,7 +18,6 @@
     ZCCitySelect *citySelect;
 }
 
-@property (weak, nonatomic) IBOutlet ZCTagView *tagBackView;
 @property (weak, nonatomic) IBOutlet ZCTextView *textView;
 
 @end
@@ -37,19 +36,6 @@
     [super viewDidAppear:animated];
     
     self.textView.zc_keyBoardTopBar = [[ZCKeyBoardTopBar alloc] init];
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    //self.tagBackView.zc_btnHorizontalGap = 5;
-    //self.tagBackView.zc_btnVerticalGap = 2;
-    //self.tagBackView.zc_btnHeight = 15;
-    self.tagBackView.zc_tagStyle = ZCTagViewStyleCenter;
-    self.tagBackView.zc_tagTitles = @[@" 按时蒂芬v ", @" 俗为别人 ", @" 三大沃尔 ", @" 白色 ", @" 按时斯蒂芬v ", @" 俗人 ", @" 三沃尔 ", @" 是款白色 ", @" 按时蒂芬v ", @" 俗人不为别人 "];
-    self.tagBackView.zc_btnClickBlock = ^(UIButton *btn) {
-        NSLog(@"%ld", (long)btn.tag);
-    };
 }
 
 - (IBAction)showDatePicker:(UIButton *)sender {
