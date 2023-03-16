@@ -1,6 +1,6 @@
 source 'git@github.com:CocoaPods/Specs.git'
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 use_frameworks!
 
@@ -8,11 +8,11 @@ project 'CocoapodsLibrary.xcodeproj'
 
 target 'CocoapodsLibrary'  do
 
-pod 'AFNetworking'
+pod 'AFNetworking',   :git  => 'git@github.com:AFNetworking/AFNetworking.git'
 # pod 'ZCCalendarView'
-pod 'ZCCalendarView', :path =>'../'
+pod 'ZCCalendarView', :path => '../'
 # pod 'ZCEasyLibrary'
-pod 'ZCEasyLibrary', :path =>'../'
+pod 'ZCEasyLibrary',  :path => '../'
 
 end
 
