@@ -10,6 +10,8 @@
 
 @interface NSAlert (ZCEasy)
 
-+ (NSAlert *)zc_alertWithTitle:(NSString *)title message:(NSString *)message buttons:(NSArray *)buttons completionHandler:(void (^)(NSModalResponse returnCode))handler;
++ (NSAlert *)zc_showAlertWithTitle:(NSString *)title message:(NSString *)message buttons:(NSArray *)buttons completionHandler:(void (^)(NSModalResponse returnCode))handler;
+
++ (NSAlert *)zc_alertWithTitle:(NSString *)title message:(NSString *)message view:(NSView *)v buttons:(NSArray *)buttons;
 
 @end

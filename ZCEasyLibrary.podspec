@@ -22,35 +22,42 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'ZCDate' do |sp|
     sp.source_files = 'Library/ZCEasyLibrary_sub/ZCDate/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibrary_sub/ZCDate/**/*.{h}'
   end
 
   spec.subspec 'ZCEncrypt' do |sp|
     sp.source_files = 'Library/ZCEasyLibrary_sub/ZCEncrypt/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibrary_sub/ZCEncrypt/**/*.{h}'
   end
 
   spec.subspec 'ZCJson' do |sp|
     sp.source_files = 'Library/ZCEasyLibrary_sub/ZCJson/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibrary_sub/ZCJson/**/*.{h}'
   end
 
   spec.subspec 'ZCMutableDeepCopy' do |sp|
     sp.source_files = 'Library/ZCEasyLibrary_sub/ZCMutableDeepCopy/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibrary_sub/ZCMutableDeepCopy/**/*.{h}'
   end
 
   spec.subspec 'ZCString' do |sp|
     sp.source_files = 'Library/ZCEasyLibrary_sub/ZCString/**/*.{h,m,c,mm}'
     sp.dependency     'ZCEasyLibrary/ZCDate'
     sp.dependency     'ZCEasyLibrary/ZCJson'
+    sp.public_header_files = 'Library/ZCEasyLibrary_sub/ZCString/**/*.{h}'
   end
 
 
   spec.subspec 'UIViewCategory' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/UIViewCategory/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/UIViewCategory/**/*.{h}'
   end
 
   spec.subspec 'ZCBannerView' do |sp|
     sp.platform = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCBannerView/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCBannerView/**/*.{h}'
     sp.private_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCBannerView/ZCBannerImageView.h'
   end
 
@@ -58,58 +65,69 @@ Pod::Spec.new do |spec|
     sp.platform = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCCitySelect/**/*.{h,m,c,mm}'
     sp.resources    = 'Library/ZCEasyLibraryIOS_sub/ZCCitySelect/**/*.plist'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCCitySelect/**/*.{h}'
   end
 
   spec.subspec 'ZCContactStore' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCContactStore/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCContactStore/**/*.{h}'
   end
 
   spec.subspec 'ZCKeyBoardTopBar' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCKeyBoardTopBar/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCKeyBoardTopBar/**/*.{h}'
     sp.dependency 'ZCEasyLibrary/ZCTextSelectedRange'
   end
 
   spec.subspec 'ZCPicturePreview' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCPicturePreview/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCPicturePreview/**/*.{h}'
   end
 
   spec.subspec 'ZCReachability' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCReachability/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCReachability/**/*.{h}'
   end
 
 
   spec.subspec 'ZCSpinnerView' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCSpinnerView/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCSpinnerView/**/*.{h}'
   end
 
   spec.subspec 'ZCTextSelectedRange' do |sp|
     sp.platform     = :ios
     sp.source_files = 'Library/ZCEasyLibraryIOS_sub/ZCTextSelectedRange/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryIOS_sub/ZCTextSelectedRange/**/*.{h}'
   end
 
   spec.subspec 'ZCDrag' do |sp|
     sp.platform     = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCDrag/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryMac_sub/ZCDrag/**/*.{h}'
   end
 
   spec.subspec 'ZCQRCode' do |sp|
     sp.platform     = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCQRCode/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryMac_sub/ZCQRCode/**/*.{h}'
   end
 
   spec.subspec 'ZCScreenCapture' do |sp|
     sp.platform     = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCScreenCapture/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryMac_sub/ZCScreenCapture/**/*.{h}'
   end
 
   spec.subspec 'ZCScrollTextView' do |sp|
     sp.platform     = :osx
     sp.source_files = 'Library/ZCEasyLibraryMac_sub/ZCScrollTextView/**/*.{h,m,c,mm}'
+    sp.public_header_files = 'Library/ZCEasyLibraryMac_sub/ZCScrollTextView/**/*.{h}'
   end
 
   spec.requires_arc  = true
