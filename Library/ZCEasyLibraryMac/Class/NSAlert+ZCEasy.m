@@ -21,8 +21,8 @@
 + (NSAlert *)zc_alertWithTitle:(NSString *)title message:(NSString *)message view:(NSView *)v buttons:(NSArray *)buttons {
     NSAlert *alert = [[self alloc] init];
     [alert setMessageText:title];
-    [alert setInformativeText:message];
-    [alert setAccessoryView:v];
+    if (message) [alert setInformativeText:message];
+    if (v) [alert setAccessoryView:v];
     for (NSString *btn in buttons) {
         [alert addButtonWithTitle:btn];
     }
