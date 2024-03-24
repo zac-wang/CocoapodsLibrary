@@ -11,7 +11,12 @@
 @implementation NSAlert (ZCEasy)
 
 + (NSAlert *)zc_showAlertWithTitle:(NSString *)title message:(NSString *)message buttons:(NSArray *)buttons completionHandler:(void (^ __nullable)(NSModalResponse returnCode))handler {
-    NSAlert *alert = [self zc_alertWithTitle:title message:message view:nil buttons:buttons];
+    return [self zc_showAlertWithTitle:title message:message view:nil buttons:buttons completionHandler:handler];
+}
+
++ (NSAlert *)zc_showAlertWithTitle:(NSString *)title message:(NSString *)message view:(NSView *)v buttons:(NSArray *)buttons completionHandler:(void (^ __nullable)(NSModalResponse returnCode))handler {
+    NSAlert *alert = [self zc_alertWithTitle:title message:message view:v buttons:buttons];
+    [[NSRunningApplication currentApplication] activateWithOptions:NSApplicationActivateIgnoringOtherApps];
     NSUInteger action = [alert runModal];
     if(handler)
         handler(action);
